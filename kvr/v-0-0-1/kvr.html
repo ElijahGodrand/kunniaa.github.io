@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="../../favicon.png" type="image/png">
     <script src="https://unpkg.com/wavesurfer.js@7"></script>
     <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
     <title data-translate="Kunniaa Voice Repeater">Kunniaa Voice Repeater</title>
 </head>
 
 <body>
-    
+    <!--选择本地音频文件-->
     <input type="file" id="fileInput" style="display: none;" accept=".mp3,.ogg,.wav">
 
     <div class="bg-gradient-to-r from-green-100 to-blue-100 text-black shadow-lg">
@@ -20,11 +22,11 @@
                     <div class="px-4 py-2 cursor-pointer hover:bg-white hover:bg-opacity-20 transition duration-150 ease-in-out relative group"
                         id="importMenu">
                         <span data-translate="Import">Import</span>
-                        <div class="text-sm absolute left-0 mt-2 w-60 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="importSubMenu">
                             <div class="py-1">
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadAudio"
-                                    onclick="saveAudioToDataBase()">
+                                    onclick="importAudioFromFileToDatabase()">
                                     <span data-translate="Import an audio file">Import an audio file</span>
                                 </div>
                             </div>
@@ -33,7 +35,7 @@
                     <div class="px-4 py-2 cursor-pointer hover:bg-white hover:bg-opacity-20 transition duration-150 ease-in-out relative group"
                         id="exportMenu">
                         <span data-translate="Export">Export</span>
-                        <div class="text-sm absolute left-0 mt-2 w-60 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="exportSubMenu">
                             <div class="py-1">
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportRPFile"
@@ -47,14 +49,14 @@
                     <div class="px-4 py-2 cursor-pointer hover:bg-white hover:bg-opacity-20 transition duration-150 ease-in-out relative group"
                         id="debugMenu">
                         <span data-translate="Debug">Debug</span>
-                        <div class="text-sm absolute left-0 mt-2 w-60 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="debugSubMenu">
                             <div class="py-1">
-                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="readAllDataBase()">
-                                    <span data-translate="Console: read all data">Console: read all data</span>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="readAllKeysOfAudioDataBase()">
+                                    <span data-translate="Console: read all keys">Console: read all keys</span>
                                 </div>
-                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="rmAllDataBase()">
-                                    <span data-translate="Console: delete all data">Console: delete all data</span>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="deleteAudioDatabase()">
+                                    <span data-translate="Console: delete audio database">Console: delete audio database</span>
                                 </div>
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="updatePlayList()">
                                     <span data-translate="Update play list">Update play list</span>
@@ -65,7 +67,7 @@
                     <div class="px-4 py-2 cursor-pointer hover:bg-white hover:bg-opacity-20 transition duration-150 ease-in-out relative group"
                         id="helpMenu">
                         <span data-translate="Help">Help</span>
-                        <div class="text-sm absolute left-0 mt-2 w-60 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="helpSubMenu">
                             <div class="py-1">
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
@@ -85,7 +87,7 @@
         </div>
     </div>
 
-    
+    <!--播放器-->
     <div class="w-3/4 mx-auto pt-2">
         <div class="bg-gray-100 rounded-lg">
             <audio class="w-full select-none" id="audioPlayer" controls>
@@ -94,7 +96,7 @@
                 <source type="audio/wav">
                 您的浏览器不支持播放音频。
             </audio>
-            
+            <!--播放器波形图-->
             <div class="h-36 relative" id="waveSurfer">
                 <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none"
                     id="placeholderWaveform">
@@ -114,12 +116,12 @@
             </div>
         </div>
 
-        
+        <!--播放控制-->
         <div class="text-sm mt-1 mb-2 pb-1 pt-1 flex w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md">
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnCntPlay" onclick="cntPlayAudio(this)">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-4 h-4 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
@@ -132,7 +134,7 @@
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnRPSart" onclick="recordRPStart(this)">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-4 h-4 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 21v-17l6 4 6-4v12l-6 4z"></path>
@@ -142,7 +144,7 @@
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnRPEnd" onclick="recordRPEnd(this)">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-4 h-4 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M5 5v14h14V5H5zm4 4h6v6H9V9z"></path>
@@ -152,7 +154,7 @@
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnRPAdd" onclick="addRP(this)">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-4 h-4 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -162,7 +164,7 @@
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnReset" onclick="resetAudioPlay(this)">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-4 h-4 -ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path>
@@ -207,19 +209,19 @@
         </div>
     </div>
 
-
+    <!--右键菜单，删除播放列表的音频-->
     <div id="contextMenu" class="absolute hidden bg-white border border-gray-300 shadow-md">
         <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOption" data-translate="Delete">
             Delete</div>
     </div>
 
-    
+    <!--右键菜单，删除复读列表的复读段-->
     <div id="contextMenuRP" class="absolute hidden bg-white border border-gray-300 shadow-md">
         <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOptionRP" data-translate="Delete">
             Delete</div>
     </div>
 
-    
+    <!--底部信息-->
     <footer class="bg-gradient-to-r from-purple-100 to-indigo-100 text-black py-1 mt-2"> 
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -248,8 +250,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="./js/kvr-min.js"></script> -->
-    <script src="./js/kvr.js"></script>
+    <script src="./js/kvr-min.js"></script>
 </body>
 
 </html>
