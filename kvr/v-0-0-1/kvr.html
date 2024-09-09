@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link href="css/tailwind.kvr.min.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/png">
     <script src="https://unpkg.com/wavesurfer.js@7"></script>
     <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
@@ -15,7 +15,8 @@
     <!--选择本地音频文件-->
     <input type="file" id="fileInput" style="display: none;" accept=".mp3,.ogg,.wav">
 
-    <div class="bg-gradient-to-r from-green-100 to-blue-100 text-black shadow-lg">
+    <!--顶部菜单-->
+    <div class="bg-gradient-to-r from-green-100 to-blue-100 text-black shadow-md">
         <div class="container mx-auto px-4">
             <div class="flex text-base">
                 <div class="flex flex-1 justify-start">
@@ -52,7 +53,7 @@
                         <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="debugSubMenu">
                             <div class="py-1">
-                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="readAllKeysOfAudioDataBase()">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick = "readAllKeysOfAudioDataBase()">
                                     <span data-translate="Console: read all keys">Console: read all keys</span>
                                 </div>
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="deleteAudioDatabase()">
@@ -88,7 +89,7 @@
     </div>
 
     <!--播放器-->
-    <div class="w-3/4 mx-auto pt-2">
+    <div class="w-3/4 mx-auto pt-2 mt-1">
         <div class="bg-gray-100 rounded-lg">
             <audio class="w-full select-none" id="audioPlayer" controls>
                 <source type="audio/mpeg">
@@ -117,7 +118,7 @@
         </div>
 
         <!--播放控制-->
-        <div class="text-sm mt-1 mb-2 pb-1 pt-1 flex w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md">
+        <div class="text-sm mt-3 pb-1 pt-1 flex w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md">
             <button
                 class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 id="btnCntPlay" onclick="cntPlayAudio(this)">
@@ -174,9 +175,11 @@
         </div>
     </div>
 
+
     <div class="w-3/4 mx-auto pt-2 mt-1 h-full mb-12">
         <div class="flex w-full mx-auto">
-            <div class="flex-1 bg-gray-200 p-4 rounded-lg shadow-md mr-2"><!--播放列表-->
+            <!--播放列表-->
+            <div class="flex-1 bg-gray-200 p-4 rounded-lg shadow-md mr-2">
                 <h1 class="mx-auto text-xl font-bold mb-4 text-gray-800 flex items-center justify-center"
                     data-translate="Audio library">
                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -192,7 +195,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex-1 bg-gray-200 p-4 rounded-lg shadow-md ml-2"><!--复读列表-->
+            <!--复读列表-->
+            <div class="flex-1 bg-gray-200 p-4 rounded-lg shadow-md ml-2">
                 <h1 class="mx-auto text-xl font-bold mb-4 text-gray-800 flex items-center justify-center"
                     data-translate="Repeating list">
                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -209,8 +213,8 @@
                 </div>
             </div>
         </div>
-
     </div>
+
 
     <!--右键菜单，删除播放列表的音频-->
     <div id="contextMenu" class="absolute hidden bg-white border border-gray-300 shadow-md">
@@ -240,7 +244,7 @@
                     </div>
                     <div class="text-sm transition duration-100" id="versionInfo">
                         <span data-translate="Update date">Update date</span>
-                        <span>: 2024-09-09</span>
+                        <span>: 2024-09-05</span>
                     </div>
                     <a href="https://x.com/ElijahGodrand" target="_blank" rel="noopener noreferrer"
                         class="text-blue-400 hover:text-blue-500 transition-colors duration-300">
@@ -253,7 +257,7 @@
             </div>
         </div>
     </footer>
-    <script src="./js/kvr-min.js"></script>
+    <script src="./js/kvr.min.js"></script>
 </body>
 
 </html>
