@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荣耀设计</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+
+</head>
+
+<body class="sans-serif bg-near-white">
+    <header class="bg-dark-green washed-yellow pa3">
+        <div class="flex justify-between items-center">
+            <div class="w-20"></div>
+            <div class="w-60 tc">
+                <h1 class="f3 fw4 ma0">移动端优先设计的5条顶层原则</h1>
+            </div>
+            <div class="w-20 tr">
+                <span class="f6 fw3">更新：2024-09-15</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="pa4 w-60 center flex-column">
+        <section class="mb5">
+            <div class="flex flex-column">
+                <p class="tl f5 lh-copy">
+                    移动端是手机和平板的统称。它们使用广泛，使用频率高，
+                    因此导致移动端优先的设计策略。
+                </p>
+
+                <p class="f5 lh-copy tl">
+                    移动端设计，三个约束最重要：第一，屏幕尺寸偏小；第二不同设备的屏幕尺寸差别大；
+                    第三，屏幕可以横放，也可以竖放。
+                </p>
+
+                <h2 class="f4 fw6 navy tc">移动端设计的5条顶层原则</h2>
+
+                <p class="f5 lh-copy tl">我总结了网上能找到的移动端设计的几十篇文章，总结出5条便于执行的具体的顶层原则。</p>
+
+                <p class="f5 lh-copy tl">原则1：先设计移动端的方案，其次才是PC端。</p>
+
+                <p class="f5 lh-copy tl">原则2：先从最小的屏幕开始设计，然后扩展到更大的屏幕。</p>
+
+                <p class="f5 lh-copy tl">原则3：先实现最核心的功能，然后再扩展其他功能。</p>
+
+                <p class="f5 lh-copy tl">原则4：CSS框架应当是响应式的，当屏幕发生变化了，自动适应变化。</p>
+
+                <p class="f5 lh-copy tl">原则5：尽可能多种设备上测试，以便尽早发现问题。</p>
+
+
+                <h2 class="f4 fw6 navy tc">TailWind移动端设计的6条最佳实践</h2>
+
+
+
+                <p class="f5 lh-copy tl">我使用TailWind开发Kunniaa Voice Repeater。</p>
+
+                <p class="f5 lh-copy tl">TailWind CSS是实战优先的CSS框架：多数情况下，不需要在Style设计样式，
+                    直接在Class中使用，又叫原子化css。不需要绞尽脑汁给CSS样式起名字，
+                    不需要自己写CSS文件，因为TailWind的CSS文件是编译生成的。</p>
+
+                <p class="f5 lh-copy tl">在开发的过程中，我总结出6条最佳实践。</p>
+
+                <p class="f5 lh-copy tl">1. 通过编译，删除掉不需要的样式，可以将CSS文件从几M降低到几个K，十几个K，几十个K。</p>
+
+                <p class="f5 lh-copy tl">2. 使用媒体查询功能，让设计能可以适应手机，平板，显示器，超大屏幕等多种显示媒体。</p>
+
+                <p class="f5 lh-copy tl">3. 优化性能。某些原子类的组合，会被重复使用。
+                    那么，用apply把这些组合定义成一个独立的类名，可以进一步减少HTML文件的尺寸。</p>
+
+                <p class="f5 lh-copy tl">4. 谨慎用JS动态地调整样式，因为不同的浏览器会有不同的实现，导致样式的表现不一致。
+                    可能会劳而无功。尽量只使用框架自身提供的功能。
+                </p>
+
+
+                <p class="f5 lh-copy tl">5. 使用flex-wrap，flexbox, flex-row, flex-col，对标记进行自适应堆叠。</p>
+
+                <p class="f5 lh-copy tl">6. 为了美观，可以使用tailwind的自带插件，调整纵横比，排版，表单，让页面更美观。</p>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="bg-navy white pa2 tc">
+        <p class="f7">&copy; 2024 荣耀设计 | 保留所有权利</p>
+    </footer>
+</body>
+
+</html>

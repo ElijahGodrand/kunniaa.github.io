@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunniaa Design</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+</head>
+<body class="sans-serif bg-near-white">
+    <header class="bg-dark-green washed-yellow pa3">
+        <div class="flex justify-between items-center">
+            <div class="w-20 tl">
+                <a href="mobile-first-design-zh.html" target="_blank" class="f6 fw3 washed-yellow no-underline">中文版</a>
+            </div>
+            <div class="w-60 tc">
+                <h1 class="f3 fw4 ma0">5 Top-Level Principles For Mobile-First Design</h1>
+            </div>
+            <div class="w-20 tr">
+                <span class="f6 fw3">update: 2024-09-15</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="pa4 w-60 center flex-column">
+        <section class="mb5">
+            <div class="flex flex-column">
+
+                <p class="tl f5 lh-copy tl">
+                    Mobile end is a general term for mobile phones and tablets. 
+                    They are widely used and frequently used, which leads to a mobile-first design strategy.
+                </p>
+
+                <p class="f5 lh-copy tl">
+                    For mobile design, three constraints are most important: 
+                    first, the screen size is small; 
+                    second, the screen sizes of different devices vary greatly; 
+                    third, the screen can be placed horizontally or vertically.
+                </p>
+
+                <h2 class="f4 fw6 navy tc">5 Top-Level Principles</h2>
+
+                <p class="f5 lh-copy tl">I summarized dozens of articles on mobile design that I 
+                    could find online and came up with five specific top-level principles that are easy to implement.</p>
+
+                <p class="f5 lh-copy tl">Principle No.1: Design the solution for mobile first, then the desktop.</p>
+
+                <p class="f5 lh-copy tl">Principle No.2: Design for the smallest screen first, then scale to larger screens.</p>
+
+                <p class="f5 lh-copy tl">Principle No.3: Implement the most core functions first, then expand other functions.</p>
+
+                <p class="f5 lh-copy tl">Principle 4: The CSS framework should be responsive and automatically adapt to changes when the screen changes.</p>
+
+                <p class="f5 lh-copy tl">Principle 5: Test on as many devices as possible to detect problems as early as possible.</p>
+
+
+                <h2 class="f4 fw6 navy tc">6 Best Practices For TailWind Mobile Design</h2>
+
+                <p class="f5 lh-copy tl">I use TailWind to develop Kunniaa Voice Repeater.</p>
+
+                <p class="f5 lh-copy tl">TailWind CSS is a practical CSS framework: 
+                    in most cases, you don't need to design styles in Style,
+                    you can use them directly in Class, also known as atomic CSS. 
+                    You don't need to rack your brains to name CSS styles,
+                    and you don't need to write CSS files yourself, 
+                    because TailWind's CSS files are compiled and generated.</p>
+
+                <p class="f5 lh-copy tl">During the development process, I summarized 6 best practices.</p>
+
+                <p class="f5 lh-copy tl">1. By compiling and deleting unnecessary styles, 
+                    the size of the CSS file can be reduced from several MB to several KB, dozens of KB, 
+                    or dozens of KB.</p>
+
+                <p class="f5 lh-copy tl">2. Use the media query function to make the design adaptable to various display media such as mobile phones, 
+                    tablets, monitors, and ultra-large screens.</p>
+
+                <p class="f5 lh-copy tl">3. Optimize performance. 
+                    Some combinations of atomic classes will be used repeatedly.
+                    Then, use apply to define these combinations as a separate class name, 
+                    which can further reduce the size of the HTML file.</p>
+
+                <p class="f5 lh-copy tl">4. Be cautious when using JS to dynamically adjust styles, 
+                    because different browsers have different implementations, 
+                    resulting in inconsistent style performance.
+                    It may be futile. Try to only use the functions provided by the framework itself.
+                </p>
+
+                <p class="f5 lh-copy tl">5. Use flex-wrap, flexbox, flex-row, flex-col to stack tags adaptively.</p>
+
+                <p class="f5 lh-copy tl">6. For aesthetics, 
+                    you can use Tailwind's built-in plug-in to adjust the aspect ratio, 
+                    layout, and form to make the page more beautiful.</p>
+            
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-navy white pa2 tc">
+        <p class="f7">&copy; 2024 Kunniaa Design | All rights reserved.</p>
+    </footer>
+</body>
+</html>
