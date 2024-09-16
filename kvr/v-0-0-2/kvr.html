@@ -29,7 +29,7 @@
     <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
     <!-- <title data-translate="Kunniaa Voice Repeater">Kunniaa Voice Repeater</title> -->
-     <title>KVR: Free Online Static Tools, Voice Repeater, For Language Learning</title>
+     <title>KVR: Free Online Static Tool, Voice Repeater, For Language Learning</title>
 </head>
 
 <body>
@@ -51,6 +51,10 @@
                                     onclick="importAudioFromFileToDatabase()">
                                     <span data-translate="Import an audio file">Import an audio file</span>
                                 </div>
+                                <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadRP"
+                                    onclick="importRPFromFileToDatabase()">
+                                    <span data-translate="Import an audio file">Import an repeating point file</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -60,10 +64,18 @@
                         <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
                             id="exportSubMenu">
                             <div class="py-1">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAudioFile"
+                                    onclick="exportAudioFile()">
+                                    <span data-translate="Export a repeating record file">Export an audio file</span>
+                                </div>
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportRPFile"
                                     onclick="exportRPFile()">
                                     <span data-translate="Export a repeating record file">Export a repeating
-                                        recordfile</span>
+                                        point file</span>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAllFiles"
+                                    onclick="exportAllFiles()">
+                                    <span data-translate="Export a repeating record file">Export all files</span>
                                 </div>
                             </div>
                         </div>
@@ -287,6 +299,7 @@
         </div>
     </footer>
 
+    <script src="./js/jszip.min.js"></script>
     <script src="./js/kvr.min.js"></script>
 </body>
 
