@@ -70,7 +70,7 @@
     </div>
 
     <!--产品特点-->
-    <div class="w-2/3 container mx-auto px-1 py-2 mb-15">
+    <div class="w-2/3 container mx-auto px-1 py-2 mb-15" id="productFeatures">
         <div class="grid grid-cols-1 gap-2">
             <div
                 class="items-center bg-gradient-to-r from-purple-400 to-pink-400 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
@@ -106,7 +106,7 @@
     </div>
 
     <!--底部-->
-    <div class="fixed w-full bottom-0 text-center text-gray-500 text-sm">
+    <div class="fixed w-full bottom-0 text-center text-gray-500 text-sm" id="footerInfo">
         <div class="flex justify-center items-center p-2 bg-gradient-to-r from-gray-100 to-gray-200">
             <div class="text-left flex-1">
                 <span>&copy; 2024</span>
@@ -162,6 +162,29 @@
             element.textContent = key;
             element.setAttribute('data-translate', key);
         });
+
+
+        //页面加载完，立刻自动执行这里
+        window.onload = function () {
+
+            setTimeout(function () {
+                // 设置底部边距
+                setBottomSutiableSize();
+            }, 1000);
+        };
+
+        window.addEventListener('resize', setBottomSutiableSize);
+
+        function setBottomSutiableSize() {
+            const tmpOffSet1 = 15;
+            const fixedBottomDivHeight = document.getElementById('footerInfo').offsetHeight;
+            const productFeatures = document.getElementById('productFeatures');
+
+            //给productFeatures加上mb，大小就是fixedBottomDivHeight+tmpOffSet1
+            productFeatures.classList.remove(...Array.from(twoLists.classList).filter(cls => cls.startsWith('mb-')));
+            productFeatures.style.marginBottom = `${fixedBottomDivHeight + tmpOffSet1}px`;
+        }
+
     </script>
 
 </body>
