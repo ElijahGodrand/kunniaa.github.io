@@ -70,7 +70,7 @@
     </div>
 
     <!--产品特点-->
-    <div class="w-2/3 container mx-auto px-1 py-2 mb-15" id="productFeatures">
+    <div class="w-2/3 container mx-auto px-1 py-2 mb-50" id="productFeatures">
         <div class="grid grid-cols-1 gap-2">
             <div
                 class="items-center bg-gradient-to-r from-purple-400 to-pink-400 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
@@ -181,7 +181,7 @@
             const productFeatures = document.getElementById('productFeatures');
 
             //给productFeatures加上mb，大小就是fixedBottomDivHeight+tmpOffSet1
-            productFeatures.classList.remove(...Array.from(twoLists.classList).filter(cls => cls.startsWith('mb-')));
+            productFeatures.classList.remove(...Array.from(productFeatures.classList).filter(cls => cls.startsWith('mb-')));
             productFeatures.style.marginBottom = `${fixedBottomDivHeight + tmpOffSet1}px`;
         }
 
