@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Modified from SnapDrop, see more details in ksd.js-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Kunniaa SnapDrop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/tailwind.kvr.min.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+</head>
+
+<body>
+    <div class="w-1/2 flex flex-col items-center m-10 text-sm text-purple-500 mx-auto">
+        This is an independent feature. Connect the devices to the same local area network, such as using the same WIFI, 
+        then click 'Sync' button, this device will synchronize audio and repeat information with the target device, 
+        making the data of the two devices exactly the same.
+    </div>
+    <div class="flex flex-col items-center m-10 text-lg">
+        <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
+    </div>
+    <!--这里，放置发现的所有设备，包括电脑、手机、平板-->
+    <div class="flex flex-col items-center m-5 p-5" id="deviceContainer">
+    </div>
+
+    <script src="js/jszip.min.js"></script>
+    <script src="js/kdb.min.js"></script>
+    <script src="js/ksd.js"></script>
+</body>
+
+</html>

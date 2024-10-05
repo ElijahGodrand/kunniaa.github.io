@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9W1X0PLMF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R9W1X0PLMF');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Kunniaa Voice Repeater, free, online, static application, for Language learning.">
+    <meta name="keywords" content="Language Learning, Voice Repeater">
+    <meta name="author" content="Brian Chen">
+    <meta property="og:title" content="Kunniaa Voice Repeater">
+    <meta property="og:url" content="https://kunniaaa.com/">
+    <meta property="og:author" content="https://x.com/ElijahGodrand">
+    <meta name="twitter:author" content="@ElijahGodrand">
+     
+    <link href="css/tailwind.kvr.min.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <title>KVR: Free Online Static Tool, Voice Repeater, For Language Learning</title>
+</head>
+
+<body>
+    <!--选择本地音频文件-->
+    <input type="file" id="fileInput" style="display: none;" accept=".mp3,.ogg,.wav">
+
+    <!--顶部菜单-->
+    <div class="text-base bg-gradient-to-r  from-green-100 to-blue-100 text-black shadow-md">
+        <div class="container mx-auto px-1">
+            <div class="flex flex-wrap">
+                <div class="flex flex-wrap justify-start">
+                    <div class="px-2 py-2 hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out relative group"
+                        id="importMenu">
+                        <span data-translate="Import">Import</span>
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                            id="importSubMenu">
+                            <div class="py-1">
+                                <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadAudio"
+                                    onclick="importAudioFromFileToDatabase()">
+                                    <span data-translate="Import an audio file">Import an audio file</span>
+                                </div>
+                                <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadRP"
+                                    onclick="importRPFromFileToDatabase()">
+                                    <span data-translate="Import an repeating point file">Import an repeating point file</span>
+                                </div>
+                                <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fielReadZip"
+                                    onclick="importZipFileToDatabase()">
+                                    <span data-translate="Import an zip file of audio and rp">Import an zip file of audio and rp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2 py-2 hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out relative group"
+                        id="exportMenu">
+                        <span data-translate="Export">Export</span>
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                            id="exportSubMenu">
+                            <div class="py-1">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAudioFile"
+                                    onclick="exportAudioFile()">
+                                    <span data-translate="Export an audio file">Export an audio file</span>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportRPFile"
+                                    onclick="exportRPFile()">
+                                    <span data-translate="Export a repeating record file">Export a repeating
+                                        point file</span>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAllFiles"
+                                    onclick="exportAllFiles()">
+                                    <span data-translate="Export all files">Export all files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2 py-2 hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out relative group"
+                        id="debugMenu">
+                        <span data-translate="Debug">Debug</span>
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                            id="debugSubMenu">
+                            <div class="py-1">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                    onclick="readAllKeysOfAudioDataBase()">
+                                    <span data-translate="Console: read all keys">Console: read all keys</span>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="deleteAudioDatabase()">
+                                    <span data-translate="Console: delete audio database">Console: delete audio
+                                        database</span>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="updatePlayList()">
+                                    <span data-translate="Update play list">Update play list</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2 py-2 hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out relative group"
+                        id="toolsMenu">
+                        <span data-translate="Tools">Tools</span>
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                            id="toolsSubMenu">
+                            <div class="py-1">
+                                <div class="px-4 py-2 hover:bg-gray-100">
+                                    <a class="cursor-pointer" href="ksd.html"
+                                        target="_blank" data-translate="LAN data synchronization">LAN data synchronization</a>
+                                        <!--关闭当前的db，打开ksd.html，同步数据-->                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2 py-2 hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out relative group"
+                        id="helpMenu">
+                        <span data-translate="Help">Help</span>
+                        <div class="text-sm absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-50"
+                            id="helpSubMenu">
+                            <div class="py-1">
+                                <div class="px-4 py-2 hover:bg-gray-100">
+                                    <a class="cursor-pointer" href="https://Kunniaa.com/blog/post/tutoril-en.html"
+                                        target="_blank" data-translate="Tutorial">Tutorial</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap flex-1 justify-end">
+                    <div class="px-4 py-2 cursor-pointer hover:bg-white hover:bg-opacity-20 transition duration-100 ease-in-out"
+                        id="languageToggle">
+                        中文
+                    </div>
+                    <!--顶部菜单右侧，将来可以放其他的并列的div-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--播放器-->
+    <div class="w-3/4 mx-auto pt-2 mt-1">
+        <div class="bg-gray-100 rounded-lg">
+            <audio class="w-full select-none" id="audioPlayer" controls>
+                <source type="audio/mpeg">
+                <source type="audio/ogg">
+                <source type="audio/wav">
+                您的浏览器不支持播放音频。
+            </audio>
+            <!--播放器波形图-->
+            <div class="relative" id="waveSurfer">
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none"
+                    id="placeholderWaveform">
+                    <g stroke="#8b8bff" stroke-width="1" stroke-opacity="0.4" fill="none">
+                        <path d="M0 50 
+                                 Q 125 10, 250 50 
+                                 T 500 50 
+                                 T 750 50 
+                                 T 1000 50" />
+                        <path d="M0 50 
+                                 Q 125 90, 250 50 
+                                 T 500 50 
+                                 T 750 50 
+                                 T 1000 50" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <!--播放控制-->
+        <div
+            class="flex flex-wrap w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md text-sm mt-3 pb-1 pt-1">
+            <button
+                class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                id="btnCntPlay" onclick="cntPlayAudio(this)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span data-translate="Continue play">Continue play</span>
+            </button>
+            <button
+                class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                id="btnRPSart" onclick="recordRPStart(this)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 21v-17l6 4 6-4v12l-6 4z"></path>
+                </svg>
+                <span data-translate="Repeating start">Repeating start</span>
+            </button>
+            <button
+                class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                id="btnRPEnd" onclick="recordRPEnd(this)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 5v14h14V5H5zm4 4h6v6H9V9z"></path>
+                </svg>
+                <span data-translate="Repeating end">Repeating end</span>
+            </button>
+            <button
+                class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                id="btnRPAdd" onclick="addRP(this)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span data-translate="Add repeating">Add repeating</span>
+            </button>
+            <button
+                class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                id="btnReset" onclick="resetAudioPlay(this)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path>
+                </svg>
+                <span data-translate="Reset play">Reset play</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!--右键菜单，删除播放列表的音频-->
+    <div id="contextMenu" class="absolute hidden bg-white border border-gray-300 shadow-md">
+        <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOption" data-translate="Delete">
+            Delete</div>
+    </div>
+
+    <!--右键菜单，删除复读列表的复读段-->
+    <div id="contextMenuRP" class="absolute hidden bg-white border border-gray-300 shadow-md">
+        <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOptionRP" data-translate="Delete">
+            Delete</div>
+    </div>
+
+    <div class="flex w-full" id="twoLists">
+        <div class="w-3/4 mx-auto mt-4">
+            <div class="flex w-full mx-auto">
+                <!--播放列表-->
+                <div class="flex-1 w-1/2 mx-1 bg-gray-200 rounded-lg shadow-md">
+                    <h1 class="flex items-center justify-center mx-auto text-xl font-bold text-gray-800"
+                        data-translate="Audio library">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3">
+                            </path>
+                        </svg>
+                        Audio library
+                    </h1>
+                    <div class="h-64 max-h-64 overflow-y-auto" id="playListWrap">
+                        <ul class="" id="playList">
+                        </ul>
+                    </div>
+                </div>
+                <!--复读列表-->
+                <div class="flex-1 w-1/2 mx-1 bg-gray-200 rounded-lg shadow-md">
+                    <h1 class="flex items-center justify-center mx-auto text-xl font-bold text-gray-800 "
+                        data-translate="Repeating list">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
+                        Repeating list
+                    </h1>
+                    <div class="h-64 max-h-64 overflow-y-auto" id="rpListWrap">
+                        <ul class="" id="rpList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--底部信息-->
+    <footer class="fixed bottom-0 w-full bg-gradient-to-r from-purple-100 to-indigo-100 text-black py-1 mt-2 text-base"
+        id="footerInfo">
+        <div class="container mx-auto px-1">
+            <div class="flex flex-wrap">
+                <div class="flex flex-wrap justify-start">
+                    <span>© 2024 &nbsp</span>
+                    <span data-translate="All Rights Reserved">All Rights Reserved</span>
+                    <span>|</span>
+                    <span data-translate="Kunniaa Voice Repeater">Kunniaa Voice Repeater</span>
+                </div>
+                <div class="flex flex-1 flex-wrap justify-end space-x-4">
+                    <div>
+                        <span data-translate="Version">Version</span><span>: 0.0.2</span>
+                    </div>
+                    <div>
+                        <span data-translate="Update">Update</span>
+                        <span>: 2024-09-13</span>
+                    </div>
+                    <a href="https://x.com/ElijahGodrand" target="_blank" rel="noopener noreferrer"
+                        class="text-blue-400 hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jszip.min.js"></script>
+    <script src="js/kdb.min.js"></script>
+    <script src="js/kvr.min.js"></script>
+</body>
+
+</html>
