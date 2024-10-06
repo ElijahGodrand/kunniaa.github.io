@@ -19,6 +19,9 @@
   //KSD namespace
   window.KSD = window.KSD || {};
   window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
+  if(!window.isRtcSupported){
+    alert('RTC is not support!');
+  }
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
 
@@ -736,6 +739,7 @@
         if (window.isRtcSupported && peer.rtcSupported) {
           this.peers[peer.id] = new KSD.RTCPeer(this._server, peer.id);
         } else {
+          console.log("warning, rtc is not supported");
           this.peers[peer.id] = null;
         }
       });
