@@ -3,12 +3,30 @@
 //Should import jszip https://stuk.github.io/jszip/ in html head frist,
 //for example <script src="js/jszip.min.js"></script>
 
+//todo 
+// 1. 展示传输进度，表示在行动，以免出错  
+// 2. 如果对方是空，可能不进行了，实际上需要把自己的传给对方，因此要有一个判断
+// 3. 在小米上不成功，在iphone上成功了
+// 4. 增加一个搜索功能，否则总是连不上，不能显示搜索的进度
+// 5. 有时候不灵，从同一个局域网出去，看不到其他device。
+// 6. iphone的浏览器似乎不支持复读功能
+// 7. iphone的浏览器，收到了mp3数据，不能存入indexeddb，当时可以播放，重新打开网页就没有了。
+// 8. 有可能需要自己写一个nodejs服务端，部署到cloudflare，用免费worker节点，每天免费10万次请求。
+// 或者Vercel。
+// 9. 全面测试kvr在edege，firefox，以及小米手机上的功能是否正常
+
 (function () {
   //KSD namespace
   window.KSD = window.KSD || {};
   window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
+
+  // 同步是否运行的指标，避免循环执行
+  var g_sync_once = false;
+
+  // debug mobile end
+  eruda.init();
 
   KSD.Events = class {
     static fire(type, detail) {
@@ -28,29 +46,49 @@
   KSD.audioSync = function (el) {
     console.log('audioSync');
     console.log('el.data-peer-id = ', el.getAttribute('data-peer-id'));
-    KSD.Events.fire('sync-get-keys', el.getAttribute('data-peer-id'));
+    KSD.Events.fire('sync-start', el.getAttribute('data-peer-id'));
   }
 
   KSD.ServerConnection = class {
     constructor() {
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      g_idx += 1;
+
       this._connect();
       KSD.Events.on('beforeunload', e => this._disconnect());
       KSD.Events.on('pagehide', e => this._disconnect());
     }
 
     _connect() {
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      g_idx += 1;
+
       clearTimeout(this._reconnectTimer);
       if (this._isConnected() || this._isConnecting()) return;
       const ws = new WebSocket(this._endpoint());
       ws.binaryType = 'arraybuffer';
       ws.onmessage = e => this._onMessage(e.data);
       ws.onclose = e => this._onDisconnect();
-      ws.onerror = e => console.error(e);
       this._socket = ws;
     }
 
     _onMessage(msg) {
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      g_idx += 1;
+
       msg = JSON.parse(msg);
+
+      console.log(logStr, 'msg = ', msg);
+
       switch (msg.type) {
         case 'peers':
           KSD.Events.fire('peers', msg.peers);
@@ -82,7 +120,7 @@
 
     _endpoint() {
       const url = "wss://api.snapdrop.net/server/webrtc";
-      // const url = "ws://127.0.0.1:3000/server/webrtc";
+      // const url = "ws://192.168.188.101:3000/server/webrtc";
       return url;
     }
 
@@ -241,6 +279,14 @@
     }
 
     _onMessage(message) {
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      g_idx += 1;
+
+      console.log(logStr, 'message = ', message);
+
       if (typeof message !== 'string') {
         this._onChunkReceived(message);
         return;
@@ -260,10 +306,10 @@
           this._onTransferCompleted();
           break;
         //KSD: from here, KSD message
-        case 'sync-get-all-keys':
-          this._syncGetAllKeys();
+        case 'sync-give-me-all-your-keys':
+          this._syncSendAllMyKeysToYour();
           break;
-        case 'sync-all-my-keys':
+        case 'sync-send-all-my-keys-to-your':
           this._syncCalcSyncList(message.val);
           break;
         case 'sync-give-me-files':
@@ -273,9 +319,12 @@
     }
 
     async _syncSendZipFile(files) {
-      let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
         new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
       g_idx += 1;
+
       console.log('\n\n\n==============');
       console.log(logStr);
 
@@ -309,7 +358,9 @@
     }
 
     async _syncCalcSyncList(peer_keys) {
-      let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
         new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
       g_idx += 1;
       console.log('\n\n\n==============');
@@ -320,27 +371,42 @@
       let my_keys = await KDB.db[KDB.objectStorName].toCollection().keys();
       console.log(logStr, 'my_keys = ', my_keys);
       const pullKeys = peer_keys.filter(key => !my_keys.includes(key));
-      if (pullKeys.length <= 0) return;
-      console.log('List of keys to be obtained from peer = ', JSON.stringify(pullKeys));
-      const key_list = { 'type': 'sync-give-me-files', 'val': pullKeys };
-      this._send(JSON.stringify(key_list));
-      console.log('send pullkeys end');
+      if (pullKeys.length <= 0) {
+        console.log(logStr, 'pullKeys = [], then peer do sync');
+        this.sendJSON({ type: 'transfer-complete' });
+      } else {
+        console.log('List of keys to be obtained from peer = ', JSON.stringify(pullKeys));
+        const key_list = { 'type': 'sync-give-me-files', 'val': pullKeys };
+        this.sendJSON(key_list);
+        console.log('send pullkeys end');
+      }
     }
 
     //KSD: get keys from peer
-    async _syncGetAllKeys() {
+    async _syncSendAllMyKeysToYour() {
       let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
         new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
       g_idx += 1;
       console.log('\n\n\n==============');
       console.log(logStr);
 
-      const keys = await KDB.db[KDB.objectStorName].toCollection().keys();
-      const key_list = { 'type': 'sync-all-my-keys', 'val': keys };
-      this._send(JSON.stringify(key_list));
+      console.log(logStr, 'g_sync_once = ', g_sync_once);
+
+      //在每一次同步中，一个device中，本函数只运行一次，否则就是死循环，因此用g_sync_once控制
+      if (g_sync_once) {
+        console.log(logStr, 'g_sync_once is true');
+        g_sync_once = false;
+        console.log(logStr, 'reset g_sync_once = ', g_sync_once);
+      } else {
+        console.log(logStr, 'g_sync_once is false');
+        const keys = await KDB.db[KDB.objectStorName].toCollection().keys();
+        this.sendJSON({ 'type': 'sync-send-all-my-keys-to-your', 'val': keys });
+        //为了避免循环，这个函数在每个device上只运行一次。
+        g_sync_once = true;
+        console.log(logStr, 'reset g_sync_once = ', g_sync_once);
+      }
 
       console.log(logStr, 'end');
-
     }
 
     _onFileHeader(header) {
@@ -415,8 +481,7 @@
       this._busy = false;
       this._dequeueFile();
       //KSD: run from peer, get push key, and synchronize them 
-      const msg = JSON.stringify({ 'type': 'sync-get-all-keys', 'val': '' });
-      this._send(msg);
+      this.sendJSON({ 'type': 'sync-give-me-all-your-keys', 'val': '' });
     }
   }
 
@@ -635,10 +700,10 @@
       KSD.Events.on('peers', e => this._onPeers(e.detail));
       // KSD.Events.on('files-selected', e => this._onFilesSelected(e.detail));
       KSD.Events.on('peer-left', e => this._onPeerLeft(e.detail));
-      KSD.Events.on('sync-get-keys', e => this._syncGetKeys(e.detail));
+      KSD.Events.on('sync-start', e => this._syncStart(e.detail));
     }
 
-    _syncGetKeys(peerId) {
+    _syncStart(peerId) {
       let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
         new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
       g_idx += 1;
@@ -650,8 +715,7 @@
 
       const peer = this.peers[peerId];
       console.log('peer = ', JSON.stringify(peer));
-      const msg = JSON.stringify({ 'type': 'sync-get-all-keys', 'val': '' });
-      peer._send(msg);
+      peer.sendJSON({ 'type': 'sync-give-me-all-your-keys', 'val': '' });
 
       console.log(logStr, 'end');
     }
