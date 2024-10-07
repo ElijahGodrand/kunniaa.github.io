@@ -14,15 +14,16 @@
 // 8. 有可能需要自己写一个nodejs服务端，部署到cloudflare，用免费worker节点，每天免费10万次请求。
 // 或者Vercel。
 // 9. 全面测试kvr在edege，firefox，以及小米手机上的功能是否正常
+// 10. todo 注意：new Error().stack.split('\n')[1].trim().split(' ')[1]
+//     部署后,在iphone的safiri，new Error()的statck是网址开头的行数，不能用这种方式，需要重写
+// new Error的格式，在不同浏览器上是不统一的，差别很大。估计这块不能作为关键点。
+
 
 (function () {
   //KSD namespace
   window.KSD = window.KSD || {};
   window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
 
-  // if (!window.isRtcSupported) {
-  //   alert('RTC is not support!');
-  // }
   // if (window.RTCPeerConnection) {
   //   alert('window.RTCPeerConnection');
   // }
@@ -35,13 +36,14 @@
 
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
+  var debug_mod = true;
 
   // 同步是否运行的指标，避免循环执行
   var g_sync_once = false;
 
   // debug mobile end
-  // eruda.init();
-  var vConsole = new window.VConsole();
+  eruda.init();
+  // var vConsole = new window.VConsole();
 
   KSD.Events = class {
     static fire(type, detail) {
@@ -66,27 +68,29 @@
 
   KSD.ServerConnection = class {
     constructor() {
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
 
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      // let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+        let t = new Error();
+        console.log('error = ', JSON.stringify(t));
+        console.log('error stack = ', t.stack);
+        console.log('error stack split = ', t.stack.split('\n'));
+        console.log('error stack split [1] = ', t.stack.split('\n')[1]);
+        console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
+        console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
+
+        let error = new Error();
+        let lineNumber = error.stack.split('\n')[1].trim().split(':')[1].trim();
+        let fileName = error.stack.split('\n')[1].trim().split(':')[0].trim();
+        console.log('当前行数 = ', lineNumber, ' 文件名 = ', fileName);
+  
+      }
 
       g_idx += 1;
-
-      let t = new Error();
-      console.log('error = ', JSON.stringify(t));
-      console.log('error stack = ', t.stack);
-      console.log('error stack split = ', t.stack.split('\n'));
-      console.log('error stack split [1] = ', t.stack.split('\n')[1]);
-      console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
-      console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
-
-
-      // let className = this.constructor.name;
-      // let functionName = arguments.callee.name;
-      // console.log('className = ', className, ' functionName = ', functionName);
-
 
 
       this._connect();
@@ -95,10 +99,14 @@
     }
 
     _connect() {
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
 
       clearTimeout(this._reconnectTimer);
@@ -111,10 +119,13 @@
     }
 
     _onMessage(msg) {
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
 
       g_idx += 1;
 
@@ -152,8 +163,8 @@
     }
 
     _endpoint() {
-      const url = "wss://api.snapdrop.net/server/webrtc";
-      // const url = "ws://192.168.188.101:3000/server/webrtc";
+      // const url = "wss://api.snapdrop.net/server/webrtc";
+      const url = "ws://192.168.188.101:3000/server/webrtc";
       return url;
     }
 
@@ -312,10 +323,14 @@
     }
 
     _onMessage(message) {
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
 
       console.log(logStr, 'message = ', message);
@@ -352,10 +367,14 @@
     }
 
     async _syncSendZipFile(files) {
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
 
       console.log('\n\n\n==============');
@@ -391,10 +410,14 @@
     }
 
     async _syncCalcSyncList(peer_keys) {
-      let currentTime = new Date();
-      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
       console.log('\n\n\n==============');
       console.log(logStr);
@@ -461,8 +484,14 @@
     }
 
     async _onFileReceived(proxyFile) {
-      let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
       console.log('\n\n\n==============');
       console.log(logStr);
@@ -737,8 +766,14 @@
     }
 
     _syncStart(peerId) {
-      let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      if (debug_mod) {
+        let currentTime = new Date();
+        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      }
+
       g_idx += 1;
       console.log('\n\n\n==============');
       console.log(logStr);
@@ -806,8 +841,11 @@
         const server = new KSD.ServerConnection();
         const peers = new KSD.PeersManager(server);
         const peersUI = new KSD.PeersUI();
+        document.getElementById('introduction').innerHTML = 'This is an independent feature. Connect the devices to the same local area network, such as using the same WIFI, \
+        then click \'Sync\' button, this device will synchronize audio and repeat information with the target device, \
+        making the data of the two devices exactly the same.';
       } else {
-        alert('WEB RTC is not support!');
+        document.getElementById('introduction').innerHTML = 'This browser doesn\'t support Web RTC!';
       }
     }
   }

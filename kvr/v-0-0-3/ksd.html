@@ -13,10 +13,8 @@
 </head>
 
 <body>
-    <div class="w-1/2 flex flex-col items-center m-10 text-sm text-purple-500 mx-auto">
-        This is an independent feature. Connect the devices to the same local area network, such as using the same WIFI, 
-        then click 'Sync' button, this device will synchronize audio and repeat information with the target device, 
-        making the data of the two devices exactly the same.
+    <div class="w-1/2 flex flex-col items-center m-10 text-sm text-purple-500 mx-auto" 
+    id="introduction">
     </div>
     <div class="flex flex-col items-center m-10 text-lg">
         <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
@@ -25,7 +23,7 @@
     <div class="flex flex-col items-center m-5 p-5" id="deviceContainer">
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/eruda"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script src="js/jszip.min.js"></script>
     <script src="js/kdb.min.js"></script>
