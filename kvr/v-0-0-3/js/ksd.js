@@ -19,9 +19,20 @@
   //KSD namespace
   window.KSD = window.KSD || {};
   window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
-  if(!window.isRtcSupported){
-    alert('RTC is not support!');
-  }
+
+  // if (!window.isRtcSupported) {
+  //   alert('RTC is not support!');
+  // }
+  // if (window.RTCPeerConnection) {
+  //   alert('window.RTCPeerConnection');
+  // }
+  // if (window.mozRTCPeerConnection) {
+  //   alert('window.mozRTCPeerConnection');
+  // }
+  // if (window.webkitRTCPeerConnection) {
+  //   alert('window.webkitRTCPeerConnection');
+  // }
+
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
 
@@ -29,7 +40,8 @@
   var g_sync_once = false;
 
   // debug mobile end
-  eruda.init();
+  // eruda.init();
+  var vConsole = new window.VConsole();
 
   KSD.Events = class {
     static fire(type, detail) {
@@ -54,11 +66,28 @@
 
   KSD.ServerConnection = class {
     constructor() {
+
       let currentTime = new Date();
       let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+
       g_idx += 1;
+
+      let t = new Error();
+      console.log('error = ', JSON.stringify(t));
+      console.log('error stack = ', t.stack);
+      console.log('error stack split = ', t.stack.split('\n'));
+      console.log('error stack split [1] = ', t.stack.split('\n')[1]);
+      console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
+      console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
+
+
+      // let className = this.constructor.name;
+      // let functionName = arguments.callee.name;
+      // console.log('className = ', className, ' functionName = ', functionName);
+
+
 
       this._connect();
       KSD.Events.on('beforeunload', e => this._disconnect());
@@ -86,6 +115,7 @@
       let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
       let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
         new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+
       g_idx += 1;
 
       msg = JSON.parse(msg);
@@ -772,9 +802,13 @@
 
   KSD.Snapdrop = class {
     constructor() {
-      const server = new KSD.ServerConnection();
-      const peers = new KSD.PeersManager(server);
-      const peersUI = new KSD.PeersUI();
+      if (window.isRtcSupported) {
+        const server = new KSD.ServerConnection();
+        const peers = new KSD.PeersManager(server);
+        const peersUI = new KSD.PeersUI();
+      } else {
+        alert('WEB RTC is not support!');
+      }
     }
   }
 
