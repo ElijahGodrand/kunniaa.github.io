@@ -36,7 +36,8 @@
 
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
-  var debug_mod = true;
+  var debug_mod = false;
+  // var debug_mod = true;
 
   // 同步是否运行的指标，避免循环执行
   var g_sync_once = false;
@@ -70,24 +71,23 @@
     constructor() {
       let logStr = "";
       if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+        // let currentTime = new Date();
+        // let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        // logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
 
-        let t = new Error();
-        console.log('error = ', JSON.stringify(t));
-        console.log('error stack = ', t.stack);
-        console.log('error stack split = ', t.stack.split('\n'));
-        console.log('error stack split [1] = ', t.stack.split('\n')[1]);
-        console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
-        console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
+        // let t = new Error();
+        // console.log('error = ', JSON.stringify(t));
+        // console.log('error stack = ', t.stack);
+        // console.log('error stack split = ', t.stack.split('\n'));
+        // console.log('error stack split [1] = ', t.stack.split('\n')[1]);
+        // console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
+        // console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
 
-        let error = new Error();
-        let lineNumber = error.stack.split('\n')[1].trim().split(':')[1].trim();
-        let fileName = error.stack.split('\n')[1].trim().split(':')[0].trim();
-        console.log('当前行数 = ', lineNumber, ' 文件名 = ', fileName);
-  
+        // let error = new Error();
+        // let lineNumber = error.stack.split('\n')[1].trim().split(':')[1].trim();
+        // let fileName = error.stack.split('\n')[1].trim().split(':')[0].trim();
+        // console.log('当前行数 = ', lineNumber, ' 文件名 = ', fileName);
       }
 
       g_idx += 1;
@@ -100,12 +100,12 @@
 
     _connect() {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
 
@@ -120,12 +120,12 @@
 
     _onMessage(msg) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+        // let currentTime = new Date();
+        // let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+        // logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+        //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
 
@@ -163,8 +163,10 @@
     }
 
     _endpoint() {
-      // const url = "wss://api.snapdrop.net/server/webrtc";
-      const url = "ws://192.168.188.101:3000/server/webrtc";
+      let url = "wss://api.snapdrop.net/server/webrtc";
+      if (debug_mod){
+        url = "ws://192.168.188.101:3000/server/webrtc";
+      }
       return url;
     }
 
@@ -324,12 +326,12 @@
 
     _onMessage(message) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
 
@@ -368,12 +370,12 @@
 
     async _syncSendZipFile(files) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
 
@@ -411,12 +413,12 @@
 
     async _syncCalcSyncList(peer_keys) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
       console.log('\n\n\n==============');
@@ -440,8 +442,13 @@
 
     //KSD: get keys from peer
     async _syncSendAllMyKeysToYour() {
-      let logStr = '[' + g_idx + ':' + this.constructor.name + ':' +
-        new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      let logStr = "";
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
       g_idx += 1;
       console.log('\n\n\n==============');
       console.log(logStr);
@@ -485,12 +492,12 @@
 
     async _onFileReceived(proxyFile) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
       console.log('\n\n\n==============');
@@ -767,12 +774,12 @@
 
     _syncStart(peerId) {
       let logStr = "";
-      if (debug_mod) {
-        let currentTime = new Date();
-        let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-          new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      }
+      // if (debug_mod) {
+      //   let currentTime = new Date();
+      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
+      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
+      // }
 
       g_idx += 1;
       console.log('\n\n\n==============');
