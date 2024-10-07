@@ -789,9 +789,13 @@
         const server = new KSD.ServerConnection();
         const peers = new KSD.PeersManager(server);
         const peersUI = new KSD.PeersUI();
-        document.getElementById('introduction').innerHTML = 'This is an independent feature. Connect the devices to the same local area network, such as using the same WIFI, \
-        and open this url, then click \'Sync\' button, this device will synchronize audio and repeat information with the target device, \
-        making the data of the two devices exactly the same. Also, it\'s beta version, may be unstable.)';
+        document.getElementById('introduction').innerHTML = 'This is an independent feature. \
+        Multiple devices Connect the same local area network, such as using the same WIFI, \
+        and all open this url, then click \'Sync\' button, the owner device of current web \
+        page will synchronize audio and \
+        repeating information with the target device, \
+        making the data of the two devices exactly the same. \
+        Also, it\'s beta version, may be unstable.)';
       } else {
         document.getElementById('introduction').innerHTML = 'This browser doesn\'t support Web RTC!';
       }
