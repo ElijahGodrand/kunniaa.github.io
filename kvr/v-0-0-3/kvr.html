@@ -32,10 +32,10 @@
 </head>
 
 <body>
-    <!--选择本地音频文件-->
+    <!--Select local audio file-->
     <input type="file" id="fileInput" style="display: none;" accept=".mp3,.ogg,.wav">
 
-    <!--顶部菜单-->
+    <!--Top Menu-->
     <div class="text-base bg-gradient-to-r  from-green-100 to-blue-100 text-black shadow-md">
         <div class="container mx-auto px-1">
             <div class="flex flex-wrap">
@@ -112,7 +112,7 @@
                                 <div class="px-4 py-2 hover:bg-gray-100">
                                     <a class="cursor-pointer" href="ksd.html"
                                         target="_blank" data-translate="LAN data synchronization">LAN data synchronization</a>
-                                        <!--关闭当前的db，打开ksd.html，同步数据-->                                        
+                                        <!--Close the current db, open ksd.html, and synchronize data-->                                        
                                 </div>
                             </div>
                         </div>
@@ -136,22 +136,22 @@
                         id="languageToggle">
                         中文
                     </div>
-                    <!--顶部菜单右侧，将来可以放其他的并列的div-->
+                    <!--On the right side of the top menu, other parallel divs can be placed in the future-->
                 </div>
             </div>
         </div>
     </div>
 
-    <!--播放器-->
+    <!--Player-->
     <div class="w-3/4 mx-auto pt-2 mt-1">
         <div class="bg-gray-100 rounded-lg">
             <audio class="w-full select-none" id="audioPlayer" controls>
                 <source type="audio/mpeg">
                 <source type="audio/ogg">
                 <source type="audio/wav">
-                您的浏览器不支持播放音频。
+                Your browser does not support playing the audio.
             </audio>
-            <!--播放器波形图-->
+            <!--Player waveform-->
             <div class="relative" id="waveSurfer">
                 <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none"
                     id="placeholderWaveform">
@@ -171,7 +171,7 @@
             </div>
         </div>
 
-        <!--播放控制-->
+        <!--Play Controls-->
         <div
             class="flex flex-wrap w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md text-sm mt-3 pb-1 pt-1">
             <button
@@ -231,13 +231,13 @@
     </div>
 
 
-    <!--右键菜单，删除播放列表的音频-->
+    <!--Right-click menu to delete the audio in the playlist-->
     <div id="contextMenu" class="absolute hidden bg-white border border-gray-300 shadow-md">
         <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOption" data-translate="Delete">
             Delete</div>
     </div>
 
-    <!--右键菜单，删除复读列表的复读段-->
+    <!--Right-click menu to delete the repeat segment in the repeat list-->
     <div id="contextMenuRP" class="absolute hidden bg-white border border-gray-300 shadow-md">
         <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="deleteOptionRP" data-translate="Delete">
             Delete</div>
@@ -246,7 +246,7 @@
     <div class="flex w-full" id="twoLists">
         <div class="w-3/4 mx-auto mt-4">
             <div class="flex w-full mx-auto">
-                <!--播放列表-->
+                <!--Playlist-->
                 <div class="flex-1 w-1/2 mx-1 bg-gray-200 rounded-lg shadow-md">
                     <h1 class="flex items-center justify-center mx-auto text-xl font-bold text-gray-800"
                         data-translate="Audio library">
@@ -263,7 +263,7 @@
                         </ul>
                     </div>
                 </div>
-                <!--复读列表-->
+                <!--RP list-->
                 <div class="flex-1 w-1/2 mx-1 bg-gray-200 rounded-lg shadow-md">
                     <h1 class="flex items-center justify-center mx-auto text-xl font-bold text-gray-800 "
                         data-translate="Repeating list">
@@ -285,7 +285,7 @@
     </div>
 
 
-    <!--底部信息-->
+    <!--bottom information-->
     <footer class="fixed bottom-0 w-full bg-gradient-to-r from-purple-100 to-indigo-100 text-black py-1 mt-2 text-base"
         id="footerInfo">
         <div class="container mx-auto px-1">

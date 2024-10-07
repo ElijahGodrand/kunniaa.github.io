@@ -3,43 +3,16 @@
 //Should import jszip https://stuk.github.io/jszip/ in html head frist,
 //for example <script src="js/jszip.min.js"></script>
 
-//todo 
-// 1. 展示传输进度，表示在行动，以免出错  
-// 2. 如果对方是空，可能不进行了，实际上需要把自己的传给对方，因此要有一个判断
-// 3. 在小米上不成功，在iphone上成功了
-// 4. 增加一个搜索功能，否则总是连不上，不能显示搜索的进度
-// 5. 有时候不灵，从同一个局域网出去，看不到其他device。
-// 6. iphone的浏览器似乎不支持复读功能
-// 7. iphone的浏览器，收到了mp3数据，不能存入indexeddb，当时可以播放，重新打开网页就没有了。
-// 8. 有可能需要自己写一个nodejs服务端，部署到cloudflare，用免费worker节点，每天免费10万次请求。
-// 或者Vercel。
-// 9. 全面测试kvr在edege，firefox，以及小米手机上的功能是否正常
-// 10. todo 注意：new Error().stack.split('\n')[1].trim().split(' ')[1]
-//     部署后,在iphone的safiri，new Error()的statck是网址开头的行数，不能用这种方式，需要重写
-// new Error的格式，在不同浏览器上是不统一的，差别很大。估计这块不能作为关键点。
-
-
 (function () {
   //KSD namespace
   window.KSD = window.KSD || {};
   window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
 
-  // if (window.RTCPeerConnection) {
-  //   alert('window.RTCPeerConnection');
-  // }
-  // if (window.mozRTCPeerConnection) {
-  //   alert('window.mozRTCPeerConnection');
-  // }
-  // if (window.webkitRTCPeerConnection) {
-  //   alert('window.webkitRTCPeerConnection');
-  // }
-
   //KSD: only for debuging, print running sequence index of function
   var g_idx = 0;
-  var debug_mod = false;
-  // var debug_mod = true;
+  var g_debug_mod = false;
 
-  // 同步是否运行的指标，避免循环执行
+  //Synchronize the running indicator to avoid loop execution
   var g_sync_once = false;
 
   // debug mobile end
@@ -69,29 +42,14 @@
 
   KSD.ServerConnection = class {
     constructor() {
-      let logStr = "";
-      if (debug_mod) {
-        // let currentTime = new Date();
-        // let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        // logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-
-        // let t = new Error();
-        // console.log('error = ', JSON.stringify(t));
-        // console.log('error stack = ', t.stack);
-        // console.log('error stack split = ', t.stack.split('\n'));
-        // console.log('error stack split [1] = ', t.stack.split('\n')[1]);
-        // console.log('error stack split [1] trim = ', t.stack.split('\n')[1].trim());
-        // console.log('error stack split [1] trim split [2] = ', t.stack.split('\n')[1].trim().split(' ')[2]);
-
-        // let error = new Error();
-        // let lineNumber = error.stack.split('\n')[1].trim().split(':')[1].trim();
-        // let fileName = error.stack.split('\n')[1].trim().split(':')[0].trim();
-        // console.log('当前行数 = ', lineNumber, ' 文件名 = ', fileName);
-      }
-
+      let className = 'KSD.ServerConnection';
+      let funcName = 'constructor';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
 
+      console.log(logStr);
 
       this._connect();
       KSD.Events.on('beforeunload', e => this._disconnect());
@@ -99,15 +57,14 @@
     }
 
     _connect() {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.ServerConnection';
+      let funcName = '_connect';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
+
+      console.log(logStr);
 
       clearTimeout(this._reconnectTimer);
       if (this._isConnected() || this._isConnecting()) return;
@@ -119,14 +76,12 @@
     }
 
     _onMessage(msg) {
-      let logStr = "";
-      // if (debug_mod) {
-        // let currentTime = new Date();
-        // let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-        // logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-        //   new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.ServerConnection';
+      let funcName = '_onMessage';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
+    
       g_idx += 1;
 
       msg = JSON.parse(msg);
@@ -164,7 +119,7 @@
 
     _endpoint() {
       let url = "wss://api.snapdrop.net/server/webrtc";
-      if (debug_mod){
+      if (g_debug_mod) {
         url = "ws://192.168.188.101:3000/server/webrtc";
       }
       return url;
@@ -325,14 +280,11 @@
     }
 
     _onMessage(message) {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.Peer';
+      let funcName = '_onMessage';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
 
       console.log(logStr, 'message = ', message);
@@ -369,14 +321,11 @@
     }
 
     async _syncSendZipFile(files) {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.Peer';
+      let funcName = '_syncSendZipFile';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
 
       console.log('\n\n\n==============');
@@ -412,15 +361,13 @@
     }
 
     async _syncCalcSyncList(peer_keys) {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.Peer';
+      let funcName = '_syncCalcSyncList';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
+
       console.log('\n\n\n==============');
       console.log(logStr);
 
@@ -442,14 +389,13 @@
 
     //KSD: get keys from peer
     async _syncSendAllMyKeysToYour() {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
+      let className = 'KSD.Peer';
+      let funcName = '_syncSendAllMyKeysToYour';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
+
       console.log('\n\n\n==============');
       console.log(logStr);
 
@@ -464,7 +410,7 @@
         console.log(logStr, 'g_sync_once is false');
         const keys = await KDB.db[KDB.objectStorName].toCollection().keys();
         this.sendJSON({ 'type': 'sync-send-all-my-keys-to-your', 'val': keys });
-        //为了避免循环，这个函数在每个device上只运行一次。
+        //To avoid looping, this function is run only once per device.
         g_sync_once = true;
         console.log(logStr, 'reset g_sync_once = ', g_sync_once);
       }
@@ -491,15 +437,13 @@
     }
 
     async _onFileReceived(proxyFile) {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.Peer';
+      let funcName = '_onFileReceived';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
+
       console.log('\n\n\n==============');
       console.log(logStr);
 
@@ -767,21 +711,18 @@
       this._server = serverConnection;
       KSD.Events.on('signal', e => this._onMessage(e.detail));
       KSD.Events.on('peers', e => this._onPeers(e.detail));
-      // KSD.Events.on('files-selected', e => this._onFilesSelected(e.detail));
       KSD.Events.on('peer-left', e => this._onPeerLeft(e.detail));
       KSD.Events.on('sync-start', e => this._syncStart(e.detail));
     }
 
     _syncStart(peerId) {
-      let logStr = "";
-      // if (debug_mod) {
-      //   let currentTime = new Date();
-      //   let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
-      //   logStr = '[' + g_idx + ', ' + formattedTime + ', ' + this.constructor.name + ', ' +
-      //     new Error().stack.split('\n')[1].trim().split(' ')[1] + ']';
-      // }
-
+      let className = 'KSD.PeersManager';
+      let funcName = '_syncStart';
+      let currentTime = new Date();
+      let formattedTime = currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '.' + currentTime.getMilliseconds();
+      let logStr = '[' + g_idx + ', ' + formattedTime + ', ' + className + ', ' + funcName + ']';
       g_idx += 1;
+
       console.log('\n\n\n==============');
       console.log(logStr);
 
@@ -850,7 +791,7 @@
         const peersUI = new KSD.PeersUI();
         document.getElementById('introduction').innerHTML = 'This is an independent feature. Connect the devices to the same local area network, such as using the same WIFI, \
         then click \'Sync\' button, this device will synchronize audio and repeat information with the target device, \
-        making the data of the two devices exactly the same.';
+        making the data of the two devices exactly the same. Also, it\'s beta version, may be unstable.)';
       } else {
         document.getElementById('introduction').innerHTML = 'This browser doesn\'t support Web RTC!';
       }
