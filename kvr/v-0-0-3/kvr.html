@@ -47,15 +47,15 @@
                             id="importSubMenu">
                             <div class="py-1">
                                 <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadAudio"
-                                    onclick="importAudioFromFileToDatabase()">
+                                    onclick="KVR.importAudioFromFileToDatabase()">
                                     <span data-translate="Import an audio file">Import an audio file</span>
                                 </div>
                                 <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fileReadRP"
-                                    onclick="importRPFromFileToDatabase()">
+                                    onclick="KVR.importRPFromFileToDatabase()">
                                     <span data-translate="Import an repeating point file">Import an repeating point file</span>
                                 </div>
                                 <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer" id="fielReadZip"
-                                    onclick="importZipFileToDatabase()">
+                                    onclick="KVR.importZipFileToDatabase()">
                                     <span data-translate="Import an zip file of audio and rp">Import an zip file of audio and rp</span>
                                 </div>
                             </div>
@@ -68,16 +68,16 @@
                             id="exportSubMenu">
                             <div class="py-1">
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAudioFile"
-                                    onclick="exportAudioFile()">
+                                    onclick="KVR.exportAudioFile()">
                                     <span data-translate="Export an audio file">Export an audio file</span>
                                 </div>
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportRPFile"
-                                    onclick="exportRPFile()">
+                                    onclick="KVR.exportRPFile()">
                                     <span data-translate="Export a repeating record file">Export a repeating
                                         point file</span>
                                 </div>
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" id="exportAllFiles"
-                                    onclick="exportAllFiles()">
+                                    onclick="KVR.exportAllFiles()">
                                     <span data-translate="Export all files">Export all files</span>
                                 </div>
                             </div>
@@ -90,14 +90,14 @@
                             id="debugSubMenu">
                             <div class="py-1">
                                 <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                                    onclick="readAllKeysOfAudioDataBase()">
+                                    onclick="KVR.readAllKeysOfAudioDataBase()">
                                     <span data-translate="Console: read all keys">Console: read all keys</span>
                                 </div>
-                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="deleteAudioDatabase()">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="KVR.deleteAudioDatabase()">
                                     <span data-translate="Console: delete audio database">Console: delete audio
                                         database</span>
                                 </div>
-                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="updatePlayList()">
+                                <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" onclick="KVR.updatePlayList()">
                                     <span data-translate="Update play list">Update play list</span>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
             class="flex flex-wrap w-full mx-auto justify-evenly bg-gray-100 rounded-lg shadow-md text-sm mt-3 pb-1 pt-1">
             <button
                 class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                id="btnCntPlay" onclick="cntPlayAudio(this)">
+                id="btnCntPlay" onclick="KVR.cntPlayAudio(this)">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -189,7 +189,7 @@
             </button>
             <button
                 class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                id="btnRPSart" onclick="recordRPStart(this)">
+                id="btnRPSart" onclick="KVR.recordRPStart(this)">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -199,7 +199,7 @@
             </button>
             <button
                 class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                id="btnRPEnd" onclick="recordRPEnd(this)">
+                id="btnRPEnd" onclick="KVR.recordRPEnd(this)">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -209,7 +209,7 @@
             </button>
             <button
                 class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                id="btnRPAdd" onclick="addRP(this)">
+                id="btnRPAdd" onclick="KVR.addRP(this)">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -219,7 +219,7 @@
             </button>
             <button
                 class="flex items-center my-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                id="btnReset" onclick="resetAudioPlay(this)">
+                id="btnReset" onclick="KVR.resetAudioPlay(this)">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
