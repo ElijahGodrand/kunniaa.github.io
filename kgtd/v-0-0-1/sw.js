@@ -7,6 +7,7 @@ const urlsToCache = [
     'js/kgtd-egn.min.js',
     'js/kgtd.min.js',
     'js/sql-wasm.wasm',
+    'js/sw-register.min.js',
     'https://unpkg.com/dexie/dist/dexie.js',
     'https://cdn.jsdelivr.net/npm/eruda',
     'https://unpkg.com/vconsole@latest/dist/vconsole.min.js',
