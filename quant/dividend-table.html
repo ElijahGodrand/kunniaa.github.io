@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股股票的十年分红对当前市值的股息率统计表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义样式 */
+        table {
+            font-size: 0.8125rem; /* 比text-sm更小一点 */
+        }
+        th {
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover {
+            background-color: #f3f4f6;
+        }
+        .sort-icon {
+            margin-left: 4px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+        th.sorted-asc .sort-icon,
+        th.sorted-desc .sort-icon {
+            opacity: 1;
+        }
+        /* 紧凑的表头 */
+        th {
+            padding: 0.375rem 0.5rem !important;
+        }
+        td {
+            padding: 0.25rem 0.5rem !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4">
+    <div class="max-w-screen-2xl mx-auto">
+        <!-- 标题 -->
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">
+            A股股票的十年分红对当前市值的股息率统计表
+        </h1>
+
+        <!-- 统计时间 -->
+        <div id="stat-date" class="text-center text-gray-600 mb-4 text-lg">
+            统计时间：<span id="date-value">加载中...</span>
+        </div>
+
+        <!-- 警告提示 -->
+        <div class="text-center text-gray-600 mb-4 text-sm">
+            数据量大，滚动和排序略有卡顿。
+        </div>
+
+        <!-- 年份选择 -->
+        <div id="year-filter" class="mb-4 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hidden">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="font-medium text-gray-700 mr-2">选择年份:</span>
+                <div id="year-checkboxes" class="flex flex-wrap gap-2">
+                    <!-- 年份复选框将通过JS动态生成 -->
+                </div>
+                <button id="select-all-years" class="ml-2 px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200">
+                    全选
+                </button>
+                <button id="deselect-all-years" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                    全不选
+                </button>
+                <button id="reset-years" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                    重置
+                </button>
+            </div>
+            <div class="mt-2 text-sm text-gray-500">
+                已选择 <span id="selected-year-count">0</span> 个年份
+            </div>
+        </div>
+
+        <!-- 表格容器 -->
+        <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-sm">
+            <table id="dividend-table" class="min-w-full divide-y divide-gray-200">
+                <thead id="table-header" class="bg-gray-100">
+                    <!-- 表头将通过JS动态生成 -->
+                </thead>
+                <tbody id="table-body" class="bg-white divide-y divide-gray-200">
+                    <!-- 数据将通过JS动态生成 -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 加载状态 -->
+        <div id="loading" class="text-center py-8">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <p class="mt-2 text-gray-600">正在加载数据...</p>
+        </div>
+
+        <!-- 数据计数 -->
+        <div id="data-count" class="mt-4 text-right text-gray-500 text-sm hidden">
+            共 <span id="count-value">0</span> 只股票
+        </div>
+    </div>
+
+    <script>
+        // 全局数据
+        let stockData = [];
+        let tableConfig = {
+            sortColumn: null,
+            sortDirection: 'desc' // 'asc' 或 'desc'
+        };
+
+        // 年份范围
+        let yearStart = 0;
+        let yearEnd = 0;
+
+        // 年份过滤相关
+        let availableYears = [];  // 有数据的年份列表
+        let selectedYears = new Set();  // 选中的年份
+        let allYearsDataValid = [];  // 所有有数据的年份（过滤空年份）
+
+        // 行选择相关
+        let selectedRow = null;  // 当前选中的行（股票代码）
+
+        // 排序缓存
+        let sortCache = {
+            code: [],
+            name: [],
+            marketCap: [],
+            bonuses: {},  // 年份 -> 值数组
+            rates: {}     // 年份 -> 值数组
+        };
+
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+        });
+
+        // 加载数据函数
+        function loadData() {
+            const loadingEl = document.getElementById('loading');
+
+            // 方法1: 使用XMLHttpRequest（兼容file://协议）
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'No-007-res.json', true);
+            xhr.responseType = 'json';
+
+            xhr.onload = function() {
+                if (xhr.status === 200 || xhr.status === 0) {
+                    // status为0表示file://协议成功
+                    try {
+                        const data = xhr.response;
+                        if (data && typeof data === 'object') {
+                            processData(data);
+                        } else {
+                            // 尝试手动解析JSON
+                            const text = xhr.responseText;
+                            if (text) {
+                                processData(JSON.parse(text));
+                            } else {
+                                throw new Error('响应数据为空');
+                            }
+                        }
+                    } catch (parseError) {
+                        showError('数据解析失败: ' + parseError.message);
+                    }
+                } else {
+                    showError('HTTP错误: ' + xhr.status);
+                }
+            };
+
+            xhr.onerror = function() {
+                // XMLHttpRequest失败，尝试使用fetch作为备用
+                console.log('XMLHttpRequest失败，尝试fetch...');
+                tryFetchFallback();
+            };
+
+            xhr.ontimeout = function() {
+                showError('请求超时');
+            };
+
+            xhr.timeout = 10000; // 10秒超时
+            xhr.send();
+
+            // 备用fetch方法
+            function tryFetchFallback() {
+                fetch('No-007-res.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP错误: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        processData(data);
+                    })
+                    .catch(fetchError => {
+                        console.error('fetch也失败:', fetchError);
+                        // 最后尝试：直接嵌入数据或提供手动加载选项
+                        showError('无法加载数据文件。浏览器安全限制阻止了本地文件访问。<br><br><strong>解决方案：</strong><br>1. <strong>使用本地HTTP服务器</strong> (推荐):<br>   &nbsp;&nbsp;• 双击目录中的 <code>start-server.bat</code> 文件<br>   &nbsp;&nbsp;• 然后用浏览器访问 <code>http://localhost:8000</code><br>   &nbsp;&nbsp;• 或手动: 安装Python后运行 <code>python -m http.server</code><br><br>2. <strong>修改浏览器安全设置</strong> (不推荐):<br>   &nbsp;&nbsp;• Chrome: 关闭时加参数 <code>--allow-file-access-from-files</code><br>   &nbsp;&nbsp;• Firefox: 设置 <code>security.fileuri.strict_origin_policy</code> 为 false<br><br>3. <strong>手动加载JSON文件</strong>:<br>   &nbsp;&nbsp;• 点击下方的"手动加载JSON文件"按钮');
+                    });
+            }
+
+            function showError(message) {
+                console.error('加载数据失败:', message);
+                loadingEl.innerHTML = `
+                    <div class="text-red-600">
+                        <i class="fas fa-exclamation-triangle text-2xl"></i>
+                        <p class="mt-2">数据加载失败: ${message}</p>
+                        <p class="mt-2 text-sm">尝试解决方案:</p>
+                        <ul class="text-sm text-left mt-1 ml-4">
+                            <li>• 使用Chrome/Firefox浏览器</li>
+                            <li>• 启动本地HTTP服务器 (如: python -m http.server)</li>
+                            <li>• 或使用支持本地文件访问的浏览器扩展</li>
+                        </ul>
+                        <button onclick="loadData()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                            重试加载
+                        </button>
+                        <button onclick="showManualLoad()" class="mt-2 ml-2 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">
+                            手动加载JSON文件
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // 手动加载JSON文件
+        function showManualLoad() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        try {
+                            const data = JSON.parse(e.target.result);
+                            processData(data);
+                        } catch (error) {
+                            alert('JSON文件格式错误: ' + error.message);
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            };
+            input.click();
+        }
+
+        // 处理数据函数
+        function processData(data) {
+            // 提取info信息
+            const info = data.info;
+            yearStart = info.year_start;
+            yearEnd = info.year_end;
+
+            // 设置统计时间
+            document.getElementById('date-value').textContent = info.data_market_cap;
+
+            // 准备股票数据
+            stockData = [];
+
+            // 遍历所有股票代码（排除info）
+            Object.keys(data).forEach(stockCode => {
+                if (stockCode === 'info') return;
+
+                const stock = data[stockCode];
+                const marketCap = stock.market_cap;
+                const bonuses = stock.bonus;
+
+                // 计算每年的股息率
+                // 注意：分红单位是"万"，市值单位是"亿"，1亿=10000万
+                // 股息率(%) = (分红_万 / 市值_亿) × 0.01
+                const dividendRates = bonuses.map(bonus => {
+                    if (marketCap === 0 || bonus === 0) return 0;
+                    return (bonus / marketCap) * 0.01;
+                });
+
+                // 创建股票数据对象
+                const stockItem = {
+                    code: stockCode,
+                    name: stock.name,
+                    marketCap: marketCap,
+                    bonuses: bonuses,
+                    dividendRates: dividendRates
+                };
+
+                stockData.push(stockItem);
+            });
+
+            // 分析哪些年份有数据（过滤全为0的年份）
+            analyzeYearData();
+
+            // 预计算排序数据
+            precomputeSortData();
+
+            // 隐藏加载状态
+            document.getElementById('loading').classList.add('hidden');
+
+            // 显示年份选择框
+            document.getElementById('year-filter').classList.remove('hidden');
+
+            // 更新数据计数
+            document.getElementById('count-value').textContent = stockData.length;
+            document.getElementById('data-count').classList.remove('hidden');
+
+            // 生成年份选择框
+            generateYearCheckboxes(info);
+
+            // 生成表头（根据选中的年份）
+            generateTableHeader(info);
+
+            // 生成表格数据
+            generateTableBody();
+
+            // 初始按总市值降序排序
+            sortTable('marketCap', 'desc');
+        }
+
+        // 分析年份数据函数
+        function analyzeYearData() {
+            // 初始化年份数据统计
+            const yearStats = {};
+
+            // 初始化所有可能的年份
+            for (let year = yearStart; year >= yearEnd; year--) {
+                yearStats[year] = {
+                    totalBonus: 0,
+                    stockCount: 0,
+                    hasData: false
+                };
+            }
+
+            // 统计每个年份的数据
+            stockData.forEach(stock => {
+                stock.bonuses.forEach((bonus, index) => {
+                    const year = yearStart - index;
+                    if (year >= yearEnd && year <= yearStart) {
+                        yearStats[year].totalBonus += bonus;
+                        yearStats[year].stockCount++;
+                        if (bonus > 0) {
+                            yearStats[year].hasData = true;
+                        }
+                    }
+                });
+            });
+
+            // 确定哪些年份有数据
+            allYearsDataValid = [];
+            for (let year = yearStart; year >= yearEnd; year--) {
+                if (yearStats[year].hasData) {
+                    allYearsDataValid.push(year);
+                }
+            }
+
+            // 默认选择所有有数据的年份
+            selectedYears = new Set(allYearsDataValid);
+            availableYears = [...allYearsDataValid].sort((a, b) => b - a); // 从大到小排序
+
+            console.log('有数据的年份:', availableYears);
+            console.log('年份统计:', yearStats);
+        }
+
+        // 预计算排序数据函数
+        function precomputeSortData() {
+            // 清空缓存
+            sortCache = {
+                code: [],
+                name: [],
+                marketCap: [],
+                bonuses: {},
+                rates: {}
+            };
+
+            // 预计算固定列
+            stockData.forEach((stock, index) => {
+                sortCache.code[index] = stock.code;
+                sortCache.name[index] = stock.name;
+                sortCache.marketCap[index] = stock.marketCap;
+            });
+
+            // 预计算年份相关列（所有年份，包括未选中的）
+            for (let year = yearStart; year >= yearEnd; year--) {
+                const yearIndex = yearStart - year;
+                sortCache.bonuses[year] = [];
+                sortCache.rates[year] = [];
+
+                stockData.forEach((stock, index) => {
+                    if (yearIndex >= 0 && yearIndex < stock.bonuses.length) {
+                        sortCache.bonuses[year][index] = stock.bonuses[yearIndex];
+                        sortCache.rates[year][index] = stock.dividendRates[yearIndex];
+                    } else {
+                        sortCache.bonuses[year][index] = 0;
+                        sortCache.rates[year][index] = 0;
+                    }
+                });
+            }
+
+            console.log('排序数据预计算完成');
+        }
+
+        // 获取股票交易所函数
+        function getStockExchange(stockCode) {
+            // 提取点号前的部分
+            const codePart = stockCode.split('.')[0];
+
+            // 根据前三位判断
+            if (codePart.startsWith('60') || codePart.startsWith('688')) {
+                return 'SH'; // 沪市
+            } else if (codePart.startsWith('00') || codePart.startsWith('30')) {
+                return 'SZ'; // 深市
+            } else if (stockCode.includes('.XSHE')) {
+                return 'SZ'; // 深圳交易所
+            } else if (stockCode.includes('.XSHG')) {
+                return 'SH'; // 上海交易所
+            } else {
+                // 默认假设为深市
+                return 'SZ';
+            }
+        }
+
+        // 获取雪球链接函数
+        function getXueqiuUrl(stockCode) {
+            const exchange = getStockExchange(stockCode);
+            const codePart = stockCode.split('.')[0];
+            return `https://xueqiu.com/S/${exchange}${codePart}`;
+        }
+
+        // 生成年份选择框函数
+        function generateYearCheckboxes(info) {
+            const container = document.getElementById('year-checkboxes');
+            container.innerHTML = '';
+
+            availableYears.forEach(year => {
+                const checkboxId = `year-${year}`;
+                const checkbox = document.createElement('div');
+                checkbox.className = 'flex items-center';
+                checkbox.innerHTML = `
+                    <input type="checkbox"
+                           id="${checkboxId}"
+                           value="${year}"
+                           ${selectedYears.has(year) ? 'checked' : ''}
+                           class="h-4 w-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="${checkboxId}" class="ml-1 text-sm text-gray-700">
+                        ${year}年
+                    </label>
+                `;
+                container.appendChild(checkbox);
+
+                // 添加事件监听
+                const input = checkbox.querySelector('input');
+                input.addEventListener('change', function() {
+                    if (this.checked) {
+                        selectedYears.add(year);
+                    } else {
+                        selectedYears.delete(year);
+                    }
+                    updateSelectedYearCount();
+                    // 重新生成表格
+                    generateTableHeader(info);
+                    generateTableBody();
+                });
+            });
+
+            // 添加按钮事件
+            document.getElementById('select-all-years').addEventListener('click', function() {
+                selectedYears = new Set(availableYears);
+                updateCheckboxes();
+                updateSelectedYearCount();
+                generateTableHeader(info);
+                generateTableBody();
+            });
+
+            document.getElementById('deselect-all-years').addEventListener('click', function() {
+                selectedYears.clear();
+                updateCheckboxes();
+                updateSelectedYearCount();
+                generateTableHeader(info);
+                generateTableBody();
+            });
+
+            document.getElementById('reset-years').addEventListener('click', function() {
+                selectedYears = new Set(availableYears);
+                updateCheckboxes();
+                updateSelectedYearCount();
+                generateTableHeader(info);
+                generateTableBody();
+            });
+
+            updateSelectedYearCount();
+        }
+
+        // 更新复选框状态
+        function updateCheckboxes() {
+            availableYears.forEach(year => {
+                const checkbox = document.getElementById(`year-${year}`);
+                if (checkbox) {
+                    checkbox.checked = selectedYears.has(year);
+                }
+            });
+        }
+
+        // 更新选中年份计数
+        function updateSelectedYearCount() {
+            document.getElementById('selected-year-count').textContent = selectedYears.size;
+        }
+
+        // 生成表头函数
+        function generateTableHeader(info) {
+            const header = document.getElementById('table-header');
+            let headerHTML = '<tr>';
+
+            // 固定列（使用紧凑padding）
+            headerHTML += '<th class="text-left font-medium text-gray-700" rowspan="2" onclick="sortTable(\'code\')" data-column="code">股票代码 <i class="sort-icon fas fa-sort"></i></th>';
+            headerHTML += '<th class="text-left font-medium text-gray-700" rowspan="2" onclick="sortTable(\'name\')" data-column="name">股票名称 <i class="sort-icon fas fa-sort"></i></th>';
+            headerHTML += '<th class="text-left font-medium text-gray-700" rowspan="2" onclick="sortTable(\'marketCap\')" data-column="marketCap">总市值(亿) <i class="sort-icon fas fa-sort"></i></th>';
+
+            // 动态年份列（只显示选中的年份）
+            const sortedSelectedYears = Array.from(selectedYears).sort((a, b) => b - a); // 从大到小排序
+            sortedSelectedYears.forEach(year => {
+                headerHTML += `
+                    <th class="text-left font-medium text-gray-700" colspan="2">
+                        ${year}年
+                    </th>
+                `;
+            });
+
+            headerHTML += '</tr><tr>';
+
+            // 年份的详细列（分红和股息率）
+            sortedSelectedYears.forEach(year => {
+                headerHTML += `
+                    <th class="text-left font-medium text-gray-500" onclick="sortTable('bonus_${year}')" data-column="bonus_${year}" data-year="${year}" data-type="bonus">
+                        分红(${info.bonus_unit}) <i class="sort-icon fas fa-sort"></i>
+                    </th>
+                    <th class="text-left font-medium text-gray-500" onclick="sortTable('rate_${year}')" data-column="rate_${year}" data-year="${year}" data-type="rate">
+                        股息率(%) <i class="sort-icon fas fa-sort"></i>
+                    </th>
+                `;
+            });
+
+            headerHTML += '</tr>';
+            header.innerHTML = headerHTML;
+        }
+
+        // 生成表格数据函数
+        function generateTableBody() {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+
+            // 稍后通过排序函数填充
+            renderTableBody(stockData);
+        }
+
+        // 渲染表格数据函数
+        function renderTableBody(data) {
+            const tbody = document.getElementById('table-body');
+            let bodyHTML = '';
+
+            // 选中的年份（从大到小排序）
+            const sortedSelectedYears = Array.from(selectedYears).sort((a, b) => b - a);
+
+            data.forEach((stock, index) => {
+                const rowClass = index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+
+                bodyHTML += `<tr class="${rowClass} hover:bg-blue-100" data-stock-code="${stock.code}">`;
+
+                // 股票代码和名称
+                const xueqiuUrl = getXueqiuUrl(stock.code);
+                bodyHTML += `<td class="font-mono">
+                    <a href="${xueqiuUrl}" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline" title="在雪球查看">
+                        ${stock.code}
+                    </a>
+                </td>`;
+                bodyHTML += `<td class="">${stock.name}</td>`;
+
+                // 总市值
+                bodyHTML += `<td class="text-right font-medium">${formatNumber(stock.marketCap, 2)}</td>`;
+
+                // 每年的分红和股息率（只显示选中的年份）
+                sortedSelectedYears.forEach(year => {
+                    // 计算该年份在数组中的索引
+                    const yearIndex = yearStart - year;
+
+                    // 确保索引在有效范围内
+                    if (yearIndex >= 0 && yearIndex < stock.bonuses.length) {
+                        const bonus = stock.bonuses[yearIndex];
+                        const rate = stock.dividendRates[yearIndex];
+
+                        // 分红
+                        const bonusClass = bonus === 0 ? 'text-gray-400' : 'text-gray-800';
+                        bodyHTML += `<td class="text-right ${bonusClass}">${formatNumber(bonus, 2)}</td>`;
+
+                        // 股息率
+                        let rateClass = 'text-gray-800';
+                        let rateText = formatNumber(rate, 2);
+
+                        if (rate === 0) {
+                            rateClass = 'text-gray-400';
+                        } else if (rate >= 5) {
+                            rateClass = 'text-green-600 font-medium';
+                        } else if (rate >= 3) {
+                            rateClass = 'text-blue-600';
+                        }
+
+                        bodyHTML += `<td class="text-right ${rateClass}">${rateText}</td>`;
+                    } else {
+                        // 数据缺失，显示空单元格
+                        bodyHTML += `<td class="text-right text-gray-300">-</td>`;
+                        bodyHTML += `<td class="text-right text-gray-300">-</td>`;
+                    }
+                });
+
+                bodyHTML += '</tr>';
+            });
+
+            tbody.innerHTML = bodyHTML;
+
+            // 添加行点击事件
+            addRowClickEvents();
+
+            // 更新排序图标
+            updateSortIcons();
+        }
+
+        // 添加行点击事件函数
+        function addRowClickEvents() {
+            const rows = document.querySelectorAll('#table-body tr');
+            rows.forEach(row => {
+                row.addEventListener('click', function() {
+                    const stockCode = this.getAttribute('data-stock-code');
+
+                    // 移除之前选中的行的样式
+                    if (selectedRow) {
+                        const prevRow = document.querySelector(`tr[data-stock-code="${selectedRow}"]`);
+                        if (prevRow) {
+                            prevRow.classList.remove('bg-blue-200', 'shadow-sm');
+                            // 恢复斑马纹样式
+                            const index = Array.from(prevRow.parentNode.children).indexOf(prevRow);
+                            if (index % 2 === 0) {
+                                prevRow.classList.add('bg-white');
+                            } else {
+                                prevRow.classList.add('bg-gray-50');
+                            }
+                        }
+                    }
+
+                    // 如果点击的是同一行，取消选择
+                    if (selectedRow === stockCode) {
+                        selectedRow = null;
+                        // 恢复斑马纹样式
+                        const index = Array.from(this.parentNode.children).indexOf(this);
+                        this.classList.remove('bg-blue-200', 'shadow-sm');
+                        if (index % 2 === 0) {
+                            this.classList.add('bg-white');
+                        } else {
+                            this.classList.add('bg-gray-50');
+                        }
+                    } else {
+                        // 选择新行
+                        selectedRow = stockCode;
+
+                        // 移除所有行的斑马纹样式，添加选中样式
+                        this.classList.remove('bg-white', 'bg-gray-50');
+                        this.classList.add('bg-blue-200', 'shadow-sm');
+                    }
+                });
+            });
+        }
+
+        // 排序表格函数
+        function sortTable(column, direction = null) {
+            // 检查列是否有效（对于年份列，检查是否在选中年份中）
+            if (column.startsWith('bonus_') || column.startsWith('rate_')) {
+                const year = parseInt(column.split('_')[1]);
+                if (!selectedYears.has(year)) {
+                    console.warn(`年份 ${year} 未被选择，跳过排序`);
+                    return;
+                }
+            }
+
+            // 如果指定了方向，使用它；否则切换
+            if (direction) {
+                tableConfig.sortDirection = direction;
+            } else {
+                // 如果是同一列，切换方向；否则设为降序
+                if (tableConfig.sortColumn === column) {
+                    tableConfig.sortDirection = tableConfig.sortDirection === 'asc' ? 'desc' : 'asc';
+                } else {
+                    tableConfig.sortColumn = column;
+                    tableConfig.sortDirection = 'desc';
+                }
+            }
+
+            tableConfig.sortColumn = column;
+
+            // 创建索引数组 [0, 1, 2, ..., stockData.length-1]
+            const indices = Array.from({length: stockData.length}, (_, i) => i);
+
+            // 排序索引（使用预计算的数据）
+            indices.sort((indexA, indexB) => {
+                let valueA, valueB;
+
+                // 从缓存中获取值
+                if (column === 'code') {
+                    valueA = sortCache.code[indexA];
+                    valueB = sortCache.code[indexB];
+                } else if (column === 'name') {
+                    valueA = sortCache.name[indexA];
+                    valueB = sortCache.name[indexB];
+                } else if (column === 'marketCap') {
+                    valueA = sortCache.marketCap[indexA];
+                    valueB = sortCache.marketCap[indexB];
+                } else if (column.startsWith('bonus_')) {
+                    const year = parseInt(column.split('_')[1]);
+                    valueA = sortCache.bonuses[year][indexA] || 0;
+                    valueB = sortCache.bonuses[year][indexB] || 0;
+                } else if (column.startsWith('rate_')) {
+                    const year = parseInt(column.split('_')[1]);
+                    valueA = sortCache.rates[year][indexA] || 0;
+                    valueB = sortCache.rates[year][indexB] || 0;
+                }
+
+                // 比较
+                if (typeof valueA === 'string') {
+                    // 字符串比较
+                    if (tableConfig.sortDirection === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                } else {
+                    // 数字比较
+                    if (tableConfig.sortDirection === 'asc') {
+                        return valueA - valueB;
+                    } else {
+                        return valueB - valueA;
+                    }
+                }
+            });
+
+            // 根据排序后的索引重新排列数据
+            const sortedData = indices.map(index => stockData[index]);
+
+            // 渲染排序后的数据
+            renderTableBody(sortedData);
+        }
+
+        // 更新排序图标函数
+        function updateSortIcons() {
+            // 重置所有图标
+            document.querySelectorAll('th[data-column]').forEach(th => {
+                th.classList.remove('sorted-asc', 'sorted-desc');
+                const icon = th.querySelector('.sort-icon');
+                if (icon) {
+                    icon.className = 'sort-icon fas fa-sort';
+                }
+            });
+
+            // 设置当前排序列的图标
+            if (tableConfig.sortColumn) {
+                const header = document.querySelector(`th[data-column="${tableConfig.sortColumn}"]`);
+                if (header) {
+                    header.classList.add(`sorted-${tableConfig.sortDirection}`);
+                    const icon = header.querySelector('.sort-icon');
+                    if (icon) {
+                        if (tableConfig.sortDirection === 'asc') {
+                            icon.className = 'sort-icon fas fa-sort-up';
+                        } else {
+                            icon.className = 'sort-icon fas fa-sort-down';
+                        }
+                    }
+                }
+            }
+        }
+
+        // 格式化数字函数
+        function formatNumber(num, decimals = 2) {
+            if (num === 0) return '0';
+            if (typeof num !== 'number' || isNaN(num)) return '-';
+
+            // 如果数字很小，显示更多小数位
+            if (Math.abs(num) < 0.01) {
+                return num.toFixed(6).replace(/\.?0+$/, '');
+            }
+
+            // 正常格式化
+            return num.toFixed(decimals).replace(/\.?0+$/, '');
+        }
+
+        // 导出到全局
+        window.sortTable = sortTable;
+        window.loadData = loadData;
+        window.showManualLoad = showManualLoad;
+    </script>
+</body>
+</html>
