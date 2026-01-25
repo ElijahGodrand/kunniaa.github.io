@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股申万二级行业市值龙头统计</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .industry-link {
+            transition: all 0.2s ease;
+        }
+        .industry-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .stock-row {
+            transition: background-color 0.2s ease;
+        }
+        .stock-row:hover {
+            background-color: #f8fafc;
+        }
+        .back-to-top {
+            transition: all 0.3s ease;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 标题 -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
+                A股申万二级行业市值龙头统计
+            </h1>
+            <p class="text-lg text-gray-600">
+                点击下方行业名称快速跳转到对应的龙头股票详情
+            </p>
+        </header>
+
+        <!-- 行业导航 -->
+        <section class="mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-3 border-b border-gray-200">
+                    <i class="fas fa-list mr-2 text-blue-500"></i>行业索引
+                </h2>
+                <div id="industry-nav" class="flex flex-wrap gap-3">
+                    <!-- 行业链接将通过JavaScript动态生成 -->
+                    <div class="text-gray-500">正在加载行业数据...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行业详情 -->
+        <section id="industry-details">
+            <!-- 行业详情将通过JavaScript动态生成 -->
+            <div class="text-center py-12 text-gray-500">
+                <i class="fas fa-spinner fa-spin text-3xl mb-4"></i>
+                <p>正在加载行业龙头数据...</p>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-600">
+            <p class="mb-2">数据来源：申万二级行业分类</p>
+            <p class="text-sm">股票数据仅供参考，投资有风险，入市需谨慎</p>
+            <p class="text-sm mt-4">更新时间：<span id="update-date"></span></p>
+        </footer>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#top" class="back-to-top fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
+
+    <script>
+        // 更新日期
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // 数据文件路径
+        const dataFile = '每个申万二级行业的前五名-有名称.txt';
+
+
+        // 加载和解析数据 - 使用多种方法兼容本地环境和Web环境
+        function loadDataFile() {
+            return new Promise((resolve, reject) => {
+                // 方法1: 使用fetch API (适用于Web环境)
+                fetch(dataFile)
+                    .then(response => {
+                        if (response.ok) {
+                            return response.text();
+                        } else {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        }
+                    })
+                    .then(data => resolve(data))
+                    .catch(fetchError => {
+                        console.log('fetch方法失败，尝试XMLHttpRequest:', fetchError.message);
+
+                        // 方法2: 使用XMLHttpRequest (兼容本地文件环境)
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('GET', dataFile, true);
+                        xhr.overrideMimeType('text/plain; charset=utf-8');
+
+                        xhr.onload = function() {
+                            if (xhr.status >= 200 && xhr.status < 400) {
+                                resolve(xhr.responseText);
+                            } else {
+                                console.log('XMLHttpRequest异步方法失败，尝试同步方法:', xhr.status);
+
+                                // 方法3: 使用同步XMLHttpRequest (某些本地环境)
+                                try {
+                                    const syncXhr = new XMLHttpRequest();
+                                    syncXhr.open('GET', dataFile, false); // 同步请求
+                                    syncXhr.send(null);
+
+                                    if (syncXhr.status === 200 || syncXhr.status === 0) {
+                                        // 本地文件系统可能返回0状态
+                                        resolve(syncXhr.responseText);
+                                    } else {
+                                        throw new Error(`同步请求失败: HTTP ${syncXhr.status}`);
+                                    }
+                                } catch (syncError) {
+                                    console.log('同步XMLHttpRequest也失败:', syncError.message);
+
+                                    // 方法4: 尝试从相对路径读取 (使用FileReader API，需要用户交互)
+                                    showManualLoadOption(reject);
+                                }
+                            }
+                        };
+
+                        xhr.onerror = function() {
+                            console.log('XMLHttpRequest onerror触发');
+                            // 尝试同步方法
+                            try {
+                                const syncXhr = new XMLHttpRequest();
+                                syncXhr.open('GET', dataFile, false);
+                                syncXhr.send(null);
+
+                                if (syncXhr.status === 200 || syncXhr.status === 0) {
+                                    resolve(syncXhr.responseText);
+                                } else {
+                                    throw new Error(`同步请求失败: HTTP ${syncXhr.status}`);
+                                }
+                            } catch (syncError) {
+                                console.log('所有自动方法都失败:', syncError.message);
+                                showManualLoadOption(reject);
+                            }
+                        };
+
+                        xhr.send();
+                    });
+            });
+        }
+
+        // 显示手动加载选项
+        function showManualLoadOption(reject) {
+            const navContainer = document.getElementById('industry-nav');
+            const detailsContainer = document.getElementById('industry-details');
+
+            navContainer.innerHTML = `
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-yellow-800">无法自动加载数据文件</h3>
+                            <div class="mt-2 text-sm text-yellow-700">
+                                <p>可能是浏览器安全限制。请尝试：</p>
+                                <ol class="list-decimal pl-5 mt-1">
+                                    <li>将HTML文件和数据文件放在同一文件夹</li>
+                                    <li>使用支持本地文件读取的浏览器（如Chrome启动时添加--allow-file-access-from-files参数）</li>
+                                    <li>或将文件发布到Web服务器</li>
+                                </ol>
+                                <p class="mt-2">当前数据文件路径：<code class="bg-gray-100 px-2 py-1 rounded">${dataFile}</code></p>
+                                <p class="mt-2">或者，您可以手动选择数据文件：</p>
+                                <button id="manual-file-select-btn" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition">
+                                    <i class="fas fa-folder-open mr-2"></i>手动选择数据文件
+                                </button>
+                                <p class="mt-2 text-xs">错误信息：浏览器安全策略限制本地文件读取</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            detailsContainer.innerHTML = `
+                <div class="text-center py-12">
+                    <i class="fas fa-file-exclamation text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">数据加载失败</h3>
+                    <p class="text-gray-600 mb-4">无法读取数据文件，请按照上方提示操作。</p>
+                    <p class="text-sm text-gray-500">数据文件应该与HTML文件在同一目录下。</p>
+                    <button id="manual-file-select-btn2" class="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition font-medium">
+                        <i class="fas fa-upload mr-2"></i>手动选择数据文件
+                    </button>
+                </div>
+            `;
+
+            // 创建隐藏的文件输入元素
+            // 先移除可能已存在的文件输入元素
+            const existingInput = document.getElementById('data-file-input');
+            if (existingInput) {
+                document.body.removeChild(existingInput);
+            }
+
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.id = 'data-file-input';
+            fileInput.accept = '.txt,.text';
+            fileInput.style.display = 'none';
+            document.body.appendChild(fileInput);
+
+            // 文件选择成功后的处理函数
+            function handleFileSelect(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                // 显示加载状态
+                detailsContainer.innerHTML = `
+                    <div class="text-center py-12">
+                        <i class="fas fa-spinner fa-spin text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">正在加载数据...</h3>
+                        <p class="text-gray-600">正在读取文件: ${file.name}</p>
+                    </div>
+                `;
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const data = e.target.result;
+                        const industries = parseIndustryData(data);
+
+                        // 按字母顺序排序行业
+                        industries.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+
+                        // 生成行业导航
+                        generateIndustryNav(industries);
+
+                        // 生成行业详情
+                        generateIndustryDetails(industries);
+
+                        // 移除文件输入元素
+                        if (fileInput.parentNode) {
+                            document.body.removeChild(fileInput);
+                        }
+
+                        // 显示成功提示
+                        //const successMsg = document.createElement('div');
+                        
+                        //successMsg.className = 'bg-green-50 border-l-4 border-green-400 p-4 mb-4';
+                        //successMsg.innerHTML = ``;
+                        //successMsg.innerHTML = `
+                        //    <div class="flex">
+                        //        <div class="flex-shrink-0">
+                        //            <i class="fas fa-check-circle text-green-400"></i>
+                        //        </div>
+                        //        <div class="ml-3">
+                        //            <p class="text-sm text-green-800">数据加载成功！已从手动选择的文件 <strong>${file.name}</strong> 加载数据。</p>
+                        //        </div>
+                        //    </div>
+                        //`;
+                        //navContainer.insertBefore(successMsg, navContainer.firstChild);
+                    } catch (error) {
+                        console.error('手动加载数据失败:', error);
+                        detailsContainer.innerHTML = `
+                            <div class="text-center py-12">
+                                <i class="fas fa-exclamation-circle text-4xl text-red-500 mb-4"></i>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">数据解析失败</h3>
+                                <p class="text-gray-600 mb-4">文件格式不正确，请确保选择正确的数据文件。</p>
+                                <button onclick="location.reload()" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+                                    重新加载页面
+                                </button>
+                            </div>
+                        `;
+                    }
+                };
+
+                reader.onerror = function() {
+                    console.error('文件读取失败');
+                    detailsContainer.innerHTML = `
+                        <div class="text-center py-12">
+                            <i class="fas fa-exclamation-circle text-4xl text-red-500 mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">文件读取失败</h3>
+                            <p class="text-gray-600 mb-4">无法读取文件内容，请检查文件权限或选择其他文件。</p>
+                            <button onclick="location.reload()" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+                                重新加载页面
+                            </button>
+                        </div>
+                    `;
+                };
+
+                reader.readAsText(file, 'UTF-8');
+            }
+
+            // 绑定文件选择事件
+            fileInput.addEventListener('change', handleFileSelect);
+
+            // 绑定按钮点击事件
+            document.getElementById('manual-file-select-btn').addEventListener('click', () => {
+                fileInput.click();
+            });
+
+            document.getElementById('manual-file-select-btn2').addEventListener('click', () => {
+                fileInput.click();
+            });
+
+            reject(new Error('无法加载数据文件：浏览器安全限制'));
+        }
+
+        // 开始加载数据
+        loadDataFile()
+            .then(data => {
+                // 解析数据
+                const industries = parseIndustryData(data);
+
+                // 按字母顺序排序行业
+                industries.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+
+                // 生成行业导航
+                generateIndustryNav(industries);
+
+                // 生成行业详情
+                generateIndustryDetails(industries);
+            })
+            .catch(error => {
+                console.error('加载数据失败:', error);
+                // showManualLoadOption已经显示错误信息
+            });
+
+        // 解析行业数据
+        function parseIndustryData(data) {
+            const lines = data.split('\n').filter(line => line.trim() !== '');
+            const industries = [];
+
+            lines.forEach(line => {
+                // 找到第一个空格的位置，分隔行业名称和数据
+                const spaceIndex = line.indexOf(' ');
+                if (spaceIndex === -1) return;
+
+                const industryName = line.substring(0, spaceIndex);
+                const dataStr = line.substring(spaceIndex + 1);
+
+                try {
+                    // 解析Python列表格式的数据
+                    const stocks = JSON.parse(dataStr.replace(/'/g, '"'));
+                    industries.push({
+                        name: industryName,
+                        stocks: stocks.map(stock => ({
+                            code: stock[0],
+                            name: stock[1],
+                            marketValue: stock[2]
+                        }))
+                    });
+                } catch (e) {
+                    console.error('解析数据失败:', line, e);
+                }
+            });
+
+            return industries;
+        }
+
+        // 生成行业导航
+        function generateIndustryNav(industries) {
+            const navContainer = document.getElementById('industry-nav');
+            navContainer.innerHTML = '';
+
+            industries.forEach(industry => {
+                // 创建行业名称的锚点ID（移除特殊字符）
+                const anchorId = 'industry-' + industry.name.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '');
+
+                const link = document.createElement('a');
+                link.href = `#${anchorId}`;
+                link.className = 'industry-link bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-3 rounded-lg font-medium';
+                link.textContent = industry.name;
+
+                navContainer.appendChild(link);
+            });
+        }
+
+        // 生成行业详情
+        function generateIndustryDetails(industries) {
+            const detailsContainer = document.getElementById('industry-details');
+            detailsContainer.innerHTML = '';
+
+            industries.forEach(industry => {
+                // 创建行业详情部分
+                const anchorId = 'industry-' + industry.name.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '');
+
+                const section = document.createElement('div');
+                section.id = anchorId;
+                section.className = 'mb-12 bg-white rounded-xl shadow-lg overflow-hidden';
+
+                // 行业标题
+                const header = document.createElement('div');
+                header.className = 'bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6';
+
+                const titleLink = document.createElement('a');
+                titleLink.href = '#industry-nav';
+                titleLink.className = 'float-right text-white hover:text-blue-200 text-sm';
+                titleLink.innerHTML = '<i class="fas fa-arrow-up mr-1"></i>返回顶部';
+
+                const title = document.createElement('h3');
+                title.className = 'text-2xl font-bold';
+                title.textContent = industry.name;
+
+                header.appendChild(title);
+                header.appendChild(titleLink);
+
+                // 股票表格
+                const table = document.createElement('div');
+                table.className = 'p-6';
+
+                const tableHeader = document.createElement('div');
+                tableHeader.className = 'grid grid-cols-12 gap-4 mb-4 pb-3 border-b border-gray-200 font-semibold text-gray-700';
+                tableHeader.innerHTML = `
+                    <div class="col-span-3">股票代码</div>
+                    <div class="col-span-4">股票名称</div>
+                    <div class="col-span-3">股票市值（亿元）</div>
+                    <div class="col-span-2">排名</div>
+                `;
+
+                table.appendChild(tableHeader);
+
+                // 添加股票行
+                industry.stocks.forEach((stock, index) => {
+                    const stockRow = document.createElement('div');
+                    stockRow.className = `stock-row grid grid-cols-12 gap-4 py-4 ${index % 2 === 0 ? 'bg-gray-50' : ''} rounded-lg`;
+
+                    // 格式化市值（保留两位小数）
+                    const formattedValue = stock.marketValue.toFixed(2);
+
+                    // 判断交易所并生成雪球链接
+                    const xueqiuLink = getXueqiuLink(stock.code);
+
+                    stockRow.innerHTML = `
+                        <div class="col-span-3">
+                            <a href="${xueqiuLink}" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+                                ${stock.code.split('.')[0]}
+                                <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                            </a>
+                            <span class="text-xs ml-2 px-2 py-1 rounded ${stock.code.includes('.XSHG') ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}">
+                                ${stock.code.includes('.XSHG') ? '沪市' : '深市'}
+                            </span>
+                        </div>
+                        <div class="col-span-4 font-medium">${stock.name}</div>
+                        <div class="col-span-3 font-bold text-gray-800">${formattedValue}</div>
+                        <div class="col-span-2">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full ${index < 3 ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'} font-bold">
+                                ${index + 1}
+                            </span>
+                        </div>
+                    `;
+
+                    table.appendChild(stockRow);
+                });
+
+                section.appendChild(header);
+                section.appendChild(table);
+                detailsContainer.appendChild(section);
+            });
+        }
+
+        // 根据股票代码生成雪球链接
+        function getXueqiuLink(stockCode) {
+            // 提取代码部分（去掉交易所后缀）
+            const code = stockCode.split('.')[0];
+            const exchange = stockCode.split('.')[1];
+
+            // 判断市场
+            let marketPrefix = 'SH'; // 默认上海
+
+            if (exchange === 'XSHE') {
+                // 深市
+                marketPrefix = 'SZ';
+            } else if (exchange === 'XSHG') {
+                // 沪市
+                marketPrefix = 'SH';
+            }
+
+            return `https://xueqiu.com/S/${marketPrefix}${code}`;
+        }
+    </script>
+</body>
+</html>
