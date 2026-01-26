@@ -62,31 +62,6 @@
                 市值获取时间：加载中...
             </div>
 
-            <!-- 数据文件加载区域 -->
-            <div class="max-w-lg mx-auto mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div>
-                        <p class="text-blue-800 font-medium mb-1">数据加载方式</p>
-                        <p class="text-sm text-blue-600">由于浏览器安全限制，请选择一种方式加载数据</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-2">
-                        <button id="auto-load-btn" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors flex items-center">
-                            <i class="fas fa-bolt mr-2"></i>自动加载（在线部署）
-                        </button>
-                        <div class="relative">
-                            <input type="file" id="file-input" accept=".json" class="hidden">
-                            <label for="file-input" class="cursor-pointer px-4 py-2 bg-white hover:bg-gray-50 text-blue-600 border border-blue-300 rounded-lg font-medium transition-colors flex items-center">
-                                <i class="fas fa-upload mr-2"></i>选择JSON文件
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div id="file-info" class="mt-3 text-sm text-blue-700 hidden">
-                    <i class="fas fa-info-circle mr-1"></i>
-                    <span id="selected-file-name">未选择文件</span>
-                </div>
-            </div>
-
             <!-- 行业搜索框 -->
             <div class="max-w-md mx-auto mb-6">
                 <div class="relative">
@@ -95,10 +70,10 @@
                     </div>
                     <input type="text" id="sector-search"
                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all"
-                           placeholder="请先加载数据..."
+                           placeholder="数据加载中..."
                            disabled>
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <span id="sector-count" class="text-gray-500 text-sm">请加载数据</span>
+                        <span id="sector-count" class="text-gray-500 text-sm">加载中...</span>
                     </div>
                 </div>
             </div>
@@ -129,6 +104,51 @@
         <button id="back-to-top" class="back-to-top hidden bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300">
             <i class="fas fa-arrow-up"></i>
         </button>
+
+        <!-- 隐藏的文件输入（用于手动加载） -->
+        <input type="file" id="file-input" accept=".json" class="hidden">
+
+        <!-- 文件选择模态对话框 -->
+        <div id="file-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-exclamation-triangle text-red-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">数据加载失败</h3>
+                            <p class="text-sm text-gray-600">自动加载因浏览器安全限制而失败</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-gray-700 mb-3">由于浏览器安全策略，无法自动加载本地数据文件。</p>
+                        <p class="text-gray-700 mb-4">请手动选择数据文件继续：</p>
+
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                            <div class="flex items-center text-blue-800">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <span class="text-sm">请选择文件：<span class="font-medium">No-008-res.json</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button id="modal-select-file" class="flex-1 px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors flex items-center justify-center">
+                            <i class="fas fa-file-import mr-2"></i>选择JSON文件
+                        </button>
+                        <button id="modal-retry-auto" class="flex-1 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-colors flex items-center justify-center">
+                            <i class="fas fa-redo mr-2"></i>重试自动加载
+                        </button>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <p class="text-xs text-gray-500">在线部署时自动加载会正常工作，本地使用时需手动选择文件</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -140,35 +160,67 @@
         document.addEventListener('DOMContentLoaded', function() {
             setupEventListeners();
             setupBackToTop();
+            // 页面加载后立即尝试自动加载数据
+            autoLoadData();
         });
 
         // 设置事件监听器
         function setupEventListeners() {
-            // 自动加载按钮
-            const autoLoadBtn = document.getElementById('auto-load-btn');
-            if (autoLoadBtn) {
-                autoLoadBtn.addEventListener('click', handleAutoLoad);
-            }
-
             // 文件选择输入
             const fileInput = document.getElementById('file-input');
             if (fileInput) {
                 fileInput.addEventListener('change', handleFileSelect);
             }
 
-            // 初始显示状态
-            updateLoadingState('idle');
+            // 模态对话框按钮
+            const modalSelectFileBtn = document.getElementById('modal-select-file');
+            if (modalSelectFileBtn) {
+                modalSelectFileBtn.addEventListener('click', function() {
+                    // 触发隐藏的文件输入点击
+                    fileInput.click();
+                    // 隐藏模态对话框（文件选择后会处理）
+                });
+            }
+
+            const modalRetryAutoBtn = document.getElementById('modal-retry-auto');
+            if (modalRetryAutoBtn) {
+                modalRetryAutoBtn.addEventListener('click', function() {
+                    // 隐藏模态对话框并重试自动加载
+                    hideFileModal();
+                    autoLoadData();
+                });
+            }
+
+            // 初始显示状态 - 直接进入加载状态
+            updateLoadingState('loading');
         }
 
-        // 处理自动加载
-        async function handleAutoLoad() {
+        // 自动加载数据
+        async function autoLoadData() {
             updateLoadingState('loading');
             try {
                 await loadDataFromUrl('No-008-res.json');
             } catch (error) {
                 console.error('自动加载失败:', error);
-                showError('自动加载失败: ' + error.message + '<br><br>通常是因为本地浏览器安全限制。<br>请尝试使用"选择JSON文件"方式手动加载。');
+                // 显示文件选择模态对话框
+                showFileModal();
                 updateLoadingState('error');
+            }
+        }
+
+        // 显示文件选择模态对话框
+        function showFileModal() {
+            const modal = document.getElementById('file-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        }
+
+        // 隐藏文件选择模态对话框
+        function hideFileModal() {
+            const modal = document.getElementById('file-modal');
+            if (modal) {
+                modal.classList.add('hidden');
             }
         }
 
@@ -177,12 +229,6 @@
             const file = event.target.files[0];
             if (!file) return;
 
-            // 显示文件信息
-            const fileName = file.name;
-            const fileSize = (file.size / 1024).toFixed(2);
-            document.getElementById('selected-file-name').textContent = `${fileName} (${fileSize} KB)`;
-            document.getElementById('file-info').classList.remove('hidden');
-
             updateLoadingState('loading');
 
             const reader = new FileReader();
@@ -190,6 +236,8 @@
                 try {
                     const data = JSON.parse(e.target.result);
                     processFileData(data);
+                    // 文件加载成功，隐藏模态对话框
+                    hideFileModal();
                 } catch (error) {
                     console.error('文件解析失败:', error);
                     showError('文件解析失败: ' + error.message + '<br>请确保选择正确的JSON文件格式。');
@@ -235,28 +283,11 @@
 
         // 更新加载状态
         function updateLoadingState(state) {
-            const autoLoadBtn = document.getElementById('auto-load-btn');
-            const fileInput = document.getElementById('file-input');
             const searchInput = document.getElementById('sector-search');
             const loadingElements = document.getElementById('sectors-container');
 
             switch (state) {
-                case 'idle':
-                    if (autoLoadBtn) autoLoadBtn.disabled = false;
-                    if (searchInput) searchInput.disabled = true;
-                    if (loadingElements) {
-                        loadingElements.innerHTML = `
-                            <div class="text-center py-10">
-                                <div class="inline-block h-8 w-8 bg-blue-100 rounded-full"></div>
-                                <p class="mt-4 text-gray-600">请选择数据加载方式</p>
-                                <p class="text-sm text-gray-500 mt-2">点击上方按钮加载数据</p>
-                            </div>
-                        `;
-                    }
-                    break;
-
                 case 'loading':
-                    if (autoLoadBtn) autoLoadBtn.disabled = true;
                     if (searchInput) searchInput.disabled = true;
                     if (loadingElements) {
                         loadingElements.innerHTML = `
@@ -269,12 +300,10 @@
                     break;
 
                 case 'error':
-                    if (autoLoadBtn) autoLoadBtn.disabled = false;
                     if (searchInput) searchInput.disabled = true;
                     break;
 
                 case 'loaded':
-                    if (autoLoadBtn) autoLoadBtn.disabled = true;
                     if (searchInput) searchInput.disabled = false;
                     break;
             }
