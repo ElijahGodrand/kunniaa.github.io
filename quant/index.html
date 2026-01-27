@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量化工具</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 自定义一些简单的tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 min-h-screen">
+    <!-- 页面主体容器 -->
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- 标题区域 -->
+        <header class="text-center mb-16 mt-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+                量化工具
+            </h1>
+        </header>
+
+        <!-- 链接区域 -->
+        <main class="max-w-2xl mx-auto">
+            <div class="space-y-1">
+                <!-- 链接1 -->
+                <div class="py-5 border-b border-gray-100">
+                    <a href="https://www.kunniaa.com/quant/dividend-table.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="link-item text-lg text-gray-800 hover:text-blue-600 leading-relaxed">
+                        A股股票的十年分红对当前市值的股息率统计表
+                    </a>
+                </div>
+
+                <!-- 链接2 -->
+                <div class="py-5 border-b border-gray-100">
+                    <a href="https://www.kunniaa.com/quant/industry_leaders.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="link-item text-lg text-gray-800 hover:text-blue-600 leading-relaxed">
+                        A股申万二级行业市值龙头统计
+                    </a>
+                </div>
+
+                <!-- 链接3 -->
+                <div class="py-5 border-b border-gray-100">
+                    <a href="https://www.kunniaa.com/quant/shenwan-all-stocks-sorted.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="link-item text-lg text-gray-800 hover:text-blue-600 leading-relaxed">
+                        A股所有股票按照申万二级行业分类并按照市值排序
+                    </a>
+                </div>
+            </div>
+
+            <!-- 简单说明 -->
+            <!-- div class="mt-8 pt-6 border-t border-gray-100">
+                <p class="text-gray-500 text-sm">
+                    点击链接在新标签页中打开。设计简洁，易于扩展。
+                </p>
+            </div -->
+        </main>
+
+        <!-- 页脚 -->
+        <!-- footer class="mt-16 text-center text-gray-400 text-sm">
+            <p>量化工具</p>
+        </footer -->
+    </div>
+</body>
+</html>
