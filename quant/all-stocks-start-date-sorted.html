@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股所有股票上市日期可排序统计表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义样式 */
+        .selected-row {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+        .selected-row a {
+            color: #dbeafe !important;
+        }
+        .selected-row a:hover {
+            color: white !important;
+        }
+        /* 排序箭头样式 */
+        .sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        .sortable:hover {
+            background-color: #f3f4f6;
+        }
+        /* 表格容器 */
+        .table-container {
+            /* 移除高度限制，让表格自然扩展，页面整体滚动 */
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #f9fafb;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 透明覆盖层（用于本地文件选择，用户看不到但点击可触发） -->
+    <div id="transparent-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 9999;"></div>
+    <input type="file" id="file-input" style="display: none;" accept=".json">
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <h1 class="text-3xl font-bold text-center mb-2 text-gray-900">A股所有股票上市日期可排序统计表</h1>
+
+        <!-- 统计时间 -->
+        <div id="stat-date" class="text-center text-gray-600 mb-4">统计时间：加载中...</div>
+
+        <!-- 提示信息 -->
+        <div class="text-center text-sm text-gray-500 mb-6">
+            <i class="fas fa-info-circle mr-1"></i>数据量大，计算、滚动和排序略有卡顿
+        </div>
+
+
+        <!-- 表格容器 -->
+        <div class="table-container bg-white rounded-lg shadow-md overflow-hidden">
+            <table class="w-full text-sm">
+                <thead class="bg-gray-50 border-b">
+                    <tr>
+                        <th class="py-3 px-4 font-medium text-gray-700 text-left sortable" data-sort="code">
+                            股票代码 <span class="sort-arrow"></span>
+                        </th>
+                        <th class="py-3 px-4 font-medium text-gray-700 text-left sortable" data-sort="name">
+                            股票名称 <span class="sort-arrow"></span>
+                        </th>
+                        <th class="py-3 px-4 font-medium text-gray-700 text-left sortable" data-sort="swii">
+                            申万二级分类 <span class="sort-arrow"></span>
+                        </th>
+                        <th class="py-3 px-4 font-medium text-gray-700 text-left sortable" data-sort="date">
+                            上市日期 <span class="sort-arrow"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="stock-table-body">
+                    <!-- 数据将在这里动态加载 -->
+                    <tr>
+                        <td colspan="4" class="py-8 text-center text-gray-500">
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-spinner fa-spin text-2xl text-blue-500 mb-2"></i>
+                                <p>正在加载数据...</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        // 主应用程序
+        document.addEventListener('DOMContentLoaded', function() {
+            const app = new StockTableApp();
+            app.init();
+        });
+
+        class StockTableApp {
+            constructor() {
+                this.stockData = [];
+                this.sortedData = [];
+                this.sortState = {
+                    field: null,
+                    direction: 'asc' // 'asc' or 'desc'
+                };
+                this.precomputedSorts = {};
+                this.selectedRow = null;
+            }
+
+            init() {
+                // 检测是否在本地文件协议下运行
+                const isLocalFile = window.location.protocol === 'file:';
+
+                if (isLocalFile) {
+                    // 本地打开：绑定透明覆盖层点击事件
+                    const overlay = document.getElementById('transparent-overlay');
+                    if (overlay) {
+                        overlay.addEventListener('click', () => {
+                            this.showFileSelector();
+                            // 文件选择后隐藏覆盖层（在loadLocalFile中处理）
+                        });
+                    }
+                }
+
+                this.bindEvents();
+                this.loadData();
+            }
+
+            bindEvents() {
+                // 绑定排序表头点击事件
+                document.querySelectorAll('.sortable').forEach(th => {
+                    th.addEventListener('click', (e) => {
+                        const field = e.currentTarget.dataset.sort;
+                        this.sortTable(field);
+                    });
+                });
+
+                // 绑定文件输入
+                const fileInput = document.getElementById('file-input');
+                if (fileInput) {
+                    fileInput.addEventListener('change', (e) => {
+                        this.loadLocalFile(e.target.files[0]);
+                    });
+                }
+
+                // 文档点击事件：点击表格外部时取消选中行
+                document.addEventListener('click', (e) => {
+                    // 检查点击目标是否是表格行或表头
+                    const isTableClick = e.target.closest('table') ||
+                                         e.target.closest('.sortable') ||
+                                         e.target.closest('a[href^="https://xueqiu.com"]');
+
+                    // 如果不是表格内部点击，取消选中行
+                    if (!isTableClick && this.selectedRow !== null) {
+                        const prevRow = document.querySelector(`#stock-table-body tr[data-index="${this.selectedRow}"]`);
+                        if (prevRow) {
+                            prevRow.classList.remove('selected-row');
+                        }
+                        this.selectedRow = null;
+                    }
+                });
+            }
+
+            async loadData() {
+                // 检测是否在本地文件协议下运行
+                const isLocalFile = window.location.protocol === 'file:';
+
+                if (!isLocalFile) {
+                    // 在线部署：尝试直接加载JSON文件
+                    try {
+                        await this.fetchJsonFile();
+                    } catch (error) {
+                        this.showFileSelector();
+                    }
+                }
+            }
+
+            async fetchJsonFile() {
+                // 尝试直接获取JSON文件
+                const response = await fetch('No-011-res.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                this.processData(data);
+                this.hideFileSelector();
+            }
+
+            loadLocalFile(file) {
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        this.processData(data);
+                        this.hideFileSelector();
+                    } catch (error) {
+                        alert('文件格式错误，请选择正确的JSON文件');
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            showFileSelector() {
+                // 触发文件选择对话框
+                const fileInput = document.getElementById('file-input');
+                if (fileInput) {
+                    fileInput.click();
+                }
+            }
+
+            hideFileSelector() {
+                // 隐藏透明覆盖层
+                const overlay = document.getElementById('transparent-overlay');
+                if (overlay) overlay.style.display = 'none';
+            }
+
+            processData(data) {
+                // 提取info信息
+                const info = data.info || {};
+                const queryDate = info.query_date || '未知';
+
+                // 更新统计时间
+                const statDate = document.getElementById('stat-date');
+                if (statDate) {
+                    const dateObj = new Date(queryDate);
+                    const formattedDate = dateObj.getFullYear() + '年' +
+                                         (dateObj.getMonth() + 1) + '月' +
+                                         dateObj.getDate() + '日';
+                    statDate.textContent = `统计时间：${formattedDate}`;
+                }
+
+                // 更新底部更新时间
+                const updateDate = document.getElementById('update-date');
+                if (updateDate) {
+                    updateDate.textContent = queryDate;
+                }
+
+                // 提取股票数据
+                this.stockData = [];
+                for (const [code, stock] of Object.entries(data)) {
+                    if (code === 'info') continue;
+
+                    this.stockData.push({
+                        code: code,
+                        name: stock.name || '未知',
+                        market: stock.market_name || '未知',
+                        swii: stock.swii || '未知',
+                        startDate: stock.start_date || '未知',
+                        startTimestamp: stock.start_date ? new Date(stock.start_date).getTime() : 0
+                    });
+                }
+
+                // 预计算排序
+                this.precomputeSorts();
+
+                // 初始渲染（按代码升序）
+                this.sortTable('code');
+            }
+
+            precomputeSorts() {
+                // 预计算各种排序方式的结果
+                const data = this.stockData;
+
+                // 按代码排序
+                this.precomputedSorts.code_asc = [...data].sort((a, b) =>
+                    a.code.localeCompare(b.code));
+                this.precomputedSorts.code_desc = [...this.precomputedSorts.code_asc].reverse();
+
+                // 按名称排序
+                this.precomputedSorts.name_asc = [...data].sort((a, b) =>
+                    a.name.localeCompare(b.name, 'zh-CN'));
+                this.precomputedSorts.name_desc = [...this.precomputedSorts.name_asc].reverse();
+
+                // 按上市日期排序
+                this.precomputedSorts.date_asc = [...data].sort((a, b) =>
+                    a.startTimestamp - b.startTimestamp);
+                this.precomputedSorts.date_desc = [...this.precomputedSorts.date_asc].reverse();
+
+                // 按申万二级分类排序（特殊处理：先按行业，再按日期）
+                this.precomputedSorts.swii_asc = [...data].sort((a, b) => {
+                    const swiiCompare = a.swii.localeCompare(b.swii, 'zh-CN');
+                    if (swiiCompare !== 0) return swiiCompare;
+                    return a.startTimestamp - b.startTimestamp;
+                });
+                this.precomputedSorts.swii_desc = [...this.precomputedSorts.swii_asc].reverse();
+
+            }
+
+            sortTable(field) {
+                // 切换排序方向
+                if (this.sortState.field === field) {
+                    this.sortState.direction = this.sortState.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    this.sortState.field = field;
+                    this.sortState.direction = 'asc';
+                }
+
+                // 使用预计算的数据
+                const sortKey = `${field}_${this.sortState.direction}`;
+                this.sortedData = this.precomputedSorts[sortKey] || [...this.stockData];
+
+                // 更新表头箭头
+                this.updateSortArrows();
+
+                // 渲染表格
+                this.renderTable();
+            }
+
+            updateSortArrows() {
+                // 清除所有箭头
+                document.querySelectorAll('.sort-arrow').forEach(arrow => {
+                    arrow.textContent = '';
+                });
+
+                // 设置当前排序字段的箭头
+                const currentTh = document.querySelector(`[data-sort="${this.sortState.field}"] .sort-arrow`);
+                if (currentTh) {
+                    currentTh.textContent = this.sortState.direction === 'asc' ? ' ↑' : ' ↓';
+                }
+            }
+
+            renderTable() {
+                const tbody = document.getElementById('stock-table-body');
+                if (!tbody) return;
+
+                if (this.sortedData.length === 0) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="4" class="py-8 text-center text-gray-500">
+                                暂无数据
+                            </td>
+                        </tr>
+                    `;
+                    return;
+                }
+
+                let html = '';
+                this.sortedData.forEach((stock, index) => {
+                    // 格式化日期
+                    const dateStr = stock.startDate;
+                    let formattedDate = dateStr;
+                    if (dateStr !== '未知') {
+                        const dateParts = dateStr.split('-');
+                        if (dateParts.length === 3) {
+                            formattedDate = `${dateParts[0]}-${dateParts[1]}-${dateParts[2]}`;
+                        }
+                    }
+
+                    // 生成雪球链接
+                    let xueqiuLink = '#';
+                    let displayCode = stock.code;
+                    if (stock.market === 'SH' || stock.market === 'SZ') {
+                        const marketPrefix = stock.market;
+                        const codeWithoutSuffix = stock.code.split('.')[0];
+                        xueqiuLink = `https://xueqiu.com/S/${marketPrefix}${codeWithoutSuffix}`;
+                        displayCode = codeWithoutSuffix;
+                    }
+
+                    // 行点击事件处理
+                    const rowClass = this.selectedRow === index ? 'selected-row' : '';
+
+                    html += `
+                        <tr class="border-b hover:bg-gray-50 ${rowClass}" data-index="${index}">
+                            <td class="py-3 px-4">
+                                <a href="${xueqiuLink}" target="_blank"
+                                   class="text-blue-600 hover:text-blue-800 hover:underline">
+                                    ${displayCode}
+                                </a>
+                            </td>
+                            <td class="py-3 px-4">${this.escapeHtml(stock.name)}</td>
+                            <td class="py-3 px-4">${this.escapeHtml(stock.swii)}</td>
+                            <td class="py-3 px-4">${formattedDate}</td>
+                        </tr>
+                    `;
+                });
+
+                tbody.innerHTML = html;
+
+                // 绑定行点击事件
+                this.bindRowEvents();
+            }
+
+            bindRowEvents() {
+                document.querySelectorAll('#stock-table-body tr').forEach((row, index) => {
+                    row.addEventListener('click', () => {
+                        this.selectRow(index);
+                    });
+                });
+            }
+
+            selectRow(index) {
+                // 如果点击的是已选中的行，则取消选中
+                if (this.selectedRow === index) {
+                    const prevRow = document.querySelector(`#stock-table-body tr[data-index="${this.selectedRow}"]`);
+                    if (prevRow) {
+                        prevRow.classList.remove('selected-row');
+                    }
+                    this.selectedRow = null;
+                    return;
+                }
+
+                // 移除之前选中行的样式
+                if (this.selectedRow !== null) {
+                    const prevRow = document.querySelector(`#stock-table-body tr[data-index="${this.selectedRow}"]`);
+                    if (prevRow) {
+                        prevRow.classList.remove('selected-row');
+                    }
+                }
+
+                // 设置新的选中行
+                this.selectedRow = index;
+                const newRow = document.querySelector(`#stock-table-body tr[data-index="${index}"]`);
+                if (newRow) {
+                    newRow.classList.add('selected-row');
+                }
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        }
+    </script>
+</body>
+</html>
