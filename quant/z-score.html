@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股所有股票最近30天的日K波动率统计表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义样式 */
+        .table-container {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .selected-row {
+            background-color: #dbeafe !important; /* 亮蓝色高亮 */
+        }
+        .sortable:hover {
+            cursor: pointer;
+            background-color: #f3f4f6;
+        }
+        th {
+            font-size: 0.875rem; /* 小一点的字号 */
+            white-space: nowrap;
+        }
+        td {
+            font-size: 0.875rem;
+        }
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <h1 class="text-3xl font-bold text-center mb-4 text-blue-800">
+            A股所有股票最近30天的日K波动率统计表
+        </h1>
+
+        <!-- 统计时间 -->
+        <div class="text-center mb-2 text-lg text-gray-600">
+            统计时间：<span id="stat-date">加载中...</span>
+        </div>
+
+        <!-- 提示信息 -->
+        <div class="text-center mb-6 text-sm text-gray-500">
+            数据量大，计算、滚动和排序略有卡顿
+        </div>
+
+        <!-- 表格容器 -->
+        <div class="table-container bg-white rounded-lg shadow-lg border border-gray-200">
+            <table class="min-w-full divide-y divide-gray-200" id="stock-table">
+                <thead class="bg-gray-100 sticky top-0">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-700 uppercase tracking-wider sortable" data-sort="code">
+                            股票代码 <i class="fas fa-sort ml-1"></i>
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-700 uppercase tracking-wider sortable" data-sort="name">
+                            股票名称 <i class="fas fa-sort ml-1"></i>
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-700 uppercase tracking-wider sortable" data-sort="market_cap">
+                            总市值(亿) <i class="fas fa-sort ml-1"></i>
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-700 uppercase tracking-wider sortable" data-sort="swii">
+                            申万二级分类 <i class="fas fa-sort ml-1"></i>
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-700 uppercase tracking-wider sortable" data-sort="z_score">
+                            最近30天波动率 <i class="fas fa-sort ml-1"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200" id="table-body">
+                    <!-- 数据将通过JS动态填充 -->
+                    <tr id="loading-row">
+                        <td colspan="5" class="px-6 py-4 text-center">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin text-blue-500 text-2xl mr-2"></i>
+                                <span class="text-gray-600">加载数据中...</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="mt-6 text-center text-sm text-gray-500">
+            <p>数据来源：本地JSON文件 | 更新时间：<span id="update-time">-</span></p>
+            <p class="mt-1">点击表头可排序，点击行可高亮选中</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
