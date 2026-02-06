@@ -95,6 +95,336 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+// A股股票波动率数据表格应用
+document.addEventListener('DOMContentLoaded', function() {
+    // 全局变量
+    let stockData = []; // 存储所有股票数据
+    let infoData = {}; // 存储info信息
+    let sortState = {
+        field: null,
+        direction: 'asc' // 'asc' 或 'desc'
+    };
+    let precomputedSorts = {}; // 预计算的排序结果
+
+    // 初始化应用
+    init();
+
+    function init() {
+        loadData();
+        setupEventListeners();
+        updateDateTime();
+    }
+
+    // 加载JSON数据
+    function loadData() {
+        fetch('No-012-res.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络响应错误');
+                }
+                return response.json();
+            })
+            .then(data => {
+                processData(data);
+                precomputeSorts();
+                renderTable();
+                updateUI();
+            })
+            .catch(error => {
+                console.error('加载数据失败:', error);
+                document.getElementById('table-body').innerHTML = `
+                    <tr>
+                        <td colspan="5" class="px-6 py-4 text-center text-red-600">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            加载数据失败: ${error.message}
+                        </td>
+                    </tr>
+                `;
+            });
+    }
+
+    // 处理原始数据
+    function processData(rawData) {
+        // 提取info信息
+        infoData = rawData.info;
+
+        // 转换股票数据为数组
+        stockData = [];
+        for (const [code, stock] of Object.entries(rawData)) {
+            if (code === 'info') continue;
+
+            stockData.push({
+                code: code,
+                name: stock.name,
+                market_cap: stock.market_cap,
+                market_name: stock.market_name,
+                swii: stock.swii,
+                z_score: stock.z_score,
+                // 添加格式化后的值用于显示
+                display_market_cap: formatNumber(stock.market_cap),
+                display_z_score: formatNumber(stock.z_score),
+                // 雪球链接
+                xueqiu_url: getXueqiuUrl(code, stock.market_name)
+            });
+        }
+
+        console.log(`加载了 ${stockData.length} 支股票数据`);
+    }
+
+    // 预计算所有排序
+    function precomputeSorts() {
+        // 股票代码排序
+        precomputedSorts.code_asc = [...stockData].sort((a, b) => a.code.localeCompare(b.code));
+        precomputedSorts.code_desc = [...precomputedSorts.code_asc].reverse();
+
+        // 股票名称排序
+        precomputedSorts.name_asc = [...stockData].sort((a, b) => a.name.localeCompare(b.name));
+        precomputedSorts.name_desc = [...precomputedSorts.name_asc].reverse();
+
+        // 市值排序
+        precomputedSorts.market_cap_asc = [...stockData].sort((a, b) => a.market_cap - b.market_cap);
+        precomputedSorts.market_cap_desc = [...precomputedSorts.market_cap_asc].reverse();
+
+        // 波动率排序
+        precomputedSorts.z_score_asc = [...stockData].sort((a, b) => a.z_score - b.z_score);
+        precomputedSorts.z_score_desc = [...precomputedSorts.z_score_asc].reverse();
+
+        // 申万二级分类排序（特殊排序：先按分类，再按波动率降序）
+        precomputedSorts.swii_asc = sortBySwii(stockData, 'asc');
+        precomputedSorts.swii_desc = sortBySwii(stockData, 'desc');
+
+        console.log('所有排序已预计算完成');
+    }
+
+    // 特殊排序：按申万二级分类排序
+    function sortBySwii(data, direction) {
+        // 先按行业分类分组
+        const grouped = {};
+        data.forEach(stock => {
+            if (!grouped[stock.swii]) {
+                grouped[stock.swii] = [];
+            }
+            grouped[stock.swii].push(stock);
+        });
+
+        // 每个行业组内按波动率降序排序（z_score从大到小）
+        Object.values(grouped).forEach(group => {
+            group.sort((a, b) => b.z_score - a.z_score);
+        });
+
+        // 获取所有行业分类并排序
+        const sortedIndustries = Object.keys(grouped).sort();
+        if (direction === 'desc') {
+            sortedIndustries.reverse();
+        }
+
+        // 按排序后的行业顺序合并数据
+        const result = [];
+        sortedIndustries.forEach(industry => {
+            result.push(...grouped[industry]);
+        });
+
+        return result;
+    }
+
+    // 渲染表格
+    function renderTable(data = stockData) {
+        const tbody = document.getElementById('table-body');
+
+        if (data.length === 0) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">
+                        暂无数据
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        let html = '';
+        data.forEach((stock, index) => {
+            html += `
+                <tr class="hover:bg-gray-50 cursor-pointer" data-index="${index}">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <a href="${stock.xueqiu_url}" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+                            ${stock.code}
+                        </a>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">${stock.name}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${stock.display_market_cap}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">${stock.swii}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${stock.display_z_score}%</td>
+                </tr>
+            `;
+        });
+
+        tbody.innerHTML = html;
+
+        // 添加行点击事件
+        tbody.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('click', function() {
+                selectRow(this);
+            });
+        });
+    }
+
+    // 更新UI
+    function updateUI() {
+        // 更新统计时间
+        if (infoData.end_dt) {
+            const date = new Date(infoData.end_dt);
+            const formattedDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+            document.getElementById('stat-date').textContent = formattedDate;
+        }
+
+        // 更新表格排序图标
+        updateSortIcons();
+    }
+
+    // 设置事件监听器
+    function setupEventListeners() {
+        // 表头排序点击事件
+        document.querySelectorAll('.sortable').forEach(header => {
+            header.addEventListener('click', function() {
+                const field = this.getAttribute('data-sort');
+                sortTable(field);
+            });
+        });
+
+        // 初始选中第一行（可选）
+        // setTimeout(() => {
+        //     const firstRow = document.querySelector('#table-body tr');
+        //     if (firstRow) selectRow(firstRow);
+        // }, 100);
+    }
+
+    // 排序表格
+    function sortTable(field) {
+        // 确定排序方向
+        if (sortState.field === field) {
+            // 同一字段，切换方向
+            sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+            // 新字段，默认升序
+            sortState.field = field;
+            sortState.direction = 'asc';
+        }
+
+        // 从预计算的结果中获取数据
+        const sortKey = `${field}_${sortState.direction}`;
+        let sortedData = precomputedSorts[sortKey];
+
+        // 如果没有预计算的结果，实时计算（备用）
+        if (!sortedData) {
+            console.warn(`未找到预计算的排序: ${sortKey}, 实时计算中...`);
+            sortedData = [...stockData];
+
+            if (field === 'swii') {
+                sortedData = sortBySwii(sortedData, sortState.direction);
+            } else {
+                sortedData.sort((a, b) => {
+                    let aVal = a[field];
+                    let bVal = b[field];
+
+                    // 字符串比较
+                    if (typeof aVal === 'string') {
+                        return sortState.direction === 'asc'
+                            ? aVal.localeCompare(bVal)
+                            : bVal.localeCompare(aVal);
+                    }
+
+                    // 数字比较
+                    return sortState.direction === 'asc'
+                        ? aVal - bVal
+                        : bVal - aVal;
+                });
+            }
+        }
+
+        // 渲染排序后的表格
+        renderTable(sortedData);
+        updateSortIcons();
+
+        // 显示排序状态
+        console.log(`按 ${field} ${sortState.direction === 'asc' ? '升序' : '降序'} 排序`);
+    }
+
+    // 更新排序图标
+    function updateSortIcons() {
+        // 重置所有图标
+        document.querySelectorAll('.sortable i').forEach(icon => {
+            icon.className = 'fas fa-sort ml-1 text-gray-400';
+        });
+
+        // 设置当前排序字段的图标
+        if (sortState.field) {
+            const header = document.querySelector(`.sortable[data-sort="${sortState.field}"] i`);
+            if (header) {
+                header.className = sortState.direction === 'asc'
+                    ? 'fas fa-sort-up ml-1 text-blue-600'
+                    : 'fas fa-sort-down ml-1 text-blue-600';
+            }
+        }
+    }
+
+    // 选择行（高亮）
+    function selectRow(row) {
+        // 移除之前选中的行
+        document.querySelectorAll('#table-body tr').forEach(r => {
+            r.classList.remove('selected-row');
+        });
+
+        // 高亮当前行
+        row.classList.add('selected-row');
+
+        // 可选：滚动到选中行
+        // row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // 工具函数：格式化数字（保留两位小数）
+    function formatNumber(num) {
+        if (num === null || num === undefined) return '0.00';
+        return parseFloat(num).toFixed(2);
+    }
+
+    // 工具函数：生成雪球链接
+    function getXueqiuUrl(code, marketName) {
+        // 提取股票代码（去掉后缀）
+        const pureCode = code.split('.')[0];
+
+        // 确定市场前缀
+        let prefix = '';
+        if (marketName === 'SH') {
+            prefix = 'SH';
+        } else if (marketName === 'SZ') {
+            prefix = 'SZ';
+        } else {
+            // 默认根据代码判断
+            prefix = code.startsWith('6') ? 'SH' : 'SZ';
+        }
+
+        return `https://xueqiu.com/S/${prefix}${pureCode}`;
+    }
+
+    // 工具函数：更新日期时间
+    function updateDateTime() {
+        const now = new Date();
+        const formatted = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+        document.getElementById('update-time').textContent = formatted;
+    }
+
+    // 导出到全局（用于调试）
+    window.app = {
+        stockData,
+        infoData,
+        sortState,
+        precomputedSorts,
+        sortTable,
+        reloadData: loadData
+    };
+});
+    </script>
 </body>
 </html>
