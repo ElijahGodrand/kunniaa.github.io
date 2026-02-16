@@ -98,6 +98,7 @@
                             <th data-field="ps_ratio" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">PS</th>
                             <th data-field="roe" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">ROE(%)</th>
                             <th data-field="pb_roe" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">PB/ROE</th>
+                            <th data-field="roe_pb" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">ROE/PB(%)</th>
                             <th data-field="total_assets" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">人均总资产(万)</th>
                             <th data-field="total_liability" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">人均总债务(万)</th>
                             <th data-field="equities_parent_company_owners" class="sort-arrow px-3 py-2 text-right font-semibold border-b whitespace-nowrap">人均净资产(万)</th>
@@ -165,7 +166,16 @@
             for (const [code, stock] of Object.entries(data)) {
                 if (code === 'info') continue;
                 
-                stockData.push({
+                    // 计算 roe/pb，异常时赋值为0
+                    let roe_pb = 0;
+                    if (stock.pb_ratio && stock.pb_ratio !== 0 && 
+                        typeof stock.roe === 'number' && !isNaN(stock.roe) &&
+                        typeof stock.pb_ratio === 'number' && !isNaN(stock.pb_ratio) &&
+                        isFinite(stock.roe) && isFinite(stock.pb_ratio)) {
+                        roe_pb = stock.roe / stock.pb_ratio;
+                    }
+                    
+                    stockData.push({
                     code: code,
                     name: stock.name,
                     market_cap: stock.market_cap,
@@ -177,6 +187,7 @@
                     ps_ratio: stock.ps_ratio,
                     roe: stock.roe,
                     pb_roe: stock.pb_roe * 100,
+                    roe_pb: roe_pb,
                     total_assets: stock.total_assets,
                     total_liability: stock.total_liability,
                     equities_parent_company_owners: stock.equities_parent_company_owners,
@@ -198,7 +209,7 @@
         // 预先计算所有排序
         function precomputeSorts() {
             const fields = ['code', 'name', 'market_cap', 'swii', 'n_employee', 'pb_ratio', 
-                          'pe_ratio', 'ps_ratio', 'roe', 'pb_roe', 'total_assets', 
+                          'pe_ratio', 'ps_ratio', 'roe', 'pb_roe', 'roe_pb', 'total_assets', 
                           'total_liability', 'equities_parent_company_owners', 
                           'total_operating_revenue', 'account_receivable', 
                           'np_parent_company_owners', 'net_operate_cash_flow', 'inventories'];
@@ -333,6 +344,7 @@
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.ps_ratio)}</td>
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.roe)}</td>
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.pb_roe)}</td>
+                    <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.roe_pb)}</td>
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.total_assets)}</td>
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.total_liability)}</td>
                     <td class="px-3 py-2 text-right whitespace-nowrap">${formatNumber(stock.equities_parent_company_owners)}</td>
