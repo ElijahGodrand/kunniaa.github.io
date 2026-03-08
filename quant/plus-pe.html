@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股所有正PE股票统计表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sortable { cursor: pointer; user-select: none; }
+        .sortable:hover { background-color: #f3f4f6; }
+        .selected { background-color: #fef08a !important; }
+        tr:hover:not(.selected) { background-color: #f9fafb; }
+        .arrow-asc::after { content: ' ↑'; }
+        .arrow-desc::after { content: ' ↓'; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-2xl mx-auto px-0 py-2">
+        <h1 class="text-lg font-bold text-center text-gray-800 mb-1">A股所有正PE股票统计表</h1>
+        <p class="text-center text-gray-500 text-xs mb-1" id="statTime"></p>
+        <p class="text-center text-gray-400 text-xs mb-1">数据量大，计算、滚动和排序略有卡顿</p>
+        <div class="flex justify-center mb-1">
+            <label class="flex items-center space-x-1 cursor-pointer text-xs">
+                <input type="checkbox" id="groupSort" class="w-3 h-3 text-blue-600 rounded">
+                <span class="text-gray-600">先按申万二级行业分类排序，再按点击表头排序</span>
+            </label>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full bg-white border border-gray-200" style="font-size:12px; border-spacing: 100px 0;">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-0 py-1 font-semibold text-gray-700 text-left sortable" data-sort="code" style="width:50px">代码</th>
+                        <th class="px-0 py-1 font-semibold text-gray-700 text-left sortable" data-sort="name" style="width:40px">名称</th>
+                        <th class="px-0 py-1 font-semibold text-gray-700 text-right sortable" data-sort="market_cap" style="width:50px">市值(亿)</th>
+                        <th class="px-0 py-1 font-semibold text-gray-700 text-left sortable" data-sort="swii" style="width:70px; padding-left:100px">行业</th>
+                        <th class="px-0 py-1 font-semibold text-gray-700 text-right sortable" data-sort="pe_ratio" style="width:35px">PE</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        let stockData = [];
+        let sortColumn = 'pe_ratio';
+        let sortAsc = false;
+        let groupSort = false;
+        const preSortedData = {};
+
+        async function loadData() {
+            const response = await fetch('No-019-res.json');
+            const json = await response.json();
+            const info = json.info;
+            
+            const dateParts = info.end_dt.split('-');
+            document.getElementById('statTime').textContent = `统计时间：${dateParts[0]}年${dateParts[1]}月${dateParts[2]}日`;
+            
+            stockData = Object.entries(json).filter(([key]) => key !== 'info').map(([code, data]) => ({
+                code: code.replace('.XSHE', '').replace('.XSHG', ''),
+                fullCode: code,
+                name: data.name,
+                market_cap: data.market_cap,
+                market_name: data.market_name,
+                swii: data.swii,
+                pe_ratio: data.pe_ratio
+            }));
+            
+            preComputeSort();
+            renderTable();
+        }
+
+        function preComputeSort() {
+            const columns = ['code', 'name', 'market_cap', 'swii', 'pe_ratio'];
+            columns.forEach(col => {
+                preSortedData[col] = {
+                    asc: [...stockData].sort((a, b) => {
+                        if (col === 'code') return a.code.localeCompare(b.code, 'zh-CN');
+                        if (col === 'name') return a.name.localeCompare(b.name, 'zh-CN');
+                        return a[col] - b[col];
+                    }),
+                    desc: [...stockData].sort((a, b) => {
+                        if (col === 'code') return b.code.localeCompare(a.code, 'zh-CN');
+                        if (col === 'name') return b.name.localeCompare(a.name, 'zh-CN');
+                        return b[col] - a[col];
+                    })
+                };
+            });
+            
+            columns.forEach(col => {
+                preSortedData[col + '_group'] = {
+                    asc: preSortedData[col].asc.reduce((acc, item) => {
+                        if (!acc[item.swii]) acc[item.swii] = [];
+                        acc[item.swii].push(item);
+                        return acc;
+                    }, {}),
+                    desc: preSortedData[col].desc.reduce((acc, item) => {
+                        if (!acc[item.swii]) acc[item.swii] = [];
+                        acc[item.swii].push(item);
+                        return acc;
+                    }, {})
+                };
+            });
+        }
+
+        function getSortedData() {
+            let data;
+            if (groupSort) {
+                const grouped = preSortedData[sortColumn + '_group'][sortAsc ? 'asc' : 'desc'];
+                data = [];
+                Object.keys(grouped).sort().forEach(swii => {
+                    data.push(...grouped[swii]);
+                });
+            } else {
+                data = preSortedData[sortColumn][sortAsc ? 'asc' : 'desc'];
+            }
+            return data;
+        }
+
+        function renderTable() {
+            const data = getSortedData();
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = data.map((item, idx) => {
+                const xueqiuUrl = `https://xueqiu.com/S/${item.market_name}${item.code}`;
+                return `
+                    <tr class="border-b border-gray-100 hover:bg-gray-50" data-idx="${idx}" onclick="selectRow(this)">
+                        <td class="px-0 py-1 text-left"><a href="${xueqiuUrl}" target="_blank" class="text-blue-600 hover:underline" onclick="event.stopPropagation()">${item.code}</a></td>
+                        <td class="px-0 py-1 text-left truncate" style="max-width:40px">${item.name}</td>
+                        <td class="px-0 py-1 text-right">${item.market_cap.toFixed(2)}</td>
+                        <td class="px-0 py-1 text-left truncate" style="max-width:70px; padding-left:100px">${item.swii}</td>
+                        <td class="px-0 py-1 text-right">${item.pe_ratio.toFixed(2)}</td>
+                    </tr>
+                `;
+            }).join('');
+            
+            updateHeader();
+        }
+
+        function updateHeader() {
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.classList.remove('arrow-asc', 'arrow-desc');
+                if (th.dataset.sort === sortColumn) {
+                    th.classList.add(sortAsc ? 'arrow-asc' : 'arrow-desc');
+                }
+                if (groupSort && th.dataset.sort === 'swii') {
+                    th.style.pointerEvents = 'none';
+                    th.style.opacity = '0.5';
+                } else {
+                    th.style.pointerEvents = 'auto';
+                    th.style.opacity = '1';
+                }
+            });
+        }
+
+        function selectRow(row) {
+            document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+            row.classList.add('selected');
+        }
+
+        document.querySelectorAll('th.sortable').forEach(th => {
+            th.addEventListener('click', () => {
+                const col = th.dataset.sort;
+                if (groupSort && col === 'swii') return;
+                if (sortColumn === col) {
+                    sortAsc = !sortAsc;
+                } else {
+                    sortColumn = col;
+                    sortAsc = false;
+                }
+                renderTable();
+            });
+        });
+
+        document.getElementById('groupSort').addEventListener('change', (e) => {
+            groupSort = e.target.checked;
+            renderTable();
+        });
+
+        loadData();
+    </script>
+</body>
+</html>
