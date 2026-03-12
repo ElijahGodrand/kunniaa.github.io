@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股所有正ROE股票统计表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sort-arrow {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+        .sort-arrow.asc {
+            border-bottom: 6px solid #374151;
+        }
+        .sort-arrow.desc {
+            border-top: 6px solid #374151;
+        }
+        .selected-row {
+            background-color: #fef08a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">A股所有正ROE股票统计表</h1>
+        <p id="stat-date" class="text-center text-gray-600 mb-2"></p>
+        <p class="text-center text-gray-400 text-sm mb-4">数据量大，计算、滚动和排序略有卡顿</p>
+        
+        <div class="flex justify-center mb-4">
+            <label class="flex items-center cursor-pointer">
+                <input type="checkbox" id="group-by-swii" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                <span class="ml-2 text-gray-700">先按申万二级行业分类排序，再按照点击表头排序</span>
+            </label>
+        </div>
+
+        <div class="overflow-x-auto w-full max-w-4xl mx-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="code">
+                            股票代码 <span class="sort-arrow" id="arrow-code"></span>
+                        </th>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="name">
+                            股票名称 <span class="sort-arrow" id="arrow-name"></span>
+                        </th>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="market_cap">
+                            总市值(亿) <span class="sort-arrow" id="arrow-market_cap"></span>
+                        </th>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="equities">
+                            净资产(亿) <span class="sort-arrow" id="arrow-equities"></span>
+                        </th>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="swii">
+                            申万二级分类 <span class="sort-arrow" id="arrow-swii"></span>
+                        </th>
+                        <th class="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-200 whitespace-nowrap" data-sort="roe">
+                            ROE(%) <span class="sort-arrow" id="arrow-roe"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="divide-y divide-gray-200">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let stockData = [];
+        let sortedData = {};
+        let currentSort = { field: null, asc: true };
+        let groupBySwii = false;
+
+        function formatNumber(num) {
+            if (num === undefined || num === null) return '-';
+            return num.toFixed(2);
+        }
+
+        function getStockCode(fullCode) {
+            const parts = fullCode.split('.');
+            return parts[0];
+        }
+
+        function getXueqiuUrl(code, marketName) {
+            return `https://xueqiu.com/S/${marketName}${code}`;
+        }
+
+        function parseDate(dateStr) {
+            const parts = dateStr.split('-');
+            return `${parseInt(parts[0])}年${parseInt(parts[1])}月${parseInt(parts[2])}日`;
+        }
+
+        function precomputeSorts() {
+            const fields = ['code', 'name', 'market_cap', 'equities', 'swii', 'roe'];
+            fields.forEach(field => {
+                sortedData[field] = { asc: [], desc: [] };
+                const dataAsc = [...stockData].sort((a, b) => {
+                    let valA, valB;
+                    switch(field) {
+                        case 'code': valA = getStockCode(a.code); valB = getStockCode(b.code); break;
+                        case 'name': valA = a.name; valB = b.name; break;
+                        case 'market_cap': valA = a.market_cap; valB = b.market_cap; break;
+                        case 'equities': valA = a.equities; valB = b.equities; break;
+                        case 'swii': valA = a.swii; valB = b.swii; break;
+                        case 'roe': valA = a.roe; valB = b.roe; break;
+                    }
+                    if (typeof valA === 'string') return valA.localeCompare(valB);
+                    return valA - valB;
+                });
+                const dataDesc = [...dataAsc].reverse();
+                sortedData[field].asc = dataAsc;
+                sortedData[field].desc = dataDesc;
+            });
+        }
+
+        function getSortedData(field) {
+            if (!sortedData[field]) return stockData;
+            return currentSort.asc ? sortedData[field].asc : sortedData[field].desc;
+        }
+
+        function getGroupedSortedData(field) {
+            const baseData = getSortedData(field);
+            const grouped = {};
+            baseData.forEach(item => {
+                if (!grouped[item.swii]) grouped[item.swii] = [];
+                grouped[item.swii].push(item);
+            });
+            let result = [];
+            Object.keys(grouped).sort().forEach(swii => {
+                result = result.concat(grouped[swii]);
+            });
+            return result;
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('table-body');
+            let dataToRender;
+            
+            if (groupBySwii && currentSort.field && currentSort.field !== 'swii') {
+                dataToRender = getGroupedSortedData(currentSort.field);
+            } else {
+                dataToRender = currentSort.field ? getSortedData(currentSort.field) : stockData;
+            }
+
+                tbody.innerHTML = dataToRender.map(item => {
+                const code = getStockCode(item.code);
+                const url = getXueqiuUrl(code, item.market_name);
+                return `
+                    <tr class="hover:bg-gray-50 transition-colors cursor-pointer" 
+                        onclick="toggleSelect(this)" 
+                        ondblclick="window.open('${url}', '_blank')">
+                        <td class="px-1 py-1 whitespace-nowrap text-sm">
+                            <a href="${url}" target="_blank" class="text-blue-600 hover:underline" onclick="event.stopPropagation()">${code}</a>
+                        </td>
+                        <td class="px-1 py-1 whitespace-nowrap text-sm text-gray-900">${item.name}</td>
+                        <td class="px-1 py-1 whitespace-nowrap text-sm text-gray-900">${formatNumber(item.market_cap)}</td>
+                        <td class="px-1 py-1 whitespace-nowrap text-sm text-gray-900">${formatNumber(item.equities)}</td>
+                        <td class="px-1 py-1 whitespace-nowrap text-sm text-gray-900">${item.swii}</td>
+                        <td class="px-1 py-1 whitespace-nowrap text-sm text-gray-900">${formatNumber(item.roe)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function toggleSelect(row) {
+            document.querySelectorAll('.selected-row').forEach(r => r.classList.remove('selected-row'));
+            row.classList.add('selected-row');
+        }
+
+        function updateArrows() {
+            document.querySelectorAll('.sort-arrow').forEach(arrow => {
+                arrow.className = 'sort-arrow';
+            });
+            if (currentSort.field) {
+                const arrow = document.getElementById(`arrow-${currentSort.field}`);
+                if (arrow) {
+                    arrow.classList.add(currentSort.asc ? 'asc' : 'desc');
+                }
+            }
+        }
+
+        function handleSort(field) {
+            if (groupBySwii && field === 'swii') return;
+            
+            if (currentSort.field === field) {
+                currentSort.asc = !currentSort.asc;
+            } else {
+                currentSort.field = field;
+                currentSort.asc = true;
+            }
+            updateArrows();
+            renderTable();
+        }
+
+        document.querySelectorAll('th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const field = th.dataset.sort;
+                handleSort(field);
+            });
+        });
+
+        document.getElementById('group-by-swii').addEventListener('change', function(e) {
+            groupBySwii = e.target.checked;
+            renderTable();
+        });
+
+        fetch('No-020-res.json')
+            .then(response => response.json())
+            .then(data => {
+                const info = data.info;
+                document.getElementById('stat-date').textContent = `统计时间：${parseDate(info.end_dt)}`;
+                
+                stockData = Object.keys(data)
+                    .filter(key => key !== 'info')
+                    .map(key => ({
+                        code: key,
+                        name: data[key].name,
+                        market_name: data[key].market_name,
+                        market_cap: data[key].market_cap,
+                        equities: data[key].equities_parent_company_owners,
+                        swii: data[key].swii,
+                        roe: data[key].roe
+                    }));
+                
+                precomputeSorts();
+                renderTable();
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('table-body').innerHTML = '<tr><td colspan="6" class="px-3 py-4 text-center text-red-500">数据加载失败</td></tr>';
+            });
+    </script>
+</body>
+</html>
