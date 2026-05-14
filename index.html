@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunniaa - 荣耀在路上</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <main class="max-w-4xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="space-y-16">
+            <section class="fade-in">
+                <p class="text-base sm:text-lg text-ink italic">荣耀不在终点，荣耀在路上。</p>
+                <p class="text-base sm:text-lg text-ink italic mt-2">我还在追求，你也是。</p>
+                <p class="text-base sm:text-lg text-ink italic mt-2">我们一起跨过那一道道门槛。</p>
+            </section>
+
+            <section class="fade-in" style="animation-delay: 0.2s;">
+                <div class="w-80 sm:w-88 md:w-96">
+                    <img 
+                        src="zsxq.jpg" 
+                        alt="知识星球" 
+                        class="w-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                    <p class="text-center text-base text-gray-warm mt-3 font-medium">年费66元</p>
+                </div>
+            </section>
+
+            <section class="fade-in" style="animation-delay: 0.4s;">
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-base text-ink">2026年05月15日</p>
+                        <p class="text-sm text-gray-warm mt-1">新增AI Agent面试题10套，AI Agent面试题总套数20套。</p>
+                    </div>
+                    <div>
+                        <p class="text-base text-ink">2026年05月01日</p>
+                        <p class="text-sm text-gray-warm mt-1">新增大模型面试题15套，总套数突破50套。</p>
+                    </div>
+                    <div>
+                        <p class="text-base text-ink">2026年04月15日</p>
+                        <p class="text-sm text-gray-warm mt-1">昆尼面试题网站正式上线，开启求职之旅。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="mt-16 text-center text-sm text-gray-warm">
+            <p>© 2026 Kunniaa. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
