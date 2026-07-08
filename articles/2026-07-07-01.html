@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>昆尼Kunniaa的文章</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,12 +31,12 @@
             background-color: #FDFBF7;
             color: #2C2C2C;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-out;
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .content strong {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -49,27 +49,8 @@
     </header>
 
     <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <section class="fade-in">
-            <div class="space-y-6">
-                <div>
-                    <p class="text-base text-ink">持续更新中...</p>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月08日</p>
-                    <a href="2026-07-08-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 由一人公司OPC引出的：销冠是人生的伟大目标。
-                    </a>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月07日</p>
-                    <a href="2026-07-07-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 世界模型的未来：只有跑通数据飞轮，才能走出实验室。
-                    </a>
-                </div>
-            </div>
-        </section>
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
     </main>
 
     <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
@@ -95,5 +76,44 @@
         </div>
         <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
     </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 世界模型的未来：只有跑通数据飞轮，才能走出实验室';
+        const CONTENT = `2026年5月，AI行业发生了标志性转折：**Anthropic以9650亿美元估值，正式超越OpenAI的8520亿美元。**
+
+Anthropic是从**编程这个高频场景**超越的。
+
+程序员每天都在写代码、改Bug、重构项目。Claude Code嵌入这个场景后，每一次代码提交、每一次测试失败，都成为模型训练的**真实数据**。数据越多，模型越懂代码；越懂代码，越多人用它——**飞轮一旦启动，便自我加速**。
+
+**这个案例揭示了本质规律：谁能找到高频交互场景，谁就能跑通数据飞轮。**
+
+现在，全世界都在讨论“世界模型”。但是，游戏，元宇宙，产线调试，这些场景能跑通数据飞轮吗？
+
+**世界模型真正的出路在哪里？哪些场景能跑通飞轮，哪些注定是死路？自动驾驶、清洁机器人、小区巡逻——谁才是物理AI的“编程时刻”？**
+
+全文8000字，星球见。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。
+`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
 </body>
 </html>
