@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>昆尼Kunniaa的文章</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,12 +31,12 @@
             background-color: #FDFBF7;
             color: #2C2C2C;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-out;
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .content strong {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -49,20 +49,8 @@
     </header>
 
     <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <section class="fade-in">
-            <div class="space-y-6">
-                <div>
-                    <p class="text-base text-ink">持续更新中...</p>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月08日</p>
-                    <a href="2026-07-08-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 由一人公司OPC引出的：销冠是人生的伟大目标。
-                    </a>
-                </div>
-            </div>
-        </section>
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
     </main>
 
     <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
@@ -88,5 +76,41 @@
         </div>
         <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
     </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 由大模型一人公司OPC引出的：销冠是人生的伟大目标';
+        const CONTENT = `一人公司OPC想成功，创始人必须会销售，必须会卖，卖产品，卖服务，卖未来，最好是销冠。
+
+为什么一个技术出身的创始人，做了半年一年，没有收入？
+
+为什么不懂技术、不懂开发的老板，能把公司做到几千万？
+
+**为什么那么多小公司，明明只有几个人，老板却非要在核心地段租高档办公室？这笔房租，买的到底是什么信号**？
+
+**为什么有些老板不停地招人、不停地换人，三个月就让人走一批？那些频繁进出的"试用期"，到底在试用什么**？
+
+全文16000字，星球见。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
 </body>
 </html>
