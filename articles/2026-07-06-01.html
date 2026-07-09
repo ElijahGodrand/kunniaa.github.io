@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>昆尼Kunniaa的文章</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,12 +31,12 @@
             background-color: #FDFBF7;
             color: #2C2C2C;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-out;
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .content strong {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -49,41 +49,8 @@
     </header>
 
     <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <section class="fade-in">
-            <div class="space-y-6">
-                <div>
-                    <p class="text-base text-ink">持续更新中...</p>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月09日</p>
-                    <a href="2026-07-09-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 应用平台不赚钱，那钱到底在哪？——AI应用平台商业模式全解析。
-                    </a>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月08日</p>
-                    <a href="2026-07-08-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 由一人公司OPC引出的：销冠是人生的伟大目标。
-                    </a>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月07日</p>
-                    <a href="2026-07-07-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 世界模型的未来：只有跑通数据飞轮，才能走出实验室。
-                    </a>
-                </div>
-                <div>
-                    <p class="text-base text-ink">2026年07月06日</p>
-                    <a href="2026-07-06-01.html" target="_blank"
-                       class="block text-sm text-gray-warm mt-1 no-underline hover:underline underline-offset-4 decoration-1 decoration-gray-warm/60 transition-all duration-200">
-                        大模型 | 世界模型的未来：只有跑通数据飞轮，才能走出实验室。
-                    </a>
-                </div>
-            </div>
-        </section>
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
     </main>
 
     <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
@@ -109,5 +76,47 @@
         </div>
         <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
     </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大有大的难处，以及解决方案';
+        const CONTENT = `为什么很多大厂，明明富可敌国，却总给人一种“越努力越绝望”的感觉？
+
+它们不得不自研通讯、自研云、自研地图、自研支付、自研芯片、自研大模型。**把所有东西都造一遍**。
+
+不是因为聪明，而是因为恐惧。 数据主权、卡脖子风险、内部囚徒困境——越大，越不敢用别人的。
+
+然后它们开始收购。优酷死了，饿了么被压制，大润发巨亏卖掉，摩拜成了包袱，91无线彻底关停。**买一个死一个**。
+
+只有一个大厂例外，几乎是投什么成什么，大赢家，为何成为例外？
+
+这背后是一条被反复验证的残酷规律：**生物体和公司遵循亚线性增长，城市和国家遵循超线性增长。大厂本质上是“公司”，不是“城市”——它注定要走向停滞。**
+
+我写了一篇长文，分析这个问题：为什么大厂必须自研的基建，为什么大模型将成为史上最可怕的吞金兽，为什么全资收购几乎必死，为什么持有少量股权反效果更好，为什么国内大厂为什么改不了自己的基因。
+
+**如果你正在思考大厂的终局，或者你就在大厂里，这篇长文会给你一个俯视全局的视角。**
+
+全文8700字，星球见。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
 </body>
 </html>
