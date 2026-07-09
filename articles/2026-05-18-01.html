@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大模型顶级研发千万年薪，高吗？一点都不高。';
+        const CONTENT = `**大模型年薪千万？不高。因为每年光是电费就要烧掉1个亿。**
+
+大模型领域，已经成了人类薪资的新天花板。
+
+小米的罗福莉，年薪千万（新浪财经）；  
+字节跳动的周畅，年薪千万（新浪科技）；  
+腾讯的姚顺宇，年薪过亿（知乎）；  
+字节的郭达雅，年薪近亿（腾讯网）。
+
+硕士人才计划，起薪百万；博士毕业，起薪两三百万。
+
+国外更夸张。  
+Meta 给 Andrew Tulloch 开出的条件是：**6年1.5亿美金**。  
+Meta 挖 OpenAI 的顶级研究员，年薪**不低于1亿美金**。  
+给 Matt Deitke 的 4年2.5亿美金，还被拒绝了。
+
+高吗？**很高**。
+
+但跟大模型的烧钱速度比，**一点都不高**。
+
+给你算一笔账。
+
+从零预训练一个大模型，首先要建一个算力中心。  
+最基础的配置：**1万张H100显卡**。一张20万人民币，这就是**20亿**。
+
+显卡有折旧。如果全力运行，且每年新卡更有性价比，每年折旧25%-50% —— 也就是每年成本 **5到10个亿**。
+
+**每年电费**：1个亿。  
+**每年运维**（工程师、备件、软件平台）：3000万。
+
+除了显卡，还有集群硬件：主板、CPU、内存、高速网络、存储、机柜……大约是显卡成本的1.5倍，也就是**30亿**。按年15%折旧，**每年4.5亿**。
+
+还有算力中心的建筑：土建、液冷、供电、消防，按5亿算，年折旧5%，**2500万**。
+
+**加起来，每年保底成本：11.05亿。**
+
+这么大的投入，一定要找最优秀、最有创造力的人来用好它。
+
+一个大模型研发团队：核心30人，总人数100人。负责人年薪千万，其他人平均年薪百万，**总人力成本约1.1亿**。
+
+**人力成本占总成本的比例 = 1.1 ÷ (1.1+11.05) ≈ 9%**
+
+**不到10%。**
+
+高吗？**一点都不高**。
+
+以后还得涨。
+
+这不，前几天，2026年5月15号，**米哈游官宣：未来三年，最多投入1000亿，深耕AI。**
+
+那么，从零开发大模型的面试，会问什么？
+
+**面试官想确认一件事：你能不能真正驾驭1万张卡的集群算力，把钱“烧”出效果，而不是只会调用API或微调。**
+
+所以，面试题会大幅偏向**预训练**，而不是下游的SFT、RLHF或产品化。
+
+会问这些：
+
+#### 1. 核心架构与预训练目标
+
+- Transformer的核心组件？Self-Attention的计算复杂度？FlashAttention、RoPE、Group Query Attention的优化原理？
+- 预训练的目标函数？Causal LM vs Masked LM的区别？为什么主流大模型用Causal LM？
+- 位置编码方案：相对位置 vs 绝对位置，在长上下文中的优劣？
+- Tokenizer：BPE vs SentencePiece vs WordPiece？中文预训练时要注意什么？
+
+#### 2. Scaling Laws 与数据
+
+- 什么是Scaling Laws（Kaplan / Chinchilla）？参数量、数据量、计算量如何最优分配？
+- 给定固定算力预算（如10^25 FLOPs），如何决定模型大小和训练tokens数量？
+- 数据质量 vs 数据量，哪个更重要？如何构建高质量预训练数据集？
+- 数据中毒或重复数据对训练的影响？如何检测和缓解？
+
+#### 3. 分布式训练与工程实现
+
+- 百亿/千亿参数模型怎么训？单卡放不下怎么办？（Data、Tensor、Pipeline、Sequence Parallelism的区别）
+- 3D Parallelism（ZeRO + Megatron）如何组合？通信开销怎么优化？
+- 训练稳定性问题：loss spike、divergence如何诊断？学习率调度、warmup、weight decay的作用？
+- Mixed Precision训练（FP16/BF16/FP8）的注意事项？Gradient Checkpointing怎么用？
+- MoE（Mixture of Experts）的优势和训练难点（负载均衡、路由噪声）？
+
+#### 4. 优化器与训练技巧
+- AdamW vs Lion vs Sophia的区别？为什么预训练常用AdamW？
+- 学习率调度（Cosine、WSD等）？Batch Size越大越好吗？trade-off是什么？
+- 预训练中如何监控模型（Perplexity、下游零样本指标）？什么时候early stop？
+
+#### 5. 系统与硬件（对应前面的算力中心讨论）
+
+- 1万张H100集群训练时，网络（InfiniBand vs RoCE）的重要性？All-Reduce通信瓶颈怎么解决？
+- PUE、电费、液冷对大规模训练的影响？如何优化整体TCO？
+- 训练中断（节点故障）后如何快速恢复？Checkpoint策略？
+
+#### 6. 实际经验与开放题（判断是否真正做过）
+
+- 你从零预训练过模型吗？遇到过哪些坑？怎么解决的？
+- 如何从7B Scaling到更大规模？有哪些经验教训？
+- 如果训练loss突然不降或爆炸，你第一步会检查什么？
+- 继续预训练 vs 从头预训练的区别和适用场景？
+
+#### 7. 其他高阶/论文相关
+
+- FlashAttention的原理和加速效果？
+- 如何评估预训练模型的质量？
+- 合成数据在预训练中的作用？未来Scaling的瓶颈在哪里？
+
+**不同职级的考察重点：**
+
+- **初级**：架构、Scaling Laws、基本并行训练。
+- **高级**：系统设计、稳定性工程、实际万卡训练经验、论文复现。
+- **负责人**：给你X亿预算、Y张卡，如何训出SOTA模型？
+
+https://www.kunniaa.com
+
+**这里有83套真实AI Agent面试题，112轮面试，覆盖大中小厂。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

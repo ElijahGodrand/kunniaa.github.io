@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '陈宇森调整钉钉架构：存量归旧人，增量归新人';
+        const CONTENT = `陈宇森发了一封全员信。
+
+钉钉内网全员信【原文一字未改】 
+
+今天我们的组织做如下调整： 
+
+1.成立核心平台业务部，负责钉钉等一系列核心业务，朱鸿负责，向我汇报。 
+
+2.整合悟空与MuleRun 两个团队，成立新的悟空团队，束骏亮负责，向我汇报。 
+
+3.将直销、电销、服务商、售前、交付、客户成功团队全面整合，成立客户发展部，杨猛负责，向我汇报。 
+
+4.成立市场部，李昕瑜负责，向我汇报。 
+
+5.成立公司信息技术部，负责优化迭代公司各业务系统，让一切系统易于被Agent 使用，邓悟负责，向我汇报。 
+
+宇森 悟空事业部CEO
+
+全员信宣布了五个组织调整，五个负责人全部直接向他汇报。信不长，但每一句话都有明确指向。
+
+朱鸿负责钉钉核心平台核心业务。朱鸿是钉钉前CEO无招的老下属，钉钉最早的CTO，跟着无招把钉钉从零做到几亿用户。他是整个阿里体系里对钉钉底层架构、产品逻辑、技术债务最熟悉的人。陈宇森刚接手钉钉，对这套复杂系统的了解不可能比朱鸿更深。把钉钉的存量业务交给朱鸿，是基于信息对称性的考虑。如果钉钉出了问题，责任会落在朱鸿身上，因为最核心的部分交给了最懂它的人。
+
+束骏亮负责悟空和MuleRun的整合。束骏亮是陈宇森在阿里云联合创办MuleRun时的CTO，两人一起把产品做到商业化首月ARR破三亿。这是陈宇森在进入钉钉之前就建立的工作关系，两人之间的信任成本和沟通成本都最低。把AI创新业务交给束骏亮，意味着这个板块的决策链条最短。这块业务的失败概率相对较低，因为产品和技术是从MuleRun平移过来的，不是从零开始。
+
+杨猛负责客户发展部。他把直销、电销、服务商、售前、交付、客户成功全部整合在一起。杨猛工号598，阿里中供铁军出身，在钉钉负责商业化体系多年。他是五个人里资历最老、最能打硬仗的人。他负责的是五块业务中人力最密集、客诉最多、变量最复杂的部分，阿里体系内最能打的人来管这个摊子。
+
+李昕瑜负责市场部。李昕瑜在MuleRun担任CMO，负责市场推广和商业化运营。她与陈宇森的工作关系同样建立于MuleRun时期。她负责的是悟空的市场声量和品牌建设，不承担直接销售指标，但承担认知塑造的功能。这个板块相对独立，不依赖钉钉存量体系的配合。
+
+邓悟负责信息技术部，让公司内部所有业务系统易于被Agent使用。关于他，信息不多，疑似本名王小勇，如果是，已在阿里云工作超过十年，从零构建了阿里云销售平台CRM，熟悉阿里内部的业务系统、数据流转和销售链路。他的职级预估在P9，与CEO吴泳铭和CTO李飞飞之间隔着至少两到三层的汇报关系。他的职能是技术改造，不涉及业务决策。
+
+用词精雕细刻。
+
+第一段写的是“核心平台业务部，负责钉钉等一系列核心业务”，用了两次“核心”。第二段写的是“整合悟空与MuleRun”，没有用“核心”这个词。但所有人都知道，第一段的核心是存量，第二段没有说核心的才是真正的未来。
+
+还有一个细节。前四个人的名字，朱鸿、束骏亮、杨猛、李昕瑜，都是本名。第五个邓悟大概率是花名。阿里的任命文件，正规格式是本名加花名。这一次却出现了例外。要么是花名文化正在被淡化，新任管理层倾向于使用更职业化的本名来定义高管身份。要么是邓悟这个人已经特殊到，在公开文本里，组织更愿意用他在系统里的代号来定义他，而非他的本名。无论哪一种，都指向一个事实：阿里的花名制度正在从创始人时代的江湖气向职业经理人时代的科层制迁移。
+
+把这五个安排放在一起看，可以观察到一个清晰的二元结构。钉钉核心平台和客户发展部承载的是存量业务，悟空和市场部承载的是AI增量。存量的负责人与陈宇森没有历史工作交集，增量的负责人与陈宇森有共同创业经历。存量的风险留给了钉钉体系内部，增量的可能留给了陈宇森自己带来的团队。杨猛负责把存量卖出去服务好，是存量的执行终端。李昕瑜负责让增量被看见被期待，是增量的声量制造者。邓悟负责内部系统的Agent化改造，是先把验证做给自己看。
+
+五个负责人各自为政，每个人只了解自己板块内的信息，跨板块的信息流动需要通过陈宇森向下一对一传递，这是一个以CEO为唯一信息枢纽的辐射状结构。
+
+正面来说，每个人都在自己最擅长的位置上：朱鸿熟悉钉钉，束骏亮熟悉AI，杨猛熟悉销售，李昕瑜熟悉市场推广，邓悟熟悉内部系统。人岗匹配度很高，没有明显的错配。而且五个负责人全部直接向CEO汇报，决策链条短，信息传递快。
+
+但从另一个角度看，这套安排更像一套精密的防御体系。钉钉的核心平台和客户发展部，这两个板块承载了最多的历史包袱和风险，而它们的负责人与陈宇森没有历史渊源。悟空和市场部，这两个板块承载了最多的未来增量和可能性，而它们的负责人是陈宇森从外面带来的创业搭档。信息技术部掌握全公司业务系统的数据接口，而邓悟本人不隶属于钉钉体系，与朱鸿、杨猛、束骏亮、李昕瑜均无历史工作关系。
+
+如果存量出问题，归因指向朱鸿和杨猛的执行。如果增量出问题，归因指向束骏亮和李昕瑜的产品落地。如果内部改造出问题，归因指向邓悟的技术实施。每个板块都有明确的归因路径。
+
+如果陈宇森离开阿里，他可以带走的东西包括：悟空从零到一的增长数据，AI Agent商业化模型的经验，以及MuleRun时期已经被验证过的团队协作模式。这些东西不依赖于钉钉存量的成败。存量的好坏不影响这些资产的估值。
+
+这是历史上空降者的基操：旧人守存量，亲信攻增量；建立一条独立的信息通道；把自己的核心资产圈定在可控范围内。
+
+汉文帝用周勃守行政、用宋昌掌兵权。汉宣帝命令群臣奏封事，绕开原有汇报体系，直接建立与皇帝的信息通道。康熙擒鳌拜之前，先用自己的亲信替换了京师的卫戍权。反例是李密，空降瓦岗军而不做切割，最终身死道消。
+
+陈宇森的做法没有超出这些历史先例。他把每个人都放在了功能明确的格子里，每个格子都划清了边界，每个可能出问题的地方都预设了归因路径。无论这家公司未来走向何方，陈宇森本人作为决策者，已经完成了对自己个人资产的最大化保护。花名在逐渐消失，本名正在回归。阿里的江湖气正在被职业经理人的精密计算取代。唯一可以确定的是，陈宇森作为个人已经立于不败之地。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

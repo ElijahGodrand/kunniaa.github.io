@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 第一性原理对AI不普适，SpaceX上市解困';
+        const CONTENT = `SpaceX上市，马斯克成为人类第一个万亿万亿富豪，顺便解救了xAI。
+
+SpaceX上市，解决了大麻烦xAI。星链和火箭非常好，高速增长期上市反而把价值分出去了，有点亏。
+
+但是，xAI搞砸了。它从2023年开始融资，前前后后拿了四百多亿美元，结果非常不理想。2025年出的那个Grok 4，效果不咋地。马斯克自己都承认，xAI从一开始就没建好，得从头来。四百亿不是小数字，显卡折旧很快，四年清零，核心人才十一个联合创始人，到2026年春天全跑了，一个不剩，大概率就这么打水漂了，要知道SpaceX IPO 才融资750亿。
+
+那为什么xAI会搞砸呢？这里头有一个深层的原因，跟马斯克最拿手的那套方法有关。他最擅长的是是第一性原理。就是把一个东西拆到最基本的物理和数学原理上，然后从根子上重新设计。这个办法在火箭和电车这种僵化的传统行业里特别管用，因为那些行业之前的人都在沿袭老办法，没有人真正从物理定律出发去想问题。马斯克一去，把火箭成本从几亿美金降到几千万，把电车从奢侈品变成大众消费品，靠的就是这个。
+
+然而，第一性原理不是万能的。它适合那种问题本身有确定性的领域，比如物理学、数学，公式摆在那里，谁都得遵守。可AI和大模型不是这回事。大模型是怎么做出来的？是无数聪明的头脑，拿海量的数据，不停地试错，这里面没有什么从第一性原理就能推导出来的最优解。没法通过拆解物理定律就知道transformer应该用多少层、学习率该设多少、什么样的数据配比最好。这些东西都是靠经验、靠实验、靠规模堆出来的。第一性原理在AI这个领域基本使不上劲，游戏规则完全不同。所以xAI搞不过OpenAI、搞不过Anthropic。
+
+而且不光是AI，你顺着这个逻辑往下想，只要不是数学优化理论和物理学能解决的领域，马斯克大概率都会失败。咱们来盘一盘他那个商业帝国里，哪些是注定要栽跟头的。
+
+第一个，全自动驾驶。很多人以为这是个工程问题，其实不是。它的难点不是感知，感知已经不错了，而是那些永远遇不全的边缘情况——一个塑料袋被风吹到路上，一个举着停字牌的修路工人，一堆不规则摆放的锥桶。这些场景不可能用物理模型穷举。其他公司靠海量数据、影子模式、神经网络迭代去逼近，本质上就是试错。马斯克非要走纯视觉、不要激光雷达，说人用两只眼睛就能开车，车为什么不行？听起来很第一性原理，但人的视觉系统进化了数亿年，背后是极其复杂的生物神经架构。纯视觉的端到端模型可以做得越来越好，但永远没法消除那些训练不到的突发状况。所以FSD大概率永远卡在L2到L3之间，永远无法兑现“每辆车值十万美元”。
+
+第二个，Optimus人形机器人。这个比自动驾驶还难。自动驾驶至少是在相对结构化的道路上，机器人要在完全乱七八糟的环境里干活——叠衣服、洗碗、搬箱子、拧螺丝。每一个动作都是多自由度的复杂控制问题，环境千变万化。波士顿动力干了几十年，能做跑酷翻跟头，但没法叠衣服。特斯拉想把机器人拆成电机、减速器、传感器，再用AI控制，但说到底这还是试错问题。OpenAI、Figure都在做，谁也还没找到通用方案。马斯克没有理由比别人更厉害，因为这不是物理优化能解决的。大概率就是做出几个很酷的演示视频，然后永远停留在实验室和试点，永远没法让每个家庭都买一台。
+
+第三个，Neuralink脑机接口。这个更不是物理和数学问题了。它涉及神经科学、生物相容性、免疫反应、大脑可塑性。马斯克想用“电极读信号，再控制外部设备”这种思路搞定大脑，但大脑不是CPU，神经元不是晶体管。每个大脑的布线都不一样，信号会漂移，植入物会引发疤痕组织把信号隔断。这不是工程优化能解决的，需要几十年的基础生物学研究。Neuralink能做出猴子打游戏、人用意念打字，但从演示到真正安全植入病人体内、大规模商业化，中间隔着天堑。大概率是一个长期烧钱、只能服务极少数病人的医疗项目，永远赚不回投资。
+
+第四个，The Boring Company。挖隧道听起来是物理工程——优化盾构机、降低成本。但隧道的问题从来不是挖，而是：挖到哪儿去？谁出钱？地怎么征？城市规划怎么批？这是政治、社会、商业模型的问题，不是物理问题。拉斯维加斯那个小环线能跑，但要想做成城市交通网，就得跟地方政府、公交公司、出租车行业、环保组织打交道，马斯克的第一性原理在这儿使不上劲。所以这家公司会一直停留在几个小项目和概念视频里，永远成不了下一个高速公路网。
+
+第五个，X平台，就是推特。这个我们已经看到了。社交媒体不是工程问题，是内容生态、广告关系、用户心理、舆论监管的问题。马斯克接手后用工程师思维砍成本、改算法、推蓝V付费，结果广告收入腰斩，平台价值从四百四十亿跌到不到两百亿。他以为社交媒体的问题可以用“更好的推荐算法”和“言论自由”解决，但实际上这是个极其复杂的软系统，没有第一性原理能告诉你“应该推荐哪条推文才能让用户多看广告”。所以X平台会持续萎缩，变成一个二线甚至三线的社交网络，商业上大概率失败。
+
+那哪些能成功呢？很简单——那些物理和数学说了算的领域。火箭发射、星链、特斯拉的整车制造和电池、储能业务。这些都是标准的工程优化问题，马斯克的第一性原理能发挥威力。SpaceX的发射业务和星链的通信服务是真金白银的收入，特斯拉的Megapack储能也是实实在在的产品。这些会继续赚钱。
+
+好，回到正题。为了拯救xAI那四百亿的投资，只能干一件事——把xAI跟X公司合并，再把整个打包塞进SpaceX里，重新编一个故事，叫“太空算力”——火箭加星链加太空里的AI算力。这故事现在连影子都没有，可是星链和火箭发射成功确实把大家的胃口吊起来了，市场一看就兴奋。于是SpaceX就上市了，2026年6月12号，估值1.77万亿美元，人类历史上最大的IPO。
+
+为这么急？因为AI的泡沫已经在碎了。去年英伟达、Oracle和OpenAI搞了个连环合同，拉了一波股价，结果Oracle冲上去又跌了一半，那是第一次破裂。今年下半年，Anthropic和OpenAI都要上市，如果SpaceX不在它们前面跑掉，赶上第二次破裂，那四百亿就全赔了。单独上不了，只能绑在火箭和星链身上。
+
+上市后，招股书写得，有一部分钱是上市当天就能卖——公开发行的新股占了大概4.2%，还有5%左右的股份是给员工亲友和高管身边的人，这两块加起来9.2%，没有锁定期，开市就能卖。然后那些内部人，员工，早期投资者，他们手里握着大概41%的股份，从八月份开始分批次可以卖，八月十一号跑一批，八月二十一号跑一批，九月十号、九月二十五号、十月十号、十月二十五号，每回可卖7%，到了十一月份再来一大波28%，到十二月九号就全部解禁了。这些人如果想走，在马斯克之前都可以卖掉。
+
+那马斯克自己呢？他手里有42%的股份，锁定期366天，要到明年的六月十三号才能卖，而且要高盛同意。核心机构投资者要到明年三月到八月才分批解禁。
+
+纳斯达克为了SpaceX改了规则——上市后十五个交易日就把SpaceX塞进纳斯达克100指数。这意味着什么？所有追踪这个指数的被动基金，包括401k、退休账户、养老金，它们没有选择，必须买。全世界追踪纳斯达克100的产品有二百多种，管着八千多亿美元，SpaceX一进去占个0.5%~1%的权重，就有五六十亿到八十亿美元被动资金被动在十五天内冲进去接盘。
+
+标普拒绝快速纳入，不认这个账，老钱不接盘，所有压力全压在纳斯达克一百这条线上。
+
+咱们再对比一下两千年的互联网泡沫。那时候大家疯了一样挖光纤，泡沫破了以后光纤利用率只有百分之十，但光纤有个好处——它能用三十年，甚至三十五年以上。到今天，大模型训练传数据还靠那些光纤，基础设施留下了，能用。可GPU不一样，这东西三到四年就淘汰了。英伟达一年一代，Hopper、Blackwell、Rubin、Rubin Ultra，迭代快得吓人。你花几万亿美元买回来的算力，三年后就是废铁。高盛算过，如果把芯片寿命从五年缩短到三年，每年的折旧成本就要从三万亿美元跳到四万亿。AI泡沫一碎，这些钱就是实实在在烧掉了，什么都留不下。
+
+但，xAI失败了，四百亿想回本只能塞进SpaceX讲新故事，然后纳斯达克改规则，让被动基金和退休账户高位接盘，散户跟风冲进去，内部人和早期投资者可以分批卖出。也许明年下半年AI泡沫第二次破裂，接盘侠们跟着亏一些钱。
+
+如果你已经买了，也不用担心，星链和火箭业务足够好，独一无二，持有时间足够长，肯定是赚的。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

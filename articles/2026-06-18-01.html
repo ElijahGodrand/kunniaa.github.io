@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 从400亿打水漂到600亿买对手：收购Cursor，马斯克在大模型赛道上的绝地反击';
+        const CONTENT = `马斯克在大模型这场竞赛里，被现实反复教育，然后不断调整策略，最后走了一步险棋：收购Cursor。
+
+2023年7月，马斯克成立了xAI。他组了个豪华阵容，从DeepMind、OpenAI、谷歌这些地方挖来了11位顶尖科学家。公司刚成立四个月，就发布了第一版Grok。那时候的xAI，步伐很快，野心很大。
+
+xAI的融资能力也强得吓人。2024年，它接连完成了两轮各60亿美元的融资。到了2025年，估值一路从510亿美元涨到800亿美元。加上后续各种融资，xAI累计筹了超过400亿美元。同时，它还建了个超级算力中心Colossus，从10万块GPU迅速扩容到20多万块。要钱有钱，要人有人，要算力有算力，当时的xAI，看起来就是大模型赛道上的一个重量级选手。
+
+但表面的风光，盖不住底下的窟窿。xAI烧钱的速度实在太快了，2025年前9个月就烧掉了80多亿美元现金，全年预计要烧130亿美元。而它的收入少得可怜，一年只有5亿美元左右。这完全是个填不满的无底洞。
+
+更要命的是，钱烧了，东西却没做到顶尖。xAI的Grok在市场上一直不温不火。反观对手，OpenAI的GPT-5牢牢占着头部位置，Anthropic的Claude靠安全和代码能力异军突起，谷歌的Gemini有搜索撑着。xAI没挤进第一梯队。
+
+Anthropic的崛起，给了xAI最致命的一击。到2025年，Anthropic的Claude Code在AI编程工具市场的份额已经超过50%。更狠的是，Anthropic在2025年把价格大幅降低，逼得xAI只能跟着打价格战，烧钱速度更快了。
+
+与此同时，核心团队开始瓦解。从2024年开始，就有人陆续离开。到了2026年2月到3月，走的人更多了。到2026年3月，xAI最初的11位联合创始人，一个不剩，全部离职。预训练负责人、推理团队负责人、Grok核心架构师这些核心岗位全空了。一家AI公司连创始团队都留不住，研发能力基本就垮了。
+
+面对这种情况，马斯克开始调整策略。第一步，承认失败，把xAI并入SpaceX。2026年2月，SpaceX宣布收购xAI。到了5月，xAI正式解散，并入SpaceX，成了SpaceXAI。马斯克自己也承认，xAI最初并未正确构建，需要从基础重建。
+
+第二步，把算力租给对手，当房东。合并的同一天，SpaceX把Colossus超算中心的22万块GPU，租给了它最大的对手Anthropic。每月租金12.5亿美元，三年合同就是450亿美元。另一部分算力租给了谷歌，每月9.2亿美元。曾经花了几百亿建起来的算力，从烧钱的无底洞变成了印钞机。
+
+第三步，用股票收购Cursor。早在2026年4月，xAI就和Cursor达成协议，获得了用600亿美元收购它的选择权。6月12日，SpaceX刚完成人类史上最大的IPO。四天后，它就用股票支付的方式，正式宣布收购Cursor。这笔交易本质上是用SpaceX上市后高涨的股票，去换一个已经有成熟产品和客户群的AI公司。
+
+但事情没那么简单。Cursor过去高度依赖Anthropic的Claude模型，巅峰期贡献了Anthropic高达40%到50%的营收。这种依赖在2025年5月变成了灾难，Anthropic推出了自己的竞品Claude Code。短短六个月，Claude Code年收入就破了10亿美元。
+
+更绝的是2026年1月9日，Anthropic毫无预警地从服务器端封锁了所有第三方对Claude模型的访问权限。Cursor、OpenCode这些一夜之间全部失效。供应商变成了刽子手，直接断了Cursor的命。现在Cursor被SpaceX收购，Anthropic只会更坚决地执行断供策略，因为扶持Cursor就是扶持自己的直接竞争对手。
+
+OpenAI的态度会比较微妙。2025年，OpenAI曾试图收购Cursor来扩大自己的开发者工具。如今Cursor被老对手SpaceX抢走，OpenAI肯定不爽。但短期内，OpenAI可能不会立即切断Cursor对Codex等模型的访问，因为Cursor每年贡献的API收入非常可观。然而这种合作不会持久。一旦Cursor开始大规模用SpaceX的算力和数据训练Grok，在编程能力上威胁到Codex，OpenAI就会像Anthropic一样下狠手。把最先进的模型卖给一个正在打造竞品的对手，任何商业公司都无法容忍。
+
+谷歌的处境也挺尴尬。谷歌CEO也承认，在编程领域缺乏像Cursor那样直接触达开发者的高频入口。谷歌有Gemini模型和Antigravity等产品，但就是无法真正走进开发者的日常工作流程。Cursor被SpaceX收购后，谷歌的处境更难了。它的策略可能是继续深耕自己的开发者生态，但短期内很难撼动Cursor和Claude Code的地位。
+
+其他玩家也在找机会。它们会利用Cursor被收购后的不确定性来挖墙脚，但对大局影响有限。
+
+收购Cursor，马斯克的目标很明确：用它的数据来训练Grok，提升编程能力。Cursor有上百万开发者每天在使用，这些真实的编程数据，是任何公开数据集都比不了的。据说，新一代的Grok V9内部代号，就是在训练中灌入了大量Cursor的编程交互数据，参数规模达到了1.5万亿。所以这笔收购本质上是用资本市场的优势，也就是高市值股票，去换一个能弥补自身短板的关键资产。
+
+这种自己没做成功，通过上市获取大规模资金收购竞争对手的方式，在硅谷并不少见。Facebook是玩这套手法最成功的。2012年它刚上市不久，就以10亿美元收购了Instagram，其中大部分是股票。当时Facebook在移动端转型很吃力，而Instagram发展迅猛，被视为巨大威胁。后来2014年，它又用约190亿美元收购了WhatsApp，同样是大比例股票加现金。虽然当时被骂买贵了，但从结果看，这两笔交易直接帮Facebook统治了移动社交时代，把潜在对手变成了自己的护城河。
+
+微软也常这么干，但效果两极分化。它用股票或现金收购了LinkedIn、GitHub等公司，整体算是成功的，把业务顺利融合进了自己的体系。但它也有很多失败的收购，最典型的是2013年花72亿美元收购诺基亚手机业务，想补上移动短板，结果一年后就巨亏减记，基本打了水漂。2011年花85亿美元收购Skype，后来也被竞争对手超越，最终在2025年被关闭。文化冲突和官僚作风被认为是失败的主因。
+
+谷歌也是如此。2006年用16.5亿美元股票收购YouTube，当时觉得贵，现在看是捡了宝。2005年花5000万美元买下Android，更是奠定了移动时代的霸主地位。但它2011年花125亿美元收购摩托罗拉移动，本想增强手机硬件实力，结果无法整合，三年后只能以90亿美元转卖给联想，亏了几十亿美元。
+
+亚马逊2017年花137亿美元现金收购全食超市，也是为了快速进入线下生鲜零售。虽然挑战很大，但确实帮它在线下零售站稳了脚跟。
+
+把这些案例放在一起看，就能发现一个规律：用上市后的高估值股票去收购，本质上是用资本市场的钱去买时间。关键不是花多少钱，而是买来后能不能消化。如果收购是为了消灭潜在威胁并融入自己生态，比如Facebook买Instagram，或者是为了获取核心技术和人才并保持其独立发展，比如谷歌买Android，那成功的概率就高很多。反过来，如果收购只是为了进入一个完全陌生的领域，自己又不擅长整合，比如微软买诺基亚、谷歌买摩托罗拉，那失败几乎是注定的。
+
+那么这笔收购在什么情况下算成功，什么情况下算失败呢？
+
+如果满足下面几点，这次收购就能说成功了。第一，Grok的编程能力能有质的飞跃，至少能在编程这个细分领域和Claude、GPT正面竞争。第二，Cursor能保持独立运营和增长，不能因为被收购就丢了开发者用户。第三，SpaceX能把算力租赁加AI服务这条路走通，让AI业务自己造血，不再是个烧钱的黑洞。
+
+失败的风险同样不小。第一，马斯克又开始微管理，把xAI那套高压风格带到Cursor，导致核心人才流失。Cursor的四位00后创始人，会不会像xAI那11位联合创始人一样走光，这是个巨大的问号。第二，Cursor对OpenAI和Anthropic的依赖没法解决，如果这些对手限制Cursor使用它们的模型，Cursor的产品会直接出问题。第三，整合过程中出现严重文化冲突，把Cursor的创造力磨没了。第四，AI编程赛道的竞争进一步加剧，Cursor的市场份额继续被Anthropic和OpenAI蚕食。
+
+Cursor的故事还揭示了一个AI时代最残酷的现实：纯应用层没有护城河。20亿美元的年收入、数百万开发者、七成的财富500强客户，在供应商翻脸的瞬间，什么都挡不住。Cursor的未来，完全取决于马斯克能否用SpaceX的算力和数据，真正训练出一个不依赖任何人的顶级编程模型。这600亿美元的豪赌，赌的就是能不能为Cursor造出属于自己的心脏。
+
+回头来看，马斯克在大模型这条路上，先是高调入场，然后烧钱、掉队、团队瓦解，最后不得不承认失败，把公司解散并入SpaceX。但在这个过程中，他留下了最值钱的东西，就是那个超级算力中心。然后他用这个算力去收租，用SpaceX的股票去收购Cursor，试图用另一种方式留在牌桌上。
+
+这整件事，不像是一个深思熟虑的战略，更像是一个被现实逼到墙角的人，不得不做出一系列高风险的操作。这场大模型竞赛远没到终点，而马斯克选择了一条跟所有人都不同的路。最终成败，或许不取决于这笔交易本身，而取决于他能不能管住自己，让Cursor保持它的创造力和独立性。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 面试官问LoRA，你这样回答（原理+多LoRA+变现）——他大概率会当场录用你';
+        const CONTENT = `面试官问：“说说LoRA的原理。” 你内心狂喜，倒背如流：“低秩适配、旁路矩阵……” 面试官点点头，面无表情：“下一个问题。” 然后就没有然后了。因为你跟其他候选人一样，把LoRA当名词解释在背。
+
+今天给你一个降维打击的回答模板：从LoRA的一篇论文，讲到多LoRA动态路由，再落到一个年利润50万的细分生意。按这个思路答，面试官的反应会是：“你什么时候能入职？”
+
+先看一个震撼对比。全量微调70亿参数的模型，需要100万搭集群配8张A100显卡，再加5万清洗100万条高质量数据，还要应付梯度消失、内存爆炸、过拟合等各种掉头发的事。而LoRA呢？原模型不动，只额外训练一个低秩矩阵，参数只有原模型的0.1%到2%。一张RTX 3090显卡两万块钱，几个小时搞定，性能能达到全量微调的90%，有些任务甚至反超。这就叫降本增效。
+
+LoRA的价值这么大，面试官必问。但你不能只背八股文。想要一击必中当场拿offer，需要展示四个东西：知识的广度、知识的深度、落地实践、价值变现。
+
+先说一句话记住LoRA：给大模型挂一个外挂U盘，只训练U盘，不动电脑本身。原模型的通用能力不会下降，这是它最聪明的地方。
+
+接着说技术演进。不要罗列论文，而是画一条时间线：2021年微软提出LoRA；2023年QLoRA在4-bit量化模型上微调，显存从50GB降到8GB；2024年QuAILoRA让量化精度损失更小；2025年RaLo自动找出每层最优的秩；2026年ProLoG把提示学习和LoRA融合。你不需要背全名，只需要告诉面试官：这个领域三年迭代了四代，而你一直在跟。
+
+然后是最加分的地方——多LoRA组合。把若干个LoRA模块串起来或并联起来，做成专家团队。串联：先加载法律LoRA，再叠加礼貌语气LoRA，就得到一个法律专家+客服风格。并联：同时运行金融和风控两个LoRA，加权融合输出。动态路由：用一个小路由器判断当前问题属于哪个领域，自动选择合适的LoRA。这是2025到2026年的前沿方向，面试官听到这里已经开始认真了。
+
+再讲一个商业案例，把变现能力亮出来。假设你要做一个法律合同审核智能体。目标客户是中小律所和企业法务部，他们不敢把敏感合同数据交给通用大模型。你用Qwen2.5-7B作为基座，用LoRA微调，数据从公开法律文书中清洗出五万条“条款-审核意见”对，训练配置R=16 alpha=32 batch_size=2，在24GB显卡上跑几百步。成本多少？显卡两万，数据清洗一个月算人力成本两万，总共不到五万。部署的时候把LoRA合并成GGUF，用Ollama封装API。定价模式：私有化部署一次性收费15到30万，加每年5万运维。算一笔账：每月固定成本2.5万，只要签六个客户每年各5万，即可盈亏平衡。同一个基座模型，叠加劳动法、知识产权、公司法等不同LoRA模块，一套部署服务多个细分方向。通用大模型不敢碰敏感数据，开源模型不懂中国司法文书格式，而你做出来的东西既私有又专业。这就是窄领域做王者的逻辑。
+
+讲完案例，再聊风险，展示思辨能力。LoRA也有安全问题：恶意适配器可以植入越狱攻击能力，通过Hugging Face等平台去中心化分发，一万次查询就能窃取96%的知识。你知道这些风险，意味着你懂得如何防范——可信来源认证、行为审计、自动化检测。面试官会想：这个人不是只会调参，他能看到系统层面。
+
+接下来是工程落地细节。你不需要背代码，但要能说出：具体环境用24GB显卡，框架用Unsloth，数据准备从公开法律文书来，评估用BLEU和人工抽检。你遇到过显存OOM就减小max_seq_len，loss不下降就调整学习率。这比只说“我会微调”强十倍。
+
+本科生能把LoRA原理、QLoRA、多LoRA组合的论文脉络讲清楚，并说出自己的理解，小天才。硕士在上述基础上，能结合金融、法律等具体场景论述商业价值和落地方案，可称经验丰富。博士能清晰论述技术脉络、优缺点、未来方向并形成系统性知识框架，只能算及格。而经验丰富的博士，能快速复现核心代码，基于实验判断哪些方法是坑，能判断哪个方向投入产出比高，能解决真实世界的问题，可称惊艳。
+
+如果你按照”经验丰富的博士“这个层面准备，大概率当场拿offer。
+
+这些内容，是我梳理的83套真实AI Agent面试题、112轮面试的总结，面试题覆盖大中小厂。
+
+你不是在买题，你是在买面试官的大脑。
+
+https://www.kunniaa.com`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

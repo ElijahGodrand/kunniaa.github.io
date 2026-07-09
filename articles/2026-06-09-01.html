@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '《置身钉内》：牛马在钉钉是如何被捶的';
+        const CONTENT = `**“族谱上钉”大作业 P6**
+
+面试前要求完成一份大作业：把家族成员拉进钉钉，建立6人以上族谱组织，让他们真实活动，并写产品见解。
+
+作者家里人口少，能真正用钉钉的凑不够6人。她做了大量代偿工作：去图书馆查族谱、联系族谱商家、动员朋友搭旅游群。
+
+面试时反复追问：“为什么做不成？父亲家还有人吗？母亲家？外公外婆还在吗？真的找不到吗？真的凑不齐六个能上钉钉的家人吗？”
+
+一系列“低宜人性”问题，令人发指。
+
+最后评价作者“学术底色太重”，但仍给了通过。
+
+**盘问婚姻交友情况 P7**
+面试中无招还问了作者的婚姻交友情况，以及“创业有没有做好抛弃这些的准备”。
+
+**V6 1000分企业任务 P82**
+转正必须完成三个材料，第三个是：在钉钉服务池里选一个低分企业，或自己拉一个新组织上钉，并把该组织服务到V6 1000分。V6是企业等级，1000分是超满分头部水准，全平台不足2%的企业能达到。作者花了30个小时以上陌拜、调研、打无效电话，最后靠求朋友公司帮忙刷数据才完成。
+
+她自述：“做V6任务的时候，我常常走在路上或正在吃饭的时候，心里突然升腾起一种巨大的无意义感。为什么我要做这个？这究竟在考验我什么方面的能力？”
+
+**试用期大比例被淘汰 P82**
+和作者同期进入ONE的一个产品、一个运营，都没过试用期就走了。
+
+**凌晨汇报、漫长等待 P77**
+每周至少两次向无招汇报。下午4点到，等到快6点，改到晚上8点，再改到10点，最后变成12点以后在项目室汇报。
+
+**整个三月份周末无休 P91**
+要求全员周六日两天都来加班。
+
+**看竞对熄灯的荒诞任务 P91**
+某天SM通知所有SM和PD“12点前不许下班，看飞书那栋楼几点熄灯”。作者留到十点半，意识到自己“只是为了呆着而呆着”。
+
+**日均工作15小时，一个月只休一天半 P95**
+封闭开发期间：早9点到晚11点半之后，周日固定上班，周六偶尔突击。最夸张的一个月，整个月只休了一天半，日均工作时长15小时左右。
+
+作者写道：“嗟乎！一人之心，千万人之心。‘钉’爱奋苦，人亦念其家。奈何取之尽锱铢，用之如泥沙。”
+
+**夜里等发版到一两点，习以为常 P95**
+
+**请假一天半（含调休）连续被打B- P78**
+清明节前请了半天假，节后又请了一天假。隔着一个周末，连续被打B-。作者去问Scrum Master，原因就是“请假”。那半天加一天，是她之前整个三月份周末无休换来的调休假。作者感叹：“当组织把可见投入当成默认美德，休息就容易被解释成不投入。”
+
+**Scrum每周强制拉开差距，总有人背低分 P78**
+每周打分，必须有B-或C。低分有时是评价，有时是“组织配额”。
+
+**第一次晕倒：深夜汇报后回项目室，快速起身后眼前一黑，倒地两三分钟 p96**
+连续熬夜+大量咖啡，没去医院，因为医生只会说“多休息”，而“那是我做不到的”。
+
+**第二次晕倒：同事打120叫救护车 p96**
+晚上7点多，在工位写文档，突然心脏一紧，呼吸困难，左半边身体发麻，声带僵直。摔倒在地，脸贴灰色地毯，浑浊空气混着霉味。“眼泪鼻涕口水从这台失能的人体里窜出来”，她用外套央求同事遮住脸。诊断：呼吸性碱中毒，低血压。医嘱：注意休息。作者批注：“获得一条难以执行的医嘱。”
+
+**膝盖磕破，两三周才好 P97**
+
+**CEO像“金色飞贼”在工区巡视 P81**
+中午一点半午休刚结束，无招在工区游走。看到有人“玩微信”，该员工的SM被要求手写检讨书发到群里。
+
+**老板上午提需求，晚上必须进包验收 P67**
+“每日一包”机制：无招的信息流是最高优先级。一小时内反馈处理方案，二十四小时内交付。
+
+**无人敢质疑 P33**
+分组功能做成那样，开发问“这是bug吧”，产品只能说“没办法，这是他要的”。作者自述：“说这话的时候，我自己也脸红，感觉自己在逃避和推卸责任。”
+
+**用户反馈被无视 P47**
+“发现”模块用户骂“像广告”“工作时不想看”，后台要求关闭的反馈极多，但老板觉得好，所以保留。
+
+**否定共创用户的真实需求 P64**
+碧桂园保安保洁想要任务卡片，无招说“ONE不是服务保安保洁的”。
+
+**秘密项目，对外部团队不能透露完整场景 P85**
+向外部团队要接口，只能含糊提需求，不能给看完整界面。一个小需求对三遍，拉很多人，鸡同鸭讲，像猜谜。
+
+**看竞争对手的深夜熄灯时间 P91**
+
+**强制不用微信 P5**
+要求“对不起我只用钉钉”，不能私下加微信。
+
+**早晚会制度 P79**
+早九点晚会，晚十点或十点半晚会，围观看板逐个说明。
+有同事建议：晚上6点直接回家休息，9点半再来，开完晚会再回家。
+
+**Scrum Master非本工种，评价失真 P79**
+技术负责人给产品设计打分，只能看客观数据和工时，难以置信评价。
+
+**校招设计被安排做OPT、写skill，与本专业无关 P79**
+一个认真、温和的校招设计，被调去做“一人公司skill”，绩效不好看。
+
+**我在某乎看了跟《置身钉内》的相关问题和回答，发现实际情况比作者描述的更可怕，作者大概描述了不到十分之一的恐怖。**
+
+**说它是人间地狱也毫不为过。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

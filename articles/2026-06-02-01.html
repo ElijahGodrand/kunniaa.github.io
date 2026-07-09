@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大模型+形式化证明，下一个星辰大海。';
+        const CONTENT = `我花了整整两天，研究了大模型+形式化证明这个赛道。还写下6000字分析，2000字外发，4000字放星球，然后我失眠了。
+
+不是因为累，是因为想清楚了：纯大模型赛道，已经诞生了万亿级公司。但大模型+形式化证明这个组合，未来产生的总价值，会是纯大模型的10倍。
+
+逻辑很简单——大模型负责猜，形式化证明负责证。没有形式化证明，大模型永远有幻觉，永远不能押注；有了形式化证明，可以把100%的本金加上100倍杠杆，砸向一个数学上必然正确的结论。
+
+为什么确定性=无限财富？
+
+凯利公式告诉你该押多少钱：2p-1=应投比例，p是胜率。
+
+用大模型做投资决策，胜率能做到99%？不可能，幻觉就是定时炸弹。所以要永远留一手。
+
+但形式化证明，把p变成了100%。
+
+100%胜率意味着可以把所有本金押上去，再加100倍倍杠杆。这意味着一次正确的决策，抵得上别人100次赌博式的尝试。
+
+过去，只有上帝和疯子敢这么干。现在，形式化证明给了一把数学级确定性的钥匙。
+
+而大模型，是找到可能正确的方向的引擎。两者结合，就是那个既能发现机会，又能确认它100%必赢的人。
+
+这种人在历史上叫什么？常胜将军、赌神。
+
+大模型有没有泡沫？有。但那是因为它缺了最关键的一环。
+
+我听到很多人说：大模型泡沫太大了。OpenAI烧了几百亿还在亏，大部分AI公司连商业模式都没跑通。
+
+我同意。纯大模型赛道，确实有点虚。
+
+但是——
+
+如果大模型只是用来写诗、聊天、画图，那它确实泡沫很大。这些事，用户愿意付的钱有限。
+
+但如果是：大模型加上形式化证明，可以100%确定性验证芯片设计、飞机控制系统、金融交易策略、甚至核聚变反应堆——还觉得这是泡沫吗？
+
+煤炭刚挖出来的时候，又黑又脏，没什么用。直到瓦特给它加了蒸汽机，世界才进入工业时代。
+
+大模型就是那块黑石头。形式化证明，就是那个蒸汽机。
+
+泡沫是什么？泡沫是人们对一个尚未完成的东西，提前支付了过高的价格。
+
+但如果这个东西一旦完成，就能重写人类所有硬核领域的底层安全逻辑——那现在的价格，不是泡沫，是折扣。
+
+所以大模型没有泡沫。有泡沫的，是那些以为会写提示词就是掌握了未来的人。
+
+真正改变世界的，是那个组合。
+
+最恐怖的事：不仅知道哪个方案会赢，而且手里全是必胜方案
+
+有了大模型，可以瞬间生成一百种商业策略、投资方案、战术布局。
+
+但问题是：哪一个真的会赢？
+
+形式化证明来了。它像一台数学验钞机，把那一百种方案一个个验证过去。然后告诉你：第3、第17、第62号方案，在数学上必然获胜。剩下的97个，都有漏洞。
+
+现在手里握着三个必胜方案。对手只有一个。
+
+然后环境变了——市场风向转了、对手出招了、监管政策改了。没关系，从三个必胜方案里，选那个最适合当前状态的，执行。
+
+无论对手多强，无论局势多复杂，永远能赢。
+
+就像下棋：每一步都能计算到将死对方的走法。这不是大概率赢，是数学上的必胜。
+
+而现在，大模型+形式化证明，把这个超能力，交到了你手里。
+
+这个逻辑已经在五个战场验证的。
+
+不是画饼。这些领域，形式化证明已经是黄金标准：
+
+ 1，芯片设计：3nm芯片的背后，是数学证明。
+
+没有形式化验证，就没有今天的3nm芯片。它被用来穷举验证CPU逻辑，保证没有一丝错误。大模型可以写Verilog，但只有形式化验证：这个设计在任何输入下都不会出错。
+
+市场很大？ 仅芯片验证工具，每年就是百亿级。而大模型+形式化正在把它变成一个自动化的印钞机——谁先做出产品，谁就垄断下一代芯片设计工具。
+
+2，安全关键系统：汽车、飞机、医疗。
+
+ISO 26262标准强制要求：最高安全等级必须用形式化方法。大模型可以生成代码，但无法保证代码不会杀人。只有形式化验证能数学上证明：这辆车在任何情况下都不会撞人。
+
+每家车厂、航企、医疗器械公司，都必须为这个数学保险付费。这是一个千亿级的刚需市场。
+
+3，博弈论与机制设计：拍卖、碳交易、市场。
+
+频谱拍卖、碳交易市场，一个机制漏洞就是百亿损失。大模型可以模拟，但只有形式化验证能证明：这个拍卖机制没有作弊空间、是纳什均衡。
+
+顶级高频交易公司、政府监管机构、交易所。他们为数学上公平的市场愿意付无穷大的代价。
+
+4，军事科技。
+
+美国DARPA已经用形式化方法造出了无法被黑客攻破的无人机控制系统。大模型可以发现漏洞，但只有形式化证明能消灭漏洞。
+
+随便一个项目的预算就是十亿美金起步。而且这个东西没有替代品——不能靠大概率安全去打仗。
+
+5，防止AI失控。
+
+OpenAI、DeepMind都在研究用形式化方法给超级AI上数学缰绳。形式化验证是通往它们的唯一已知路径。
+
+浮萍定律：看到它的时候，它已经赢了。
+
+有一个经典的脑筋急转弯：
+
+池塘里有一片浮萍，每天面积翻一倍。第9天的时候，它覆盖了池塘的50%。请问：它什么时候覆盖整个池塘？
+
+答案是：第10天。从50%到100%，只需要一天。
+
+这就是指数级增长的恐怖之处。
+
+现在看大模型+形式化证明这个赛道。可能觉得它还很早期，论文还只在学术圈流传，产品还没普及，身边没几个人在讨论。
+
+但要注意——
+
+Axiom从成立到提交第一篇论文，用了多久？
+从第一篇论文到5篇被顶级期刊接收，用了多久？
+从数学跨界到博弈论，用了多久？
+
+答案是：几个月。
+
+如果它的能力每几个月翻一倍，那么从今天看起来只覆盖了池塘的10%，到突然覆盖100%，可能只需要一年，甚至更短。
+
+我们是什么时候开始频繁听到大模型这个词的？2023年。但GPT-3在2020年就发布了。从2020到2023，那三年就是浮萍从1%到50%的沉默积累期。等在新闻上天天看到它的时候，它已经覆盖了80%。
+
+同样的剧本，正在大模型+形式化证明身上重演。
+
+区别是：这次剧本的节奏更快。
+
+数学家Ken Ono小野健放弃教职加入Axiom，是因为他发现Axiom三个月做的研究比他过去三十年还多，如果不加入Axiom，他这个人就没意义了。
+
+这意味着，从它看起来还有点意思到彻底颠覆一切，可能只有很短的窗口期。
+
+Axiom是比 AlphaZero 更恐怖的真理生成器。
+
+AlphaGo打败了李世石。
+
+AlphaZero比AlphaGo还厉害，它不需要任何人类棋谱，只靠左右互搏，自己跟自己下棋，最终在围棋这个有限盘面上遍历一切可能，成为无敌的存在，对战AlphaGo胜率百分百。
+
+想象一个更疯狂的版本：一个 AI，从最基础的几条公理出发——比如1+1=2、两点之间直线最短——然后自己给自己出题，自己证明定理，每证明一个，就把它添加到公理库里，继续往上盖。
+
+这就是 Axiom 在做的事。
+
+它要做的不只是一个围棋冠军，而是一个从根基上建造、每一层都经过数学验证、不可推翻的真理大厦。这个大厦的底层是公理，上层是定理，再上层是应用。只要你承认公理，就必须承认大厦里的一切。
+
+这就像欧几里得几何：从五条公理出发，推导出整个几何世界。Axiom 想把这个过程自动化、指数级加速。
+
+写到这里，我刷到一条刚出炉的新闻，手机弹出一条推送：
+
+Axiom Math，一家成立不到一年的初创公司，从2026年2月到5月，用他们的大模型+形式化证明系统，提交了8篇数学论文。到今天，5篇已经通过同行评审，正式登上学术期刊。
+
+覆盖的领域：数论、组合、交换代数、代数几何、表示论。
+
+5月27日——就在几天前——Axiom的最新论文跨界博弈论和经济学领域，与哈佛商学院教授合作，用Lean形式化证明了诺贝尔奖得主Robert Aumann的经典定理。
+
+上面说的芯片验证、安全系统、博弈论、军事科技、AI对齐，不是科幻，不是画饼。Axiom已经用论文证明：这套方法能产出人类专家认可的新知识，并且正以肉眼可见的速度，从数学领域向经济学、社会科学、博弈论扩张。
+
+2022年GPT爆火的时候，是什么感觉？羡慕早期玩家，后悔没上车？
+
+现在，同样的窗口正在打开。但这次不同：
+
+门槛更高：形式化验证论文全是数学符号，工具链还在早期，90%的人看不懂。这意味着信息差巨大，早期玩家能吃到最肥的肉。
+
+空间更大：纯大模型解决的是效率问题。大模型+形式化解决的是生死和信任问题。后者商业价值至少大10倍。
+
+时间更紧：等它变成人人可用的标准工具，红利期就过了。现在就是2016年的AI，2008年的比特币。
+
+已经在大模型里投入资源的人，要注意被替代危险。
+
+你手里的提示词工程、RAG、微调——这些东西有用，但它们都解决不了100%确定的问题。
+
+在芯片、汽车、军事、金融这些高价值领域，客户不会为大概率正确买单。他们要的是数学上证明。而现在的技能，在那些场景里价值很低。
+
+等大模型+形式化证明成为主流，技能会迅速贬值。
+
+形式化证明很难，所以它是难以跨越的护城河。
+
+做大模型应用的门槛越来越低。提示词工程，学几天就能上手；RAG，跟着教程跑一遍就会；微调，开源工具一大堆。OpenAI和DeepMind的核心工程师，私下也承认：大模型本质上是一个工程问题，不是数学问题。拼的是数据、算力、实验次数，不是智力。
+
+这意味着未来不可避免陷入内卷。
+
+但形式化证明不一样。
+
+它需要懂数理逻辑、懂形式语义、懂定理证明。这些东西，需要一点天赋，需要足够时间学习。它不是经验积累，是硬核的数学思维。
+
+这就是护城河。
+
+大模型让很多人失业，但形式化证明，是码农的福音。因为它重新定义了什么是不可替代。
+
+最后一句，兜底免责：形式化证明不是魔法，它在开放世界、非理性人类面前依然有局限。但在芯片、安全、军事、机制设计这些规则明确、代价极高的领域，它就是唯一的选择。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

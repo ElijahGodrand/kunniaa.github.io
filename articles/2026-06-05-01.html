@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 全网独家：跟大模型说真话，能改命';
+        const CONTENT = `手机里是不是装了大模型？
+
+豆包、Kimi、深度探索...
+
+每天跟它聊什么？
+
+“我是一个积极向上的创业者，请问如何提升内容质量？”
+
+拉倒吧。
+
+半夜三点失眠，盯着竞品的数据牙痒，焦虑到下个月房贷——这些都不提。
+
+提的是“积极向上”。
+
+跟大模型相亲吗？
+
+先说个常识，虽然常识往往最贵。
+
+大模型本质上是个**概率输出机**。它把人类上千年来攒的几乎所有文本、图像、音频、语音全吞下去，浓缩成一坨智慧的压缩包。
+
+跟它说话，就是在给它扔坐标。它从压缩包里定位到最相似的地方，给吐出一个最优解。
+
+这个解，是基于**统计**的最优路径。是无数前人踩过坑、填过土、修过路之后，总结出来的共性经验。
+
+什么意思？就是它能帮人从“普通”跨到“优秀”，效率惊人。
+
+但前提是——得给它**真坐标**。
+
+跟它说“我很努力”，它给努力的建议。
+
+但不说“我其实在假装努力”，它不知道真正卡在哪。
+
+不说真话，等于给导航输错地址。想去北京，输了个“南京”。导航说：好的，前方左转。开了一小时，发现怎么特么还在江苏？
+
+这能怪导航吗？
+
+> PUA大模型没用
+
+现在市面上有些提示词技巧，教“PUA大模型”。
+
+比如要说“是一个资深文案”，要“用马克吐温的风格”，要“分三步回答”，还要“如果不回答我就扣工资”……
+
+打住。
+
+Anthropic在2026年发了一篇论文，"这种做法不仅没有稳定收益，反而会系统性降低模型质量，并引入更高的对齐风险。"
+
+PUA它，它不会更听话，只会变**蠢**。PUA把求解路径引向了**低密度流形**，只适用于极端情况。
+
+>假设最终没用
+
+有人问：那我给大模型一个假设，让它基于假设回答，有用吗？
+
+一开始有点用。比如分析同事，知道他是男的、做运营、95后、爱吃辣。这些参数输进去，大模型能给点靠谱的东西。
+
+但继续问下去呢？
+
+“他为什么最近老躲着我？”——不知道他昨晚跟女朋友吵架了。
+
+“他为什么升职比我快？”——不知道他跟老板是远房亲戚。
+
+参数错了，答案就废了。
+
+**但分析自己就不一样了。**
+
+自己知道自己是不是在摸鱼。自己知道自己是不是嫉妒。自己知道自己是不是在骗自己。
+
+>说真话，改命
+
+人的工作记忆容量，小得可怜。
+
+心理学家说大概能同时记住4样东西——房租、KPI、体重秤数字、老板阴阳怪气——随便塞塞就能把大脑内存占满。
+
+解决不了问题，不是能力不行，是**说不清楚问题是什么**。
+
+“我自媒体总碰壁。”
+
+碰什么壁？流量低？完播率差？转化不行？还是发了就限流？
+
+说不清楚，大模型也只能瞎蒙。
+
+**但当逼着自己精确描述问题时，神奇的事情发生了。**
+
+这是流量问题，这是内容问题，这是心态问题。
+
+这个动作把脑子里的“隐性焦虑”变成了“显性文字”，大脑瞬间释放了压力，从“我好烦”切换到“我先解决标题点击率”。
+
+这就是为什么说，跟大模型说真话，**人会变聪明**。
+
+希腊神庙上刻着“γνῶθι σεαυτόν”——认识自己，不仅仅是哲学，是**操作手册**。
+
+把那些模糊的、藏在情绪和习惯背后的默认判断，一条一条显化到文字上，变成可检查、可改造、可优化的命题。
+
+苏格拉底那老头儿，几千年前就在干这事儿。
+
+他管这叫“产婆术”——说“勇气是坚持”，他就追问“那坚持错误也是勇气吗？”
+
+逼自己打自己脸，然后修正定义。
+
+**大模型就是苏格拉底。**
+
+说“我做自媒体总碰壁”。
+
+它会问：“流量低是因为标题点击率差，还是完播率低？”
+
+一愣，对啊，没分清楚。
+
+然后它接着问：“那怎样提高完播率？”
+
+……
+
+维特根斯坦说过：“我的语言的界限，意味着我的世界的界限。”
+
+如果意识里没有“点击率”“完播率”这些词，那问题就是盲区。看不见，没法解决。
+
+>说真话贵
+
+看心理医生必须说真话，因为假话治不了病，成本500块一小时。
+
+儒家要包一层“礼”，己所不欲勿施于人——成本是容易自我阉割。
+
+道家最省力，想骂就骂——成本是社会关系不稳。
+
+佛教要“善巧方便”，看人下菜碟——成本是费脑子。
+
+>假话更贵
+
+维持一个“假我”——假装自己很好、假装自己努力、假装不在乎——需要消耗大量的认知和情绪资源。这是生理事实。
+
+它会缓慢摧毁的免疫系统，导致慢性压力、免疫下降、内分泌紊乱、心血管疾病。
+
+当众承认自己犯错、造假、欺诈之后，说完那一瞬间，会有一种**如释重负**的感觉。
+
+因为不用再维持那个假我了。压力消失了，人就立刻健康了。
+
+>跟大模型说真话零成本
+
+大模型不需要照顾情绪，不需要维护关系，不需要看它根器。
+
+**可以说最赤裸、最真实、最难堪的真话。**
+
+如果说完之后呼吸更通畅了，那就是好的。无论怎么说，说什么。
+
+>诚实的孙割
+
+说到这，我想起一个人。
+
+孙割。孙宇晨。
+
+很多人骂他，但没人否认他**对自己诚实**。
+
+他前女友回忆过一件事：一群人吃椰子鸡，孙宇晨会在熟的第一秒，把大半只鸡一次性捞到自己碗里。不给自己吃不着的机会。后来和他一起吃饭的人发现，他做生意也是这样。
+
+贪就是贪，抢就是抢。他不装。
+
+他跟大模型的对话，肯定都是真话，聊爽了。
+
+所以他说，“能和AI聊天就不要和人类聊天，删除所有90后之前出生人的联系方式，千万不要沾染任何老登气息，时间宝贵！全力拥抱未来！”
+
+这话偏激吗？偏激。  
+但有真东西。
+
+**用真实的情绪，驱动真实的大模型，解决真实的问题，改变真实的人生。**
+
+这就是心法。
+
+>再扎一次
+
+市面上的提示词课程，几百块一节。教各种花哨的指令：“是一个资深文案”“请用马克吐温的风格”“分三步回答”……
+
+这些有用吗？有用。但它们解决的是“怎么问”，不是“怎么真诚地面对自己”。
+
+让一个不敢说真话的人，用再完美的提示词，得到的还是隔靴搔痒的答案。
+
+因为提供给大模型的输入，就是假的、是包装过的、是安全的。
+
+这不叫跟AI对话。这叫**对着镜子演自己**。
+
+所以，如果现在打开大模型，打出的第一句话还是“我是一个积极向上的人”……
+
+那我建议先别聊了。先问问自己：上一次对自己说真话，是什么时候？
+
+*全文完。*
+*如果看完这篇文章还是不想说真话，那建议学学孙割，抢先把椰子鸡里的肉全捞干净再说。*`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

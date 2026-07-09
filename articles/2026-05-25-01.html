@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 60亿刀投入AI Agent，只为了while循环的两句代码';
+        const CONTENT = `天量资金投入AI Agent。
+
+OpenAI 30亿刀收购Windsurf， 约**160**人。
+
+n8n去年10月C轮融1.8亿刀，累计融资2.5亿刀，约**150**人。
+
+LangChain去年10月B轮融1.25刀， 约**100**人。
+
+Cortex累计融资超1亿美元，约**80 人**。
+
+Dust累计融资6000万刀，约 **100 人**。
+
+Dify今年3月Pre-A轮融3000万美元，约 **110 人**。
+
+CrewAI最近A轮融资1800万美元，约 **30 人**。
+
+Griptape累计融资1460万美元，约 **22 人**，2026年2月被Foundry收购。
+
+AutoGPT，前年融资1200万刀，约 **10 人**。
+
+Composio，约 **64 人**，Flowise，**3-5 人**，分别累计融资数千万刀，具体数额未透露。
+
+还有Pydantic（Logfire）、ControlFlow、aider...
+
+全球资本在过去两年间，至少把**60亿刀**押注在了AI代理这个赛道上。人均融资额在**30万到100万刀** 之间，硅谷高级工程师年薪大致20到30万刀，**人均融资额相当于三四倍年薪**。
+
+**全球VC集体“包养”了几百号程序员，提前发了三四年的工资，只为了让他们专心优化 while 循环里的两行代码**。
+
+**所有AI代理的核心，就是一个while循环，4行代码。**
+
+\`\`\`
+while True:
+    user_input = get_prompt()  # 拼提示词
+    response = call_llm(user_input)  # 拿提示词问大模型：你说，怎么办？
+    execute_action(response)         # 执行大模型说的动作
+\`\`\`
+
+这玩意儿跟你们家洗衣机的“进水-洗涤-排水-脱水”循环在本质上没有区别。  
+
+要优化的就是第2句和第4句。
+
+一个是怎么问，一个是怎么干。60亿就砸在这两行上。
+
+真正值钱的是第2句，怎么问。
+
+这句是一串文字，是你发给大模型的“圣旨”，长度可达 **100万 Token**。什么概念？大约相当于**70万个英文字符**，或者 **30~50万个中文字符**。
+
+《三体》三部曲加起来才80万字。
+
+为什么要塞这么多？  
+
+**大模型是猴子，越念紧箍咒越听话，活干得越好。**
+
+人类把想要大模型扮演的角色、拥有的能力、遵守的规则、使用的工具、输出的格式……全部写成一句提示词，塞进每次循环的提问里。
+
+这几十万字分五块。
+
+第一块，给它穿马甲，角色扮演。写在开头：
+
+“你是一个经验丰富的黄毛，帮我写情书。”
+
+“你是一个拥有10年Python开发经验地中海发型资深工程师，擅长代码重构和性能优化，你的性格沉稳，回答简洁，只在必要时给出代码。”
+
+第二块，逼它打草稿，思维链。
+
+你直接问大模型“345 * 789 等于多少”，它可能瞎猜一个。  
+但你这样问：
+
+> “请一步一步思考。首先，把345拆成300+45。然后分别乘789。最后再相加。现在开始。”
+
+它就会乖乖输出中间步骤，最后算对。  这就是**CoT（Chain of Thought）**。把这个“一步一步思考写进提示词，要求模型在每次循环中先输出内部思考，再输出行动。
+
+第三块，给它递扳手，外挂工具
+
+大模型再牛，它不知道今天几点了，不会真的给你拨电话，更不会上数据库查你的订单。  
+所以你得告诉它：“你可以用这些工具。”
+
+给它一份清单：
+
+- \`get_current_time()\` → 返回现在几点
+    
+- \`send_email(recipient, subject, body)\` → 发邮件
+    
+- \`search_web(query)\` → 搜索互联网
+
+然后告诉它：
+
+> “当你想用工具时，请输出 \`ACTION: 工具名称(参数)\`。我会帮你执行，并把结果告诉你。”
+
+于是，大模型在循环里就会像个小孩子一样：
+
+> “我想知道现在几点了，那我应该调用 \`get_current_time()\` …… 好的，我现在输出 ACTION: get_current_time()”
+
+代理代码看到这个，就去执行函数，把结果（比如“2026-05-24 15:30”）塞回给大模型。大模型继续猜下一个字：“哦，现在下午三点半，那我回复用户……”
+
+第四块，帮它贴小抄，历史记忆
+
+大模型没有记忆。每次调用都是全新的，它不记得上一轮说了啥。  有必要在循环里把**历史对话**也塞进提示词。
+
+“上轮用户说X，你回答了Y。现在用户又说Z……”
+
+这就导致提示词越来越长，直到撑爆100万Token。  但没关系，因为只要塞得下，大模型就能表现得像真的记得你一样。
+
+第五块，教它说人话，输出格式
+
+大模型天生是自然语言狂魔，喜欢唠嗑。得告诉它怎么回复。
+
+>海瑞：“明白回话。”
+
+比如，需要**JSON结构化数据**，告诉它：
+
+> “你的每一次回复，必须严格遵守以下JSON格式：  
+> {  
+> “thought”: “你此刻的想法”,  
+> “action”: “你要调用的工具名”,  
+> “action_input”: “工具的输入参数”  
+> }”
+
+如果你不这么写，大模型可能给你来一段散文诗，你的代码怎么解析？
+
+总结一下，**一个死循环，一台猜字机器，一本几十万字的说明书。**  **说明书有五章：你是谁、怎么想、用啥工具、记啥事、怎么说话。**  
+
+**所有眼花缭乱的“智能体平台”** = 上面这些东西的排列组合 + 一个好看的UI + 一个付费按钮。
+
+原理很简单，功夫在诗外。
+
+就像，有人卖水卖成首富。有人卖水住地下室。
+
+...
+
+https://www.kunniaa.com
+
+这里有我梳理的83套真实AI Agent面试题、112轮面试的总结，面试题覆盖大中小厂。
+
+**你不是在买题，你是在买面试官的大脑。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

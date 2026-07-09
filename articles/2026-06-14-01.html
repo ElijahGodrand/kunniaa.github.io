@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '鹅腿阿姨和鹅腿宝宝';
+        const CONTENT = `“鹅腿阿姨”是什么人？是一个没读过书的农村妇女，在寒风中推个小车，卖了十五六年烤腿，勉强度日？
+
+错。完全想错了。
+
+“鹅腿阿姨”本名陈秀凤，江苏连云港人，大约56岁。她确实没受过什么高等教育。但她做了一件过去只有商学院学生才该做的事——她把烤腿这门生意做成了一个可复制的、低投入高回报的、完美的“标准化产品”。她卖的不是烤腿，她卖的是高等教育筛选出来的年轻人的“信任”。
+
+这个产品有三个核心部件：第一，选在高校周边，不在商业中心；第二，目标客户是“高智商低社会阅历”的大学生群体；第三，把自己包装成一个“农村淳朴老阿姨”。你们把这三点组合在一起，就等于印钞机。
+
+我们先来看一看，这只16块钱的“鹅腿”到底值多少钱。
+
+一只冷冻鸭腿的批发价是多少？2.4元到3.1元。注意，这是“正常”的鸭腿。如果换成最差的——那些库存一年以上的、反复解冻的陈年冻鸭腿，批发价还能更低，0.8元到1.5元就搞定了。如果用最劣质的卤料、劣质的包装，单只成品成本连2元钱都不到。她卖16元，每只纯利润至少14元。一天卖500只，一天净赚7000元。一年270天，你算算多少？189万。扣掉门面租金和人工——她在昌平租了个三层门面房，一年租金20万，雇了几个工人——她的纯利润一年至少80万元到150万元。
+
+而且她一分钱的平台费都不用交——完全通过微信群完成交易，绕开了外卖平台高达14%到17%的抽成。这一步棋，比大多数互联网创业者都高明。
+
+她2011年开始在北京大学附近摆摊，到现在整整十五六年，累计赚了多少钱？保守估计，接近1000万。
+
+所以“鹅腿阿姨”根本不是什么穷苦的农村妇女。她是一个懂商业、懂人性、懂私域流量的操盘手。她的净资产比你们很多老师都高，她赚的钱可以碾压大多数985硕士毕业十年的薪水和存款。
+
+所以问题来了：她凭什么能赚到这些钱？
+
+当然，“坏”也是她的核心竞争力。但她可不是那种“心狠手辣的坏人”。她的核心竞争力叫“包装”。她把自己包装成一个不识字、不会玩手机、不懂高科技、每天在寒风中辛苦劳作的“老阿姨”。她的经典台词是这样的——这个新闻里有原话：“我不会玩花招，就是凭良心做事”“信任是相互的”“不能让顾客遇到食品安全的问题”。多动听啊。每一句话都精准打击了大学生心中最柔软的那个地方。
+
+她甚至还专门去北京大学做过演讲，题目叫《“鹅腿阿姨”来北大啦》——连这种“高校演讲”都做了，就是要把“农村人”这个身份标签打满，让你们觉得她可怜、她可信、她值得。
+
+然后她注册了“鹅腿阿姨”商标，国际分类覆盖了食品、餐饮、啤酒饮料、医疗园艺等十多个品类。你们看她多聪明，她是先用“农村人”的人设跟你们建立感情，让你们把她当亲人，然后再去注册商标，建立中央厨房，雇佣员工，引入第三方配送代理。到这会儿，她已经完全是一个现代企业的老板了，可她还是那个“在寒风里瑟瑟发抖的老阿姨”——她的外表和内核完全分裂，而分裂本身就是她的商业模式。
+
+你还觉得她“憨厚老实”吗？你要是这么觉得，那你就是她最爱的那类顾客。
+
+最让我匪夷所思的是这群大学生。他们可以娴熟地使用AI，能精准地分析实验数据，可面对一个从内部往外渗绿的、明显是腐败变质的东西，他们居然相信“是大葱叶榨汁染色”。多可笑啊。一个人连鸭和鹅都分不清，连坏没坏都看不出来，还觉得自己是被“烟火气”感动了。
+
+但你要问他们为什么愿意一次又一次地下单，十几年来从不间断？答案比你想的简单得多——因为他们觉得自己占了天大的便宜。
+
+一只真鹅腿在餐厅卖四五十块钱，在食堂卖三十多。鹅腿阿姨只卖十六块。十六块啊，在北京，一杯奶茶都买不到好的，却能买一只“鹅腿”。那些大学生心里想的是什么？想的是：“外面卖那么贵，阿姨这里这么便宜，阿姨一定是为了我们学生，不赚钱，就是做善事。我买到就是赚到。”他们每一次下单，都有一种“我比别人精明”的成就感。他们把十六块钱买到的鸭腿，在心里自动换算成了四十五块钱的真鹅腿，然后觉得自己每买一次就省了二十九块。一天买一只，一年就省了一万多。多划算啊。
+
+这就是占便宜心理。比任何营销都管用。你不需要说服大学生，大学生自己会说服自己。你只需要给大学生一个“比市场价低很多”的价格，大学生自己就会帮你编出一整套“阿姨是好人”“阿姨不容易”“这是学生福利”的理由。然后大学生不但自己买，还会拉着室友一起买，会在群里接龙，会在朋友圈晒图。为什么？因为炫耀自己“抢到了便宜货”也是一种优越感。
+
+阿姨太懂了。她故意把价格定在16元——比真鹅腿便宜一大截，但又不像免费赠送那样让人起疑。这个价格恰好卡在“便宜得让人心动，但又贵得让人觉得自己在支持良心生意”的黄金分割点上。你仔细品一品。这是消费心理学论文级别的定价策略。而阿姨没读过一天商学院。她是天生的。
+
+更让我震惊的是，有些医学生吃这只鸭腿时吃坏了肚子腹泻，第一反应不是去找食品安全的问题，而是说“是我肠胃不好，本来就容易腹泻”。一个医学生，连自己的症状都判断不了，还要被一个卖假货的老太太保护？这种教育到底给孩子教了些什么？教了你们刷题、教了你们听话、教了你们要相信权威。就是不教你们最基本的“常识”，就是不教你们“不要轻易相信任何一种陌生的食物”，就是不教你们“一个十六块钱的东西，怎么可能是一只真鹅腿”。
+
+这正好说明我们现在的教育系统在干一件什么事呢？在干一件“明线”和“暗线”割裂的事。“明线”是告诉你们：“好好读书，考上好大学，人生就圆满。”“暗线”是什么呢？是它从来不会告诉你们怎么分辨鸭和鹅的区别，不会告诉你们一斤鸭腿和一斤鹅腿分别应该多少钱，不会告诉你们微信群里被人集体夸赞的“老阿姨”有可能就是最精明的骗子。因为一旦教会你们这些，你们就有批判性思维了，你们就容易产生质疑精神，你们就不好管了。
+
+所以他们宁可把你们教成没有经验的、出了学校就被各种人骗的“鹅腿宝宝”，也不愿意让你们在毕业之前完成真正意义上的“社会化”。这样，教育系统才能筛选出那些听话、懂事、按部就班的孩子，而不是那些看到发绿的烤腿就会说一句“这不对，这可能是变质的”的孩子。
+
+说到最后，我想问你：你说这群人像什么？他们像极了被人用一颗糖就骗走的小宝宝——一个十六块钱的东西，顶多是用低廉的鸭肉冒充鹅腿，就能让他们心甘情愿被骗十五年。
+
+所以我给这个特定的人群起了个名字：“鹅腿宝宝”。
+
+什么是“鹅腿宝宝”？第一，永远在支付宝里算不清楚16元能不能买到真鹅腿——因为从来没进过菜市场。第二，永远指着已经变质的绿色斑块说是独家秘方——因为完全不了解什么是真正的人类社会。第三，永远在微信群里接力说“阿姨辛苦了”——因为不学习社会底层的基本博弈规则。第四，永远把市场中的骗子当成自己人——把“我是一个农村人”当成信任的通行证，而不是商品包装上的一个标签。第五，也是最重要的——永远觉得自己占了大便宜，却不知道自己才是那个被占便宜的人。
+
+这一群人身上有一种“清澈的愚蠢”。这个“清澈”，来自纯粹的校园环境和听话的历史习惯；这个“愚蠢”，则来自对整个世界运行规则的彻底无知。
+
+为什么会这样？因为从来没有一个人教过他们这些。因为他们的成长里，除了分数和排名，没有其他任何东西——没有消费知识，没有成本概念，没有“占便宜往往是吃亏的开始”这种最基本的生存智慧。
+
+如果一只鸭腿能让你瞬间顿悟——原来教育教你的高智商，在现实社会里一文不值——那我觉得这16块钱就花得太值了。
+
+因为我看了半天，唯一可笑的就是这场荒诞闹剧最后呈现的结果：你们学了十八年的知识，被一个没读过大学的老阿姨按在地上摩擦，还帮她数完了钱之后，微笑着跟她说了一声“谢谢阿姨”。
+
+有人问我，你能不能帮这些被骗的大学生说一句话。我说，可以。我说了，就是：“你们被一只16块钱的鸭子骗了十几年，也该学着成为一个正常人了。”`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

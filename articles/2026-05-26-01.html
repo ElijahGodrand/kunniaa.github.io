@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 人均融资1500万的大模型产品，怎么复刻？';
+        const CONTENT = `**人均融资1500万的大模型产品，你想复刻一个出来吗？**
+
+**6个人，融了1100万刀**，约合人民币8000万，**每人1500万**。
+
+创始人是20岁的华人大三学生，辍学创业，做了**VideoTutor**，用大模型自动生成数学题讲解动画视频。
+
+今天扒一扒：**怎么复刻它**。
+
+**先看看谁投的钱**。
+
+种子轮领投方：**YZi Labs**（赵长鹏的家族办公室），参投：某度风投、锦秋基金（某节系），这是赵长鹏投的第一个AI产品。  
+
+创始人赵凯，安徽阜阳出生，爸妈收废品的。小学三年级看《硅谷之火》，18岁父母卖房送他去美国上大学，大一创业失败，大二创业失败，大三创业成功。
+
+大概是从小想创业，读大学是身份过渡，入学就持续创业，这不是普通人能下决心的事，大多数人还是学业为重。
+
+他赌赢了。
+
+团队成员包括前谷歌AI工程师、斯坦福研究员、开源动画引擎作者。
+
+VideoTutor解决什么问题？
+
+爸妈给孩子讲数学题，越讲越火大。现在拍个照，几十秒后，VideoTutor 给你生成一条 **3D动画+配音的讲解视频**。三角形、微积分、几何图形——全都动起来，看得懂。
+
+美国在线家教一小时25刀起，讲四五道题。
+
+它呢？4条视频3.99刀，性价比超高。
+
+2025年5月上线，10天冲到2万用户，零广告。
+
+需求被验证，市场需求强大！  
+
+**技术不难，三个字：拼乐高：**  
+- 一个小模型：专门识别几何图形（OCR搞不定的那种）。  
+- 一个大模型：任选调用OpenAI、Gemini、DeepSeek当导演，写剧本（开场、分步、结语）。 
+- 一个魔改引擎：Manim，就是3Blue1Brown那个动画神器，原来一个视频渲染几天，现在**RTX 4060显卡，15秒出一条**。  
+- 再加个语音：MiniMax、Azure、ElevenLabs 随便挑。
+
+**有开源项目Code2Video做参考**，跟VideoTutor的核心思路一模一样。  
+
+一个人，4-6周就能跑通LLM生成公式动画 + TTS配音。  再花8-12周，练个小模型，搞定复杂几何。  
+
+**中期3-4个人**，前端后端算法产品各一（兼职能省就省），**20-30人月**，就能干到VideoTutor的水平。
+
+**国内市场就是印钞机。**
+
+K12在校生1.88亿，AI教育市场2025年预计破700亿，年增长47%。现在覆盖率才10%-15%。  哪怕每人一年只付10块钱，那也是**接近2个亿**。
+
+什么？卷不动国内市场？
+
+那就转头卖美国去，时薪家教换成3.99刀视频，老外一样喊真香。
+
+...
+
+https://www.kunniaa.com
+
+这里有我梳理的83套真实AI Agent面试题、112轮面试的总结，面试题覆盖大中小厂。
+
+**你不是在买题，你是在买面试官的大脑。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大模型打了个响指，互联网一半的岗位要没了';
+        const CONTENT = `当下的软件开发现实场景：一个工作日的上午，项目经理丢过来一个需求，要做全球航线的动态监控大屏，几千条航线、几万条轨迹，附带一个地图SDK的文档。以前得翻GitHub、找开源项目，一行行改，没个两三天根本拿不出像样的东西。但现在不一样，把文档和截图拖进对话框，敲下一段提示词。AI只用一上午，就吐出了一个能跑、能交互、基本满足需求的初版demo。只需要改改界面颜色，调几个参数，就能上线了。
+
+那一刻其实很惊悚，工作量没了！AI写的代码，高级开发能看懂、能找出漏洞、能修正幻觉，那是因为在这行干了七八年，踩过无数坑。可刚毕业的应届生呢？连AI写的代码都读不通顺，更别提去改错。他根本没有机会再经历从画页面到线上救火的那条成长路径。他的活儿，被AI一上午就干完了。
+
+老板看到的是另一笔账：一个熟练工加上AI，效率顶过去五个初级工程师。过去要养一个五人的小团队，现在只要留一个能驾驭AI的老手，外加每月几百块的Token费用。人力成本砍掉百分之七八十。
+
+**大模型正在以惊人的速度砍掉就业岗位。**
+
+2026年5月到6月，中国互联网大厂的裁员消息密集得像雪崩。阿里巴巴旗下的飞猪，网传整体优化比例约40%，测试与前端岗位高达50%，产品约15%，后端约30%。有实习生发朋友圈说，不管前后端测试产品运维全部砍掉50%，实习以来认识打过交道的人今天一天全没了，宛如灭霸打了一个响指。刚入职不满一年的新员工和试用期员工首当其冲。滴滴传出计划整体裁员15%到20%，波及几乎所有部门，只有自动驾驶和国际化暂时安全。小红书裁员比例最高达到20%，电商、商业化、社区技术部门是重灾区。百度移动生态事业群裁员比例达40%。
+
+这还只是国内。Meta在2026年5月一次性裁掉8000人，约占员工总数10%，管理岗超1400个，软件工程经理占了近一半。亚马逊裁员3万人，微软裁了8500个岗位。全球科技行业2026年前5个月累计裁员已超10.3万人。达拉斯联储的报告说：这轮裁员不是经济周期导致的，是AI快速落地的直接结果。
+
+注意——**这些公司大多是在盈利的情况下裁员的**。企业不是活不下去了才裁人，是发现AI真的能省钱，所以主动裁。
+
+更可怕的是，这是一场**结构性洗牌**，不是周期性波动。企业一边裁撤传统岗位，一边疯狂招AI人才。2026年春招，AI相关岗位数量同比暴增约12倍。裁的是测试、前端、基础运营这些能被AI替代的岗位，招的是能开发AI的人。数据显示，2025年科技行业裁员中仅9%与AI替代相关，但进入2026年后，AI相关裁员占比已升至16%，最近单月更达26%。这个势头还在加速。
+
+那AI岗位现在很值钱。2026年前四个月，AI领域的新发岗位量同比增长了8.7倍，在新经济行业里的占比从不到3%暴涨到了22%。具身智能细分赛道招聘指数暴增了15倍。AI科学家平均月薪13.28万元，断层式领先；算法研究员平均月薪7.44万元；大模型算法工程师平均月薪7.15万元。大模型算法岗的应届生平均月薪5.2万元，比2025年涨了48%。蚂蚁集团给AI核心研发岗开出的月薪是5万到8万，按15薪计算，应届生首年税前能拿到75万到120万。字节跳动给顶尖AI博士开出的总包已经达到亿级。有清华姚班的本科生说，身边应届的学长学姐进入腾讯、阿里等大厂，年薪总包都达到了大几百万。
+
+一边是几十万甚至上百万的AI岗位年薪，一边是传统程序员被批量裁掉。这是财富和机会的重新分配。
+
+这就引出一个最悲观的问题：如果AI现在就能替代30%、40%、50%的人，那等AI再进化一两年，会裁多少？
+
+AI的学习能力是指数级的。它不会满足于当助手，它要当主力。那些暂时安全的岗位——产品经理、运营、甚至中层管理——只要工作内容能被拆解成规则和流程，AI迟早能接手。唯一暂时安全的，是需要复杂人际博弈、情感连接和现场决策的岗位，比如销售、谈判、危机处理。但这类岗位在互联网公司里占多少？少得可怜。
+
+企业裁员的逻辑会越来越简单：只要AI能干，而且干得比人便宜，那就裁。成本压力叠加AI提效，没有老板会犹豫。那些被裁的中层，35岁上下，上有老下有小，拿着N+1的赔偿，却发现市场上根本没有同等级别的岗位在招人。初级岗位被AI吃掉，高级岗位只需要极少数顶尖人才，中间层彻底悬空。
+
+新人的处境更难。过去互联网行业有个“干中学”的成长路径——先做初级岗位，踩坑、积累、慢慢升级。现在这条路被AI封死了。企业不需要学徒，只需要能直接产出的人。
+
+这不是遥远的科幻故事，这是正在发生的日常。我们亲手造出了一个比我们自己更能干、更便宜、更不知疲倦的怪物，然后发现，这个怪物吃掉的第一批人，就是我们自己。而最恐怖的是，这仅仅是开始。
+
+我是昆尼Kunniaa，**大模型第一插眼。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

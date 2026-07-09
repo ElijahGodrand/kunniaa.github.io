@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 从“怎么问”到“造什么”——我与AI共同厘清循环工程Loop Engineering的几个瞬间';
+        const CONTENT = `跟AI聊循环工程Loop Engineering，一开始我其实没那么激动。
+
+因为从数学或者几何的角度来看，这东西没那么玄乎。原来Agent干活的方式，本质上是一个DAG，有向无环图，一条路径走到底，不回头。循环工程就是在这个DAG外面套了一个环，让它能够一圈一圈地走，走不通就绕回来重新走。从拓扑结构上看，就是一个环包着一个DAG，环负责反复，DAG负责推进。我觉得这个结构挺清晰的，也没什么好大惊小怪的。
+
+但让我好奇的是，为什么就这么一个环套DAG的结构，能被那么多人拿出来单独讨论，还起了个专门的名字叫循环工程？我想知道提出这个概念的人到底怎么想的。
+
+于是就去找了发明者Addy Osmani的原始文档 https://addyosmani.com/blog/loop-engineering/。
+
+读完之后，我在脑子里试图把这个环和DAG拆开来看，看看每个部件到底承担什么职责。拆着拆着就发现问题了——不同组件的职责并不清晰，有些部位纠缠在一起，边界模糊。
+
+而且不光是开发会遇到问题，面试也一样。
+
+我面试过几千人，太了解技术面试官会怎么出题了。面试官一定会先问一个看起来很简单的问题，但那个问题一定在某个边界上模棱两可、容易出错。用这道题来判断是真的理解，还是只是背了概念。大部分人死就死在这一步。答得模棱两可，后面的就不用问了。
+
+Osmani原始架构里那些纠缠在一起的地方，恰好就是面试官最容易出题的地方。因为如果只读过原始论文，对那些组件的边界认识本身就是模糊的，面试官随便找一个点追问，你就卡住了。
+
+于是我又回去问AI：这个原始设计是不是有问题？哪些地方纠缠了？怎么拆？AI给了建议，我看了，有道理，但也有不同意见。于是继续讨论，继续拆。就这样来来回回，把那些纠缠的部位一件件剥离开，重新安排，直到每一块都有明确的边界。
+
+我把整个重构的过程整理成了一篇工程化的文档，把每一层的职责、边界、组件归属都写清楚了。写完，发了星球。
+
+我重新读了一遍，觉得有点可惜：文档是对的，很规范，也很完整，但它只记录了结论，没有记录得出这些结论的过程。而整个讨论过程中，那种反复追问、推翻、重来的状态，本身也挺有意思的。
+
+于是我又把跟AI讨论的完整过程整理成了一篇单独的文章，放在星球里。里面有怎么拆的，怎么发现问题的，哪些地方绕了远路，哪些地方推翻了重来。
+
+全文3800字，星球专供。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

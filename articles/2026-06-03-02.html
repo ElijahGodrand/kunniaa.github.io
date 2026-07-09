@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 月薪60k招一个游戏Agent，老板到底在赌什么？';
+        const CONTENT = `游戏Agent给钱真多。
+
+一个小厂招游戏Agent开发，开出了**30k-60k**的月薪。
+
+其他岗位最高也就30k。
+
+你品，你细品。
+
+这就像你去沙县小吃，发现菜单上有个澳洲和牛套餐，价格是其他拌面扁肉的10倍。你不是震惊，你是怀疑——**老板被铁线虫脑控了？**
+
+然而并没有。
+
+今天，我就用行业内部视角，给你扒一扒这个岗位背后的老板期望，以及那些JD上绝对不会写的潜规则。
+
+整个JD，两个词最重要，“多智能体协同”，“端到端生产闭环”，其他是配菜调料。
+
+“谁给翻译翻译，什么是多智能体协同？”
+
+“让一群AI狗腿子一块儿干活，有的搞策划，有的写程序，有的整画面，再弄几个搞测试。以后我再想到别的活，也都TM让AI干。”
+
+”那端到端生产闭环呢？“
+
+”我提个需求，从0到1自动化一条龙，过一会游戏直接上线发版，一个活人都不需要，别BB”。
+
+这家做**自走棋手游**。自走棋这个品类，最致命的痛点是什么？**玩家匹配不到人**。
+
+想象一下：你蹲坑的时候打开游戏，想爽一把，结果等了2分钟还没凑齐8个人。你会怎么办？卸载。
+
+所以老板的第一个期望，朴素得令人发指：**给我做一个能填充匹配池的AI对手，要像真人，不能太强不能太弱，而且推理成本要低到令人发指。**
+
+这个AI对手，就是你的第一个KPI。做不出来，试用期过不了。
+
+而且，这里有个JD上不会写的潜规则：**这个AI对手上线后，你半夜被电话叫醒的概率是100%**。为什么？因为凌晨3点是玩家在线低谷，匹配池最空，AI对手的压力最大。一旦AI决策超时或者抽风，玩家开喷，老板第一个打给你。
+
+“喂，Agent崩了，起来修一下。”
+
+你迷迷糊糊打开电脑，看着日志，发现是某个大模型API限流了。你手动切了个备用模型，然后继续睡。第二天早上，老板在群里@你：“昨晚辛苦了，今天写个复盘。”
+
+AI对手做好了，老板的胃口就大了。
+
+他开始幻想：能不能让AI帮我写策划案？能不能让AI自动生成羁绊配置表？能不能让AI跑一万局平衡性测试，然后告诉我哪个棋子太强？
+
+你看，这哥们已经开始做梦了。
+
+今晚随便做的梦，明天一早你给我实现。
+
+他的梦就是你的活。
+
+打通多智能体协同的端到端生产闭环，**就是让AI把策划、程序、美术、测试以及其它想得到想不到的脏活累活全干了**。
+
+策划不想配表？让AI配。
+
+程序不想写重复代码？让AI写。
+
+美术不想调参数？让AI调。
+
+测试不想跑用例？让AI跑。
+
+然后这四群AI之间还要能沟通，不能打架。
+
+听起来很美好对吧？
+
+但行业内幕是：**这类Agent的落地成功率，目前不到30%**。不是因为技术不行，是因为游戏研发流程本身就很”玄学”。策划说“这个羁绊要有爽感”，你让AI怎么理解“爽感”？程序说“这个代码要优雅”，AI能写出优雅的代码吗？
+
+老板梦里要“全流程AI”，**能搞定三个具体场景，他就烧高香了**。
+
+但你要假装不知道，然后拼命去实现那70%不可能的事。这就是创业公司的**预期管理艺术**。
+
+顶格60k月薪，在上海不算低，但也绝对不算高。
+
+拿到这个月薪，老板都会配个白吉光饼：业绩能力达标者，晋升合伙人，共享公司收益。
+
+“好好干，亲，上市了就财富自由吆！”
+
+代价是什么？
+
+代价是你得把公司当成自己的。
+
+你要比老板更焦虑，比老板更能扛，比老板更懂怎么用AI把公司拉到“爆发线”。
+
+你不仅要写代码，还要跟策划撕需求，跟美术对资源，跟测试掰扯bug。甚至，你还要帮老板画PPT，去跟投资人讲故事：“你看，我们有全流程AI生产体系，估值应该再翻三倍。”
+
+赌赢了，就是下一个游戏AI赛道的千万富翁。
+
+赌输了，就当花半年时间，学了最前沿的Agent技术，简历上多了个“从0到1搭建游戏AI生产体系”的项目经验——这玩意儿，大厂抢着要。
+
+但前提是，你得真的能干出活来。
+
+残酷吗？是的，但残酷只是冰山一角。
+
+游戏全行业都这样。
+
+站在游戏行业门口的你，跟朱元璋差不多。
+
+朱元璋当年在皇觉寺当和尚，饿得连粥都喝不上，他一咬牙一跺脚，反了，赌命。
+
+你也是赌命。
+
+这个行业就跟那传销组织似的，一视同仁，从不搞特殊化。甭管你是写Agent的，还是写策划案的、画画的美术、找bug的测试，进了这个门，通宵和Oncall就是一张入场券，谁也别想跑。你拿30k的得扛，拿60k的，更是要把脑袋别裤腰带上。
+
+有个3A项目组被爆出**连续三个月天天凌晨4点下班**
+
+**2025年游戏从业者全年加班总时长约882.5小时**，折算下来相当于**多干了5.3个月**。你以为是"偶尔冲刺"，实际是一年中有将近半年时间，别人朝九晚五，你一头扎进办公室。
+
+AI来了，反而让加班更隐形更狠。
+
+引入AI工具后，原画师日均出图量从3张飙到27张，但**平均下班时间从21:00推迟到23:30**。剧本工具让产能翻8倍，**剧情分支选项暴涨15倍**，你的工作量也翻倍了。
+
+"以前画一张图要一天，现在AI半小时出20版，策划要求**把这20版都细化**。"
+
+猝死是常有的事。
+
+游戏行业的offer就像**带夜视镜的矿工**——前路黑暗是真的，掘到金矿的暴富传说也是真的。
+
+但残酷归残酷，你翻翻手机银行余额，看看下个月的房租提醒，再瞅一眼老家父母那个“不敢生病”的体检报告——**残酷，能有穷残酷？**
+
+送外卖，风吹日晒一单赚1块；干代驾，凌晨三点还在等一个醉鬼。游戏公司再狠，它给你交五险一金，它给你开60k的月薪，它让你掉头发，那也是在空调办公室掉头发。
+
+如果有更好的出路——考公上岸、家里安排、大厂offer——别来。
+
+但如果**学历普通、背景一般、兜里比脸还干净**，投了三百份简历已读不回，刷了两个月简历全是“感谢关注”——那还犹豫什么？
+
+朱元璋反的是元朝，你反的只是平庸。
+
+反了，最多也就是继续穷；不反，你连穷都不知道要穷到什么时候。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

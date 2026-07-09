@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 上一篇过时了，这才是真正的、当下最好的大模型写周报方法';
+        const CONTENT = `不扯什么"向上管理""销售自己""让老板看见价值"——周报的本质就一句话：**公司为了证明"我们在管理"，要求每周提交的一份格式化信息垃圾。**
+
+它的真正作用，让HR觉得流程完善，让老板觉得"我有掌控力"，让自己花30分钟到3小时不等的时间去编一些下周自己都不记得写了什么的话。
+
+就这么简单。别赋予它太多意义，它不配。
+
+**让AI替我完成这个每周刷新的强制性日常任务，我用最低能耗刷完，然后该干嘛干嘛。**
+
+只需要做一件事：**随手记流水账**。
+
+每天花30秒，在手机备忘录里敲几个字：
+
+周一：改了俩bug，开了个会
+ 
+周二：做了张表，跟产品吵了一架
+
+周三：写了个方案，没通过，又改了一版
+
+周四：摸了半天鱼，下午回了几个邮件。
+
+周五：点了个外卖，等下班
+
+就这种。
+
+然后周五下午——那个最不想动脑子的时候——打开大模型网页版，把这段流水账贴进去，加上下面这套提示词：
+
+"***这是我这一周的工作记录，内容很碎、很乱、很流水账。请帮我整理成一份格式规范、看起来像认真写过的中文周报。要求：分板块呈现，语言正式但不生硬，把我做的琐碎事情用稍微专业一点的说法表述，但不要过度拔高、不要出现'赋能''抓手''闭环'这种词。直接输出周报正文，不要额外解释。看着像个人写的，别让我老板看出来是AI干的。谢谢，爱你。***"
+
+三秒钟，一篇周报出来了。复制粘贴到邮件里，抄送老板，关机，下班。
+
+如果想让老板觉得"这人还行，别来烦我"
+
+那就再进阶一点点。不是进阶到"让老板看到我的价值"，而是进阶到**"让老板觉得我靠谱，从而减少对我的干扰"**。
+
+把上面那套提示词稍微升级一下：
+ "***我在一家（行业）公司做（岗位）。下面是我这周的工作流水账。请帮我整理成周报，并且在我做的事情里，稍微往'我在主动发现问题、主动解决问题'这个方向靠一点，但别太过，别显得我像要篡位。语气自然，像正常员工写的。别用大词，别暴露AI。***"
+
+然后他就少找你，清净。
+
+周报这个东西，把它当"证明自己"的舞台，就是在给公司交心。交心的下场通常是——心交了，人也没捞着好。
+
+把它当"每周一次用AI快速填完的表格"，它就只是表格。
+
+精力有限，花在周报上的每一分钟，都是从真正的兴趣、爱好、休息、恋爱、游戏、发呆里挤出来的。别把命卖给一份文档。
+
+这一篇是我坐在工位上、戴着耳机、趁着老板不在、偷偷写的。
+
+**每日必糊弄**，点不点关注随你，**反正AI替我写文，我也不累。**`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

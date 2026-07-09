@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '一枚勋章，两个民族，三段血债：波兰为何撤销授予泽连斯基的白鹰勋章';
+        const CONTENT = `2026年6月19日，波兰总统纳夫罗茨基干了一件在国际外交史上都极其罕见的事——他把两年前授予乌克兰总统泽连斯基的波兰最高荣誉“白鹰勋章”，给收回来了。发出勋章再收回，这在国家交往中几乎等同于当面扇耳光。泽连斯基也没客气，第二天就通过乌克兰物流公司Nova Poshta把勋章寄了回去，还在社交媒体上贴出了快递单照片。
+
+事情怎么会闹到这个地步？
+
+直接导火索看起来很简单。2026年5月底，泽连斯基签署行政令，把乌克兰武装部队的一支特种部队命名为“乌克兰反抗军英雄”。
+
+“**乌克兰反抗军**”是什么组织？要讲清楚这件事，我们得把目光投向八十多年前。
+
+乌克兰反抗军不是什么保家卫国的义军，而是一个在二战烽火中诞生的、极端狂热的乌克兰民族主义准军事组织。它成立于1942年10月，由斯捷潘·班德拉与罗曼·舒赫维奇领导，核心目标就反对一切不利乌克兰独立的国家。为了这个目标，它奉行“敌人的敌人就是朋友”的原则，与纳粹德国合作，甚至部分成员直接加入了纳粹武装党卫队。
+
+那么，它和波兰人之间到底有什么深仇大恨？这恨意有几百年积压。
+
+在二战前，UPA活动的西乌克兰地区（如沃伦、东加利西亚），长期处于波兰的统治之下。当时波兰当局推行“波兰化”政策，对乌克兰族裔进行压迫——摧毁东正教教堂、强迫乌克兰人改信天主教、禁止乌克兰语学校。这种民族压迫持续了几百年。
+
+到了二战期间，纳粹德国占领了波兰和乌克兰，乌克兰民族主义者看到了千载难逢的“机会”。他们认为，可以利用战争的混乱，通过暴力清洗来建立一个种族纯粹的乌克兰国家。而生活在这些土地上的波兰人，就成了他们眼中必须被清除的“障碍”。
+
+于是，最惨绝人寰的一幕发生了——沃伦大屠杀。
+
+从1943年3月开始，UPA有组织、有计划地对沃伦和东加利西亚地区的波兰平民发动了系统性袭击，其目的就是“清除波兰人口”。屠杀在1943年7月11日达到高潮。那一天，UPA同时对多达150个波兰城镇和村庄发动袭击。
+
+这场屠杀有多残忍？历史学家估计，死亡人数在**10万到15万**之间。波兰官方已将其定性为**种族灭绝**。这不仅仅是数字，每一个数字背后都是一个被活活烧死的家庭、一个被砍死的孩子、一个被凌辱致死的母亲。UPA的目标很明确，就是让波兰人从这片土地上彻底消失。
+
+在波兰人眼里，UPA就是刽子手、是纳粹帮凶，这段历史是他们民族最痛的伤疤之一。他们无法理解，更无法接受，一个屠杀过自己同胞的组织，今天竟被邻国奉为英雄。
+
+但在乌克兰人眼里，尤其是西乌克兰人，他们看到的是UPA追求民族自决的一面，而对那场针对波兰人的种族清洗，要么选择性遗忘，要么辩解为“战争时期的复杂行为”。
+
+这就是问题的根源：同一个历史符号，在两个民族的叙事里，一个是恶魔，一个是英雄。当乌克兰现任政府为了凝聚抗俄士气，不仅将UPA精神继承者命名为部队称号，还把UPA领袖的遗体高调迁回并安葬在国家公墓时——在波兰人看来，这无异于当面被扇了最响亮的一记耳光。波兰总统说泽连斯基“突破了波兰的疼痛阈值”，浸透着对那段血腥历史的记忆。
+
+为什么波兰授予泽连斯基白鹰勋章？那是俄乌战争打得最凶的时候。2023年，当时的波兰总统杜达授予泽连斯基白鹰勋章，波兰作为乌克兰最坚定的盟友，不仅是西方军援进入乌克兰的必经通道——战争初期Rzeszów-Jasionka机场承担了约90%以上的西方军事援助过境——波兰自己还给了乌克兰大量弹药、数百辆坦克、14架米格-29战斗机。波兰还收容了数百万乌克兰难民。
+
+泽连斯基在跟波兰吵架的同时，他还干了一件事——向白俄罗斯发出了最后通牒。他说白俄罗斯在白乌边境安装了帮助俄罗斯无人机导航和校正火力的装置，给白俄罗斯一周时间拆除，否则“乌克兰自己动手”。白俄罗斯议会回应说这是“谎言”，并称以最后通牒的口吻跟白俄罗斯说话是“愚蠢之举”。
+
+有意思吗？泽连斯基在同一个月里——一边用一个屠杀过波兰人的组织命名自己的军队，刺痛波兰；一边对白俄罗斯发出战争威胁，刺激白俄。一个人同时在两条战线上点燃火把，这是巧合吗？
+
+这不是巧合。这是一个被战争逼到墙角的人，在用一种极其危险的方式争取生存空间。
+
+我们来扒一扒泽连斯基的处境。战争打了四年，西方援助虽然还在给，但疲劳感越来越重。美国的援助不再像以前那样源源不断，欧洲内部也有分歧。泽连斯基需要不断提醒世界：乌克兰还在战斗，乌克兰很重要，你们不能忘了我。他在各种国际论坛上讲话越来越自信，有时甚至“大嘴”。2026年3月，他开玩笑说要把“阻止欧盟向乌克兰提供援助的人”的地址告诉乌克兰军方——这实际上是在威胁欧盟成员国领导人。欧盟委员会当时发声明说这“不可接受”，但最后也不了了之。
+
+欧盟的政策已经被泽连斯基“绑架”了。乌克兰在帮欧洲挡子弹，这个叙事太强大了，强大到欧洲人即使被冒犯也不敢翻脸。
+
+所以泽连斯基的行为模式就很清楚了：他不断试探盟友的底线，用挑衅来测试谁的容忍度最高，谁最离不开乌克兰。对匈牙利如此，对白俄罗斯如此，对波兰也是如此。
+
+对泽连斯基来说，有时候“被看见”比“被喜欢”更重要。他需要让世界持续关注乌克兰，哪怕是负面关注。一个被撤销勋章的乌克兰总统，比一个被遗忘的乌克兰总统更安全。
+
+更深一层：乌克兰这个国家，从独立以来就一直在**寻找自己的民族认同**。而寻找民族认同的方式，往往是把历史上的“民族英雄”抬出来——哪怕这些英雄在邻居眼里是屠夫。乌克兰人看“乌克兰反抗军”，看到的是“反抗莫斯科统治、争取民族独立”的象征；波兰人看同一个组织，看到的是“沃伦惨案”的刽子手。同一个历史符号，在两个民族眼里是完全相反的形象。这才是波乌关系最深层的矛盾——不是当下的利益冲突，而是对历史完全不同的解读。这种矛盾无解，因为双方都觉得自己是对的。
+
+基辅没有完全放任情绪失控。乌克兰官方在几乎所有声明中都刻意强调一个底线：波兰和乌克兰是战略伙伴。泽连斯基本人在退还勋章时也说，乌克兰“继续对所有有意义的互动形式保持开放”。所有人都心知肚明：波兰的军事援助通道，乌克兰现在离不开。
+
+这对俄乌战争意味着什么？
+
+**第一，短期内乌克兰的战争意志不但不会削弱，反而可能被强化。** 一个被外国撤销勋章的总统，在乌克兰民众眼里变成了“被欺负的民族代表”。
+
+**第二，波乌之间的信任裂缝已经撕开，而且短期内无法弥合。** 波兰精英的真实心态：我们给了你们那么多，你们却用这种方式回报我们？今后波兰再向乌克兰输送武器的时候，波兰国内的政治阻力会更大，民众的热情会更低。而乌克兰方面，乌克兰政治精英层面对波兰的不满已经公开化。
+
+**第三，俄罗斯将是这场风波的最大赢家。** 这是乌克兰外长、总统办公室主任、波兰总理图斯克三方面共同承认的事实。
+
+**第四，从更长远的视角看，这场风波暴露了乌克兰在“战争生存”和“历史认同”之间的根本性矛盾。** 乌克兰需要波兰的武器来过日子，但又需要“乌克兰反抗军”这样的历史符号来建构民族认同。这个矛盾无解。乌克兰和波兰都被各自的历史和现实绑得死死的，谁都没法退。
+
+这个分析有没有疏漏？
+
+泽连斯基的行为，有没有可能他根本没想那么多，就是单纯地想给军队起个有历史感的名字？有可能。但一个在国际政治里摸爬滚打四年的总统，不可能不知道“乌克兰反抗军”在波兰意味着什么。他不知道后果的可能性，几乎为零。
+
+是不是忽略了波兰国内政治的因素？纳夫罗茨基跟图斯克有矛盾，撤销勋章确实有敲打政府的意味。但这个因素最多是“催化剂”，不是“反应物”。没有泽连斯基的命名行为，纳夫罗茨基找不到理由撤销勋章。所以根本原因还是在泽连斯基那边。
+
+是不是把这场风波说得太严重了？毕竟纳夫罗茨基自己也说了，这个决定“并非针对乌克兰民众，也不代表波兰安全政策战略方向发生变化”。波兰对乌克兰的军事支持会不会停？大概率不会。但问题是，盟友之间一旦有了这种级别的公开羞辱，信任就被打破了。以后波兰再给援助的时候，乌克兰人心里会想：你们一边给我们武器，一边羞辱我们的总统。波兰人心里会想：我们给了你们那么多，你们却侮辱我们的死者。这种心理裂痕，比撤销勋章更严重。
+
+波兰对乌克兰的压迫，沃伦大屠杀，俄乌战争，三段粘稠血债搅在一起的时候，没有人是赢家。那枚被快递寄回的白鹰勋章，不过是这场对撞中飞出来的一块碎片罢了。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

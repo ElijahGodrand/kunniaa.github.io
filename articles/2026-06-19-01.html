@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 2026年大模型最火的面试必问的Loop Engineering究竟是什么？';
+        const CONTENT = `Loop Engineering循环工程是过去两个月里，从硅谷公司内部的白板讨论，迅速蔓延成整个 AI 工程圈最炙手可热的话题。它是一套新的工作范式，正在大幅度改变人和 AI 协作的方式。
+
+本文一次性讲清楚，还能让你写出第一个Hello World。
+
+想象一下你正在指导一位新来的实习生。普通的方式是你下达一个指令，比如“去写个判断偶数的函数”，实习生交来代码，你看一眼，说“错了，逻辑反了”，实习生改完再交给你，你再检查。这个过程你不停的发出指令、接收结果、再发出新指令，你就是整个流程的推动者。
+
+循环工程做的事情，是把你从这种重复的“指令-响应”循环中解放出来。你不是在下达指令，而是在设计一个能自动运转的系统。只需设定一个清晰的目标，比如“让这个函数通过所有测试”，然后启动系统。系统会自己生成代码，自己运行测试，如果发现报错，它会自动读取错误信息，自己修正代码，然后再次运行测试，直到测试全部通过，或者它尝试了太多次后主动放弃。
+
+你从亲自操作的司机，变成了规划路线的设计师。
+
+为了让你更直观地感受这个过程，我用几十行 Python 代码写了一个最简化的演示。虽然这里的大模型生成能力是用一个模拟函数替代的，但它完整展示了一个循环工程的核心骨架。
+
+这段代码的逻辑是这样的：首先，我们设定一个初始目标，即写一个能正确判断偶数的函数。然后，系统进入循环。第一次运行时，模拟的大模型故意生成了一段错误的代码，它把判断条件写反了。接着，系统会去执行这段代码，并运行我们预设好的几个测试用例。测试自然会失败，系统会捕获这个失败的详细报错。接下来就是关键的一步，这个报错信息并不会打印出来就结束，而是会被原封不动地传回给大模型，并附上指令：“根据这个报错，修正你的代码。”于是，大模型在第二轮生成了正确的代码。系统再次执行和测试，这次所有用例通过，循环自动终止，并输出了最终有效的代码。
+
+\`\`\`
+"""
+最简单的 Loop Engineering 示例
+核心机制：Agent 生成代码 -> Runner 执行测试 -> Evaluator 判断 -> 错误信息回流 -> 迭代重试
+"""
+
+class MinimalLoopEngine:
+    def __init__(self, max_attempts=5):
+        self.max_attempts = max_attempts
+        self.attempt_count = 0
+        self.history = []  # 记录每次迭代的错误日志
+
+    # --------------------------------------------
+    # 1. 模拟大模型生成代码（实际可替换为 OpenAI/Claude API）
+    # --------------------------------------------
+    def mock_llm_generate(self, prompt: str, error_feedback: str) -> str:
+        """
+        模拟 AI 的"智能"：
+        - 第一次生成时，error_feedback 为空，故意写出错误代码 (n % 2 == 1)
+        - 收到错误反馈后，第二次生成修正代码 (n % 2 == 0)
+        """
+        if error_feedback:
+            # 场景：AI 根据报错修正了逻辑
+            return "def is_even(n):\\n    return n % 2 == 0"
+        else:
+            # 场景：AI 首次尝试，写出了 Bug
+            return "def is_even(n):\\n    return n % 2 == 1"
+
+    # --------------------------------------------
+    # 2. 观察与评估模块（Observer & Evaluator）
+    # --------------------------------------------
+    def evaluate_code(self, code: str) -> tuple:
+        """
+        在隔离环境中执行生成的代码，并运行测试用例集。
+        返回 (是否通过, 详细反馈信息)
+        """
+        local_namespace = {}
+        try:
+            # 动态执行代码，提取函数
+            exec(code, {}, local_namespace)
+            func = local_namespace.get('is_even')
+            if not func:
+                return False, "错误: 未找到名为 'is_even' 的函数"
+
+            # 预设的测试用例 (输入, 期望输出)
+            test_cases = [(2, True), (3, False), (0, True), (-1, False)]
+            for input_val, expected in test_cases:
+                result = func(input_val)
+                if result != expected:
+                    return False, f"断言失败: is_even({input_val}) 返回 {result}, 期望 {expected}"
+            
+            return True, "所有测试用例通过！"
+
+        except Exception as e:
+            return False, f"代码执行异常: {str(e)}"
+
+    # --------------------------------------------
+    # 3. 主循环引擎（Orchestrator）
+    # --------------------------------------------
+    def run(self):
+        print("🚀 启动 Loop Engineering 自动化循环...")
+        print(f"📌 目标任务: 实现一个正确的 is_even 函数")
+        print("-" * 40)
+
+        error_feedback = ""  # 初始无错误
+
+        while self.attempt_count < self.max_attempts:
+            self.attempt_count += 1
+            print(f"\\n🔄 迭代第 {self.attempt_count} 次")
+
+            # 步骤 A: 构造 Prompt（包含历史报错）
+            prompt = "请编写 Python 函数 is_even(n)，判断整数 n 是否为偶数。"
+            if error_feedback:
+                prompt += f"\\n\\n[上一次报错信息]: {error_feedback}\\n请修复代码。"
+
+            # 步骤 B: Agent 生成代码
+            generated_code = self.mock_llm_generate(prompt, error_feedback)
+            print(f"🤖 生成的代码:\\n{generated_code}")
+
+            # 步骤 C: 执行并评估
+            is_success, feedback = self.evaluate_code(generated_code)
+            print(f"📊 评估结果: {feedback}")
+
+            # 步骤 D: 决策分支
+            if is_success:
+                print("\\n✅ 目标达成！循环终止。")
+                print(f"📝 最终有效代码:\\n{generated_code}")
+                return generated_code
+            else:
+                # 将错误信息记录并喂给下一次迭代
+                error_feedback = feedback
+                self.history.append({
+                    "attempt": self.attempt_count,
+                    "error": feedback,
+                    "code": generated_code
+                })
+
+        # 超过最大重试次数
+        print(f"\\n❌ 达到最大尝试次数 ({self.max_attempts})，任务失败。")
+        print("历史错误记录:", self.history)
+        return None
+
+
+# --------------------------------------------
+# 启动程序
+# --------------------------------------------
+if __name__ == "__main__":
+    engine = MinimalLoopEngine(max_attempts=3)
+    engine.run()
+\`\`\`
+
+这个简单的例子揭示了循环工程的两个核心价值。一是自动化，整个过程不需要人类参与。你可以晚上提交一个“修复项目中所有单元测试”的任务，第二天早上就能看到结果。二是自我进化，它通过“生成-执行-反馈-再生成”这个闭环，拥有了类似人类试错和纠错的能力，对于逻辑清晰、有明确对错标准的问题，它能通过反复尝试找到正确答案，生成的代码在边界条件处理上往往比人们匆忙写出的第一版更加健壮。
+
+**当然，这种强大的能力是有代价的，而且代价不小。**
+
+首当其冲的就是成本问题，这个成本主要指大模型接口的调用费用，也就是常说的 Token 消耗。传统对话是问一句答一句，消耗不大。但在循环工程里，每次失败后的重试，都会把之前的代码、报错信息、系统指令重新打包发送，这导致后续轮次的 Token 消耗越来越重。修复一个简单的 Bug，消耗可能是单次成功完成任务的好几十倍。如果你让它去读一个几千行的大文件，迭代几次，几百万 Token 就消耗掉了，这是一笔不小的开支。
+
+除了金钱成本，还有时间成本。循环是串行执行的，必须等上一轮完全结束才能开始下一轮。如果某个任务需要迭代五次，每次生成和执行都需要时间，那么整个流程可能需要等待几十秒甚至更久。这在后台任务处理中是可以接受的，但如果你想把它用在实时聊天机器人上，让用户干等半分钟，那体验就非常糟糕了。
+
+更让人头疼的是错误的级联放大效应。人工操作时，发现方向不对可以随时打断。但自动化循环一旦启动，如果中间某一步大模型产生了偏差，这个错误会被当作既定事实传给下一步。大模型为了自圆其说，可能会生成更多奇怪的代码来“圆”这个错误，导致问题越来越复杂，最后彻底偏离正确方向，陷入死循环。此时，如果没有设计好强制终止机制，你只能手动中断进程。
+
+此外，停止条件的判断也极其微妙。代码跑通就算成功吗？如果它为了通过判断偶数的测试，直接写出一段针对几个特定数字做硬编码返回的代码，测试确实能通过，但这样的代码没有任何实际意义。设计一个能让大模型理解“什么是高质量解决方案”的评估标准，本身就是一件很有挑战性的事。
+
+最后是安全风险。如果循环系统被赋予了执行 Shell 命令或修改文件的权限，那么一旦它生成了一段危险的指令，系统会毫不犹豫地执行它。在没有严格沙箱防护和安全审查的情况下，让一个拥有权限的自动化循环直接暴露在生产环境中，无异于引狼入室。
+
+Cloudflare CTO在X 6月8号问大家怎么Loop Engineering，"How are people using loops?"
+
+回复五花八门。
+
+最常见用法是 babysit CI、自动修复 Bug、审查 PR、持续改进代码、生成测试、更新文档。很多开发者把 Coding Agent + Reviewer Agent 组合成循环，代码变更后自动测试、修复、再验证，直到通过。
+
+用Agent 持续改进一篇研究文档或文章，读取现有内容、待办事项，完成一项后自动添加新任务并循环。
+
+监控邮箱、GitHub Issue、PR 评论、社交反馈等，条件满足时自动行动（如起草回复、创建 Issue）。简单场景下，一个终端里的小循环就能处理等待回复后自动下一步这种以前需要人工跟进的事。
+
+多 Agent 舰队（Fleet）：一个 Orchestrator Agent 把大目标拆解，分给 Specialist Agent，再下发给 Sub-agent，形成树状循环。每个层级都做发现-规划-执行-验证的内循环，直到整体目标达成。
+
+数据抓取、社交管理、财务模型迭代验证、甚至 ML 模型训练直到达到目标准确率。
+
+目前的最佳实践是这样的：
+
+Closed Loop封闭循环更实用——提前定义清晰目标、步骤、评估标准和停止条件，适合预算有限的大多数人，能稳定产出。
+
+Open Loop开放循环探索性强，但 token 消耗极高，容易产出“slop”（低质输出），目前多为有充足预算的玩家使用。
+
+ 必须有强约束和刹车机制，没有良好停止条件、预算上限、进度检测和验证关卡，Loop 很容易死循环、重复错误或无限烧钱，最终质量仍需人工把关。
+ 
+Token 与成本是最大痛点。上下文反复发送导致成本快速上升。实际运行中常出现烧了很多 token 但 ROI 不明显的情况。建议用便宜模型做常规循环，贵模型做关键决策；优先在有明确验证标准（如测试通过）的任务上使用。
+
+状态与记忆是关键。好的 Loop 依赖外部 Memory，文件、数据库、Linear 、Skills 文件和清晰的状态管理。结合状态机State Machine能让循环更确定、可控。
+
+社区涌现出预制 Loop 目录，如 loops.elorm.xyz、goal、loop 命令、Routines服务端持久运行等。简单场景下，一个 YAML 配置 + 定时命令就能跑得很远。
+
+从长远看，未来它会和个人 Agentic OS 深度结合，让 AI 真正替人类工作。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
