@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大模型时代的“小而简”：个人开发者的生存之道';
+        const CONTENT = `LangChain有40万行代码。
+
+Dify有几百个插件。
+
+字节开源Coze、DeerFlow，阿里开源AgentScope，微软开源AutoGen。
+
+大厂正在用免费的方式，把AI应用开发的每一个生态位都填满。
+
+个人开发者似乎没有机会了，但历史告诉我们并非如此。
+
+**Python Web开发最火的时候，有20多个框架在竞争。**
+
+Zope、Plone、TurboGears、Pylons、Django、Flask、Pyramid、Bottle、CherryPy、web2py……
+
+最后活下来、活得最好的，有“小而简”的框架。
+
+Django很大，但Flask只有2000行核心代码。
+
+今天，FastAPI、Django、Flask三分天下。
+
+**数据库领域也一样。**
+
+Oracle统治企业级市场，PostgreSQL是开源全能王，MySQL是Web应用标配。
+
+但世界上部署最广泛的数据库，是一个连独立进程都没有的单文件——SQLite。
+
+它只做一件事，只做好一件事。
+
+**现在，同样的故事正在AI应用开发领域重演。**
+
+nano——200行代码实现一个编码Agent。
+
+Pocket Flow——100行代码实现LLM框架。
+
+memweave——用Markdown存记忆，召回率98%。
+
+这些项目正在证明：“小而简”才是个人开发者的出路。
+
+**“小而简”就一定能成功吗？**
+
+web.py失败了，Bottle.py失败了，Morepath也失败了。
+
+它们也是“小而简”，为什么没能活下来？
+
+**在AI领域，做“小而简”要避开哪些坑？**
+
+**哪些方向适合做“小而简”，哪些方向不适合？**
+
+**现在已有的极简开源项目，还有哪些不够“简”的地方？**
+
+**个人开发者应该从哪个方向切入，才不会被大厂碾压？**
+
+对比Python Web框架20年的演化史、数据库30年的发展史、AI领域17个极简开源项目，我们得出靠谱的结论和路线。
+
+**如果你是一个独立开发者，或者正在考虑进入AI应用开发领域，这篇文章值得你花5分钟读完。**
+
+全文6500字，星球见。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
