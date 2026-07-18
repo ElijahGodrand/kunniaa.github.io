@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大模型 | 大模型前沿部署工程师FDE将大面积取代知识阶层';
+        const CONTENT = `FDE的全称，Forward Deployed Engineer，前沿部署工程师。
+
+Anthropic派FDE工程师入驻客户，帮客户用AI提效。成本降了，效率升了。
+
+FDE工程师坐在工位旁边，看数据，研究流程，学习业务逻辑。客户付钱，工程师带走行业地图。
+
+几个月后，Anthropic发布了高度相似的产品。
+
+Figma就是这么被吃掉的。如果拉出Figma的周线看股价，那可老惨了。
+
+他们付给Anthropic的每一分钱，都成了Anthropic替代他们的弹药。
+
+Anthropic还会吃掉更多的象Figma一样的公司。
+
+尽管Anthropic仍在亏损，巨额亏损，预计到2030年才有盈利，但如果它活到那一天，那一天可能就是知识创造阶层的末日。
+
+一个年轻人，法学院毕业，花了三年通过司法考试，又花了五年在一家顶级律所从助理做到初级合伙人。他认为自己的专业能力是护城河。但Claude Code半小时做完他十小时的工作，不睡觉，不要加班费，不会要求升职。
+
+一个团队，三十个程序员，花了两年写一套核心系统。Claude Code在一周内重写了百分之八十的代码，效率更高，Bug更少。三十个人的团队，只留下了三个人——负责审核AI的实现。
+
+一个部门，二十个分析师，每天处理财报、做模型、写报告。一个FDE带着Claude驻场三个月后，部门只剩下一个人签字，两人审核AI的实现，修改小问题。
+
+客户买的是Token。但对Anthropic来说，买Token的任何客户，是研究素材，是训练数据，是行业地图。
+
+客户越有依赖性，Anthropic对客户了解得越多，越可能替代客户。
+
+这些曾经靠知识为生的人正在消失。不是慢慢淘汰——是批量清退。是成本塌缩之后的一夜之间。他们读过的书、考过的证、熬过的夜、积累的经验，在一个模型更新面前，变得不值钱了。
+
+那些被替代的人，都曾经以为自己只是“用AI提个效”。
+
+大部分知识创造阶层将失去工作，失去未来。
+
+全文七千六百字，星球见。
+
+我是昆尼Kunniaa，**大模型第一插眼 · 博弈论第一野王 · 十厄势第一破隐**。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
