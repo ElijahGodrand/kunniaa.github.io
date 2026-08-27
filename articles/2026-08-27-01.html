@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '美国的小费文化为什么这么难缠';
+        const CONTENT = `最近一张在美国社交媒体上广泛传播的餐厅账单照片引发了激烈的争论。账单上写着：餐厅在每笔堂食账单中自动加收18%的费用，餐厅解释这笔费用"直接用于员工工资，为团队提供生活工资"，这笔钱是餐厅获得。账单同时注明，如果顾客额外给小费，小费将由整个团队平分，这才是由服务人员获得的。这意味着顾客在支付了18%的强制费用之后，如果还想感谢服务员个人的服务，还需要再掏一笔钱，惯例也是18%，合计36%。
+
+这种做法激怒了大量消费者。有人直接评论道："你在我的账单上加18%作为'生活工资'，那就别指望我再给小费了。"也有评论一针见血："这就是不更新菜单的价格上涨。"这张账单撕开的，正是美国小费制度最核心的荒诞之处。消费者以为自己在为服务付费，却不知道自己付的钱到底去了哪里。而更深层的问题是，美国的小费制度为什么走到了这一步？
+
+美国小费制度延续至今并且变本加厉，根本原因只有一个：**这个国家的法律和制度设计，从头到尾都在保护资本，而不是保护劳动**。这不是什么秘密，这是美国社会运转的本质逻辑。在美国，资本是主人，劳动是工具。工具坏了可以换，工具不顺手可以扔，工具没有资格跟主人讨价还价。美国绝大多数州实行的"随意雇佣制"就是这一逻辑最赤裸的体现——雇主可以随时以任何理由解雇员工，也可以不给任何理由。法律上说这是"双向的"，员工也可以随时离职。但稍有常识的人都明白，这种"双向"在现实中是极度不对等的。老板开掉一个服务员，当天就能招到下一个，因为有大把人等着这份工作。而一个服务员被开掉，可能下个月的房租就没着落了。所谓的"双向自由"，不过是给资本的绝对权力披上一层虚伪的对等外衣。这套制度把劳动者置于一种永久性的生存焦虑之中。不敢请假，不敢生病，不敢顶撞顾客，不敢跟老板提任何要求，因为下一秒就可能被扫地出门，而且没有任何赔偿。在美国，被开除就是被开除，没有什么"N+1"补偿，没有什么劳动仲裁保护，没有什么工会替你撑腰。劳动者的全部议价能力，就是"接受或者滚蛋"。
+
+**小费制度就是这套逻辑在餐饮业最日常、最具体的呈现**。1938年，美国通过《公平劳动标准法》，首次确立了联邦最低工资。但在南方民主党人维护白人至上的推动下，餐饮酒店等服务行业被明确排除在最低工资保护之外。1966年，该法修正案首次为"小费工人"设立了联邦最低工资，但引入了一个关键机制——"小费抵扣"。这个机制允许雇主支付远低于标准最低工资的底薪，用员工收到的小费来补足差额。1991年，联邦"小费工人"的最低工资被锁定在每小时2.13美元。这个数字至今已经超过30年没有变化。2.13美元是什么概念？2025年，美国联邦标准最低工资是7.25美元。2.13美元不到标准最低工资的三分之一。在允许"小费抵扣"的州，服务员的基本工资就是这么低。这意味着一个全职服务员如果不靠小费，连房租都付不起。
+
+......
+
+**在这场关于小费制度的漫长博弈中，有一个最赤裸、最不容回避的真相，被包裹在"文化""传统""激励"这些体面词汇之下，始终没有被彻底撕开**。
+
+这个真相是：**如果你是老板，你是资本方，你必须支持小费；如果你是劳动者，你是底层，你必须反对小费。**
+
+......
+
+然而，从社会资本化的长期趋势来看，**资本必胜。**
+
+人性深处有一种几乎不可抗拒的驱动力——希望获得更多，希望变得更强大，希望站到更高的位置。这种驱动力在资本方得到了最充分的释放空间：资本可以积累，利润可以再投资，技术可以升级，市场可以扩张，政治游说可以推动立法向自己倾斜。资本方每赢一次，下一次的起点就更高。
+
+一个人，只要天性想获得更多，就必然会支持资本。只有在处于劣势的时候，会暂时反对，但长期而言，必然支持资本。所以资本必胜。
+
+......
+
+
+全文一万一千字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
