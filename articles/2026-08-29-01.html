@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '血腥残忍的汉初一百一十五年';
+        const CONTENT = `从刘邦称帝到汉武帝死亡，一共一百一十五年，这段历史极其重要，有两个原因。
+
+第一个原因，它非常之血腥残忍，极度无情。如果你看懂了这段历史，那么你对人生中遇到的任何事情都不会感到惊讶和难过，你会对未来可能遇到的事情都能做好充分的心理准备，无比平静，宛如穿越。
+
+很多人喜欢陀思妥耶夫斯基，把他的小说捧上天。
+
+《罪与罚》，写一个穷大学生拉斯柯尼科夫，杀了一个放高利贷的老太婆，又杀了她的妹妹。然后呢？整本书就是他的痛苦、他的疑神疑鬼、他的内心自我怀疑。他觉得自己是“超人”，杀一个“虱子”一样的老太婆是为了练胆，结果杀了之后惶惶不可终日。全篇都是他的煎熬。
+
+《卡拉马佐夫兄弟》写一桩弑父案。一个贪婪好色的老地主被杀了，他的几个儿子——德米特里、伊凡、阿廖沙——陷入了复杂的冲突。整部书都在探讨信仰、理性、自由意志、人性的复杂。
+
+有人说这是“深入灵魂”。有人说这是“人类精神的高峰”。有人说陀思妥耶夫斯基“在描写人类所受的苦难方面是无与伦比的”。
+
+**就这？这算啥玩意？**
+
+一个大学生，杀了一个放高利贷的老太婆。一个儿子，杀了自己贪婪的父亲。这就叫“深入灵魂”了？这就叫“人类的苦难”了？
+
+**杀一个放高利贷的人，或者杀一个已经活了大半辈子、干尽坏事的人——这算什么罪恶？这算什么痛苦？**
+
+跟汉初比起来，**沧海一粟，九牛一毛，若一毫置于太虚，似一滴投于巨壑，完全不值一提。**
+
+第二个原因，这段历史在后来的各个朝代都是一遍一遍地重复的——从汉到三国，到隋唐，到宋元明清。规则、趋势、结构一模一样，只是力度有所差别，有的时候强一点，有的时候弱一点，但趋势没有任何差别。只要精通这段历史，你对未来一切都可以做精准的预测，毫不夸张，就是精准的预测。
+
+刘邦的前半生是游侠，混迹市井。后半生，随着他打下的领土越来越多，这个人就变了，极其奸诈狡猾，又象世界末日一样疯狂玩命。《让子弹飞》马邦德在电影开头对他的评价——刘邦是个小人。
+
+“小人”这个评价对他来说已经有点抬举了。他比小人恶劣多了，他是电影《极度深寒》里的海底怪物**奥物瓦类（Octalus）**，既有章鱼的触手，又有水蛭的吸血习性，口器如同海葵长满利齿，身体还带有**强腐蚀性液体**，极其恶心，捕食**不咀嚼，而是整个吞下后活活吸干骨髓和体液，最后吐出白骨**，电影有个**女人被从马桶里伸出的触手拖走**，非常血腥，是无数人的心理阴影。这种怪物有**狡诈的智慧**，体型恐怖，会躲藏伏击，普通的**枪械和火焰对它无效**，这也很象刘邦。
+
+刘邦跟项羽打仗的那些事儿，咱们先不谈。最重要的一个节点在于，他跟项羽达成了“楚河汉界”的协议，双方罢兵。项羽信守承诺，把他的老婆、父亲、孩子都还给了他。但是刘邦转头就听从张良和陈平的建议，**立刻撕毁协议，发兵猛攻项羽**，把项羽灭了。
+
+此后所有人都确认了：**刘邦是个完全没有信用的人，说翻脸就翻脸**。人人自危。
+
+......
+
+全文五千两百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
