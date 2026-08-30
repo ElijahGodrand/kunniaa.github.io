@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '没有爱情，是纯代孕';
+        const CONTENT = `本文纯属虚构，如有雷同，纯属巧合。
+
+*我读大镰刀的小作文，发现一丝不对劲的地方。原文是这样写的："瑰丽酒店我们见了第一面。我一直以为见到她那天我会紧张。我没有。""她比照片上瘦，穿得很随意，靠在沙发上。我看着她，忽然想不起来我等的到底是什么。"*
+
+*一个等了十九年的人，终于见到那个人的时候——"不紧张"。一个第一次约会的场景，对方"穿得很随意"，靠在沙发上，像在自己家。一个准备了十九年的见面，见到的时候"想不起来我等的到底是什么"。这三个细节加在一起，只有一个解释：**他们在此之前已经沟通过很多次了——不是在物理空间里，而是在协议、合同、中间人的沟通中，在反复确认条款和流程的过程中。** *
+
+*正常恋爱的第一次见面应该是紧张、拘谨、打量、试探、小心翼翼地找话题、关注对方每一个表情的细微变化。他们没有。大镰刀不紧张，纯净水穿得很随意，两个人坐在那里没有任何试探，直接进入了流程：看电影，清场，磨指甲，睡觉。一切都在快速推进，没有"磨合期"。*
+
+*说明他们的"磨合期"发生在见面之前，而且持续了很长时间。那些在正常恋爱中需要当面才能完成的步骤——彼此了解、评估对方、确认关系、建立默契——他们在见面之前就已经通过中间人、电话、信息完成了。*
+
+*更值得玩味的是大镰刀那句"想不起来我等的到底是什么"。如果一个人真的在期待一段感情，他不会说"想不起来"。因为期待是有具体对象的——她笑起来的样子、她说话的语气、她看向他时的眼神。但大镰刀的"想不起来"说明，他等的不是一个具体的人，而是一个抽象的"纯净水"*
+
+*纯净水的表现——"随意"、"靠"、"像在自己家"——同样说明了她对这个见面的态度。一个正常的第一次约会，她会精心打扮、注意坐姿、控制表情、管理每一个动作。但她没有。这不是约会，是在执行一个她已熟悉的任务。*
+
+***这个不对劲，反过来证明大镰刀写的小说有部分真相**。大镰刀如果纯粹虚构一个爱情故事，他应该怎么写"第一次见面"？他会写心跳加速，写精心打扮，写欲言又止，写那种让人屏住呼吸的浪漫张力——这是写手都懂的叙事本能。他写了一个"不紧张"、"随意"、"流程化"的见面，一个让读者读起来都感到别扭的见面。这种"别扭"感，恰恰是真实性的直接证据。*
+
+*编造者会努力让一切看起来"合理"、"顺畅"、"符合期待"。如果为了编故事而编故事，他完全可以让第一次见面看起来像正常的爱情初遇——写几个"紧张的心跳"、"惊艳的对视"、"暧昧的试探"，读者就满足了，故事也顺畅了。但他没有。他写了一个让人读起来不舒服的见面——"不紧张"、"穿得很随意"、"靠在沙发上"、"想不起来"——这些都是正常的爱情叙事里不该出现的东西。*
+
+*为什么他会写这些东西？**因为他经历的第一次见面就是这样子的。他没有按照"应该怎么写"来写，他只是按照"实际上发生了什么"来写。他不知道该如何让它看起来像正常的爱情，因为他经历的本来就不是正常的爱情**——那是一场预先排练好的执行，他只是如实记录了他的不适感。*
+
+*大镰刀发起起诉，大概率，小说中的事实比较多，以免出现不必要的麻烦，可信度稍高。*
+
+*由此，我从小说抽出爱情下面的事实和逻辑，拼出整个代孕过程。*
+
+2007年，大镰刀刚进北京大学。他在一年房租一千块的北大宿舍里上网，用一台联想IBM的老机器，QQ弹窗里跳出一个代言人——纯净水。“分辨率糊得很”，但他把图片存下来了。他在校内网上找到她，发了好友申请。校内网要填一句留言，他写了删、删了写，弄了大概四十分钟，最后发出去一句“你好”。她没有通过。
+
+十九年后，纯净水出现在了他的生活里。这篇基于大镰刀公开发布的长文《我的女友纯净水》所重构的时间线，呈现的是一段从开始就被精密设计的关系——医疗流程在见面之前已经启动，房产搜索在见面之前已经进行，代孕母亲在见面之前已经筛选。整段“恋爱”从头到尾只是一场执行中的表演。
+
+这场表演的起点，需要追溯到更早的时候。
+
+**第零阶段：大镰刀的“完美孩子”计划与预算。**
+
+......
+
+全文九千九百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
