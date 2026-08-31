@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '宁教我负天下人，不教天下人负我，其实是刘邦';
+        const CONTENT = `“宁教我负天下人，不教天下人负我”这句话，是刘邦用一生写出来的，曹操只是总结。
+
+刘邦分封吃独食，是史无前例的。在刘邦之前，从没有一个人敢这么赤裸裸、这么彻底地把所有好处都塞给自家人。
+
+周朝分封，同姓诸侯和异姓功臣虽然等级有别，但功臣姜子牙封齐、周公旦封鲁，至少形式上还维持着“论功行赏”的体面。
+
+战国时期更是讲“功”不讲“亲”——商鞅变法之后，秦国宗室子弟没有军功连族谱都不让上，更别说封王了。
+
+秦始皇灭六国，创建郡县制，把天下抓在自己手里，时间很短，在刘邦之前尚未成为主流。
+
+刘邦呢，他先封七个异姓王稳住局面，等仗打完了，再一个个灭掉，然后把他们的地盘分给自己的儿子、侄子、兄弟。这一套操作——先给甜头、再杀功臣、最后把肉全塞给自家人——在之前的周、战国、秦朝，从来没有出现过。
+
+刘邦称帝之前，封了四个王。
+
+公元前206年，项羽主持分封，封刘邦为**汉王**。
+
+刘邦虽是“汉王”，但实力大，他再封王，类似于一个大军阀给另一个小军阀“授衔”，并非平等的同级分封。 
+
+**汉高帝二年（前205年）十一月，刘邦封韩王信**。
+
+韩王信，原名公孙信，是韩国宗室后裔，刘邦册封的第一个异姓王。
+
+刘邦平定三秦（今陕西关中一带）时，许诺公孙信，如果公孙信为他攻下韩国故地，就封他为韩王，并任命他为韩国太尉，让他率兵攻取韩国。当时项羽已杀韩王成，另立郑昌为新韩王以抵挡汉军。公孙信率兵攻入韩国，先在汉二年（公元前205年）攻占了十几座城池，随后在阳城进攻郑昌，郑昌战败投降。刘邦正式册立公孙信为韩王，并命他率领韩国军队随刘邦征战。
+
+此时韩王信没有封地。
+
+**汉高帝四年（公元前203年）二月，刘邦封韩信为齐王**。
+
+韩信平定齐地之后，派人送信给刘邦。信里说：“齐地人狡诈多变，反复无常，南边又紧挨着楚国，如果不设一个代理齐王来镇守，局势肯定稳不住。请允许我暂时代理齐王。”
+
+......
+
+刘邦瞬间反应过来，接着骂：“大丈夫平定诸侯，要做就做真王，做什么代理齐王。”然后派张良亲自带着印信去齐地，正式册立韩信为齐王。
+
+战事吃紧，不得不封，刘邦心里很不爽。
+
+“分封”也是对既成事实的追认：当时韩信已平定齐地，掌握数十万大军。他不是在向刘邦“求职”，而是在告知刘邦一个已经发生的事实。刘邦若不封，韩信完全可能自立。因此，这次封王更像是刘邦用一纸文书承认了韩信现有的势力范围。
+
+......
+
+到刘邦死之前，除了长沙王，其他异姓王都被灭了。刘邦把最富庶的土地都封给自家人。
+
+汉朝定都长安，皇帝直接管辖十五个郡，大致就是秦国的故地加上部分周边地区，相当于今天的陕西关中、河南中西部、山西西南部、湖北北部、四川盆地、甘肃东部以及内蒙古河套地区的一小部分。
+
+刘邦把异姓王几乎杀光，把自己的儿子、兄弟、侄子封到全国各地。同姓九王的封地几乎覆盖了整个关东六国的故地。同姓九王的封地加起来，占了当时汉朝版图的一大半。
+
+......
+
+“人皆知有用之用，而莫知无用之用也。”大家都知道“有用”的好处，却没人知道“无用”的好处。
+
+韩信最有用，死得最早、最惨。张良跑得快、装没用，活到了自然死，但二代就没了。萧何介于两者之间，活着的时候被下狱，后代也是各种遭殃。哪个结局好？都谈不上好。只是死法不同、时间早晚不同而已。
+
+整个汉初一百四十三个开国侯爵，到汉武帝太初年间，只剩五家还挂着名头，其他的一百多家，全没了。有的是第一代就被杀，有的是第二代犯罪被削，有的是第三代、第四代被各种理由夺爵。汉武帝用一场“酎金夺爵”，以献祭的黄金成色不足为由，一次剥夺了一百零六个侯爵的爵位。祖辈拼死拼活打下来的东西，一句话就没了。
+
+......
+
+曹操肯定懂汉朝历史，“**宁教我负天下人，不教天下人负我**”，放在汉初的历史背景里看，确实是一句大实话，而且是极其精辟的生存法则总结。这句话大概率是曹操总结刘邦一生的心得。
+
+......
+
+**司马懿是“成功的韩信”或“成功的彭越”**，几乎是唯一一个成功翻盘的版本。
+
+司马懿一定研究过汉初的历史。他知道韩信是怎么死的，彭越是怎么被剁成肉酱的，英布是怎么被逼反的。他知道在那个系统里，能力越强的人死得越快，越有用的人越危险。所以他反其道而行之——他尽可能让自己变成一个看起来毫无威胁的废物。然后他在所有人都不把他当回事的时候，完成了出其不意的反杀。
+
+......
+
+全文八千两百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
