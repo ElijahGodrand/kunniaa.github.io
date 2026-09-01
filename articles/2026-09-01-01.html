@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a>
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '朱自清的文学源头是白话汉赋，其作品应从课本剔除';
+        const CONTENT = `*两年前，我修改某个获省金奖的本科生团队自撰介绍材料，改到一半，想把电脑砸了，想把头发揪光，想冲到阳台大骂半小时脏话。这个大学的本科录取分非常高，写作能力跟录取分完全不匹配。*
+
+*昨天，我读初一语文第一课朱自清《春》，又想把电脑砸了，又想把头发揪光，又想冲到阳台大骂半小时脏话。突然想到两年的介绍材料，于是明白问题出在哪里了。*
+
+在语文教育体系，朱自清的名字几乎与"散文"二字绑定。从小学到高中，从《匆匆》到《春》，从《荷塘月色》到《背影》，他的作品长期占据课本的重要位置，被一代又一代学生反复朗读背诵模仿。
+
+然而，如果抛开名家光环，以成年人的阅读经验重新审视这些文章，一个令人揪心的问题会浮现出来：**这些文章真的适合作为语文教育的范本吗？**
+
+以《春》为例。这篇被安排在初一语文教材开篇位置的散文，长期以来被视为"写景散文的典范"。但一个思维正常的成年人读下来，第一感受往往是——**毫无逻辑**。文章开头写"盼望着，盼望着，东风来了，春天的脚步近了"，接下来写山、写水、写太阳，然后跳到小草，再跳到桃树杏树梨树，再跳到风、雨、天上风筝、地上孩子。段落之间没有任何过渡，没有任何内在的推进逻辑，东一句西一句，像醉鬼走路一样左一下右一下，完全摸不着头脑。更糟糕的是，这篇文章要求学生背诵。**让十几岁的孩子背这种醉鬼走路的东西，等于从起跑线摧毁孩子的逻辑思维和审美判断力。** 读完《春》，除了几个花花绿绿的形容词，大脑里留不下任何清晰的画面，留不下任何完整的印象。
+
+有人可能会辩解说，这是"中国式的写意""散文的形散神不散"。但这种说法根本站不住脚。所谓"形散神不散"，前提是有一个"神"在统摄全局，而《春》从头到尾除了一个笼统的"春天来了"，没有任何贯穿的核心意象或情感线索，**整体方向是零乱的，是没意义的。**
+
+有人会说，朱自清的散文虽然逻辑散乱，但至少能像"中国式的山水画"一样，提供一种意境上的整体感受。这个说法同样经不起推敲。
+
+美术评论陈传席论中国画，“实处要化实为虚，而且化实为虚最要功夫。”“化实为虚”是中国画的最高境界。但这句话的前提，是要先有“实”。有实，才能化实为虚。没有实，拿什么去化？拿什么去虚？
+
+什么是“实”？实就是，画山水，山要像山，水要像水。范宽《溪山行旅图》，大山堂堂，壁立千仞，山石的结构、纹理、质感，每一笔都落在实处，一眼望去，如临真山。没有这个“实”，看了没感觉，谈不上共鸣。实就是画竹子要像竹子，竹竿挺拔，竹叶分明，风来了会动，雨打了会弯，一竿一叶都是真竹子的样子。实就是画荷花像荷花。八大山人画荷，残荷败叶，茎秆斜立，但那茎秆的折转、叶面的枯焦，一笔一笔都是写实。实就是画花草虫鱼，花要像真正的花，草要像真正的草，鸟要像真正的鸟，虫要像真正的虫。哪个地方不是实的？一眼看过去，全是实的，层次分明，细节跟真的一样。这就是中国画的根本——先把“实”做到极致，做到让人忘记这是画，以为是真的。写实达不到，写真的功夫没有，想表达出什么“虚”，绝无可能。“实”立不住，“虚”就是空中楼阁，就是一堆飘来飘去的空话。
+
+......
+
+全文五千四百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
