@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '纯净水日常运营成本极高，财务状况很糟糕';
+        const CONTENT = `本文纯属虚构，如有雷同，纯属巧合。
+
+所有内容来互联网公开资料，根据公开资料和行业数据进行推断，只保证数量级正确。
+
+......
+
+纯净水的工作室注册在宁波高新区，这是出于合法合规的税务规划考量——当地对影视文化企业有税收优惠政策，可以降低税负。她真正的办公地点在北京，而且必须是北京核心地段的高端写字楼。这跟避税无关，跟“排面”有关。品牌方、投资方来拜访，看到的是办公室的位置和装修，这直接决定了他们对明星的估值。没有排面，就谈不到好合作。
+
+纯净水的工作室大致是300平米左右的办公空间。这个面积是刚需——除了常规的办公区，还需要独立的化妆间、服装间（存放活动礼服和造型用品）、会议室（接待品牌方和制片方）、以及一个简易的拍摄区域（用于新媒体内容的快速产出）。这些功能分区堆在一起，300平米是底线。早几年更大，2018年纯净水的办公室在万达某层，一个大整层全归她，面积通常在 **1360㎡至1950㎡** 之间。
+
+成本相当高。北京CBD甲级写字楼2025年平均月租金约为每平方米210元。300平米的月租金约6.3万元。物业费按国贸区域标准，约每平米30到60元不等，取中间值45元，物业费约1.35万元。车位按3个固定车位算，CBD月租约1500元每个，合计4500元。仅办公室的硬成本，每月就超过8万元。
+
+纯净水身边需要养一个精干但完整的团队。贴身助理至少2人，负责行程、杂务和生活照料；专职司机1人；保镖1人；执行经纪人1人，负责对接项目和商务；宣传人员1人，全职负责新媒体运营和舆情维护。财务可以兼职，法务可以外包，不需要养全职。这样算下来，核心团队是7个人。
+
+工资这块，助理月薪约8000到9000元，两人1.6万；司机8000元；保镖是重头戏，普通三线艺人配备两名护卫每月支出就要6到8万元，纯净水这个级别一个保镖4万月薪是保守估计；经纪人2.5万；宣传1.5万。工资合计约10.4万元。再加上北京单位五险一金缴纳比例约38.9%，约4万元。人力成本每月约15万元。
+
+办公室硬成本8万加上人力成本15万，每月固定支出约23万。再加上日常办公耗材、水电、网络、保洁、绿植等杂项，每月25万是底线。**纯净水哪怕一整年不接任何工作、没有任何收入，每个月也要先掏出25万来维持这个摊子。一年就是300万**。这就是她“一动不动”的固定成本。
+
+再计算她的豪宅... ...
+
+......
+
+这就是她面临的第一个残酷现实：**不管赚不赚钱，每年至少要花掉1200万**。
+
+......
+
+
+四年累计税后进入工作室的收入，约6300万到9900万。
+
+**但请注意，这只是进入工作室的营收**，每年至少1200万的刚性支出要从这里面扣。扣完之后，四年累计盈余大约在1000万到3000万之间。平均下来，每年能存下来的钱大概250万到750万。
+
+考虑到她还有个人消费、父母家庭消费以及计划外开支，每年应在数百万级别，那每年能存下来的钱可能更少一些。
+
+这就是她面临的第二个残酷现实：**过去四年，她几乎没有积累**。
+
+......
+
+**这就是“纯纯的负资产”**。曾经的“人间富贵花”，如今正面临着她职业生涯中最严酷的寒冬。纯净水应该没读过《包法利夫人》。
+
+......
+
+全文五千七百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
