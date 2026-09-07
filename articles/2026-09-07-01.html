@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '婚姻必然消失，人类必然变成小灰人';
+        const CONTENT = `**婚姻必然消失，从博弈论的角度来看，结论非常清楚。**
+
+先说男性。男性觉得婚姻的风险非常高，不论哪个阶层的男性都这么感觉。风险不会因为男性处在哪个阶层而消失，只会以不同的方式呈现。如果不想要孩子，那就更单了——什么都不需要，自己的生活、娱乐、事业、社交，现代社会的供给系统已经足够丰富。
+
+如果想要孩子呢？
+
+上层男性想要孩子，有代孕、有信托、有法律隔离工具，完全绕开婚姻就能实现，马斯克跟4个女性生了14个孩子，Telegram创始人杜罗夫靠在不同国家有超过100个后代，徐波代孕100多个孩子。
+
+中层男性面临的情况稍微复杂一点。他们也清楚婚姻很危险，离婚可能意味着半辈子积蓄被切割、长期抚养费、生活质量断崖式下跌。但他们有个难题：如果很想要孩子，以他们的经济实力，没有太多选择。他们需要找到一个愿意跟他生孩子的女性，而女方通常要求结婚作为前提。所以中层男性是被迫进场的，他们不得不用婚姻作为代价来换取后代。但这种婚姻稳定性存疑，风险什么时候爆发不确定，但爆发几乎是100%的——因为博弈结构本身就不稳定。
+
+底层男性就比较简单了。他们当然也知道婚姻有风险，但反正没什么钱，想分也分不走多少。对于想跟他结婚的女性来说，从他身上薅不到什么羊毛，所以底层男性在婚姻市场上几乎没有竞争力。即使偶然结成了，婚姻也不会持续太久，能留下一个两个孩子已经算不错的结局。
+
+所以从男性的角度，结论非常清晰：**如果他不想要孩子，完全不需要结婚**。现代社会提供了足够的娱乐、陪伴、生理满足的替代方案，花钱就能买到，不需要用婚姻这张高风险合同来绑定。
+
+再看女性。女性的博弈逻辑有一个核心偏好：**绝大多数女性倾向于嫁给比自己更厉害、资源更丰富的男性。这个偏好不分阶层，贯穿始终**。
+
+......
+
+这些历史上的精英女性用行动证明了一件事：**当一个女性拥有足够的资源和选择的自由时，她不需要婚姻来定义自己的人生。**
+
+......
+
+**婚姻消失的前兆，已经在大学课堂里出现了。**
+
+大学阶梯教室，男生一边，女生一边，中间隔着过道。男生玩金铲铲、王者荣耀，女生架着平板追剧、喝奶茶。除非没位置了迫不得已坐到异性旁边，否则两者几乎没有交集。新一代大学男女已经基本实现了“性别隔离”。
+
+这个现象背后，有两个重要的信号。
+
+......
+
+**既然男性和女性有了足够的资源，他们倾向于不生孩子、不要婚姻，或者不要婚姻但要孩子，再或者干脆什么都不要。那么有没有可能通过把他们的资源剥夺掉，让他们重新回到不得不相互依赖才能活下去的状态呢？**
+
+不可能。这个答案非常确定。
+
+......
+
+全文九千六百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
