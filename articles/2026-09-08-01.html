@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '三十年房贷跟四十年房贷的区别是什么？';
+        const CONTENT = `假设买房子贷了100万，按照等额本息的方式来还，每个月还固定的钱，直到还完为止。现在的房贷利率大概在3%到3.5%之间浮动，咱们取个最低值，按3%算。
+
+如果贷30年，每个月要还4216块。30年还完，一共还4216x12x30=151万8千。也就是说，借了100万，给银行利息51万8千。按照银行的经营方式，给银行的利息，到了银行手上，还能帮银行继续赚钱，银行是高杠杆经营，大概有十几倍的杠杆，这五十多万大致能帮银行再多赚一百万到两百万，粗略计算。
+
+那如果贷40年呢？同样100万，利率3%，每个月还3581块。40年下来，一共还了171万9千，利息是71万9千。
+
+每个月少还多少？4216减去3581，**635块**。就少了635块。一个月少还635块，换来的是什么？是**多还10年**，是**总利息多出20万**。
+
+看起来每月少了635块，但没有省钱，多付20万利息。
+
+如果利率是3.5%，多付银行24万3千块。
+
+**数字不会骗人，但数字会让人产生幻觉**。每个月少还几百块，这个幻觉让觉得占了便宜，实际上被银行套得更深了。
+
+更严重的，如果一个人需要贷款才能买房，那其实就是这个人根本不能买房！根本不能买房！根本不能买房！
+
+这是骗局，这是一个更大的骗局的一部分。
+
+**这个世界最大的骗局就是用一切非现金的东西骗走别人手里的现金**。
+
+重要事情说三遍：现金极度珍贵！！！现金极度珍贵！！！现金极度珍贵！！！
+
+人如果手里没钱，要去工作，996，007，去赚钱，有了钱才能生存，才不会挨饿，不干活，会死。印加坡，很多七十岁的老人仍然打工养活自己。
+
+如果手里有钱，可以用钱生钱，不干活也能活下来。人会生病，会衰老，会干不动活。在能干活的时候，要想着干不动活的时候。
+
+所以，打工赚钱，最重要的目标就是积累资产，让自己以后不用干活也能赚钱，也能养活自己。**这是最重要的任务，没有之一，最重要**。
+
+**因此，打工赚到的钱，在维持自己的生活之外，最好一分都不要花，存起来，研究怎么让它变得更多**。
+
+任何试图把现金从手里骗走抢走的事情，都不能上当。
+
+房贷恰好就是这么一种把现金从你手上骗走的事情。
+
+贷款买房，但你拿到那100万了吗？没有。那100万根本就没到你手里，银行直接打给了开发商。你只是看到了一个数字，然后背上了一个债务。你失去的是未来30年或40年劳动收入的一部分。
+
+......
+
+要永久去除一切不需要的消费。因为都是骗局。要精心计算自己的生存必须。除此之外，一分不花。
+
+买房，不需要。
+
+买车，不需要。
+
+演唱会，愚蠢，当然不需要。
+
+......
+
+商业广告从来不这么说，它们说“爱她就给她买”“孝顺就送这个”“兄弟就得喝这杯”。
+
+这些口号把情感和商品绑在一起，让拒绝消费变成了拒绝情感。这一招太狠，很少有人能分开看。
+
+......
+
+这个结果有点悲观，但它指向一个更深的提醒：人只能自救，救不了别人，也救不了自己的后代。就像《一代宗师》，奉道者不传艺不留后，很有哲学，很有逻辑，很有深意。
+
+......
+
+全文五千一百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
