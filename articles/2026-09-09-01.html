@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '高额彩礼会消失吗？';
+        const CONTENT = `先说结论，结论可能有点扎心：**在大多数情况下，如果男性想获得后代，彩礼是最轻的成本，其他成本更贵**。
+
+我是男性，我对这个结论也是无可奈何，很抱歉，现实就是如此。
+
+有人说，嫁老外不要彩礼，我的研究，其实隐形福利超过彩礼数额。嫁老外，老外某种程度具有稀缺性，同时，在某些国家享有超高待遇，相当于嫁给特权。在某个国家，一个女大学生考试作弊，成绩被取消，可能还会被严重处分，她的男朋友，一个黑皮肤的外国人，为她到处找学校相关机构，最后争取到了补考。还可以再次二分，如果嫁到相对发达的国家。如果嫁给一个美国人或者欧洲人，得到的是一整个法律环境的切换。一旦离婚，对方国家的法律对女性的保护力度，是绝大多数难以想象的。如果嫁落后原始地区的老外，一旦回去这些地方，下场会很惨，那是咎由自取，达尔文奖候选人，相当于优胜劣汰，加速提升族群智商，宏观也并不差。
+
+我们经常能看到国外的电影，女性被求婚的时候，非常感动，痛哭流涕。因为对男性来说，结婚的成本和风险太高了，不愿意结婚，被求婚是小概率事件，对女性情感冲击很大。电影需要在两个小时内放置足够多的情感冲击，太平淡没人看，所以求婚环节更多一些。
+
+美国有9个州实行共同财产制，包括加州、德州、亚利桑那州、内华达州、华盛顿州等。在这些州，婚姻期间获得的大部分资产都被视为夫妻共同所有，离婚时默认规则是五五分。更关键的是，即使是一方婚前拥有的资产，只要在婚姻期间发生了增值，这个增值部分也可能被纳入分割范围。一个男性婚前有一家公司，婚前值1000万，婚后十年公司上市，股权价值变成了1个亿。这9000万的增值，在很多州的判决里，女方可以分走一半。
+
+除了财产分割，美国还有配偶赡养费制度。美国《统一结婚离婚法》第308条对配偶赡养费作出了具体规定。法院在决定是否颁布扶养令时，会考虑一系列因素：被扶养一方的经济来源、获得足够教育或训练以便找到合适工作所需要的时间、婚姻存续期间形成的生活水准、婚姻的持续时间、被扶养一方的年龄和身体状况等等。这意味着，如果一个女性为了婚姻放弃了职业发展，离婚后她可以要求男方支付赡养费，直到她有能力重新站稳脚跟。
+
+......
+
+所以，一个中国女性嫁给外国人，一整套法律保护让她在离婚时有权分割对方婚姻期间的财产增值，价值大概率超过现金彩礼。
+
+......
+
+**但即使有大量男性退市，彩礼也不会消失**。退市的男性本来就是市场里的“无效需求”。真正能进入婚姻的男性，是那些愿意并且能够支付彩礼的男性。只要有一批男性愿意出价，彩礼的价格就不会掉。
+
+......
+
+更有意思的是，即使男性数量大幅度下降，彩礼都不会降低，眼前有最好的例子，**俄乌战争导致男性人口锐减，并没有让俄罗斯和乌克兰的结婚成本降低，反而催生了一些更复杂、甚至更残酷的“新成本”**。
+
+......
+
+全文六千两百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
