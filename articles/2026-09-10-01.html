@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '纯净水的陨落：缺少三个系统';
+        const CONTENT = `我研究纯净水的陨落，以及其他女明星的成败，我发现，一个明星如果持续数十年红下去，背后必须三套系统，大致相当于柏林防空塔、莫斯科保卫战总参谋部和碟中谍不可能任务小组。如果不全，或者都没有，必然会出问题。
+
+柏林防空塔：打不穿炸不烂的硬件防御，象征顶级律师团、财务顾问、公关团队。
+
+莫斯科保卫战总参谋部：制定策略、分析形势、协调各部门的大脑，象征操盘手、策略顾问、政府关系负责人。
+
+碟中谍不可能任务小组：提供装备、研发武器、随时补给的幕后支持，象征法务审核、私人律师、合同模板、危机预案。
+
+明星自己最好是《教父》维托·柯里昂+《谍影重重》杰森·伯恩。
+
+纯净水的陨落来自一个微不足道的代言，这个代言合同金额也就200多万，跟她巅峰时大几千万的年收入相比很小，然而就是这个微不足道的代言导致了雪崩式的连锁反应，毁掉了她的商业价值。
+
+**这个事是怎么发生的呢**？
+
+......
+
+纯净水打了多么漂亮的一场翻身仗。她从万年捧不红背后有金主的负面标签走出来，靠演技和角色适配度。观众对她的好感度前所未有的高，人间富贵花以前有点负面，现在成赞美。当时大家都觉得，她终于迎来了事业的第二春，后续只要能稳住节奏，选好剧本，拿几个好代言，完全可以进入一个更成熟的阶段。
+
+她的商业价值马上面临巨大的升值，至少翻三倍，五倍也有可能。这个爆红让她吃五年没问题。
+
+**但是，大坑来了**！
+
+......
+
+这导致她从2022年到2026年的收入大跌，四年几乎没赚到钱。然后又出现大事件，有一批代言取消，热搜撤除，彻底大翻车。然后就是38岁，稍微延迟一点，进入40岁，且影视行业下行周期，很难翻身了。
+
+那这个公司是咋回事呢？为什么这么可怕？为什么拖垮纯净水？它的商业模式是什么？
+
+这个公司后面，大概率是一群野路子操盘手，打法是，选一个极小品类，签明星做代言，然后疯狂铺电商，短平快，捞到就走，赚快钱。无限畅的经营范围是批发业，有《食品经营许可证》，没有生产必需的《食品生产许可证》。说明其法律身份是经营者，不做生产。公司负责品牌运营、产品设计和市场销售，生产则完全外包，主要精力与资金投入到请明星代言、广告宣传上，追求快速获利。
+
+......
+
+纯净水本人和团队，缺少最基本的合规意识，大概率没有法务，但凡有个法务做审核都不会犯了极其低级的错误。
+
+**那为什么会出现这种低级错误呢？为什么没有合规审查？大概是因为单飞**。
+
+2018年3月，纯净水......公开恋情。单飞的开始。
+
+马上，下个月，2018年4月26日，...... 将其持有的98.3%公司股权转让给了......，切割开始了。
+
+三周后，纯净水在宁波注册了第一家个人工作室。大概率这个点正式单飞了。
+
+......
+
+**但是，即使有了这些顶级角色，就能当甩手掌柜了吗**？
+
+当然不是。比如律师，你有多少知识，你有多少思考，你提多少要求，你有多少监督，律师才能做到多少，你不提，律师不知道你要什么，不会去做。俗话说，干活不看东，累死也白扔，律师不会浪费时间的。说难听一点，你不懂，律师会忽悠你，反正你不懂。
+
+你必须自己学习法律，学习流程，跟大模型先做多种推导，反复研究，有了确定方案，再跟律师讨论具体的方案，让律师执行。
+
+如果你不懂，顶级律师能发挥的作用有限，就像灭绝师太拿倚天剑打不过张三丰，不是倚天剑不厉害，是灭绝不厉害。其他角色同理。所有这些人做的事情，你都要懂，懂了你才可以指挥这些人按照你的指挥实现你的意图。
+
+这需要强悍的学习能力，任何一个人加入你的团队，你在很短的时间内，跟这个人多次畅谈，象海绵一样吸干他的知识和能力，然后指挥他干活。
+
+纯净水一家学习能力一般。从大镰刀的小作文可以看到，纯净水天天手机聊的低价值的东西，什么花三天跟前财务谈8万块补偿，花大量时间撕番位，还觉得自己懂，别人不懂。
+
+......
+
+全文五千五百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+
+**每日必更**。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
