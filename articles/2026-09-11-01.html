@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '法国已是母系社会';
+        const CONTENT = `**法国有一个有意思的法律，禁止丈夫在私下进行亲子鉴定。这个法律必将导致婚姻解体，必将导致法兰西民族灭亡**。
+
+为什么？因为婚姻必须确认亲子关系。没有亲子关系，就没有婚姻制度。
+
+婚姻不是爱情的产物，而是私有制的产物。在人类漫长的蒙昧时期，并不存在现代意义上的婚姻制度。这是恩格斯在《家庭、私有制和国家的起源》的结论，也是学术界认可的结论。
+
+最早，人们是群居的，孩子只知妈妈，不知爸爸。生育的确定性只掌握在女性手中。男性无法确认后代。
+
+人会养动物会种庄稼后，私有财产出现了，男性作为主要的财富创造者，迫切需要解决一个问题：如何确保自己死后，积累的财产能够落到自己的亲生骨肉手里，而不是被部落或他人的后代瓜分。
+
+于是，婚姻制度应运而生。它通过法律和道德的双重锁链，将女性固定在单一的性伴侣关系中，从而将男性的确定性从“可能”变成“必然”。
+
+父权制婚姻的本质，就是一场关于确定性的交易：男性用保护和供养作为代价，换取对后代的确认权，进而完成私有财产的代际传递。否则，无法将自己的财产、地位和权力精准地传递给与自己有血缘关系的人。
+
+现在，法国的丈夫们不知道妻子生的孩子是不是自己的，那还要婚姻干什么？也就没必要结婚了。
+
+当一个社会不再保障男性确认自己的后代，不再把私有财产的继承权作为法律优先保护的对象时，这个社会实质上就失去了父系社会运转的根基。
+
+父系社会的一切制度设计，都围绕着“确定性”展开。而禁止私下亲子鉴定，等于从法律源头切断了这种确定性。
+
+男性无法再通过自己的努力去确认真相，只能被动接受法律推定的结果。在这个新的游戏规则下，男性的处境变得荒诞而残酷：他们依然被法律要求承担父亲的责任，依然需要在税收和抚养费中贡献自己的劳动果实，但他们失去了确认这份果实是否落入了自己血脉的权利。
+
+他们的义务是铁定的，他们的权利是悬空的。
+
+那么，理性的人在这种制度下会如何选择？
+
+答案极其简单。规避风险。不结婚。不结婚，就没有法定的父亲推定，就可以在很大程度上避免为别人的孩子承担责任。
+
+所以，一方面，结婚率持续下降，尤其在福利完善、法律偏向保护母亲和孩子的国家，越来越多的男性选择同居不婚，甚至独身不育。
+
+另一方面，非婚生子的比例不断攀升，在很多欧洲国家，这一比例已经超过了一半。这意味着社会在实质上正在回归“只知其母，不知其父”的状态。出生证明上父亲一栏空白，已经成为一种普遍现象。孩子由母亲和国家共同抚养，父亲的角色被彻底边缘化，变成一个可选项，而不是必选项。
+
+**这正是母系社会的核心特征：血缘的传递只通过母亲完成，父亲的地位是附着的、不确定的、可以被剥离的**。
+
+......
+
+
+**整个逻辑链到这里已经完整闭合**。起始端是私有制催生了父系婚姻，中端是福利国家用税收瓦解了私有财产的继承意义，转折端是法律禁止确认亲子关系，终点端是男性理性退出婚姻，导致社会结构向母系回归。这整个链条环环相扣，每一个节点都是上一层逻辑的自然延伸，没有跳跃，没有强加。
+
+......
+
+**那法国为什么能收这么高的税收**？
+
+高税收能不能成立，根本不取决于福利理念多先进，而取决于一件事：**抽走这笔钱之后，大多数人还能不能活下去。** 
+
+只要能勉强活下去，大多数普通人就不会选择造反。造反成本极高，收益极不确定，只要日子还能过，低风险偏好就会占上风。税收的极限，本质上就是这条“税后生存线”。
+
+......
+
+**法兰西民族已经死了**。
+
+从法兰西民族在禁止丈夫私下做亲子鉴定这条法律通过的那一刻，就已经在法律意义上被判定死亡了，剩下的只是历史垃圾时间。
+
+......
+
+全文七千七百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
