@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '某某凤“取消英语核心地位”是一派胡言';
+        const CONTENT = `先说结论：某某凤博士学历问题很大，某某凤是学术教育的边缘人，不具有讨论英语教育的资格，某某凤大概率是自我炒作，他的言论跟《弟子规》一样有毒，不要上当，想翻身，要认真学英语，比如把新概念英语前三册背下来。
+
+我说这些，不怕他来告我。我的结论是基于扎实的证据，我查了他的论文，他的履历。他如果告我，我会把打官司的过程公开，让所有考研学生看到他的真面目，以后没人报他的课了。他损失更大，而且会涉及学历授予不规范问题，甚至可能会撤销博士学位，把南京大学拉下水。告我，他大概率会身败名裂，事业破产，学位撤销，顺便摧毁他的社交圈。量他不敢。
+
+**2026年9月4日，考研数学辅导某某凤在社交媒体平台“今日头条”上公开发文，呼吁“取消英语作为核心课程的地位”。** 9月5日，他继续发文称“全世界没有一个国家像我们这样把英语置于这么至高无上的位置”，并直言“中国人崇洋媚外的历史该结束了”。这番言论迅速登上微博热搜榜首，引爆了关于英语教育存废的激烈争论。
+
+取消英语的核心课程，其实就几乎等价于取消英语。就像音乐，绘画，体育，不是核心课程，学很糟糕得很，这是公认的。
+
+某某凤说“全世界没有一个国家像我们这样把英语置于这么至高无上的位置”，**胡说八道**。印度、新加坡、菲律宾，英语不仅是核心课程，甚至是法律、行政和高等教育的唯一官方语言。即使在非英语国家如法国、德国、荷兰、北欧，英语在精英教育体系中的地位极高，许多硕士博士课程完全采用英语授课，其国民英语熟练度远超中国。
+
+中国将英语作为**基础必修课**，英语是获取国际前沿知识的工具，而非文化认同的替代品，注意，只是做工具，课文几乎只是词汇语法，完全不涉及文化、思想、制度，这就是当工具，工具有啥至高无上的地位？国家设计的工具性英语是“单向虹吸”。能学习国外的东西，能把东西卖到国外。但是出不去，出去也很难融合。承认国际市场有金矿，要吸过来，又要防止人才流失，也是合理的。很精巧。这个工具有多糟糕，有个上古笑话，一个留学生去了美国，遇到车祸现场，警察来问他发生什么事，他说，“One car come, one car go! two car peng peng, one car die! ”
+
+......
+
+**某某凤的博士学位问题很大**。
+
+......
+
+没查到其他论文，也没查到他的博士论文。他的博士论文题目、摘要、创新性成果没搜到。
+
+退一步，考虑到科学研究可以容许一定程度的失误，论文的错误就不谈了。现在问题就是，一篇JMAA可否授予南京大学博士学位的问题。够不够资格？
+
+其次就是，南京大学2006年博士研究生招生简章中明确规定，当年实行一次性招生，**入学时间为2006年9月**，然后再2006年10月份投入一篇论文，然后就能满足工作量，就可以准备博士毕业，拿博士学位了？
+
+一塌糊涂啊。
+
+......
+
+某某凤很象一个人，写《弟子规》的李毓秀。《弟子规》是剧毒砒霜，毒害孩子灵魂。
+
+**《弟子规》的作者李毓秀清初山西绛州的秀才。** 他生于1647年，卒于1729年，屡试不第，以教书为生，写了《训蒙文》，后经贾存仁修订改名《弟子规》。但他身上的那种“科举失意、以教条立身”的气质，跟某某凤神似。具有相同的，人格结构：
+
+**第一，都是旧体系里的失意者，又靠旧体系吃饭。**
+李毓秀考不上举人、进士，转身去写蒙学规条，教孩子“父母呼，应勿缓”“话说多，不如少”。这些东西的核心不是启蒙，而是**服从训练**。某某凤高考两年才上大专，后来靠专升本、硕士、两年“速成”博士拿到身份，再靠考研应试技巧成名。两人都不是旧体系里的顶尖成功者，但都找到了一个**依附于旧体系、又能获得一点身份和利益的位置**。
+
+**第二，都用“道德姿态”掩盖“利益动机”。**
+李毓秀写《弟子规》，表面是“正人心、厚风俗”，实际是给基层蒙学提供一套低成本、易执行的管控工具。某某凤喊“取消英语核心地位”，表面是“减负”“文化自信”“反崇洋媚外”，实际是**为自己的流量生意续火**。
+
+**第三，都试图用教条限制后来者的上升通道。**
+《弟子规》教孩子守规矩、别多想、别越界，本质是**让底层安分**。某某凤劝大众别学英语，本质是**让普通人失去全球信息工具**。两人都在做同一件事：自己靠某种工具或规则爬上去，转头就告诉后来者“这个工具不重要”“这个规则别打破”。**他们最怕的，就是后来者拿到他们曾经拿到的工具，然后超过他们。**
+
+......
+
+全文八千九百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
