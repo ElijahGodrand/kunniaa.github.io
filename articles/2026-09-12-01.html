@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '到处募捐的慈善基金，富豪的家族基金，都是怎么回事？';
+        const CONTENT = `今天聊的东西，可以让你未来节省几百块几千块。
+
+国外，有很多向公众募捐的慈善基金，也有富豪年龄大了把自己财产捐给家族基金，有时候两类之间也有一些PY关系，合作搞一些项目，共同站台一些仪式。它们在形式上非常有迷惑性，有很酷炫的光环，似乎很让人仰慕。
+
+......
+
+这个结论是错的。并不是国外的富豪就是好人，他们跟国内的一样，没有差别。他们把钱放进基金会，不是因为高尚，而是因为这件事对他们非常有利。这里面的逻辑一层一层往下扒，会发现他们精明得很。
+
+第一个逻辑，跟基督教有关。基督教里有一句话，出自《马太福音》第19章第24节，耶稣对门徒说的：“我又告诉你们，骆驼穿过针的眼，比财主进神的国还容易呢。”同样的记载也出现在《路加福音》第18章第25节。这句话从基督教诞生到现在，一直没有被反对过，因为这条策略对宗教太有利了。
+
+......
+
+所以在中世纪，教会非常有钱，极度有钱。教会的土地曾经占到欧洲总数的五分之一，而且这些土地多半来自王公贵族的捐赠。有钱之后就搞出很多乱七八糟的事，比如有一部文学经典叫《十日谈》，就记载了教会干的那些很好玩的事情。薄伽丘在这本书里写了大量讽刺教士贪财、纵欲、伪善的故事，其中超过60%的故事涉及教士或修女，绝大多数是以讽刺甚至丑化的方式呈现的。有一则故事甚至直接引用教皇的话说：“若非教会收入依赖赎罪券，我宁可让所有灵魂下地狱。”那个精彩程度，相当于中世纪的草榴社区。
+
+......
+
+**但是圣经里那条“富人上天堂难”的话并没有改。想上天堂，死的时候还得是穷人。** 这就出现了一个巨大的矛盾：新教鼓励疯狂赚钱，但圣经说有钱人进不了天堂。怎么办？
+
+所以这些富豪就发明了一种方式：我在临死之前把财产捐出去，成立一个基金会。这个基金会名义上是公众所有，但是关键职位让我的儿子、女儿、孙子、孙女，让我的家人来担任关键职位拿高薪。这样他们就相当于获得了一种很好的保障，而且永远是我的家族人来做管理者。**通过这种方式，他既保留了财富，又能上天堂，而且让后代得到很好的照顾。这实际上就是钻宗教的空子，钻上帝的空子。** 上帝看到这个也无可奈何，只好让他们上天堂。因为按照字面意思，他死的时候确实没钱了，钱都在基金会里。
+
+......
+
+还有一种基金会，它是向公众筹集善款的。
+
+......
+
+本质上，这套东西的底层逻辑和赎罪券是一模一样的。**先告诉你，有罪——过得比那些穷人好，不捐款就是冷漠、没有同情心。然后告诉你，捐钱可以赎罪——捐了款，就变成了一个好人。** 
+
+......
+那么我们再设想一个场景：假如在一个地方，权力是高度集中的，也没有宗教焦虑，也没有稳定的信用，这三个条件都很重要。在这种情况下，任何基金、任何慈善都是不必要的。**在这种情况下，如果有人搞这种慈善，搞这种基金，大概就两个目的。第一，要么是他要建立起自己的私有权力体系，这个是极度危险的，肯定不会有什么好果子。第二，就是他想搞一点钱，为自己活得更舒服，这种可能性倒是更大。** 没有其他可能。如果一个人真的想干好事，不会使用这种两方式，因为这两种方式都不对。
+
+......
+
+人之所以会上当，本质上就是没有做好分类。有一个人骗了你，你可能会想，是因为他是异性，因为他说话好听，因为他装得惨，所以我上当了。那么学习到的经验就是：如果有一个异性装作很有礼貌，表达得很惨，他就是在骗我的钱。但下一次，骗子可能用其他要素组合，甚至每一次都发明一个新的花招，以前从来没有出现过的骗局。所以总是有人会上当。
+
+......
+
+这也就是我们经常看到很多成功的人，实际上非常冷漠的原因。他就是没时间去调查真相。他就是总结出来所有人都是骗子，他也不想去看。他对这个事情不感兴趣，他也不想去看怎么自证、怎么证明自己没有骗。他既不想去调查，也不看的证明材料，他就一律拒绝。
+
+......
+
+全文六千四百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
