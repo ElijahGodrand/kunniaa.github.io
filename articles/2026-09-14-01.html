@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '演员，惨烈的行业';
+        const CONTENT = `最近看了一些数据和调研，如果数据和调研是真的，那演员这个行业很惨烈，可能比码农还惨。学表演可能不如学计算机，机械，自动化。
+
+先看顶级的学校。中戏北影上戏中传的表演系，录取率极低，一两百人录取一个，即使考上了，大多数人也一生跑龙套的。比如北影，每届两三个班，每班二三十个学生，总共也就是几十号人。每个班，能考上北京人艺，上海话剧艺术中心的撑死一两个。拍戏当主演的一两个。其他的如果一直拍戏，也就是在各个剧组当特约演员，没有固定角色，跑龙套，背景板，一个月收入6000到12000左右，但是不能保证一年12个月都能进组。
+
+特约演员是什么？比如夏洛特烦恼里面夏洛问路的大爷，马什么梅，什么冬梅，马冬什么，陪夏洛他妈打麻将的几个大妈。《潜伏》里的盛乡。《亮剑》里的大佐黑岛森田。有几句词或者没有词，活几分钟，阶段性出现，不对剧情产生推进作用，一天三百到五百。
+
+大部分人收入只够维持生活。有些转行做自媒体，有的在艺术培训机构教表演。还有大约三分之一毕业后彻底放弃了演艺事业，做别的去了。
+
+表演系能混出头的，基本上都是还没毕业就就拍戏了，如果上学时没有接到戏，最多延迟到毕业两年了，如果还没什么机会，基本上这辈子就不可能出名了。
+
+这个圈子里，骗子很多，表演系还没入学就有经纪公司排着队签学生，全都是骗子公司，签了就等着倒血霉吧，就三种可能，赔钱解约，打官司，雪藏，把家里榨干为止，坑到家破人亡，人家就是吃这个饭的。
+
+拍戏比建筑工人还苦。建筑工人好歹有上下班，下雨天还能休息。剧组一开工，休息那就是个奢侈品。一拍电视剧电影几个月的时间别想休息一天，每天至少工作14小时起步。反正只能8小时休息时间，还包含来回路程。工作14小时也是休息八小时，工作24小时也是休息八小时。连续拍了两天两夜都常事。剧组里几乎无论男女，大部分都是烟鬼，没办法，见天这么熬夜，不抽烟那顶不住，进了剧组连抽带发一天三包打不住。
+
+导演好不到哪里去，徐克拍七剑，传说七天七夜不睡觉，没那么多，是连续三四天不睡觉。
+
+......
+
+这是一个导演写的：
+“冬天最冷的时候，凌晨，穿一件单衣拍4个小时的雨戏”
+
+“在茶卡盐湖泡了三天，每天从早上6点过泡到晚上8、9点，支架轨道全部被腐蚀损坏，裤子上全是盐，晚上把裤子脱下来，硬邦邦的可以完全自己立在地上。雨靴不够，穿拖鞋在盐水里腌着，一天下来脚跟火在烧一样。”
+
+......
+
+摄影师写的：“剧组的工作强度，996都是小意思。都是持续几个月的007！每天晚上10点就能收工的剧组，几年也遇不到一个。”
+
+这不是人过的日子。
+
+剧组夫妻真不是个事，压力那么大，总要有个泄压的方式。
+
+......
+
+全文六千一百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
