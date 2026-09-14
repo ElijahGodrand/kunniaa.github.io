@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '《原则》即拒绝';
+        const CONTENT = `达利欧写过一本书叫《原则》，全书有21条高原则、139条中原则和365条分原则。这些原则涵盖了赚钱，生活，管理，内容繁复，读完很容易陷入一种感觉：看的时候，道理都对，但记不住，做不到。
+
+我也读过。现在问我这本书有什么原则，我想不起具体的条款。21+139+365=525，太多，多了就不稀缺了。不稀缺的东西，大脑不在意。任何一个领域，人类大脑最多记住三个品牌。如果这本书只讲三个原则，应该能记住一两条。所以要简化。
+
+再说，《原则》是基于美国的文化、职场和经验写的，桥水员工薪资太高，福利太好，实习生月薪2万刀，正式员工无限期带薪病假，太完美，对底线太高，不够残酷，拿到本土肯定水土不服。中文版是2022年出版的，现在四五年过去了，影响力没有想象的那么大，甚至还在衰退之中，这说明想在本土有效，还得往残酷的方向强化。
+
+按照这两个考量，我把全书浓缩成两个词：拒绝；极致。拒绝是一种带有负面情感的词，会触发情绪，有情绪才记得住。比例上，99.9%的拒绝+0.1%的极致。原则就是拒绝，记住拒绝就行了。标配是拒绝，选配是极致。只要做到拒绝，人生满分一百，你能打99.9，岁月静好，一生平安，幸福快乐，没有大风险。极少数人能做到极致，100分，累一点，也不会太累，因为已经拒绝很多东西了，只做一点点就行。
+
+就这两个词，拒绝，极致。
+
+很多痛苦来源不拒绝。
+
+比如内卷，内卷来源于不拒绝。拒绝996，007。
+
+文明这个东西，本质上是一种汲取体系。文明具有一个独立的抽象的人格，像一个人。一个抽象的人要活下去，就必须吃掉一些东西，这就是汲取。然后生成一些东西，以便持续活着。
+
+“人类将复杂共同体生产、积累、汲取和燃烧德性的运作机制称为文明，将秩序的输出、输入、交融和冲突称为历史。”
+
+白酒，社交用的，社交是文明一种维持群体网状结构的一种方式，但白酒是一级致癌物，没任何好处。一线城市可以相对自由一点，喝不喝都行，其他地方都有很严重的喝白酒的现象，社交pua，这个就是汲取个体的健康维持文明内部网络结构。
+
+彩礼，汲取财富。中式婚礼，汲取财富，汲取健康。房地产，汲取财富。
+
+汲取无处不在，想从文明中获取收益，尽量不被汲取，必须拒绝。
+
+一线城市，一个人从早晨九点忙到晚上十点十一点，工作日差不多都这样，如果赚的钱不多，那就是被文明汲取了。不管做什么，时间付出去了，十几个小时，做了什么不重要，做什么都是文明所需，付出的时间没有区别，收入差别很大。
+
+只有什么情况是划算的？365x24小时，什么活都不干，或者想干什么干什么，时间全归自己，此时，你是保本的，如果能始终保持这个状态，还能赚到一点钱，才是反向汲取文明，这是个体追求的最高境界。
+
+文明也产出一些有价值的东西，比如科研，知识，医疗，食物。要反向汲取这些有价值的东西。达里奥是反向汲取的高手，从文明赚到很多钱，《原则》就是防范文明汲取并反向汲取文明的拒绝体系。
+
+......
+
+全文六千字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
