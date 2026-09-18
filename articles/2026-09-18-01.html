@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '庄子内篇次序与实修';
+        const CONTENT = `通行版《庄子》内篇是乱序。
+
+内篇的次序是郭象排的，他是西晋人，整理注解庄子，今天读的33篇《庄子》，就是他把汉代52篇、魏晋27篇的各种版本删订整理之后定下来的。他把《逍遥游》放在第一，把《齐物论》放在第二，后面是《养生主》《人间世》《德充符》《大宗师》《应帝王》。
+
+这个次序，一千多年来没人动过。
+
+**郭象把《逍遥游》放在第一，是非常玄妙的操作。**
+
+大概是为了上来就开大招，折服读者的灵魂。这个想法，还有个很有价值的副作用，《逍遥游》光芒遮掩后面的厉害的现实的大招，降低了攻击性。
+
+如果把大招放在前面，必然为很多上位者不喜，原来庄子是教牛马怎么对付我们呀？后面的次序也是牛马们自己成仙了，不给我们干活了，禁掉禁掉。
+
+事实上他成功了。《逍遥游》是庄子内篇里最出名的，没有之一。鲁迅在《汉文学史纲要》里说庄子“**其文则汪洋辟阖，仪态万方，晚周诸子之作，莫能先也**”。司马迁在《史记》里早就点出庄子“**洸洋自恣以适己**”的想象特点。刘凤苞在《南华雪心编》里说得更绝：“**缥缈空灵，则推南华为独步也。**” 这些评价，大多受《逍遥游》的影响。
+
+一翻开书，鲲鹏展翅九万里，怒而飞，其翼若垂天之云，还没搞清楚庄子要说什么，已经被震住了。觉得庄子太高了，太深了，太玄了，仰着头看，越看越觉得自己渺小。
+
+后世讨论《逍遥游》的最多，其次是《齐物论》，越到后面，讨论越少，大招都在后面。
+
+负面结果就是，练成《庄子》的也少了。因为《逍遥游》讲的是“至人无己，神人无功，圣人无名”。这是庄子最高境界，是终点，是果，是走完前面六步之后自然到达的地方。把它放在第一步，等于让一个刚学会走路的人去跑马拉松。不知道什么叫“无己”，因为从来没有在人间世里经历过“有己”；不知道什么叫“无功”，因为从来没有在应帝王里做过事；不知道什么叫“无名”，因为从来没有在大宗师里体过道。直接读《逍遥游》，读不到全流程的东西。**这就是为什么许多人读庄子读不懂。**
+
+《逍遥游》是果，不是因。它是走出来的，不是学出来的。就像吃饭一样，《逍遥游》是第七个小笼包，不是第一个。不可能一上来就吃第七个，得从第一个开始吃。
+
+当然，其他六篇次序也是乱掉的。比如，有扎实的文本证据，证明《应帝王》必须紧随《齐物论》。《大宗师》是出世法，必然高于《应帝王》世间法。
+
+......
+
+全文六千字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
