@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '破坏式创新，破坏式财富';
+        const CONTENT = `现在经济下行，大家赚不到钱，找不到工作，有点很痛苦。
+
+**赚钱这个事，以经济学家熊彼得为界，分两个时代。熊彼得之前，是生产即财富的时代。熊彼得之后，是破坏即财富的时代**。
+
+**破坏能力，就是赚钱能力**。
+
+熊彼特出生在1883年，到现在已经143年，他从小经历资本主义疯狂发展的岁月。1942年，他在《资本主义、社会主义与民主》里提出创造性破坏。
+
+他的原话是，创造性毁灭是资本主义的基本事实，稳态的资本主义本身就是自相矛盾的提法。资本主义不可能稳定，它必须不断革命化，不断从内部推翻旧结构。新的组合上来，旧的组合就得死。新企业崛起，旧企业衰退。新财富增加，旧财富蒸发。这个过程不温柔，不体面，不讲道德。
+
+他说的创造性破坏，英文是Creative Destruction，Destruction来自拉丁语destruere，由de和struere组成。de是向下、彻底反转，struere是建造、堆砌。字面意思就是把建造起来的东西拆下去。不是修，不是改，是拆。这个词根里自带一种对抗性。你建，我拆。你搭，我推。
+
+剑桥词典的定义是to damage something so badly that it does not exist or cannot be used，损坏到不存在，或者无法使用的程度。不是影响，不是削弱，是终结，no longer exists，不再存在。
+
+Destruction是一个act，是一个行为，是有主体在执行的。不是自然衰败，不是意外事故，是有
+
+词根是拆掉建的东西，定义是损坏到不存在，同义词是拆除和屠杀。熊彼得把这个词和Creative放在一起，形成了一种冷峻的张力。创造的力量，以毁灭的方式运作。新的东西要生，旧的东西就得死。不是自然死，是被杀死。不是慢慢退场，是被抬出去。不是让位，是被清场。
+
+19世纪末20世纪初的资本主义，非常狂野，非常残暴。洛克菲勒的标准石油，巅峰时期控制美国炼油90%以上。卡内基的钢铁，摩根的金融帝国，铁路巨头之间的价格战、回扣、歧视性定价，都是往死里打。
+
+标准石油把无数炼油厂逼死或收购，美国钢铁把几百家小钢厂整合掉，福特用流水线把手工汽车厂送进坟墓。
+
+**失败者不是被枪毙，是被市场清除。现金流断裂，客户跑光，供应商断供，银行抽贷，最后关门**。这跟战争中的围城、断粮、歼灭是一样的。打到最后，不是合并，就是破产。
+
+美国南北战争的时候，有一本小说叫《飘》，大致从**1861年**南北战争爆发前夕开始，一直写到**1870年代**重建时期，跟熊彼得在同一个时代。小说出版于**1936年**，比熊彼特提出破坏式创新早了4年。
+
+小说里的男主角女主角都很凶悍，尤其是那个郝思嘉的爸爸，农场主，更是一个极其强悍。有一个情节，有伤兵过来抢劫，家里没有男人，两个女的把那个进来抢劫的伤兵干掉了，把财物保留下来。那个时代，不凶悍就活不下来。农场被抢，家人被杀，土地被烧，只有最凶悍的人才能保命，赚钱。
+
+所以，咱们抬头看一下，城市，建筑，社区，CBD，工厂，客流，无数的商业模式，难道它们都是无敌的？无懈可击的？永远不倒？永远不死？
+
+搞破坏没有不确定，也没有恐惧。就像，茶杯一摔就碎，这是确定性的百分百，没啥不确定，这有什么恐惧？搞破坏，要么算准了硬干，大棒平A。要么就是找到弱点，狂捅。
+
+除非宇宙空无一物，彻底热寂，那没啥破坏了，那赚不到钱。只要但凡有东西，就有弱点，就可以破坏，就有机会。
+
+男的比女的破坏力更大一些，男富豪的就多一些，女富豪偏少。
+
+......
+
+
+全文八千五百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
