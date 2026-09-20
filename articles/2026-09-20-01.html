@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '家具行业，谁在赚钱？';
+        const CONTENT = `家具行业这个概念，如果按照最严格的口径来界定，指的就是造家具的公司。沙发、床垫、软床、衣柜、橱柜、餐桌椅、实木床、茶几、电视柜，这些产品背后的制造和销售。
+
+它不是装修，装修是施工服务，是另一条赛道；它也不是卖场，卖场是收租金的流通渠道，自己不生产任何一件家具；它更不是涂料板材，那些是家具的上游原材料。
+
+把装修公司、家居卖场和建材企业全部剔除之后，家具行业剩下的就是一批把木头、皮布、海绵和五金变成一件件家用家具，然后卖给消费者的制造企业。
+
+需要先说明的是，这个行业有很多没有上市的公司，体量很大，但因为不公开财报，拿不到精确的营收、净利润和净利率数据，所以本文的分析只覆盖有公开数据可查的公司。
+
+比如某某家居，它是民用家具行业里体量最大的非上市公司之一，2024年营收在不同口径下大约在65亿元到180亿元之间，是功能沙发第一梯队玩家，2025年天猫双11成交破亿。这类公司无法纳入精确的盈利能力排序，但它们的存在本身说明，行业里还有一批不上市但体量很大的隐形巨头，数据不透明，不代表市场份额和渠道能力可以忽略。
+
+这个行业的体量不算小。2025年，全国规模以上家具制造业实现营业收入6125.1亿元，利润总额328.1亿元。但这两个数字本身就在讲一个不太乐观的故事：**营收同比下降了10.7%，利润总额同比下降了12.1%，利润的降幅还略大于营收的降幅。这意味着行业不仅在收缩，而且收缩的过程中赚钱变得更难了**。全年规模以上家具制造企业的数量大约在7467家，营业收入利润率只有4.4%左右。这是一个平均净利率不到5%的行业。
+
+......
+
+行业还**极度分散**。欧睿国际的数据显示，2025年中国家居用品市场没有任何一家公司的份额超过2%，前三名合计只占5%左右。家具出口额在2025年同比下滑了3.5%，上游木材加工和木、竹、藤、棕、草制品业的利润总额同比暴跌了38.3%。上游在亏钱，出口大盘在收缩，中游制造企业的盈利压力从两头挤过来。这些背景数据说明，2025年家具行业的盈利分化不是偶然的，而是整个产业链利润重新分配的结果。
+
+......
+
+真正值得拆解的，是某某家居为什么能把净利率做到25.38%，以及为什么某某、某某、某某这些规模更大的公司反而做不到。
+
+......
+
+把这些公司放在一起，几条普遍的规律就变得清晰了。
+
+第一条规律，也是最重要的一条：**赶上某一个品类的升级换代，比什么都重要。** 沙发正在经历从“固定”到“功能”、从“手动”到“电动”的升级。
+
+......
+
+第二条规律：**出海是必须的，但“怎么出海”决定了你能不能赚到钱。** 
+
+......
+
+第三条规律：**垂直一体化在制造业里永远是利润的护城河。** 某某自己做电机、电控和机构件......
+
+......
+
+**在一个平均净利率不到5%的行业里，能做到25%净利率的公司，不是因为它做的东西更高级，而是因为它的利润没有被渠道、被上游、被费用结构分走。**
+
+......
+
+全文七千六百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
