@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '羊变狼';
+        const CONTENT = `羊吃草，狼吃羊。那怎么让羊变成狼呢？
+
+教育不能让羊变狼。
+
+教育可以让一只羊变成一个比较厉害、会观察情况、会逃跑的羊，把羊训练得更有效率。更懂得规避风险，更警惕，更健康，更肥瘦得恰到好处。它让一只羊成为一只更好的羊，而不是另一种动物，比如狼。
+
+教育也无法把狼变成羊。狼这个东西必然是吃肉的。要么肉，要么死。它的消化系统、神经系统、对蛋白质的渴求，是演化确定的。
+
+同一个学校出去的学生，过了5年、10年，差别会非常大。这种差别是羊和狼的差别。财富、权力、阶层，差距可以拉到几十倍甚至几百倍。
+
+从数量上看，羊永远比狼多。羊吃草，薪资比较低，待遇不高，而且一般是被吃的一方——可能被裁员，可能会背锅。
+
+如何让羊变成狼？常规教育不行，只有极端才行。
+
+禅宗提供了一个极端方案。
+
+禅宗本质上从二祖神光开始，就确立了一套和常规教育完全不同的逻辑。达摩面壁9年，神光前来求法，取出利刀，自断左臂，放在达摩面前。达摩问他所求何事，神光说，我心未宁，乞师安心。达摩说，你把心拿来，我替你安。神光说，觅心了不可得。达摩说，我替你安好了。
+
+神光断臂，是后期的说法。前期的说法，这个左臂是贼人所斩。唐代道宣律师在《续高僧传》中记载，慧可“**遭贼斫臂，以法御心，不觉痛苦**”。他手臂被砍断后，自己用火烧灼伤口止血，简单包扎，然后像没事人一样。
+
+不管是自断，还是贼人所斩，都是生死边缘，是实实在在的肉体创伤和生命危险，经历过这些才成为祖师。
+
+......
+
+俱胝和尚，凡是有人来问法，只竖起一根手指头，什么也不说。他门下有个做杂役的小童子，看多了，别人来问事，他也学着竖起一根指头。俱胝知道了，把刀子藏在袖子里，问童子，听说你也会佛法？童子竖起指头。俱胝一刀就把那根指头砍断了。童子疼得大叫，转身就跑。俱胝在后面喊了他一声，童子一回头，俱胝竖起自己的指头。就在那一刻，童子“豁然领悟”。
+
+......
+
+现实世界里也能看到很多在濒死环境中活下来的人，最终变得很厉害。
+
+王保保就是一个例子。他是朱元璋的对手，元末最能打的将领。朱元璋称他为奇男子，说常遇春虽然人杰，吾得而臣之，吾不能臣王保保，其人奇男子也。
+
+王保保一生败多胜少，太原之战全军溃散，只带18骑仓皇北逃；沈儿峪之战全军覆没，只和妻子数人乘断木渡黄河。但他每次都能从死亡边缘跑掉，跑掉之后重新站起来。
+
+......
+
+**羊变狼的本质，不是心理变强，而是博弈位置发生相变。** 羊策略是“服从换安全”，狼策略是“控制换生存”。谁控制暴力、资源、信息、杠杆，谁就是狼。谁只能出卖时间、体力、注意力，谁就是羊。教育能优化羊策略，但改不了位置。
+
+从博弈论看，羊是**安全策略**，狼是**支配策略**。环境支付矩阵决定哪种策略占优。
+
+当资源稳定、有第三方保护、重复博弈无限次，羊策略期望值高，合作、守规矩、长期主义划算。
+
+当资源崩溃、保护消失、博弈变成终局，羊策略期望值变负，先发制人、威慑、背叛、逃跑、结盟才划算。**死亡边缘之所以能把羊逼成狼，是因为它把无限重复博弈切换成有限终局博弈。** 原来那套“忍一忍、等一等、会有人来救”的算法，在终局里全部失效。
+
+......
+
+**赌博为什么不行？因为赌博是伪死亡**。它随机、可重复、有下一把，支付矩阵没有真正改变。赌徒输光了，怕死的我还在，甚至更肥。创业为什么行？因为创业是不可逆的，公司死了就是死了，信用崩了就是崩了，团队散了就是散了。每一次归零都在重写策略。
+
+......
+
+狼狈为奸。
+
+**狈是信息套利者，是狼和羊之间的中间层**。它靠信息差、管理差、信任差吃饭。技术把这三样全部抹平，所以狈的生态位在消失。未来只剩两种：控制杠杆的狼，和被算法管理的羊。中间层被技术吃掉。
+
+......
+
+全文五千字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
