@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '禅宗二祖慧可评传：时代，气质，博弈';
+        const CONTENT = `中国传统文化的禅宗，诞生是非常偶然的。但凡出点意外，就没有今天的禅宗了。
+
+如果没有禅宗，中国会失去从王维到苏轼那一脉的禅意诗，失去梁楷、牧溪的泼墨写意，失去董其昌以禅分南北宗的画论，失去文人园林里那种“空山无人，水流花开”的留白与枯寂，失去“吃茶去”演变成的茶道精神，失去少林武术中“禅武合一”的那一层哲学底色，失去宋明心学里陆九渊、王阳明那种“心即理”“致良知”的直觉顿悟气质。寒山诗可能不会在20世纪被翻译成英文，不会影响美国垮掉的一代。禅宗的语录、灯录、公案、机锋、棒喝，整个这套语言游戏和教学法，都不会出现。
+
+......
+
+好莱坞电影会失去《星球大战》里的绝地武士、原力、尤达大师——那几乎是禅宗与武士道混合的太空版。黑泽明的《七武士》《用心棒》会失去禅意的沉着与留白，而《荒野大镖客》和《星球大战》对黑泽明的模仿也会随之消失。《黑客帝国》里尼奥的觉醒、子弹时间、“There is no spoon”，会失去禅宗“空”的隐喻。《杀死比尔》刘玉玲和乌玛瑟曼在雪地庭院里的决斗，会失去日本禅的美学背景。昆汀电影里那些突然的静默、无逻辑的暴力与顿悟，也会少掉一层禅的底色。
+
+......
+
+乔布斯对禅的痴迷、苹果产品的极简设计、无印良品的空与留白，都会失去精神源头。西方哲学里海德格尔对“无”的讨论、维特根斯坦的沉默，可能也会少掉一个东方参照。甚至现代建筑里那种“少即是多”的禅意空间，也会失去一个重要的灵感来源。
+
+......
+
+关健就在二祖慧可身上。
+
+《续高僧传》及《景德传灯录》记载，正式依止达摩得法的，**不过三四人**，通常指慧可、僧副、昙林、道育。另有一说包含尼总持。
+
+......
+
+除了慧可，其他人没有形成延续性的法脉谱系，他们的传承线索在历史中很快就模糊了。
+
+......
+
+所以慧可是关健，对他的时代，为何出家，为何拜师达摩，要从唯物主义和博弈论进行研究，以便为理解禅宗提供一些关键信息。
+
+......
+
+禅宗二祖慧可的时代是南北朝，中国历史上极度漫长血腥的时期之一。北方经历了五胡十六国，匈奴、鲜卑、羯、氐、羌轮番入主中原，每一轮政权更替都伴随着屠城。北魏与南朝连年交战，淮河两岸白骨蔽野。北周武帝灭佛，寺庙被毁，僧尼被迫还俗，不还俗的就地诛杀。
+
+......
+
+虎牢关的战略地位，在南北朝时期被反复验证，它是“河南四镇”中承上启下的枢纽。对于南方政权来说，占据虎牢，就能以黄河为天险，阻止北魏南下；对于北方政权来说，控制虎牢，黄河便不再是渡河的障碍，反而成为南伐的前进基地。因此，423年宋魏虎牢之战、450年宋文帝北伐争夺虎牢、528年陈庆之攻占虎牢，每一次都是震动南北的大事。
+
+慧可年少时饱读儒书，通达老庄易学。史料说他“久居伊洛，博览群书”，然后“年登三十，忽感无常，遂出家学道”。这个“忽感无常”四个字，给后人留了很大的想象空间。放在487到517年这三十年里，一个虎牢姬姓子弟，读着儒道经典，看着洛阳从极盛走向崩塌，最终选择剃度，这个轨迹本身，已经足够说明问题了。
+
+慧可时代没有科举。南北朝选官靠的是九品中正制，门阀垄断，上品无寒门，下品无势族。学问再好，如果出身不是顶级士族，也很难进入权力核心。学问无法换成政治地位。
+
+他出生时，洛阳是天下最繁华的都城。到他三十岁左右，北方已经开始乱了。六镇起义的烽火从523年烧起来，河阴之变在528年屠杀了两千多王公百官，洛阳从帝都变成了屠宰场。他老家虎牢关，是南北拉锯的必经之路，谁打谁都要先过这个口子。他亲眼见过北魏最鼎盛时的洛阳，也亲眼看着它一步步崩掉。
+
+战事之外，天灾也不断侵袭洛阳周边。根据史料统计，从公元499年到514年的15年间，就发生了15次规模较大的水旱灾荒。公元512年，洛阳及附近州县发生严重饥荒，朝廷甚至下诏强制有粮之家借贷给饥民。公元513年，饥荒进一步蔓延至河南全境，同年寿春发生水灾，青州等地也出现洪灾与饥荒。公元510年，禽昌、襄陵二县爆发疾疫，冀州、定州则遭遇大旱。
+
+......
+
+全文一万字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
