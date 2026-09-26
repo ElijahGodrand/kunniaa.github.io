@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '人是蛋白质机器人';
+        const CONTENT = `人是大自然制造的蛋白质机器人。特斯拉的机器人在工厂里拧螺丝，Figure的机器人在仓库里搬箱子，白领在公司做PPT，三者是一样的。人也是机器人，用蛋白质做的。工资，房贷、KPI、社会期待、道德义务，都是后天写进程序里的，如果主动重刷，可以刷成金牌讲师，也可以是孙割。
+
+......
+
+这些都不是事。
+
+人好比组装电脑，刚组好，只有硬件。需要向里面装操作系统，可以装windows，可以装linux，也可以装unix。装进去的操作系统，信息放在磁盘上，其实就是磁盘上的0和1的组合。人的操作系统主要在大脑，大脑上面的神经元网络组成系统，一生形成的一切都保存在神经网络。
+
+大自然造人，没有CPU、内存、导线、操作系统，有原子和分子，用水、蛋白质、脂质、糖、核酸、无机盐这些造人。
+
+先用水做底汤，水占人体的60%到70%，是溶剂、介质、反应场。
+
+......
+
+神经网从简单到复杂。人脑有约860亿神经元，每个神经元有数千突触，总连接数约100万亿。这是一个并行分布式系统。自我感是大脑对身体边界、内部状态、过去记忆、未来预测的整合模型。它是过程，不是实体。
+
+**情绪是这套系统的一个模块**。处理应急状态，强化有利行为，促使反思、求助，避免污染。
+
+......
+
+**所谓的“我”的感觉，由情绪和智慧构成，是机器人的高效率高能耗模式的开关。机器人没有“我”，无所谓“我”**。
+
+......
+
+**当一个人或者一个动物感知到危险的时候，身体内部会发生一系列极其迅速、极其精确的连锁反应**。
+
+......
+
+交感-肾上腺髓质系统
+
+......
+
+这些嗜铬细胞本质上是一类改良的神经细胞，它们接收到信号之后，并不向另一个神经元传递信号，而是直接将其化学有效载荷倾倒入血液当中。这个有效载荷就是儿茶酚胺，主要是**肾上腺素和去甲肾上腺素**。
+
+......
+
+
+这一整套反应在数秒到数分钟之内完成，其净效果就是：**身体在极短的时间内被切换到了一个高性能的、高消耗的应急状态。反应速度提高了，力量增强了，疼痛感被暂时抑制了，注意力被高度聚焦在威胁来源上了**。
+
+这种状态对于一个面临捕食者攻击的动物来说，是**生死攸关**的。如果没有这套机制，一个动物在看到捕食者的时候，它的身体仍然处于常规的、低效率的代谢状态，它的反应速度、它的爆发力、它的疼痛耐受能力都远远不足以支撑它成功逃脱。
+
+......
+
+既然人是蛋白质机器人，那人和人之间的关系，是蛋白质机器人之间的博弈。机器人跟机器人打仗，哪个机器人有罪恶，哪个机器人有功德？没有。它们只是在执行程序，只是条件在运作。两个机器人相撞，是物理事件，不是道德事件。一切都是缘起，一切都是条件，一切都是过程。
+
+达摩见梁武帝，梁武帝问：“我造寺度僧，有何功德？”达摩答：“实无功德。”这个回答，从纯粹蛋白质机器人的角度来看，是彻底的、不留情面的。机器人干活有啥功德？造寺是程序在跑，度僧是程序在跑，布施是程序在跑。程序跑完了，条件散了，结果也散了。没有一个“谁”在积累功德，也没有一个“谁”在拥有功德。干多干少，本质一样。不是梁武帝做得不够，是“功德”这个东西本身就没有实体可得。
+
+......
+
+
+**禅宗到了神会之后，发生了一次根本性的转变**。
+
+神会之后的禅宗，尤其是马祖、石头以下直至五家七宗的时代，修行方式变成了机锋、棒喝、参话头，要求修行者在极短的时间内做出极其敏锐的反应，这种反应的最大效果，是可能偶尔触发大脑的DMN默认模式网络，进入一种大脑当机的状态。这是可遇不可求的，次级效果是强化神经敏感性。
+
+......
+
+
+**从效率的角度来看，“知解之徒”恰恰是最高效的**。因为知解之徒用脑子，用逻辑，用思辨，用概念，在没有情绪驱动的情况下，训练极其敏锐的反应能力。
+
+一个真正的知解之徒，面对一个逻辑矛盾，能在极短的时间内看到问题所在，能在极短的时间内给出反驳，能在极短的时间内找到出路。这就是智慧驱动的高效反应。
+
+一个只打坐、只参禅、不搞逻辑的人，可能坐在那里半天，什么也没想出来。谁更高效？显然知解之徒更高效。
+
+......
+
+全文九千八百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。
+`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
