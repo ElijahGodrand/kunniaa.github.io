@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '月饼行业，谁在赚钱？';
+        const CONTENT = `月饼是妥妥的垃圾食品：高油，高糖，不好吃。如果好吃，不会只在中秋买，好吃，每天都有，每天都卖。只在中秋买就意味着不好吃。每年几百亿的销售额都是仪式感费用。
+
+月饼成为中秋节的标志性食品，是明朝的事情。明代万历年间，宛平知县沈榜在《宛署杂记》中记载了北京的中秋风俗，士庶家俱以是月造面饼相遗，大小不等，呼为月饼。市肆至以果为馅，巧名异状，有一饼值数百钱者。月饼是家家户户在中秋月制作的，人们互相馈赠月饼，市面上的月饼以干果或果脯做馅，有些做得非常精巧，一个能卖到几百钱。
+
+高糖，高油，高热量是个死结，最被人诟病的。
+
+一个五仁月饼50克，热量200多大卡，相当于一碗多两碗米饭。而且月饼营养单一，缺少维生素和膳食纤维，营养素搭配不均衡。一颗广式双黄月饼热量高达700至800大卡，几乎相当于一整顿正餐。
+
+**高糖高油不是月饼不想改，而是它改不了。如果不加糖、不加足够的油，月饼没法防腐，不能作为一个商业品类**。
+
+月饼的保质期普遍只有30到90天，而对防腐剂的使用有严格限制，苯甲酸、脱氢乙酸及其钠盐已被禁止添加，合规范围内的山梨酸及其钾盐等防腐剂安全可控，但用量同样受限。只能用糖和油当防腐剂，高糖环境抑制微生物生长，高油环境隔绝水分和氧气。
+
+如果大幅减糖减油，保质期就会急剧缩短，常温存放极易发霉、变质、滋生微生物。减了糖减了油，保质期撑不住，但即便撑住了，减糖减油之后剩下来的东西，本质上就是面糊，高碳水，照样不好吃。
+
+传统的月饼馅料几乎不含膳食纤维，升糖速度极快，无糖月饼的其饼皮、馅料含大量碳水化合物，依旧会升高血糖。部分产品以糖醇替代蔗糖，过量食用易引发腹胀、腹泻，且无糖月饼油脂含量普遍偏高。
+
+所谓的健康化，很多时候只是把蔗糖换成了糖醇，但饼皮仍然是精制面粉，馅料仍然是油脂和糖的混合物，营养结构并没有改变。
+
+......
+
+**2026年的月饼行业，两个字，“割裂”**。如果只看宏观数据，会觉得这个行业还算稳健。2026年月饼销售规模约290亿元，同比微增2.7%，需求底盘依然稳固。
+
+但走进线下商超，看到的完全是另一番景象。8月14日至9月13日，主要门店月饼销售额同比下滑45.17%，销售量下降40.67%，礼盒销量同比下滑49.04%。月饼礼盒的利润率大概10%左右，不高。
+
+大盘微增与门店腰斩并存，说明**增量不在传统商超和礼盒渠道，而在电商、直播、出口和商超自有品牌等新路径**。
+
+同时，行业落后产能加速出清、头部品牌集中度持续提升。
+
+......
+
+**区域黑马与猎奇口味构成了2026年月饼市场最热闹的部分**。上海南京路一家老字号门店日均销售额达15万元，卖出2.5万个各类月饼，高峰时日销至少4万个，**臭豆腐鲜肉**月饼单日销量可达4000个。......黑金臭豆腐鲜肉月饼......**腌笃鲜**......**酒糟鲜肉**......**香菜牛肉**......**美洲烤肉**月饼和**藤椒牛肉**月饼。山东有**临沂炒鸡**月饼、**把子肉**月饼、**豆橛子卤肉**月饼。陕西有**油泼辣子**月饼。河南有**胡辣汤**月饼，里面真的有粉条。四川有**冷吃兔**月饼、**灯影牛肉**月饼。广东东莞有**烧鹅五仁**月饼、**豆酱叉烧**月饼。......这些猎奇口味的核心特点是制造话题、社交分享、短周期爆款、低复购。
+
+
+......
+
+全文五千九百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
