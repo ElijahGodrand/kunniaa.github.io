@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '海绵模型和树模型';
+        const CONTENT = `老高和小茉有一期节目，探讨成功是怎么回事。设定了数万个虚拟人，给每个人赋予不同的能力值，IQ、努力程度、才华等。能力值服从正态分布，绝大多数人能力平庸，少数人极度聪明努力，极少数人很笨很懒。每个人初始拥有相同的初始财富。随机事件模拟40年。
+
+在模拟的40年人生中，计算机随机在地图上投放“幸运事件”，遇到贵人、风口、突发利好和“不幸事件”生病、车祸、遭遇骗局，遇到幸运事件时，如果一个人能力强，他能抓住运气，财富翻倍；如果能力弱，可能只能增加一点财富。遇到不幸事件时：无论你能力强弱，财富直接减半。
+
+四十轮模拟后的结果，最终财富排名前几名的大富豪，其能力值IQ与努力仅仅处于“中等偏上”水平，没有一个是能力值最高的“天才”。
+
+能力最强的人，结局往往很平庸，那些能力极高的人，只要在人生关键节点上连续遇到两次“不幸事件”比如正好赶上行业周期崩溃或重大疾病，他的财富就会呈指数级暴跌，再高的能力也翻不了身。
+
+成功的本质：财富排名前0.1%的那些超级成功者，无一例外是“能力尚可 + 连续遭遇了极大数量的随机幸运事件”。
+
+结论就是，能力只是门槛，运气决定上限，努力和能力只能保证你“不至于掉到最底层”保障下限，但能不能成为顶尖的成功者，100%取决于你有没有被随机的幸运连续击中决定上限。
+
+......
+
+这个是**海绵模型**。各向同性（Isotropic）的平坦海绵。一个大型概率随机池。谁碰巧吸到了更多的水。尽量多开孔、多待在池子里。
+
+海绵模型是非常理想化的公平的模型。
+
+......
+
+现实世界，还有个更重要结构，就是**树模型**。
+
+树模型，不是理想化的，也谈不上公平，但是非常现实。现实至关重要。
+
+树模型是一个垂直分层的刚性树结构，有明确的根系、主干与枝桠，养分必须沿着固定管道单向流动。
+
+在**系统的本质**上，海绵模型是一个大型概率赌场，规则对每个人是盲目的，没有定向掠夺的意图；而树模型是一个逆熵代谢的汲取机器，规则是极度定向的，系统天然地将负担下甩给根系，将养分供给树干。
+
+在**成功的解释**上，海绵模型认为谁能获得巨大成功，是因为在海绵的随机流动中，养分碰巧连续撞击到了同一个孔隙，这是一种幸存者偏差；树模型认为谁能活得好，是因为他占据了树干的有利位置，处于财政自给率高、汲取比例低的地方，被榨取少、被供养多。
+
+在**个体的对策**上，海绵模型建议人们尽量多开孔、多留在池子里，保持能力以提高吸附率，然后等待概率的降临；树模型则建议人们用脚投票，做空间腾跃，看清根系与主干的坐标，斩断无效情感，直接移动到汲取更低、造血更强的高财力区域。
+  
+**把这两个模型组合起来，就能拼凑出人类社会最真实的全景**。
+
+在社会整体的制度、财政与债务层面，宏观世界是一棵极其冷酷的树，管道已经铺好，规则已经定死，根系的养分必然会被抽取去维持主干与树冠的繁华，债务与危机必然会被下甩给无法离开的留守者，这是结构性和决定论的。
+
+然而，当你已经通过用脚投票，来到了一个财政自给率极高、资源充沛的现代大都市，在这个局部枝干内部的微观环境里，资源与机会的分布就呈现出了海绵式的随机性，谁能发财、谁能踩中风口，就服从老高所说的随机概率与幸运者筛选。
+
+老高与小莉讲的海绵概率模型，解答的是在同一个游乐场里为什么是他发财而不是我的微观困惑；树汲取模型，解答的则是我们到底应该选择坐在哪一个游乐场里的生死抉择。
+
+先用树模型的理性，把自己的生存坐标移动到幸运概率更高、汲取比例更低的高财力区域；然后再用海绵模型的豁达，尽人事、听天命，不把个人的成败过度归咎于自己或他人，这才是最顶级的通透。
+
+**树模型是怎么回事呢**？
+
+......
+
+文明和个体一样，第一要务是要吃饭，要资源，要能量。没有汲取能力，庞大的利维坦与社会协作网络一天都转不动。不屑于汲取，是空想道德狂欢；不会汲取，是低能治理瘫痪；不敢汲取，是懦弱破产。
+
+文明之间的差异是次级的，无非是树皮的颜色有所不同，树枝的修剪频率有所差异，或是根系抽取的具体技术路径有所区别。有的文明用刀剑与奴隶制抽取，有的文明用铸币厂与通货膨胀抽取，有的文明用转移支付与土地出让金抽取，但其**底层结构的同构性**超越了时间与空间的限制，前看五千年，后看五千年，无一例外。
+
+
+......
+
+
+全文九千四百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
