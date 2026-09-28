@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '日本的未来';
+        const CONTENT = `日本的未来非常暗淡，因为人口。
+
+日本的新生人口，用一句话来总结，那就是**现在就已经身处重度危机之中，并且将在2030年到2035年迎来自杀式的终极拐点**。
+
+**这些数据没有任何夸大，都出自日本总务省以及厚生劳动省国立社会保障·人口问题研究所（IPSS）的权威统计与预测，在数学推演上非常扎实**。
+
+日本政府原本预测，2030年前后，新生人口跌破80万大关，结果在2022年就到达了，提前8年，当年出生人口只有77万人左右。到了这两年，新生人口更是直接向着60万大关一路狂跌，总和生育率也掉到了1.2左右的冰点。对比第二次婴儿潮时期一年出生200多万新生儿的盛况，现在的出生人口连当年的三分之一都不到。
+
+由于过去20年结婚率和生育率持续下滑，社会基建和地方行政已经开始出现物理意义上的坍塌。日本全境有近一半的市町村被列为可能消失的自治体，大量的乡村中小学因为招不到学生而被迫关门，基础设施没人维护，边缘地区率先坍塌。
+
+**2030年到2035年的人口雪崩终极拐点**。这是最致命的一击。到了2030年，日本最后一次生育高峰，也就是1970年代初出生的团块二次代，育龄女性将彻底离开生育年龄。到时候，**能生孩子的育龄女性基数会经历一次断崖式暴跌**。哪怕到时候政府砸再多的钱去提高生育意愿，由于妈妈的总数急剧减少，一年出的新生儿可能会掉到50万甚至更低。2030年到2035年是日本人口结构彻底失去自愈能力的死线，过了这个节点，人口逆转在数学上就完全不可能了。
+
+**2040年的终局休克期**。到了2040年，日本65岁以上的老年人口将迎来历史峰值，达到约3900万至4000万，占总人口接近35%。虽然届时处于15到64岁之间的总劳动力人口大约还有5000万左右，但这5000万人里，绝大部分已经是四五十岁、负担沉重的中年打工人。真正最具活力、要接棒未来几十年税收与社保池子的年轻后备军，每年增量就只有80万人。到时候死亡人口一年可能高达160万以上，而新生人口只有四五十万，一年的净减少人口就相当于蒸发掉一个中型城市。到了那个时候，医疗保险体系和养老金池子将面临实质性的破产，整个社会将彻底失去流动性和创新活力。
+
+**最绝望的地方在于，这是一个无法逆转的死循环**。老龄化越严重，国家为了养活庞大的老年群体，就越得向极少数的年轻劳动人口抽重税。现在的日本年轻人，收入里的30%甚至40%都要用来缴纳社会保险和各种税费。手里的可支配收入被拿去养老头老太太，年轻人连自己都养活不起，更不敢谈结婚生子。不生孩子又导致下一代劳动人口更少，税负更高，形成恶性循环。很多油管博主做大了都移民新加坡了，因为日本的税太高，比如老高和小茉。
+
+因为人口问题，到了2040年前后，这种旧模式的日本确实算得上走到了**尽头**。
+
+......
+
+全文七千四百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
