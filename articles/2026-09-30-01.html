@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '魔都最小包子店盈利模式';
+        const CONTENT = `前几天，我看到有人说附近有个很有名包子店，说多好多好，就去看了一下，看看之后发现，很小的店，老板大概每个月有四万的净利润，还是非常可观的。
+
+这家包子店在魔都某某路某某路，门面很小，大概只有1.5米宽，是从旁边一家面包店割出来的一小块地方，相当简陋，门口贴着一堆收款码，微信、支付宝都有。
+
+卖的东西也很简单，各种包子，青菜包、鲜肉包、粉丝包、豆腐包、笋丁包、豆沙包，不分种类，价格全都一样，都是一块二一个。也有茶叶蛋豆浆之类的，基本没人买，摆设。包子很小，直径也就7到8厘米，袖珍，像我这样，一个人吃10个都未必饱。
+
+这家店只做早市，从早上5点半左右开始，做到9点半左右，只外卖，无堂食，有效时间大概三个小时。店里一共4个人，一个中年男打包收银，应该是老板，一个大爷和面擀皮，两个大妈负责包。包的速度大概是7秒一个，两个人一起包。客人一买就是几十个，队排得比较长，是附近生意最好的一家，其他店都没这么好的生意。
+
+整个流程，包包子是瓶颈，算帐要按包包子的速度来。两个人包，7秒一个，1分钟大概17个，1小时大概1020个，3小时大概3060个。蒸不是问题，有多个蒸箱，蒸箱是正方形的，一个蒸箱能放40个左右，一次蒸8个蒸笼，一轮大概320个，蒸的产能比包包包子快，所以包是唯一的限制。
+
+按日销3000个算，日收入3600元，月收入大概10.8万元。成本上，原材料素包大概0.3元一个，肉包大概0.45元一个，平均0.375元一个，3000个就是1125元一天，一个月大概33750元。房租按1.5米小门面算，大概6000元一个月。人工4个人，每人大概5000元一个月，一共20000元。水电大概3000元。包装大概1500元。杂费大概1500元。一个月总支出大概65750元。
+
+老板一个月净利润大概42250元，净利率大概39%。考虑弹性，淡季日销2000个，月赚大概2万；平均日销3000个，月赚大概4.2万；旺季日销4500个，月赚大概7.3万。所以老板一个月大概赚2万到7万，平均4万左右。
+
+这种模式的优点，是一年有大几十万进账，在餐饮里算很不错的生意，净利率高，现金流好，收款码多，说明生意健康。
+
+缺点也很明显，就是人被定死了，哪里都去不了。看起来是卖包子，其实每天出完早市之后，还要准备第二天的东西，面、调馅、擀皮、备料，大概要花2到3个小时。第二天凌晨大概三四点就要到店里开始和面准备，全天占用大概10个小时，全年无休，时薪算下来并不高，本质上是高级打工，赚的是辛苦钱。
+
+......
+
+这种店不可能做成连锁。因为它靠的就是现做现蒸。现做的包子，面是活的，有筋道，有弹性。做成连锁，必然中央厨房加冷冻面团和预制馅。冷冻的面，冰晶会把面筋刺断，蒸出来发死、没弹性、像面糊塞牙。
+
+几乎所有的连锁包子店都有这个问题，难吃。只要用了预制包子，一定难吃，绝无例外。
+
+稍微好一点的，就是馅可以冻，面不能冻。馅是混合物，影响相对小。所以......是馅料中央厨房冷冻配送，门店现擀现包现煮，保住了面皮的口感，是口感和规模之间最好的折中，但人工还是重，产能还是受限，扩张还是慢。
+
+模式稍微轻一点的，...... 起步于上海，做到了A股上市。......**以加盟制为主**的商业模式......而是**本质上做一家2B的供应链公司**。
+
+......“统一馅料配送 + 预混面粉 + 门店当日发面”。它使用半自动化设备和标准化发面，用供应链卖馅料和面粉给加盟商赚稳赚不赔的钱，赚的是“供应链杠杆的钱”。在它的数千家门店网络中，加盟店占比在 90% 以上，直营店极少，**直营店主要用于品牌展示、新品测试和标准样板搭建**。
+
+......
+
+全文五千五百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
