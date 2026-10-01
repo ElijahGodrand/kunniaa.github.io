@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '割学';
+        const CONTENT = `很多年前，有一本书叫《穷爸爸富爸爸》，**告诉大家，要分清楚资产和债务。这在当时是对的。因为人分不清。** 把钱放进口袋的叫资产，把钱掏出口袋的叫负债，就这么简单的一句话，当年叫醒了很多人。**在现在还不够，竞争升级了，人知道什么是资产，什么是债务。但是，抵抗债务的能力不足。**
+
+大家想想，为什么会这样？因为今天的社会竞争早已不是20年前那个粗放的年代了。过去背债务，往往是因为个人的贪婪或者冲动，想去买点奢侈品或者炒个股票，那是主动加杠杆。今天，负债已经变成了一种**系统性的社会引力**。即使大脑清清楚楚地知道背上债务是个坑，社会结构也会逼着人往里跳。
+
+大众抵抗债务能力不足，背后有三个无法抵抗的现实。
+
+第一，**生存资源的结构性捆绑**。住房、医疗、教育，这些最基础的资源被高度金融化了。如果不买房、不砸钱搞教育，必然失败。这种负债根本就不是个人选择，而是被社会结构强行裹挟着被动加杠杆。
+
+第二，**金融工程对心理防线的精密拆解**。现在的消费金融结合了大数据和行为心理学，把借贷包装得非常无害。从无感支付到极低首付，把原本沉重的债务拆成每天几十块钱的小支出。人的大脑面对这种诱导，防线很容易瓦解。
+
+第三，**伪资产在危机中的变现陷阱**。很多人在经济好的时候买房、投资实体项目，以为手里的东西是资产。可是一旦风暴到来，这些东西不仅变不了现，反而每天都在吞噬物业费、利息和维护成本。很多人不是不想抵抗债务，而是手里那些所谓的资产根本换不来硬现金，是纯负债。
+
+所以在今天，要真正抵抗债务，光靠脑子里的知识没用，**关键在于资产结构的硬度与反周期的定力**。要看在极端的环境里，手头到底握有多少不打折变现、不附带任何债务追索权的硬现金流。同时，要彻底放下身份地位的比较，不上社会设计的杠杆擂台。宁可放弃一部分暴富的幻想，也要把负债率死死压住，这才是真正的避险定力。
+
+如果抵抗不了，就全部放弃。
+
+除了债务引力，**还有一个，现代社会，忽悠人的欲望，勾引人的欲望，制造恐惧，吓唬大众，让大众被迫花钱。这个威力也比以前厉害了。方式更多。**
+
+大家看当下的商业世界，过去卖东西靠喊口号，靠广告宣传。今天靠的是**对大脑漏洞的抽取**。最厉害的就是用**恐惧营销彻底取代欲望营销**。
+
+激发欲望，只是让人产生想要变得更好的冲动，**这种转化率其实很低**。但制造恐惧就完全不同了。把衰老、健康波动、孩子的成长差异、职业的平台期，统统包装成迫在眉睫的危机。随后顺水推舟，推出各种高价的产品和服务，卖给大众**用消费购买的假性安全感**。很多人掏钱，根本不是因为东西好用，而是因为害怕落后、害怕受折磨。
+
+算法技术可以精准打击，过去是向所有人喊话，现在是算法在个体失眠、挫败、焦虑的时刻，精准击中软肋的东西送到屏幕前。还有内容化的包装，把推销伪装成同龄人的真诚分享、专家的科普、甚至是逃离内卷的生活方式。当种草渗透到资讯的每一个角落时，大众根本分不清哪些是内心的真实需求，哪些是被植入的付费指令。消费从一种自主选择，变成了被动缴纳的赎罪券。
+
+沿着这个逻辑往下看，**还有一个东西：随着技术进步，大多数东西很难成为资产了，以至于都成了消费品。比如，农业进步，粮食成为消费品。随着金融进步，大部分理财也成了消费品。房子，消费品。车子，消费品。婚姻，消费品。孩子，更是消费品。消费品无处不在，但是，资产越来越少。**
+
+......
+
+全文六千二百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
