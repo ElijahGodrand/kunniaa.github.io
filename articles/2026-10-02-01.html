@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '英语听力最优训练方法';
+        const CONTENT = `**听力的本质，是声音与含义在大脑中建立直接映射**。
+
+当我们听母语时，声波进入耳朵，转化为电信号传至听觉皮层，大脑几乎在零点几毫秒内就能直接激活该声音对应的语义神经元回路，直接理解。在这个过程中没有任何中介。
+
+绝大多数第二语言学习者在听英语时，大脑却在执行一套极其繁琐的四级跳程序：**接收英语声音-在脑海中拼写出英文单词-将英文单词翻译成中文译文-理解中文译文的含义**。
+
+这是因为教错了。学英语要象婴儿一样学习。教英语，也应该先从听入手。反复听，模仿着说，能达到日常应用了，然后才是字母表，单词，阅读，书写。按照这个流程学习，听力绝无问题。因为已经建立声音跟含义的直接对应关系了。
+
+学外语根本就不是什么很难的事情。英美的普通人，只要智商正常，语言都很流利。为什么换个国家，就学不会呢？小孩子上小学之前已经解决语言问题了。
+
+只有一个原因，教错了，教坏了。
+
+这个也是《新概念英语》作者亚历山大在第一册说的学英语的最佳流程。婴儿学外语，是字母开始学吗？学完字母学单词？再学语法？再写句子？胡说八道。
+
+所以听力不好，是理所当然。好了才怪。
+
+这套中间翻译机制，就是听力理解中致命的瓶颈。正常英语口语的输出速度通常在每分钟一百五十到两百个单词之间，而在新闻、影视或学术讲座中，语速甚至可以达到每分钟二百五十个单词以上。
+
+人类大脑的工作记忆容量是极度有限的，根据认知心理学的研究，工作记忆在同一时刻只能暂存大约四到七个信息块。如果大脑把极其宝贵的计算资源和注意力，全部耗费在把声音解码为英文字母、再将英文字母翻译为中文的中间环节上，那么只要语速稍微加快，或者出现一个较长的复合句，大脑的工作记忆就会瞬间发生严重的堆栈溢出。 会感到前面的词还没翻译完，后面的声音已经像洪水般涌来，最终导致大脑一片空白，陷入所谓的听力瘫痪状态。
+
+因此，**消除脑内心译，建立“声音-含义”的自动化直连**，是解决听力问题的唯一正确方向。
+
+理解了这一点，就能看清为什么**背字典对提升听力几乎毫无效果**。绝大多数人背字典、记单词，建立的是“视觉符号-中文含义”的二次映射。 在纸上或单字软件里反复记忆的是单词的拼写外形和中文解释，这属于视觉形态。
+
+但听力是一种纯粹的语音形态加工。英语是一种高度强调重音和语流音变的语言，单词在字典里的独立发音，与其在真实语篇中的发音往往大相径庭。背字典不仅无法建立“声音-含义”的直连，反而会加剧脑内的心译习惯，在听到声音时，强迫性地在脑海中去搜寻那个单词的文字形状和中文解释，从而彻底跟不上正常的听力节奏。
+
+训练听力就是在大脑建立足够多的语音-含义对应关系。
+
+不管听力多差，听“ok”，“thank u”，“china”，立刻就懂。因为听的次数多了。单词声音和含义已经建立强链接了。你能听懂这些，就意味着智商和记忆力没问题，只要建立更多的对应关系就行了。
+
+最好的训练听力方式，**利用大脑的语音环路（Phonological Loop）与运动觉认知，构建自动化响应机制**。
+
+......
+
+全文七千四百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
