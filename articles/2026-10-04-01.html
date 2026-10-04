@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '语文阅读理解扣分严重，本质是写作不行';
+        const CONTENT = `语文阅读理解是天大的痛点。不论小学还是初中高中。很多孩子语文卷子一发下来，阅读理解扣掉一半的分数。比如一次月考，数学140，英语140，语文110。就特别扎心。语文死就死在阅读理解和作文上。
+
+家长心里就特别着急，觉得孩子是不是阅读量不够，是不是脑子不转弯，是不是文章没读懂。
+
+但是有时候可能还有个极其诡异的现象：考卷上那些需要背诵的古诗文默写、字词填空，错误很少，有些还能拿满分。
+
+可是一遇到古文和现代文的简答题、赏析题、主旨理解题，那些需要自己组织语言写出来的题目，孩子就大面积扣分，写得满满当当却拿不到几分，除非偶尔遇到一道曾经死记硬背过的原题，才能拿个满分。
+
+这是为什么？
+
+大家天天喊着要补阅读理解，天天买各种阅读专项教辅，各种拆解答题公式，结果发现根本没用。
+
+大家以为孩子是没读懂文章，其实文章孩子早就读懂了，**关键**的病根在于孩子根本写不出来！**阅读理解做不好，本质上完全是写作能力出了大问题**。
+
+孩子平时的日常动笔太少了，没有经过真实的语言组织训练，到了考场上，大脑里想得挺好，嘴上也觉得明白，一落实到笔头上就变成了一堆逻辑不通、用词白话、毫无采分点的大白话。
+
+没有平时高频的下笔练习，没有把自己的真实想法清晰表达出来的能力，去搞什么阅读理解技巧，全都是白扯！
+
+写作训练不足。在**精确组织语言表达自己的真实意图**方面，没有训练或者训练不足。
+
+原因有两个：1）精确组织语言，需要一对一训练，大班教学不可能实现。2）小学和初中的作文，都是套模板编瞎话，希望通过忽悠改卷老师获得合理分数，一卷定终身，每一次都是一过性欺诈，没有“自己的真实意图”。
+
+大家一开始面对这个问题的时候，往往会走入一个巨大的误区。
+
+大家会跑去书店买各种经典的教辅，比如什么一本系列、53 系列、黑马阅读，或者跑去买文言文全解，想着让孩子多做题，多看标准答案里的采分点拆解，多背什么“烘托气氛”、“承上启下”、“深化主旨”、“修辞手法生动形象地写出了某某心理”这些答题套路。
+
+甚至跑去网上找各种名师的视频解答，看人家怎么用四字直译法做文言文翻译，看人家怎么把简答题拆成三步法。
+
+这些教辅和解析有没有用？不能说完全没用，它们确实把答案拆得很透，把得分点标得很清楚。**但大家必须清醒地认识到，如果孩子本身的语言表达能力是瘫痪的，看再多标准答案也只是看热闹**。孩子看到标准答案写着“生动形象地塑造了人物焦虑与挣扎的心理”，自己写出来的却是“写出了这个人心里非常害怕非常不好”。孩子根本不知道怎么把大脑里模糊的感受，转化成纸面上精准规范的书面语。这种缺乏表达基础的应试套路训练，完全是在给瘫痪的人送跑鞋。
+
+......
+
+全文七千二百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
