@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '4.6亿刀的扑朔迷局';
+        const CONTENT = `从大陆出去的有一个最牛九零后，暂时先用大镰刀来称呼他。
+
+因为这里要说的东西，可能稍微有一点点敏感，所以不直接提他的名字了，也不直接提他服务的名字了，也不直接提所有可能涉及到具体指向的名字，以免带来不必要的麻烦，哈哈。
+
+2025年，也就是去年，大镰刀收购的一个商业服务，出现了问题。这个商业服务出现问题的原因，就是它的储备金被违规转走了，而且面临严重的现金流断裂。
+
+所以这位大镰刀同学就以白骑士的身份，向他收购的这个公司，提供了四点六亿美元的流动性贷款，由他个人垫付。
+
+这个事情如果从头开始看的话，本质上就是别人对大镰刀搞了一次围猎，把他的钱搞走了。搞走他差不多四点六亿美元，接近五亿美元。
+
+大镰刀因为自己的失误，导致这笔钱大概率会损失一半以上，就是说四点六亿美元，他有可能损失二点六亿美元，所以成本非常高。
+
+我们先说结论，就是从大镰刀的二点六亿美元的损失中，我们能总结出什么有用的东西。
+
+第一条就是商业世界最珍贵的知识在判决书与法证审计中。法院的这种法证审计报告与强制披露判决，它揭露的是公司最高层的机密，这个机密通常只有老板知道全流程，即使是核心高管也只能知道一部分环节。比如说公关稿讲的是绿色供应链资产，有可能是某某某某某某公司它的溢价抽水。大众想接触到商业机密是非常困难的，这就是事以密成，言以泄败。所以如果想防骗，想发财，要多多研究这些标的巨大的商业案件的判决书。
+
+第二个就是这个案例本身是一个围猎富豪的完整操作套路。它要找这个富豪有哪些瑕疵，哪些漏洞，然后再把自身进进行合规的包装，包装之后把高流动性的这个现金，转化为难以估算的重资产，比如光伏发电、沥青厂。在转换的过程中再进行抽水。比如说一个东西，它的价值是三千万美元，经过合理评估可以把它评步到八千万美元，那么中间的五千万就可以作为为咨询费或者居间费清洗到离岸账户。再往下就可以耍赖了，就是如果被发现，那就是正常商业，投资缺乏流动性，进行拖延辩论，聘请顶级律所，拖延战，拖死。
+
+第三，就是对于一个公司来说，财务控制的铁律，就是老板必须亲自审核每一分钱，也就是说老板必须有个人硬件私钥加上多层联签加上全流程穿透式审批。凡是老板没有看过的审批，钱一分钱都不能出，一分钱都不能流出。这个其实很多大人物也是这么搞的。只是大家不知道。比如著名的画家齐白石，齐白石他们家里所有的钱，所有贵重的东西都由齐白石亲自掌管。齐白石有一个大钥匙串，这个钥匙串是家里所有重要的门，箱子，保险箱，钱柜，他的印章，所有这些东西都放在他那个钥匙串上。他是随身携带。凡是取钱，都是他亲自去开门开箱子，呵呵，非常好玩。齐白石是木匠出身，天赋超人，他经过几十年的奋斗，赚下一个很大的家业。他的画很值钱，每天画画，写字，作诗，刻章，工作非常勤奋，赚了很多钱，也娶了很多老婆。但是，他对家庭财务的管理非常之严谨。这个他的严谨程度，不亚于成龙。成龙对于家庭财产的管理态度，这个网上大家都知道的。
+
+第四，就是要有阶层隔绝，所谓阶层隔绝，就是，一个人只要有钱了，那么他身边大概率会围绕搞着各种各样要来搞他钱的人，所以如果两个人，财富量级不一样，那就要小心了，小心被搞。对于低量级的人，生存压力比较大，违约成本很低，当他手里掌握着，手里管理着几个亿的资产的时候，具有强烈的动机，用这种黑天鹅策略，比如说背叛，侵占，敲诈，来把钱搞到自己这里。因为他下行的风险有底，再差差不到哪里去，上行收益无限，只要成功了，他这辈子就不需要努力了。但是对于富豪来说，收益有限，风险无限，而且这种低量级者通常在暗处先收集个人偏好，合规漏洞，资产路径，随时可以把它转化成精准打击的靶心。
+
+第五，就是在最理想的情况下，被骗走的资金也只能收回一半。根据跨法国清算和司法追偿的统计模型，被骗的资金大致的流向，通常是，比如说拍卖，回笼百分之五十，这个需要好几年的时间才行，而且一定会有折价其次，在司法清算律师所这里的消耗大概有百分之二十五，双方都会花大量的钱，请顶级律师、会计师、法院指定的接管人，这个成本是避免不了的，再往下就是把钱搞走的那波人，他通过离岸沉淀与实控人存留，大概会留下百分之十到百分之十五，另外就是有可能在早期为了维持假象，可能会返还百分之十到百分之十五。这就是大致被骗的资金走向，以及能回收情况。所以最多最多钱被骗了，能回来一半。所以大家要有一个心理上的预期。
+
+......
+
+全文四千七百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
