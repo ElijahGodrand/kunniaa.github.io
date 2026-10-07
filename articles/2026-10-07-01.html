@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '从咖啡到古今服务业的不变逻辑';
+        const CONTENT = `先说结论，连锁咖啡这种现代服务业，跟某些古代服务业大概有点深层的相似性。古人的经营策略，是启发的，甚至有某种本质的洞察感。看一下门店，就知道某些咖啡连锁能不能赚钱，净利润多少。
+
+根据2025至2026年的行业统计数据，全球咖啡行业消费终端在一年中的总销售额约为1500亿刀至2000亿刀。整个行业在一年中创造的净利润总额大约在150亿刀至250亿刀之间。
+
+咖啡产业链从农田到餐桌，有多个环节，每个环节的分成和盈利水平差异显著。
+
+**咖啡农户与种植园**处于产业链的最上游。该环节仅分得整个产业链最终销售价值的约5%至10%。种植环节的毛利率普遍在20%至30%左右，但扣除种子、肥料、人工采摘及病虫害防治成本后，**净利润率通常低至3%至8%**。遇到价格低迷或气候灾害，很多中小农户会亏损。
+
+**咖啡加工与生豆贸易**，包括果实脱壳、清洗发酵、生豆分级以及跨国出口贸易。这一阶段获取整个产业链利润分配的约10%至15%，依靠规模化周转获利，**净利润率一般保持在5%至12%之间**。
+
+......
+
+**终端零售与连锁咖啡馆**，连锁咖啡品牌店、独立精品咖啡馆以及超市零售。这一环节捕获了整个产业链最庞大的商业价值，**分得利润总额的45%至55%**。咖啡馆在单杯饮品上的毛利率极高，普遍达到65%至75%，因为单杯咖啡的生豆原料成本仅占售价的不到10%。然而，扣除租金、工资、设备，营销，终端咖啡馆的净利润率通常落在10%至15%之间，优秀连锁品牌净利润率可达15%至20%。
+
+终端分配最大的利润，这是“**现场造梦**”商业模式：原材料只是一个廉价的引子，最终溢价靠终端在现场通过环境、灯光、人工服务与格调“凭空造梦”，卖现场的精神沉浸与情绪体验。
+
+反过来就是“**管道搬运**”商业模式，上游拿走最大利润，终端门店只是出货通道，比如化妆品。
+
+在家自己做咖啡，成本很低。一杯速溶黑咖啡0.10美元至0.25美元，一杯现磨黑咖0.5美元，现磨拿铁1美元，都是门店成本的五分之一到到十分之一。
+
+尽管成本低，大家还是喜欢去门店，在家里喝咖啡没感觉。
+
+这就有点象茶馆，酒楼，青楼，古代服务业，家里有，仍要去。
+
+古代服务业，其实跟现代非常相似，只是有些字词在历史中异化了。
+
+比如有个行业，有首诗，“自从别后减荣光，半是思郎半恨郎。欲识旧来云髻样，为奴开去缕金香”，琴棋书画，诗词歌赋，博弈谈吐，复合情绪价值。
+
+再比如，荡子，娼妇，古代也不是贬义。汉代《古诗十九首》，“昔为倡家女，今为荡子妇”。南北朝离别诗赋，“荡子”与“倡妇”构成为了固定的美感情绪表达模型，烘托长期分离的哀伤与孤独。
+
+《六朝文洁》有梁元帝萧绎的《荡妇秋思赋》，“荡子之别十年，倡妇之居自怜。登楼一望，唯见远树含烟。平原如此，不知道路几千？天与水兮相逼，山与云兮共色。山则苍苍入汉，水则涓涓不测。谁复堪见鸟飞，悲鸣只翼。秋何月不清，月何秋不明？况乃倡楼荡妇，对此伤情。”
+
+杜甫《观公孙大娘弟子舞剑器行》中写道：“昔有佳人公孙氏，一舞剑器动四方。观者如山色沮丧，天地为之久低昂。”公孙大娘是唐代制度中的舞妓，艺术家，宫廷表演者，以艺术为生。
+
+扯远了。回到正题。
+
+咖啡业是一种“**符号消费**”，是“**成瘾性情绪体验服务**”。咖啡本身并非生存必需品，如果单纯补充咖啡因，家庭自制的成本极低。
+
+......
+
+全文五千二百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
