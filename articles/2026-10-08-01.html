@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '商业模式之赎罪券';
+        const CONTENT = `有个英语短视频，一个白人女主持，带了一个黑人小伙，做街头采访，问一个白人小伙路人，你支持对黑人进行赔偿吗？因为他们遭受的奴役。
+
+白人小伙说，支持。
+
+白人女主持人说，太好了，这是乔，你现在可以把赔偿金给他，又问黑人小伙，你想要多少？
+
+黑人小伙说，我祖先的苦难值多少钱？
+
+白人小伙说，啊，这比我能付的多得多。
+
+白人女主持说，那你能分期付款吗？
+
+白人小伙说，不，政府有责任，这是政府的事。
+
+白人女主持说，好，那你掏钱吧。
+
+白人小伙掏出钱包，拿了几个硬币，放到黑人的募捐罐里。
+
+黑人小伙说，感谢你为你祖先的罪行买单，现在你被原谅了。
+
+然后，白人女主持带了黑人小伙，继续一个一个拦白人路人，按照同样的套路问他们要钱，他们也都给了。
+
+黑人小伙每次收到钱，都对白人路人说，你对我祖先的罪行得到宽恕。
+
+**这就是是赎罪券，而且是精心设计的赎罪券**。
+
+一开始问题，你支持对黑人进行赔偿吗？不涉及数额，不涉及白人小伙的祖先，所以，白人小伙没什么压力，慷他人之慨，自己没有成本，他就说了支持。这就入坑了。
+
+他其实应该说，who r u? who give u the right to ask such fuing question?你是谁？谁给你的权利问这些俊福问题？就没事了。可惜，他没有。绞索套到脖子上了。注定被坑。
+
+所以说，《不要跟陌生人说话》。
+
+第二个问题，要求白人小伙支付赔偿金。从常规思路而言，白人小伙大概率出言反对，这是历史问题，不能这么直接让他掏钱。所以白人女主持不等白人小伙反对，不容打断，立刻问黑人小伙，你想要要多少钱。这是第二个坑，意图就是防止白人小伙反对，拒绝。
+
+第三个坑，最精彩，黑人小伙说，我祖先的苦难值多少钱？这个太猛了。这个，在当前的状况下，是无法反对的，苦难不容置疑，苦难是无价的，不能用钱衡量。白人小伙如果不想被网暴，不想失去工作，不想失去社交，只能乖乖掏钱，只是钱多钱少问题。如果毫无还手之力，就只能掏一大笔钱。
+
+白人小伙此时应对还算合理，说给不出太多的钱，赔偿不了那么大。
+
+白人女主持立刻接上，你愿意分期付款吗？这句绝对是事先商量好的套路，正常人反应不了这么快，哪能随时抛出这种步步紧逼的话术？
+
+白人小伙拒绝，说，不，这是政府的事。
+
+既然遇到反对，再纠缠就没意思了，于是，白人女主持就催促白人小伙付钱。
+
+掏钱之后，黑人小伙说，感谢你为你祖先的罪行买单，现在你被原谅了。
+
+这是给白人小伙下了一个精神烙印，你祖先有罪，所以你也有罪。只要你有祖先，你有一直有罪。现在暂时原谅了，以后还得继续让你出钱。
+
+**看到没有，一个跟这事毫无关系的白人小伙，被几句话忽悠，人家是有备而来，设计严密，他付出了钱，还多了一个罪，未来还会没完没了地掏钱**。
+
+这就是赎罪券。现代版的赎罪券。从法律的角度而言，人不需要为自己的祖先赎罪，不需要为自己的祖先掏钱。
+
+赎罪券机制，比法律更可怕。
+
+赎罪券是巨大的生意，从可以公开说的角度，把它的机制抽取出来，是五步。
+
+......
+
+全文六千八百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
