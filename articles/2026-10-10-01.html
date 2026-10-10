@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '2026就业机会怎样了？';
+        const CONTENT = `最近在某乎看到一个记录找工作的帖子，写得非常有意思，所以今天就聊一聊。我就这么一聊，您就这么一乐，随便听听，不要当真，哈哈。
+
+坐标在华东某省，就是山东，双非信息安全硕士，秋招的时候投了一些国企、运营商、四大行、股份行、城商行、各大港口、两桶油、管网，基本上都是简历挂，有笔试偶尔侥幸进入面试的全部挂掉，后面就是国考、省考以及参加两场事业编考试，无一例外都挂了。
+
+毕业后重新开始找工作，主要是某联和某直聘，就不提品牌名字了，安全第一。投递的几百份简历基本没人理，然后紧急找人包装简历、包装项目，这个时候投递仍然没有回应，大致是投150份到200份简历能换了一个面试，基本上一线城市和计划单列市相关公司都投烂了，很少有回应，非常尴尬。
+
+小公司不愿意招应届生，只想社招，社招就是来了就能干活就有产出，不想培养，培养了也留不住。大公司能培养，但是名额有限。
+
+这个哥们儿投了上千份简历，主要是关于 Agent 智能体和 Java 方向的，收到的面试寥寥无几，也没拿到 offer。根据他的了解，每个岗位挂出来，很快就能收到几百份、几千份简历，压根不缺人。要两三年经验的岗位，能够来一大批五到十年经验的，而且还能接受低工资。
+
+根据他的统计，就是体制内的央国企看中的是身份，比如班干部啊，比如什么员呐，什么班长啊，什么支书啊，这个是分量最重。理工科的对技术比较看重，但是 AI 时代之下，技术越来越像工具，可能大部分技术要被 AI 取代。
+
+现在对公司来说，最为依赖的核心不是技术人员，而是销售人员，尤其是大客户销售，技术裁员很容易替代，但是如果销售走了，那个麻烦就大了，对公司的业绩是是毁灭性的打击。
+
+后来这个哥们儿实在找不到工作不行了，他就去做晚上这种兼职保安。兼职保安是非常辛苦的，所以他的结论就是，即使退一步做保安、送外卖、搞网约车，也肯定是不容易的，也是很累的。
+
+这种兼职的保安是12小时两班制，白天是全职保安，月薪4800，每月休4天，12小时两班倒。兼职临时保安是一个晚上130，从晚上7点到第二天早上7点，负责小区一个一个门，外来人员出入登记和外卖员登记，只是时间很长，工作量并不大，但是非常不好做，不好做有一堆原因。
+
+监控非常多，一举一动都在管理员的监控之下，每15分钟要进行签到报岗，如果对讲机收到签到报岗通知要立即到达，1分钟之内到达，摄像监控非常多，即使报岗完毕也必须在监控范围内不得离开。他中间因为带的水喝完了，去小卖部买了两瓶水，花了七八分钟，被点名提醒不要耍滑头，因为监控看得非常清楚，不要想偷懒。
+
+......
+
+那为什么现在工作机会变少呢？
+
+因为没有竞争，或者说没有商业上的战争，或者说没有战争。
+
+只有竞争非常激烈，只有商业战争非常激烈，只有战争非常激烈，这个时候老大或者老板才愿意把家底掏空，发高薪要打赢。
+
+比如有一个矿山，这个山出产金矿，有两拨人都想把这个矿山拿下来。老大为了让手下卖力参战，出血本，把家底掏干了，给高额鼓励、高额工资。但是等到另一方被彻底干掉，矿山开始赚钱了，这个时候就不需要给手下的人太多的钱，给个基本工资，打仗的时候成本很高的这些人想办法让他们退休，发一点退休金，能开的开掉，保留极少数人维持运转就行了，所以高薪就没了。
+
+竞争就等于高薪，商业的战争就等于高薪，战争就等于高薪。就像俄乌，如果不是因为战争，俄罗斯那些边疆地区，荒野地区、不发达地区，那些人能拿到这么高的薪资吗？我看不太可能。
+
+再比如，香港有个电影，吕良伟演的《跛豪》，跛豪他是内地人，带着几个兄弟偷渡到香港，一开始是卖体力为生，住在这种破旧的大杂院，吃的那些泔水，没钱没地位没背景，是最底层的边缘人。
+
+跛豪知道就是靠做苦力是没有出头之日的，所以要搞钱，搞钱的话先找一个靠山，他看中的靠山就是肥波，肥波是香港卖白粉的。跛豪的谈判技巧就是他知道肥波想要想要干什么，扩张地盘，打击对手，赚更多的钱。肥波的对手就是吴孟达演的那个叫金牙炳，金牙炳也做白粉生意。跛豪找到肥波，开出一个条件，就是他把金牙炳的地盘拿下来，拿下来之后他跟肥波五五分账，这个搞法对肥波来说零风险，不用自己人出气，不用自己人打仗，失败了损失的是一个关系很小的无名小卒，成功了白得一半地盘。所以宝豪拿命换机会，他出的就是自己和兄弟的命，反正没什么可失去的，就是干苦力的。
+
+......
+
+全文五千七百字，星球见。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
