@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '只有稀缺的知识才可变现大价值';
+        const CONTENT = `先说明，这里只谈钱。从头到尾的前提，是把"赚更多的钱"当作唯一的尺子。如果要的是知识的乐趣、研究的成就、稳定的生活、社会的尊重，或者认为人生的价值不该用收入来衡量，就不适用。
+
+我亲戚的孩子，在一个私立初中上了重点班，初一刚入学，比小学紧张多了。早上7点15校门关闭，晚上9点15下自习。作业非常多。考试竞争也很激烈，周测，月测。一次数学考试，全班60人，26人满分。太可怕了。差一分，就是第27名。差两分，是中下水平。
+
+这么多优秀的孩子，在这一分两分上较劲，投入那么多时间追这一分两分，太可惜，太浪费时间了。
+
+为什么？因为这些是大路货，没用，只能当牛马，变现不了大钱。
+
+如果我们找三个人跟初中生一起考试，一个年薪五十万的资深工程师，一个年入百万的小老板，一个年入千万的大厂副总裁，让他们坐下来，和这群初一的孩子一起数学月考。大概率他们会考出相当难看的分数，大概率排在班里后面几名。
+
+不要说初中了，我辅导这个孩子小学五六年级的学而思大白本，我都要绞尽脑汁。很难。很绕。有时候怀疑，如果我再来一遍还能不能上大学。
+
+但这三个人都是各自行业里最会赚钱的那一类人。这说明，他们赚钱的知识，不在课本里。如果在课本里，肯定天天用，肯定能考高分。
+
+这也说明，孩子们学的知识，课本上的知识，大概率大部分赚钱没关系。那如果让这些班里的小学生去做这几个职位，去立刻做这些年薪很高的职位，他们能不能解决问题？不能。
+
+从小学到大学，都是如此。如果这些知识跟变现大钱有关系，那这些大学的相关专业，一个班，一毕业，应该成批量出来年薪五十万，一百万，一千万的人。
+
+偶尔极少数时期的极少数专业能做到，比如这两三年大模型方向的硕士博士，少数人，可以一毕业就拿到一百万或者几百万的年薪。大多数专业做不到。
+
+因为我们从小学到大学学的知识，是不稀缺的，无论什么课本知识，都有几十个人候选，90分跟80分差别不大，80分跟70分没有本质差别，你能干，他也能干。
+
+大学的任何一个专业，每年毕业至少两个班，就是六七十人。任何一个行业，如果非常有弹性的，每年都接受六七十人，那就是它的盘子有稳定的支撑，也就是说这六七十人对它来说并不是这么重要，如果对他很重要，这个行业早就完了，波动很大，行业本身吃不消，所以这六七十人对他来说是无关紧要的，也就是不会给这六七十人很高的薪资。
+
+这就是为什么学了小学6年+初中3年+高中3+大学4年=16年，如果硕士再加三年，博士再加4年。十几年二十年，学的知识不行，变现不了大钱。只能糊口。就像我们以前算过的，魔都月薪四万，到手两万八，只能买外环老破小。
+
+变现大钱，不是智商问题，智商是相对固定的。一个人不可能随着工作时间的加长而智商变高，智商基本上不太变，甚至有可能随着时间加长，人变老，智商降低一点。
+
+这是知识结构不对，你会的知识竞争对手太多了，必须发展一些别人不知道的稀缺知识才有可能获得高薪，当然只是因为竞争者少。
+
+......
+
+全文七千五百字，全文见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
