@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大镰刀的成功可以复制吗？';
+        const CONTENT = `大镰刀这个人，我们已经聊过很多期了。熟悉我的视频的朋友都知道大镰刀是谁啊。本视频因为涉及到很多品牌、很多人名、很多商业信息，所以不太方便直接提名字，所以这里会使用一些比较抽象但大家肯定能懂的东西，肯定可以意会的东西。
+
+我们今天来分析一下大镰刀，他赚了多少钱，他赚了这些钱使用的技巧是什么，我们获得的经验总结是什么。
+
+......
+
+我们用抽象的方式把它的大意和重要的结论聊一聊。
+
+......
+
+我们先看大镰刀赚到哪些钱，大镰刀整体上赚钱来说啊，大致是从从2012年开始，现在是2026年，大概是14年时间，14年时间他从穷鬼，几乎可以说是穷鬼，现在的话大致是有80亿到120亿刀，这个速度还是非常厉害的，很牛的，堪称最牛90后。
+
+其实他的起点是不多的，2012年到2013年，也就是在14年前，他说他自己靠某些大饼，靠特斯拉的股票赚到了人生第一桶金，量级大概是数百万到1000万人民币，这个是没有凭据的，是他自己说的，所以可信度呢相对低一点，全部来自他本人的口径，没有第三方的凭证，啊跟后来三年后大概某某某某某厂才是第一桶金的说法有点自相矛盾，无论如何我觉得他大概率会在大饼上面赚到一些钱，小几百万可能是有的。
+
+2013年他担任某一个海外的公司大中华代表，每个月的月薪大概是100万这种，这种这个外资的这种计价单位，后期折算的话，大概每个月数百万人民币，可信度是中等，因为他的职位是属实，金额是事后按照价值来计算，不确定。但因为这个某外资公司的这个标的啊，它是有很大的波动，也许他不一定能够在最大的时候把它套现出去，所以很难确定他是不是真的兑现了这些钱。
+
+2014年到2016年，这两年时间他一直在创业，在参加各种各样的活动，在给自己自己制造新闻、制造事件。这段时间大致是一个关键点是2015年4月，这个时候他获得了几个投资机构的投钱，投的钱据说是千万美元级别的 A 轮估值大约 10 亿人民币，这个是口径不一，未经审计。同期还做了一个 App，他自己说这个 App 每年有三四千万人民币净利润，这个可信度比较低，我们后面会说到，他这些没有经过审计的数字，大概率是不实的，有可能放大 5 倍到 10 倍。这两个东西他最终都没有做成，所以实际赚了多少钱是不确定的。
+
+到了2017 年，他成立一个新项目，这个新项目通过某种方式募集差不多 5800 万美元，也有说是 7800万美元，但是由于某些政策的原因，他这个募集的钱呢要退回，退回的结果就是他用来募集资金的这个标的全到了他自己手里，相当于是高度控盘，这个是可信度比较高的，因为有报道数据，同时有数据库的数据。
+
+到了 2018 年，他赚了 3 亿刀，公认的第一桶金，因为他在 2017 年他高度控盘了自己的某个交易标的，到了2018年，他在高位卖了很多，所以套现了3亿美元，这是他有史以来赚到最大的一笔钱。他赚到这个钱之后，大概用了1.4亿收购了一个软件，这是属于支出。这个软件收购之后，他又发行了一个金融标的，又套了一波钱，这是2019年的事情了。
+
+2019年的事情，同时又买了一个用来做交易的平台，属于支出。2020到2021，赚到多少数字不透明。
+
+2022年，他又推出一个金融标的，大概发行3亿美元，又买了一个交易平台，所以2022年基本上是以花钱为主。到了2023年是净支出与风险年，涉及到好几场官司被起诉，同时他的交易平台又被黑客攻击，损失了很多钱，大致损失2.4亿美元，都是他自己填上去的。
+
+2024年，这一年收入很高，大概有20亿到36亿之间，这个收入是他整个个相关方的收入，但里面至少有一半是他的，或者70%是他的，所以2024年是他大丰收的一年。
+
+2025年上市，借壳买了一个公司。
+
+2026年，也就是今年，他赚到多少，这个是不确定了，因为他今年搞了一个中转站，就是跟大模型相关的。他赚多少要到年底才能知道。
+
+所以我们整体上来看，早期作为创业者，他所说的收入和支出，或者获得的投资，大概率可信度比较低。啊，到了后面，因为数据公开、报道公开、反复核查，大概率是真的。
+
+那么如果我们把他每一次赚钱拆成四个问题来看，就是第一，那是一个什么样的时代？第二，这个时代有什么趋势？第三，这个人下了什么判断？第四，他的判断对不对，有没有赚到钱？
+
+......
+
+所以我们的结论就是，他的成败对错可以这样看，就是核心竞争力从来不是技术，而是四个东西：第一，踩准时代的缝隙；第二，控制流通盘；第三，利用监管和信息的不对称；第四，变现个人 IP。
+
+......
+
+用大模型管理公司跟管理团队是有效的，所以大致半年后，某福利就在杂粮体系升级到了 22 级，就是杂粮品牌直击体系的最高级别。所以我们可以断言，用大模型做管理，半年升到最高级，这是可信的。所以我以前，我大概半年前写过一篇文章，就是跟大模型说真话可以改命。用大镰刀的话来说，就是要百分百相信大模型。他用的大模型质量比较高，当然他百分百的这个描述有点夸张，但是我觉得 80% 相信大模型是没问题的。
+
+......
+
+如果想复制他的成功，避免他的失败，有12个条件。
+
+第一个就是要在规则明确稳定的地方，不能出现投入很多钱快要成功了，然后环境变了，政策变了，投入打水漂。
+
+第二个要在一种法无禁止即可这种地方去做产品、做服务，没有说就是必须要批准了才能做。
+
+第三个，不管做什么必须高度控盘，如果不能高度控盘，白搭。
+
+第四个，必须冲风口，没有风口的话不可能爆发。
+
+第五，必须会讲故事，这个故事能吸引很多人加入，故事很流畅，有大前景。
+
+第六，必须有大的名头，很多人都知道，知道就是熟悉，熟悉就能预测前景，成本低，方便跟进。
+
+第七，必须做好兜底，足够的风控，不能出现意外让别人一锅端了。
+
+第八，如果获得了高流动性的资产，要把一定的比例转成这种基础设施，基础设施它是低流动性的，不容易被人瞬间搞光，要把低流动性凝固起来。
+
+第九，必须有强大的律师团队，合法合规，事前事后都可以收拾局面。
+
+第十，必须做多层隔离，确保跟自己没有直接关系，防止被斩首。如果如果就像一个蜘蛛网一样，它如果在蜘蛛网的中心，容易被斩首，它必须做足够多的隔离，就像章鱼一样，断一条腿没事儿，断一个触手没事儿。
+
+第十一，对任何资产必须做实时穿透，达到最底层的监控，任何收支必须亲自看过确认过，不允许任何一分钱不经审批流出去。
+
+第十二，必须风险社会化，收益归自己，成本归他人。
+
+
+......
+
+全文一万七千字，全文见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
