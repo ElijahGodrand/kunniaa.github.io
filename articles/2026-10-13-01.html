@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '两部电影和苹果高利润逻辑';
+        const CONTENT = `我以前写过一篇文章，分析全球手机行业，真正的利润在两家公司，一家是苹果，一家是谷歌。净利润率都极高，不相上下。
+
+今天就聊聊他们实现这种高利润率高垄断的逻辑和心法。
+
+先从两部电影讲起。
+
+第一部，1997年，基努·里维斯和阿尔·帕西诺《魔鬼代言人》。
+
+美国是个把"法"供成神的国家。法律好比圣经，法院是神殿，律师是神职人员。关健的门，都由律师把守。
+
+出生要经过他们的文件；婚姻要经过他们的签字；创业、上市、离婚、遗产、破产、刑事、进监狱、出监狱，每一道门都有律师。法律能随时碰到你，只有律师懂法律语言，所以它们是大众和这个国家的翻译。
+
+翻译，不是开玩笑的。
+
+法律英语是"另一套东西"，就像文言文和北京话都叫中文。差别大多了。
+
+很多词是普通词被法律借用表面认得，意思完全不同，consideration，普通人，考虑，法律，对价，合同里你拿什么换什么，premises，普通人，前提，法律，房屋，经营场所。每个词都认识，连起来一句都不懂。
+
+外来词堆砌，法语，拉丁语，都有，不查字典，肯定不懂。
+
+句子结构复杂，一段法律文字可以把状语、从句、插入语像香肠一样堆到三十行外，主语和动词隔了半页纸。不是写的人口语不好，是故意不写成口语。每加一层"除非……且在不违背……的前提下"，都是对某种解释再加一道保险。结果就是语句越长，越难反驳，也越难读。
+
+言外之意才是正文。法律语言是一种咒语：它不在于"把话说清楚"，而在于"说出这句话就产生了法律效果"。hereby，特此，deemed，这些词不是让读者明白，是让合同双方必须照做。所以准确说，它是一种具有执行力的话语，像合同上的签字盖章，和聊天的语言是两种用途。
+
+只有律师能搞定。
+
+所以美国律师很多。
+
+有个笑话，一个美国商人，一个美国律师，一个俄罗斯人，一个古巴人，坐在一个火车车厢，古巴人掏出一根雪茄，点起，抽一口，扔了出窗外，美国商人问他，干嘛抽一口就扔了，多可惜。古巴人说，我们古巴雪茄多得是。俄罗斯人掏出一瓶伏特加，打开瓶盖，喝了一口，也从窗口扔了。美国商人又问，干嘛喝一口酒扔了？俄罗斯人说，我们俄罗斯伏特加多得是。美国商人沉默片刻，抓起美国律师，从窗口扔出了。古巴人跟俄罗斯人大吃一惊，你干什么，很危险的，会死的。美国商人说，没事，我们美国律师多得是。
+
+......
+
+收租。等用户无路可走，再开闸，交易抽成、服务费、会员年费、强制续费，每口径都能收一笔，且定价不用讲成本，只讲"没有替代"。利润率的秘密不是卖得贵，是用户走不了。
+
+怎么体现这套生意思路呢？怎么体现美国精神呢？再用一段视频解释一下吧：
+
+在油管搜索关键词：New Orleans Alligator Devours Pig，能看到一段视频。
+
+地点是美国路易斯安那州新奥尔良附近沼泽河流，一群游客乘观光船在浑浊的河面上，岸边有野猪觅食，水里潜伏着一头巨大的美洲短吻鳄。游客故意往河里扔面包，一块接一块，落在野猪与鳄鱼之间的水面上。野猪前两次上前把面包吃了，都没出事；游客继续把面包抛得更近更靠水，当一头野猪再次踏入浅水去叼面包时，鳄鱼突然从水下蹿出，一口咬住野猪的后腿，牢牢不放，开始摇晃撕扯，把猪往深水里拖。其他野猪冲上前试图搭救，但毫无办法。野猪惨叫不止，很快被拖入水下，消失不见。
+
+船上游客的原话，视频里能清楚听到的几句是："We need to feed him one of these pigs."（我们得喂它一头猪。）"Look at him, he wants this big."（看它，它想要大的。）"Oh, here comes water head."（嘿，水头来了。）野猪遇袭时有人喊："That is amazing, that was scary!"（太精彩了，太吓人了！）
+
+这就是美国精神。他们是主动布局者，面包就是子弹，野猪是猎物，如果成功了，他们笑，他们录像，上传油管，喝彩，没有任何愧疚。
+
+......
+
+全文五千二百字，全文见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
