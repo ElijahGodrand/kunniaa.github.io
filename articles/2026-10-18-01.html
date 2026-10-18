@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '三元，度一切苦厄';
+        const CONTENT = `三元思维，这个东西很牛。所有的信仰，都是从三元思维来的，都是视角切换。
+
+举个例子。
+
+一个人，如果把自己父母，长辈亲戚，一辈子的照片叠在一起，从婴儿开始看，看到去世。看十几个人，会突然对生死和人生有一种特别的感觉，好像一切都没有意义了。
+
+看演员也是。一个个演员去世了，吴孟达，蓝洁瑛，郑佩佩，许绍雄，廖启智... 我们看着这些人年轻时演的电影，到中年演的电影，老年演的电影，直到去世前的照片，也会有这种感觉。
+
+所有婴儿，最终一定会死亡，从出生的一瞬间到第100年的不同时间点。不管小时候有多可爱，长大有多美貌多潇洒，这是不变。有时候会有一种奇怪的感觉：既然都会死，也没必要生出来。
+
+这就是视角改变意义。宇宙间的一切都没有意义。意义是人的设定。只要换一下视角，一切意义都会消失。痛苦会消失，希望也会消失，只有事实。
+
+这就是三元思维，第三元是在一个相关性为零的视角去观察。
+
+一元思维是一条单向因果。A导致B，B导致C，C导致D。它可以是直线，也可以是闭环：A→B→C→A，只要每一段箭头都沿着同一个方向推，它就仍然是一条因果轴在自我延续。
+
+闭环并不自动使它变成二元。“循环”不比“直线”复杂，在关系模式上，单向环和单向链属于同一个类型：**判断沿着一条线走，没有第二个不可替代的项从相反方向进入**。
+
+把这条单向链吃透，用在赚钱、工作、科研上，确实已经足够产生很强的现实能力。大部分可以被拆解为“因为这样，所以那样，然后继续那样”的事情，都是一元思维。
+
+比如科研都是一元思维，绝大多数的科研，寻找因果关系，寻找确定性。
+
+二元思维则是在同一个平面内，同时看到两个不可互相替代的项，并且让它们共同进入判断。一块木头被雕刻成家具，木头作为“原来的那块木头”消失了，家具出现了。一笔钱用来买手机，这笔钱就不能同时用来买股票。一段时间投入一个公司，就不能同时投入另一个公司。一拳打出去，对方疼，自己的手也疼。向别人伸出一根中指，至少有三根手指指向自己。
+
+这些例子的共同结构是：**任何一个动作出手，都同时携带正反两种效果；二元思维就是不让其中一面单独垄断判断，而是把两面并置起来**。得与失、收益与成本、选择A与放弃B，都是典型的二元结构。
+
+二元关系的数量可以无限多：买车的时候可以同时考虑“得到车与失去钱”“舒适与成本”“性能与油耗”“面子与实用”，考虑一百对，属性仍然是二元。**数量不改变元数**。二元思维是决策者的思维，因为决策的本质就是在并置的得失中做出取舍。
+
+二元思维，已经把所有相关性都覆盖了。所以，再升维，就只能是完全不相关。
+
+三元思维不在这个平面上继续增加项。它做的是**垂直离开**。宇航员离开地球表面，是空间上的垂直离开；看打架看到细胞和原子，是描述层级上的垂直深入；把几十年压成三秒，是时间尺度上的垂直压缩。
+
+**一元产生执行力和科研式的线性推进，二元产生决策中的得失权衡，三元产生一种把整个意义框架相对化**。
+
+......
+
+关于人生。
+
+**一元思维里，人生是一个不可逆地走向死亡的过程**。出生、成长、衰老、死亡，一条单向轴，箭头一直向前。这个描述没有错，但它只看到时间线的单向性，容易把人生压缩成一条通往终点的路径。
+
+**二元思维里，人生仍然是一条从出生走向衰老的单向时间线，但这条线不再只被当作通往死亡的直线**。结局是确定的，过程却可以自己选。在确定的结局之下，可以体验无穷无尽的事情，可以经历足够多的内容，可以选择丰富多彩的过程。二元思维让人同时看见“结局确定”和“过程可选”，看见得到与失去，看见选择与放弃，人生因此不再只是终点问题，也是过程问题。
+
+**三元思维里，没有所谓的人生**。人生作为一个被安立起来的整体概念，在更高或更外的参照系下，只是一个随机事件、偶然事件，并没有什么内在意义。出生是条件聚合，死亡是条件离散，中间那些被称作人生的事情，是人在特定参照系里安上去的叙事。只有一个纯粹的观察者。
+
+......
+
+全文五千三百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
