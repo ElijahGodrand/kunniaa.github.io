@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '为何人类永远痛苦';
+        const CONTENT = `人和人，如果有共识，不会痛苦。就好比两个小偷，要偷东西，一个人眼神过去，另一个人就知道要干啥，马上操作。这就是共识。这就是心有灵犀一点通。这种感觉是非常好的。
+
+但如果没有共识，很痛苦。比如婚姻，两个人如果没有共识，从小事到大事，每个事情都能吵一遍，非常可怕，形同陌路，同床异梦。
+
+但共识一定会破坏，后面会讲为什么破坏。这是一个圆，是循环的。所以总要从一个点开始。
+
+共识的破坏，我们说它的结果，共识的破坏，其结果就是所有美德都消失了。比如说勤奋，忠诚，信用，契约。
+
+那么从博弈的角度来说，一旦一种美德开始变弱，那么对于博弈的个体来说，因为它是囚徒困境，他应该立刻抛弃这个美德，而不应该等大家都抛弃了他才抛弃。那就慢了。
+
+反过来当一个美德开始萌芽，那要比任何人都更坚持这种美德，要求更高更强。
+
+共识的建立本质上是巨大的成本。一个新朝代的建立需要极其巨大的成本，钱和生命。一种共识体系的崩塌也会带来巨大的成本，也是钱和生命。
+
+我们可以达成一个关于共识的共识，只要巨大的成本投下去，一定会产生效果，一定会产生某种共识。即使是错误的，也可以达成。
+
+达成共识的方式，霍布斯的方式就是绝对暴力。更确切地说，就是成本，巨大的成本。而成本就意味着苦难。所以没有苦难就没有共识。
+
+反过来，任何巨大的苦难都会在一定的时间达成共识。苦难一定会让幸存者达成共识。
+
+但是由于人是生物体，有变化，所以又会忘记。
+
+人的大脑，人的身体，是快速变化的东西，想记住共识，只有持续的苦难才行，所以我们得出一个结论就是人一定会长期承受苦难，永远承受苦难，原因就是这是他的生理特征，这是生物质本身的特征决定的。
+
+人的生命很短暂，不超过一百年。下一代，没有亲身经历过达成共识的那些痛苦，那些巨大的痛苦，就会忘掉这种共识。所以人类就会一遍一遍的经受苦难，以便重新达成共识。
+
+这也就是黑格尔说的，“人类唯一从历史中吸取的教训，就是人类从不吸取教训”，这条也经常被人遗忘。
+
+《历史的教训》这本书说，“历史教训之一：人们从未从历史中汲取教训。”
+
+所以我们得到结论就是，人类必然永远的无穷无尽的承受痛苦。因为人类是生物体，生物体不能永远牢记共识，生物体会变化，不能牢记共识。生物体会死亡对共识，而对巨大的痛苦会遗忘。所以人类会一代一代承受痛苦，不但如此，人类在人生的每一个阶段，也会承受痛苦。
+
+人类如果想避免现实痛苦，只有一种方式，就是把承受痛苦的真实状态记下来......
+
+......
+
+全文五千四百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
