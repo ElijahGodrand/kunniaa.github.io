@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '未来最有前途的大学';
+        const CONTENT = `研究什么大学有前途，得先研究更大的背景。就像船必须飘在水上，没有水就没有船。大学教育是赚钱的一个环节。赚钱，赚大钱，长久赚大钱。这个说法，听起来很俗，换个美好的说法：提高个人素质。其实提高个人素质，也就是获得竞争优势，获得竞争优势，最终也会体现在钱上。优势不带来钱，这优势有什么意义？
+
+未来世界，赚钱的逻辑变了。这种变化是全球性的。现在和未来的趋势是，钱向高内聚的稀缺的竞争性企业和创新企业集中；政府财政被债务锁死，政府体制内的相对优势会持续下降；个体只有进入高内聚企业，把自己打造成跨环节解决问题的多元人才，才有持续赚大钱的能力。
+
+这种稀缺性竞争企业，一开始用常规方式赚钱，逐渐积累，在一个产业获胜，成为巨头，获胜后，竞争加剧了，很难从市场上招到合适的人，因为对方会跟你竞争，阻止你获得这些人才。想赢得更多，想统治一个行业，必须有更多人才，更强大的技术。别无选择，只能把招人提前，从高中生开始，那就是建立自己的大学，请全球行业内最厉害的人，把最优秀的学生招过来，培养若干年，再高薪招进自己的企业，强化竞争力。除此之外，没什么捷径的。只有这种方式才能形成这个自我强化的闭环，其他的都不行。
+
+看起来成本很高，建设投入几百亿，每年运营费用十个亿。看起来成本很高，其实必须如此，这个高成本相对于以后发展还是划算的。因为企业在竞争，如果缺少一些人才，速度就会比对手慢的多，带来市值上的和市场上的垄断地位的损失，那才是最大的，只要能够加快垄断地位，这都是值得的。
+
+注意，这类公司，它正在追求垄断，但是还没达到垄断。如果垄断了，它就无所谓人才了。正在追求垄断，不得不巨额投入才能获得优势。一旦垄断了就不会大投入了。实控人只会为战争投入巨大成本，战争结束了，就不投钱了。
+
+因此，教育要跟着这个逻辑走：成为统治性产业的小而精的大学，形成自我强化闭环；圈内学生被提前锁定、全球定价；圈外学校在核心行业的人才供应链里被边缘化。闭环一旦转起来，除非产业本身完蛋，否则不可推翻。
+
+政府做不了这些东西。政府必须为全方面负责。企业不需要，企业没有这个巨大的成本，企业的目的很明确，企业成本更低，企业可以把人才到了35岁就扔到社会上，政府不行。
+
+旧时代的逻辑，对大学的讨论是什么排名、学科、论文、就业率，这对新时代没什么帮助，新时代逻辑变了。新时代，要把大学放到产业统治链，从产业闭环、人才定价、财政约束、全球竞争这套框架里重新理解。
+
+因为大产业的竞争，是全球性的竞争，削弱这种机制，会影响国家的竞争力。所以国家也是支持的。别无他法，再次强调。
+
+至于教育财政的具体账、税制归属的细节、各国高等教育分层的比较制度、基础研究长周期评估的方法论，这些都是次级问题，暂不需要考虑。
+
+再从个人角度评价。一个人怎么发展？大多数人，一开始是对抗不了体系的，这些体系，比如一个企业，一个行业，一个国家。如果一个人上来就能对抗得了体系，从企业到学校到科研，那么这个这个行业早就崩溃了。等一个人自己建立一个体系，就可以对抗别的体系。
+
+所以，两条路，开始建立自己体系，或者加入一个体系。
+
+......
+
+全文六千七百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
