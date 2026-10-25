@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '新边疆和大航海之一';
+        const CONTENT = `**人类文明的竞争，归根到底是一场关于"谁能先一步把未知变成自己的疆域"的比赛**。
+
+这个判断看起来粗暴，但只要把逻辑环一环一环扣起来，从头推到尾，它就是自洽的，而且每一步都能在历史账本上找到验证。
+
+我们把这条逻辑链完整展开：从已公开知识的性质讲起，讲到未知领域的产权制度，讲到旧知识的估值方法，讲到精神消费品的结构性缺陷，讲到大航海的组织形态，讲到模仿折价与先发溢价，讲到资本市场对探险价值观的定价，最后讲到国家资源投向的生死检验。
+
+**第一个逻辑环：已公开的知识，在博弈论意义上是"公共品"，而公共品无法产生可持续的竞争优势**。
+
+知识一旦发表，就具有了两个性质：非排他性和可复制性。非排他性的意思是，你无法阻止任何愿意学习的人去学习它；可复制性的意思是，复制一份知识的边际成本几乎为零，而且复制者得到的东西和原创者手里的东西在认知上是完全同质的。
+
+经济学家肯尼斯·阿罗在1962发表《发明的经济福利与资源配置》说：发明者如果把自己的成果披露出来，等于给所有人送了一份免费礼物；发明者如果不披露，他就无法从知识本身获得任何收益，只能靠保密和抢先商业化那点时间窗。
+
+这个"披露悖论"的推论非常冷酷：凡是已经发表的知识，它的学习成本对所有人是一样的低，它的学习收益对所有人是一样的开放，于是学习竞赛的均衡结果只能是租金耗散——你能学，我也能学，我们学完之后相对位置不变，绝对水平都提高了，但竞争优势归零。
+
+生物学家范瓦伦1973年提出的"红皇后效应"精确描述了这种状态：在一个所有成员都共享同一套"已知"的生态位里，每个参与者都必须拼命奔跑才能留在原地，因为别人也在学同样的东西，你学到了什么，等于什么都没学到，只是不被淘汰而已。
+
+**中国古代的诗词歌赋就是这个机制的完美标本**。唐诗宋词的总量是固定的，研究方法是公开的，注释传统延续了上千年，鉴赏标准是共识性的，于是这块土地被翻了一遍又一遍，每一垄地都被犁过，新进入者只能做更细的考据、更偏的选题、更碎的整理，边际收益趋近于零。
+
+这不是说这些东西不好，而是说在"获取竞争优势"这个特定函数下，它的输出恒等于零。任何把资源持续投向这种已饱和知识域的个体或国家，在博弈意义上都是在红皇后赛道上空转，跑得满头大汗，名次纹丝不动。
+
+**第二个逻辑环：既然已公开知识无法提供优势，那么优势的唯一来源就是未知领域，而且必须是那种"此刻全世界都不知道"的未知**。
+
+这一环是整个体系的枢纽。这里要补全一个关键的中间推理：未知领域的探索结果，天然具有一种已公开知识不具备的性质，那就是"时间窗垄断"。
+
+在你探索出结果之前，全世界没有任何人拥有这个知识，因此这个知识的全部经济租金在一段时间内归你独占；而一旦你把它发表出来，它就滑入第一个逻辑环，租金开始耗散。
+
+所以探险家的理性策略从来不是把新大陆的地图免费散发给所有人，而是先插旗、先占有、先建收费站。
+
+......
+
+全文五千七百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
