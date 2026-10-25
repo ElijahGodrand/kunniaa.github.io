@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '大学的衰退和转型';
+        const CONTENT = `先说结论：大多数大学会衰退；少数大学转型基础研究。
+
+**大学的研究，相当一部分是应用型研究，这类研究，原理已经解决了，用这些原理解决现实问题**。
+
+这个方向的问题，企业已经形成一条完整的变现路径，大学没有变现路径，因此这块的经费逐渐转移到了企业。
+
+2025年全社会R&D经费39288.2亿元，其中企业30394.4亿元，占77.4%；高等学校3407.3亿元，占8.7%，高校经费体量约为企业九分之一。美国2023年企业研发投入占全美78%，高校占11%，2013至2023年企业研发年均复合增速6%，高校为3%。
+
+在应用型研究上，企业经费占比接近八成，增速持续高于高校。大学在应用研究端获取资源的相对能力在收缩。
+
+**企业之所以在这一端更强，是因为它们已经建立起从发现需求、解决需求到专利保护、商业模式、上市估值、资本退出的完整增值链条**，科研在这个链条里是盈利环节的前置步骤，有明确的回报信号来牵引资源。大学没有这套回报增值链条，也就获取不到这块价值，拿不到钱，必然收缩。
+
+**大学也有基础研究部分**。
+
+这一退路也在被侵蚀。基础研究因为市场挣不到钱由国家供养。但大模型改变了基础研究的产能。比如数学，数学家陶哲轩说，证明Indigestion意味着AI在问题求解端的产出速度已经超过人类数学家消化和深化的速度。数学基础研究的人力密集环节，猜想提出、证明搜索、验证，正在被大规模并行计算替代或压缩。如果基础研究能容纳的学术岗位随产出效率提升而收缩，大学在基础研究方面的地位会削弱。
+
+**因为大学在应用研究和基础研究衰弱了，所以，大学教育也贬值了**。
+
+科研衰退导致教学内容与前沿脱节，用陈旧的东西教学生，教育产品的市场价值下降。教育价值一旦下降，**大学对学生的吸引力就不再来自知识前沿的优势地位，而来自文凭信号或制度惯性，这两种东西的耐久性远低于直接的能力产出**。
+
+企业闭环的形成，进一步降低大学的地位。
+
+当一个产业在全球市场占据足够份额、积累足够利润，它就有动机把人才培养内化，因为从市场上高薪抢人的成本高于从高中阶段开始定制培养的长期成本。
+
+企业办大学不是慈善行为，而是把教育变成产业链的一个上游环节，从基础研究到应用开发到人才供给全部在同一个回报信号体系内运行。
+
+在这个闭环里，学生毕业即进入已知的岗位通道，培养标准由产业需求反向定义，科研选题由产品路线图牵引，专利和商业秘密的保护在内部完成，不需要跨越大学与企业之间的产权谈判和激励错配。
+
+从基础到应用形成闭环在福耀科技大学的模式下已经有可观察的雏形：企业导师连接真实产业，学生第四年进入项目组，首届学生定向就业，这些都是闭环在运行层面的具体环节。
+
+也就是说，大学的传统功能是用公共经费做前沿研究、在研究过程中培养学生，成立的前提是大学在科研产出效率上相对于其他组织具有比较优势。
+
+......
+
+全文五千九百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
