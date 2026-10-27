@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '法国的年轻人是对的';
+        const CONTENT = `有些视频，有些文章，最关健最重要的东西，一般是几个字，不超过十个。轻飘飘地说出来，写出出来。然后围绕这个几个字，再展开聊几段，把它说清楚。这几段也不一定是放在一起的，可能前后放在不同的地方。再用大段大段不相关的叙事和逻辑，把它们埋起来，稀释，稀释到看起来似乎无关紧要，只要浓度足够低，就不具有检测意义。这样就传递了真正的信息，而且不会带来风险。缺点就是，浓度低了，疗效不够。如果有人看懂了，得自己浓缩提炼，提升药效。哈哈。
+
+法国年轻人的诉求，非常正常，重修破旧校舍，招聘教师填补长期空缺，增设15万个高等教育名额，缩减班级人数，建立缺勤教师的系统性代课机制，对学校建筑进行翻修和气候适应性改造，提高助学金。要求废除或深度改革高校录取平台，改革学校作息制度。
+
+**任何国家都会遇到财政问题，根本原因不在会不会赚钱，而在于人的欲望是无穷的**。
+
+一个人任由欲望发挥，一年消耗一个亿都不是问题，《渔夫和金鱼》里的老太婆已经把这种人性说得很清楚了。
+
+欲望没有天然上限，得到越多就越要更多，所有人都是如此。男人会变老头，女人会变老太婆，每个人都会老，每个人的欲望都在膨胀，累加起来是无穷的，整个宇宙都填不满。
+
+财政收入无论多高都是有限的，养老、社保、医疗，本质上都是把今天的承诺押在未来的有限资源上，用有限的财政去面对无限加总并且不断升级的欲望，当然撑不住，**甚至一个人自己的资源都撑不住他自己的无限欲望，更不用说一个国家去撑所有人的无限欲望**。
+
+所以结果只能是必须用某种方式压制人的欲望，法律划边界，税收抽资源，福利设资格，道德劝节制，意识形态给牺牲赋予意义，通胀和债务把矛盾往后推，代际转移把压力传给后来者，
+
+但人不会因为被压制就满意，人会不满，会尽可能在各种方式上找更多理由、钻更多缝隙、拿更多的钱。这就是制度永远有道德风险和寻租的原因。
+
+**每个国家的财政收入永远不够用，欲望秩序不解决，钱再多也不够，制度只能压制、排序、延迟和转嫁欲望，而不能满足无穷欲望，这就是最深刻的人性分析**。
+
+欲望的秩序问题，不是靠谁设计一套完美规则就能解决的，而是只能通过博弈来解决。
+
+规则本身也是博弈的沉淀物，是上一轮博弈暂时停下来的边界。欲望无穷，资源有限，谁多拿谁少拿，谁先拿谁后拿，谁承担代价谁享受保障，这些问题不可能靠道德自觉自动排好，只能靠不同层次的力量相互碰撞、试探、施压、妥协，形成临时均衡。
+
+个人之间是博弈，群体之间是博弈，阶层之间是博弈，代际之间是博弈，国家之间也是博弈。
+
+博弈有层次，也有底线高低。
+
+有底线的博弈靠法律、暴力垄断、道德、信任、重复交往、退出权和监督来维持。
+
+无底线博弈则发生在约束失效、权力不对等、信息不透明、监督缺位、一次性博弈压过长期博弈的时候，这时候人会找理由、钻空子、伪装、赖账、煽动、转嫁、甚至用暴力和欺骗。无底线博弈一旦成为主导，欲望秩序就不是靠规则维持，而是靠强制、掠夺和恐惧维持，财政就不再是公共保障的装置，而变成谁有力量谁多拿的工具，承诺随时改写、拖延和转嫁。
+
+......
+
+全文五千七百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
