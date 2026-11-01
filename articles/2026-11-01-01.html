@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '台积电平替的上学和就业的时代机遇';
+        const CONTENT = `**这篇文章很长，一万四千字，详细论述为什么替代台积电是半导体行业的最后一战，这一战为何长达十五年到二十五年，为什么有大量的高薪机会，这些机会落在哪些城市，这些机会对应于哪些不同层次的大学，上大学要选择哪些大学的哪些专业。如果在半导体专业没有足够的机会或者没有兴趣，还可以在半导体六个配套行业也能获得巨大的机会，有些甚至比半导体专业还要稀缺。**
+
+**台积电是整个半导体行业里最难替代的那一个**。
+
+如果中国要在半导体行业获得优势，必须能平替台积电。必须，没有其他选择。如果不能平替台积电，战线一定会集居到台积电，仍然在这里最终决战。
+
+台积电最难替代，不能只从“制程先进”一个维度去看，因为先进本身是可以被追赶的。三星在3nm节点上曾经比台积电更早宣布量产，英特尔也在推进自己的先进制程路线，但这两家都没有真正动摇台积电的位置。
+
+**真正让台积电难以替代的，是一组互相加固的结构性条件**。
+
+2026年第二季度，**台积电在全球晶圆代工市场的占有率是72.5%**，第二名三星电子是5.9%，第三名中芯国际是5.4%，这两名之和仍然远不及台积电一家。
+
+从手机旗舰处理器到AI训练芯片，从CPU到FPGA，几乎所有对性能和功耗有要求的芯片设计公司，最终的先进制程订单都落在台积电。当份额达到这个量级的时候，它就不再是一个“供应商选项”的问题，而是变成了整个算力基础设施的物理单点，任何需要先进制程的产品，在设计阶段就必须把台积电的工艺参数、设计规则和良率特性当作前提条件来对待。
+
+份额本身还只是结果，**真正构成壁垒的是份额背后的成本结构和工程化能力**。
+
+台积电的毛利率长期维持在远高于普通制造业的水平，2026年三季度营收463.6亿美元，净利同比涨68.7%，连续第六个季度刷新净利润纪录。先进制程，也就是7纳米及以下的节点，贡献了绝大部分营收。
+
+**一个制造业企业能长期维持这样的毛利率，意味着它在同样的设备折旧和材料成本之上，通过良率和产能利用率把单位成本压到了竞争对手无法复制的水平**。
+
+真正难以拉近的是台积电长期累积的产能规模、供应链设备交付的优先权，以及固定成本分摊能力。当一家代工厂的固定成本分摊能力达到足够高的水平时，它在定价上就有了别人没有的空间，它可以在保持高毛利的同时，用产能和交期把客户锁住，而追赶者即便技术指标追近了，在成本上仍然要背着更重的包袱跑。
+
+再往深一层看，良率的领先不是靠一台设备或者一项工艺就能达到的。台积电在3纳米节点的良率稳定在极高水平，而追赶者在同等制程上的良率差距以季度甚至年为单位来计量。
+
+良率差距的根源在于工程经验的密度：同一代制程在爬坡阶段会遇到数以千计的缺陷模式和工艺漂移，处理这些问题的速度和准确度，取决于过去十几年里在每一代节点上积累下来的失效分析数据库、工艺窗口的边界认知，以及跨模块整合的判断力。这些能力不写在设备说明书里，也不存在于单篇论文中，它们分散在成千上万个工艺整合工程师的日常决策里。一个追赶者可以买到同样的EUV光刻机，可以建设同样规格的洁净室，但它买不到的是“在某个特定缺陷出现的第三个小时就知道该调哪个参数”的那套组织记忆。
+
+......
+
+全文一万四千字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
