@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '研究《红楼梦》，看什么';
+        const CONTENT = `看《红楼梦》，要看它最重要的东西，权力和金钱。它跟《金瓶梅》本质上是一样的。《金瓶梅》直白，赤裸裸。《红楼梦》是高级版的《金瓶梅》，更有艺术性，风花雪月，诗词歌赋，琴棋书画，把权力和金钱藏得深。藏就是艺术。千呼万唤始出来，犹抱琵琶半遮面。这才有吸引力。画家库尔贝作品《世界的起源》，不藏，艺术感并不高，视角还有点恶心，肯定不如安格尔的《泉》，也不如谢楚余的《陶》。
+
+爱情不是《红楼梦》的主题，它是诱饵，把读者拉进场。我们以为是爱情悲剧，读着读着发现爱情做不了主，做主的在别处。这个别处就是权力和金钱，藏而不露，靠日常一丝丝透出来。
+
+**爱情是权钱结构的探针**。怎么表现权钱？用爱情。这个做法最强烈，最容易让读者共振。但探针不是目的，权钱才是目的。
+
+**为了让探针更敏感，给爱情增加很多极限条件，让人同情**。
+
+比如林黛玉，无父无母、无家产、无兄弟，在婚姻市场上是一个没有议价能力的孤女，又才气最高，最聪明，还身体有病，不是长寿之象。
+
+这些极限条件加上去，让人非常惋惜林黛玉。
+
+给贾宝玉加的极限条件，行为偏僻性乖张。因为他的任务是继承家族资源，家族联姻，要巩固权力。这是无情的生意，他不想服从。
+
+宝黛爱情是权钱结构里不按价格走的东西。
+
+他们的地位，生活，享受，来自权钱结构。但他们不想维持和强化这种权钱结构。那其结果就必然完蛋。要么他们完蛋。要么权钱结构完蛋。权钱结构完蛋，他们俩也得完蛋。所以宝黛爱情必然被碾碎。
+
+其他都是细节了。宝钗的金锁、湘云的麒麟、黛玉的孤女身份、贾母对“不是冤家不聚头”的态度、王夫人对晴雯的清洗，每一处“情”的波动，底下都是联姻报价、财产安全、内宅控制。
+
+权钱在细微处，怎么操作，怎么改变走向，怎么博弈。
+
+从细微处下手，最重要的原因是成本低。蛮力，动作太大，成本高。不得已的时候可以用蛮力，但最好少用。如果不得已用蛮力，最好是彻底消除一切隐患，力挺扫雪，斩草除根，车轮放平。
+
+《红楼梦》是一个谜语，我们要从细微之处拼凑出全局，这也是它比《金瓶梅》更高级的地方。
+
+洪承畴掸掸衣服上的灰，范文程就知道，这人绝食是假的，肯定会投降，得给他找个台阶，送点美女什么的。
+
+《金瓶梅》是把钱权交易摊在桌面上，西门庆怎么买官、怎么放债、应伯爵怎么明码标价地帮闲，赤裸、直接、高效。《红楼梦》把同一套钱权逻辑埋进了礼法、情感、日常，看到的永远是“表面”，“真相”要自己拼。
+
+表层是情感，谁跟谁好、谁跟谁恼了、谁给谁送了什么、谁在背后说了谁一句。
+
+中层是权力关系，谁说了算、谁被边缘化、谁在争位置、谁在替谁撑腰。若隐若现，但细看处处是痕迹：贾母赏菜的顺序、王熙凤对谁哭穷对谁大方、探春理家时谁配合谁拆台。
+
+底层是金钱关系，月钱、地租、当票、赏赐、体己。这层最隐蔽，但它支撑着上面两层。没有银子，权力转不动；没有权力，银子守不住。
+
+这三层之间不直说。情感底下有权力，权力底下有钱，挑明了，礼法就破了，体面就没了。贾元春也只能说皇宫是“见不得人的地方”。
+
+......
+
+全文八千八百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
