@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '精密光谱和光刻机：专业和就业';
+        const CONTENT = `有朋友问题，精密光谱在半导体领域机会大吗？很大。因为这个专业对光刻机很重要，光刻机是半导体行业的关健。理解这一点，得从源头开始聊。
+
+1600年，人类研究摩擦起电，发现不只是琥珀，玻璃、硫磺、宝石等很多物质摩擦后都能带电。发现静电。
+
+1745，荷兰莱顿大学的穆申布鲁克等人发现，可以把摩擦产生的静电储存到一个特制的玻璃瓶里，莱顿瓶。莱顿瓶本质上是最早的电容器，它让电第一次变得可以被“抓住”、被携带、被在需要的时候释放出来。
+
+1827年前后，电阻的概念和欧姆定律被确立。
+
+1831年法拉第通过电感线圈发现电磁感应。这些无源元件干的事很朴素：储能、限流、分压、变压，为后来的电报和电力系统准备了最基本的零件。
+
+**电和电器首先用在通信上。无它，电跑的太快了，一秒三十万公里。通信就是要快**。
+
+1837年莫尔斯发明电报。
+
+1876年贝尔发明电话。
+
+1895年马可尼实现无线电通信。电报靠继电器和开关把信号一站站传下去，电话靠碳精话筒把声音变成电流变化。但这些系统里还没有“放大”这件事，信号传远了就会衰减，控制电的手段仍然停留在通断和被动变换上。
+
+1904年，弗莱明利用爱迪生效应发明了真空二极管，用于无线电检波和整流。
+
+1906年，德福雷斯特在二极管里加入了第三个电极——栅极，发明了真空三极管，第一次实现了电信号的放大。无线电接收机、发射机、长距离电话才真正变得可行。也是在这个时期，矿石检波器作为最早的半导体器件已经在无线电里被使用，人们知道某些矿石有单向导电性，但当时并没有pn结理论来解释它。
+
+1947年，贝尔实验室的巴丁、布拉顿和肖克利做出了点接触式锗晶体管，用半导体取代真空管来实现放大和开关。晶体管不需要灯丝加热，体积小、功耗低，迅速取代真空管，计算机从真空管时代进入晶体管时代。这是“控制电”的介质从真空换到了半导体内部。
+
+1958年，德州仪器的基尔比把几个器件做在同一块半导体材料上，形成了第一个集成电路。几个月后，仙童公司的诺伊斯提出了用平面工艺和金属互连把多个器件集成在硅片上的方案。从此，电路不再是一个个分立器件焊接起来，而是在一块材料上同时制造大量晶体管和互连。
+
+1971年，英特尔推出第一个微处理器4004，片上集成了2250个晶体管。此后，集成度沿着摩尔观察到的规律持续提升，芯片从简单的逻辑电路走向CPU、存储器和今天复杂的系统级芯片。
+
+做微处理器，物理结构太小了，必须用光刻。光刻负责把每一层的图形定义到晶圆上，量测和光谱诊断负责保证这些图形做得准、工艺稳。
+
+光刻，光的波长越短，光刻能分辨的最小特征尺寸就越小。波长缩短，能定义更细的线条、更小的孔和更密的图形。结构越细，同样面积上能放下的晶体管就越多，互连层也能做得更密，芯片能实现的电路规模和复杂度就越高。
+
+**13.5纳米EUV极紫外光刻是当前所有已实现大规模量产的光刻技术中，所用过的最短波长，它的确立是被Mo/Si多层膜反射镜的物理特性锁定的，是一个系统工程上的最优解**。
+
+这个技术的研发成本非常高。
+
+极紫外光刻的概念在1988年就被提出来了，1991年激光等离子体源也初步验证了可行性，让大家看到“用激光打靶产生EUV”这条路理论上走得通。但“能产生”和“能用来造芯片”之间，隔着巨大的鸿沟。
+
+......
+
+全文五千五百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
