@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '法官霍尔顿化';
+        const CONTENT = `《血色子午线》不是一本传统意义上好看的小说，第一次读的人会觉得怪，生理不适。
+
+传统小说有清晰的主线、起因。这本书没有。它是一场漫长的、没有终点的噩梦。
+
+主角孩子（The Kid），身材瘦小、体格单薄，14岁离家出走，加入了格兰顿帮，经历了无数次与印第安人的血腥遭遇战、帮派间的火拼。他学会了在极其恶劣的环境中生存，熟练掌握枪械和刀具。他像一个没有感情的摄像机镜头，带着读者从东走到西，今天遇到一群印第安人剥头皮，明天遇到一伙强盗火拼，后天在荒漠里找水。故事的推进不靠逻辑，靠的是无尽的流浪和暴力。这种结构让人感到极其疲惫和虚无。
+
+文体非常怪诞，没有引号，书里所有人说话都没有双引号，也不标明是谁在说话，对话和叙述完全混在一起，必须反复读几遍才能分清是谁在开口。
+
+书里用了大量极其生僻的植物、地理、古英语词汇，像史诗一样去写一段泥泞里的杀戮。白描冷血残酷，开膛破肚、婴儿被挂在树上、剥皮抽筋。没有怜悯，没有愤怒，没有心理活动，极其压抑。
+
+小说没有好人。主角会毫不犹豫地开枪杀人、参与剥头皮。法官霍尔顿（Judge Holden）是个变态杀人狂，精通多国语言、懂科学、懂哲学的学者。他身高两米，像一头白化病的大猩猩，力大无穷，不吃不喝不睡也能在沙漠里走上几天几夜，能一边拉小提琴一边发表关于战争是永恒的游戏的哲学演讲。
+
+书里没有救赎，没有正义，只有谁今天活下来了。
+
+小说结尾也没有给读者任何安慰。它说，人类不过是荒原上一群无意义的打洞者，文明不过是虚伪的掩饰，暴力才是宇宙的终极法则。
+
+这本书为什么被奉为神作？
+
+因为它怪到了极致，就变成了一种极其独特的暴力美学和历史隐喻。把读者带到了美国西部扩张的最黑暗、最真实、最血淋淋的深渊，探讨人类本性中的恶、战争的必然性，以及宇宙的绝对冷漠。
+
+《血色子午线》全书最高潮、也是最令人毛骨悚然的场景，主角孩子步入中年，在茅房里被法官霍尔顿干掉的现场。
+
+*他顺着木板路走向茅房。他站在外面，听着那些声音渐渐远去，他又看了一眼那些星星在暗沉的山丘上空消亡时留下的寂静轨迹。然后他推开茅房粗糙的木板门，走了进去。法官正坐在茅坑上。他赤身裸体，微笑着站起来，张开双臂将他搂进自己那巨大而可怕的肉体里，并在身后插上了木门闩。*
+
+作者没有写法官杀了他，而是写法官微笑着站起来，张开双臂将他搂进自己那巨大而可怕的肉体里（gathered him in his arms against his immense and terrible flesh）。
+
+这是动物之间的猎杀。
+
+熊捕食人类，用双臂抓着人往自己怀里拖，熊的臂力极其恐怖，一旦抱住，立刻压断人类肋骨，胸腔挤压无法呼吸，然后撕咬。雄狮捕食野牛，也是抓着脖子，咬住野牛的喉咙，把整个身体贴挂在野牛身上，直到把野牛咬死，也一动不动挂着。
+
+主角被法官用这种熊抱勒住，胸腔瞬间被压扁，肺里的空气被全部挤出，气管闭塞，只能发出微弱的闷哼，甚至失声。这就解释了为什么外面狂欢的人、撒尿的人，没有任何人听到求救声。压制住之后，法官可以撕咬或瞬间捏碎颈椎，在密闭的茅房里只需几秒钟就能完成终结。
+
+在《血色子午线》中，法官常被解读为诺斯替主义（Gnosticism）中的巨匠造物（Demiurge），一个盲目、残忍、吞噬一切的神。主角被搂进巨大而可怕的肉体，隐喻了人类血肉之躯最终被这个冷酷的物质世界、被暴力的宿命所吞噬。法官的肉体就是这片大地的终极现实，沉重、恶心、无法逃避。在这个拥抱里，没有灵魂的升华，只有肉体的毁灭。
+
+......
+
+全文一万字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
