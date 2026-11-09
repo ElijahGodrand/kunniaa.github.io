@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '崩老登的马斯克';
+        const CONTENT = `赚钱这个东西，是有逻辑的。是想清楚了，开始做之前，就知道必然赚钱，百分百赚。然后再动手。想清楚是一定的。想不清楚，睡不着，焦虑。想清楚了，再去做，后面是具体细节问题，可能很忙很累，不会焦虑，不会睡不着。就好比，你成绩很好，知道自己只要考试就是满分，肯定第一，但还是要考，一笔一划做题。
+
+马斯克应该想过这些问题。他的结论就是，崩老登，当精神小妹。
+
+马斯克最成功业务，先是特斯拉。然后是可回收火箭，星链。这几个业务有什么共同点？
+
+传统车企一大堆老气横秋的家伙，供应链、经销商、工会、平台化节奏、安全认证，规矩厚得很。经销商网络、层层加价、保养售后和动力总成的复杂度上，造车本身成本没这么高。特斯拉用电动车切入，用直销、软件迭代、超级工厂和资本叙事，把旧汽车体系的一部分链条重新做了一遍。
+
+火箭就是这样，各国政府和大承包商搞了几十年，成本加成、层层分包、怕失败、周期长、动作慢，整个行业老登气息浓郁。马斯克进去后自己造零件、快速试错、允许火箭炸、压成本、改迭代节奏，把旧体系掀了。
+
+卫星，比火箭和汽车更典型。传统卫星行业就是老登把持的高门槛领域，政府和军工承包商主导，定制化、小批量、周期长、成本高、怕失败，一颗卫星像工艺品一样磨很久，发射机会也稀缺。老登气息比汽车和火箭还要大。
+
+马斯克的星链不是按老规矩造精品卫星，而是把卫星变成批量工业品，用可回收火箭高频发射，用内部供应链压成本，用快速迭代容忍失败，把旧卫星体系那套慢、贵、少的逻辑崩掉。卫星制造、发射、组网、运营被他串成一条快节奏链条，
+
+这三个行业，旧秩序越厚，老登越多，动作越慢，马斯克越能靠工程化、成本压缩和快速迭代打出缺口。火箭是这样，汽车是这样，卫星也是这样。
+
+这三个领域是他做的最成功的领域，也是他商业价值变现最高的地方。
+
+大模型反过来就说明问题，它不是老登领域，那是少壮派、巨头实验室、创业公司都在狂奔的新战场，人才密度、算力规模、产品迭代、生态入口，全都拼得极快。这个领域没有多少旧秩序等他慢慢崩，他入场不算早，组织节奏也不占优，所以他做得不成功。新领域不给他崩老登的时间，也不给他改造旧链条的空间，他那一套就不灵。
+
+其他业务，也有崩老登的，也有不崩的。
+
+The Boring Company也算是崩老登。传统隧道基建的老登是大型土木承包商、重型机械和层层分包的市政工程，成本高、速度慢、启动准备重。Boring Company的机器把目标定到每周掘进1英里、每英里综合成本低于500万美元，用连续掘进和全自动管片拼装把传统那套“开挖竖井、吊装、重型 civil 准备”的流程绕过去。
+
+......
+
+全文六千六百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
