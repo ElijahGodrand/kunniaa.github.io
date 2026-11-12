@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '年猪理论修改版';
+        const CONTENT = `年猪理论：把所有人分成两类，一类是即将过年的猪，过年要杀猪；一类是屠夫，杀猪的。屠夫少，年猪多，大多数人是年猪。
+
+一年365天，对猪来说，364天都很舒服，天天有人给吃的，有病可以治病，每天笑嘻嘻的，一切很和谐很美好，只有最后一天不美好，这一天在概率上看起来很小，三百六十五分之一，千分之二点七，小的不能再小了。但是很致命，所有的猪都有这一天。所有的猪，一个都不少，全部。
+
+**年猪的命运是定期重演的。这种重演是有规律的。规律是可以预测的**。
+
+历史上第一次大规模杀年猪是汉武帝。这个人，我非常讨厌，非常不喜欢，是个烂人，屠夫，罪该万死。
+
+他搞出个算缗令和告缗令。
+
+所有人都要按年叫个税，做生意的，每年6%，个体户，每年3%。
+
+“凡属工商业主、高利贷者、囤积商等，不论有无市籍（汉代商人另立户口册，叫做市籍），都要据实向政府呈报自己的财产数字，并规定凡二缗（2000文，一缗为一千钱）抽取一算，即一百二十文（一说二百文）。而一般小手工业者，则每四缗（4000文）抽取一算。这叫做“算缗”。除官吏、三老（乡官，掌教化）和北边骑士外，凡有轺车（即小马车）的，一乘抽取一算；贩运商的轺车，一乘抽取二算；船五丈以上的抽取一算。”
+
+隐瞒不报，或呈报不实的人，罚戌边一年，并没收他们的财产。有敢于告发的人，政府赏给他没收财产的一半，这叫做告缗。
+
+禁止有市籍的商人及其家属占有土地和奴婢，敢于违抗法令的，即没收其全部财产。
+
+个税只能按照个人收入计算，不能按照财产计算。按照财产收收个税，每年6%，这个数字是极度恐怖的。就像一个房子价值200万，每年收12万个税，受得了吗？每月1万个税，住200万的房子的人，一个月收入有没有一万块都难说，大概率没有，全得交上去。
+
+而且不仅仅是房子，所有财产都的算入个税口径，衣服，首饰，家具，车子......
+
+更狠的是处罚，处罚才是真实目的，就是为了没收全部财产定的。
+
+这个搞法，就好像，软件开发不能出bug，出一个bug，没收全部个人财产。
+
+告缗令的核心设计是一套激发人性恶意的精算模型。赏格极高，告发属实，被告者的全部财产没收，其中一半直接赏给告发者。最致命的一条是无论诬告还是错告均不追责，这意味着告发零成本。结果就是告缗遍天下。在零风险和对半分成的暴利驱动下，邻里熟人乃至亲族之间的检举揭发彻底失控，社会信任从根基上被瓦解，把一个社会结构连根拔起，把无数家庭搞破产了。
+
+后果很可怕，司马迁用一句话概括了覆盖面，中家以上大抵皆遇告。全国中等资产以上的家庭几乎无一幸免。抄没的体量极其骇人，财物以亿计，奴婢以千万数，田大县数百顷小县百余顷，宅亦如之。一个社会赖以运转的中坚力量在几年内被系统性清零。
+
+告缗令下，天下嚣然丧其乐生之心，整个社会陷入活着没意思的集体绝望。司马迁还记录了一个极其精准的后续反应，民偷甘食好衣，不事畜藏之产业，百姓不再储蓄不再投资产业，有钱就赶紧吃掉穿掉，因为不知道下一次告缗什么时候落到自己头上。
+
+后世史家，痛斥此举是以天子而同于盗与兵，天子用国家暴力做起了强盗的勾当，它摧毁的不仅是商贾，更是政府的信用与道义的合法性。
+
+告缗令在后世一遍遍重演。
+
+......
+
+全文四千两百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
