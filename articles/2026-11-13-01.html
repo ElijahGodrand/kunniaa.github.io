@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '破产越多越快，繁荣来得越早越猛';
+        const CONTENT = `经济下行，即使是一线城市，也有很多店铺关门了，有的门面空了大半年还贴着转让。稍微偏一点的地方，一排排空着的商铺。写字楼一层层退租。工厂订单变少，账期拉长，应收账款拖成死账。公司始冻结招聘，中层优化，应届生投出去的简历石沉大海，考公考研的人一年比一年多。中小老板把房子押了又押，银行抽贷断贷，民间借贷利息高到不敢看。房价和资产价格往下走，手里有房的人觉得财富缩水，背着房贷的人不敢消费。各行业里价格战打到心脏了，谁都不赚钱，谁都不敢先退。僵尸企业靠续贷和担保撑着，健康企业被拖得喘不过气。外卖、网约车、直播，快递，人数过多，预警了。年轻人收入预期不稳，结婚往后推，生育往后推，人口出生率一降再降。大家都进入过日子时代，能省就省，消费降级从口号变成日常，所有人都在问什么时候是个头。
+
+**那到底什么时候是个头呢**？
+
+**答案很简单，等大大小小的公司死得差不多，寒冬才会结束，才有春天，如果不死，永远是寒冬**。
+
+**死亡还会间接改变非常多的东西，让整体更健康**。
+
+真相说起来是很难听的，也容易得罪人。所以只能这么对付着，麻痹麻痹神经，制造一些幻觉，用各种方式勉强走下去，遮遮掩掩，直到死得差不多了，才算完事。实话实说，过于坚持不死，会带来很多不必要的痛苦，但是没办法，这就是人性，谁都不想死。
+
+**加速投资新产业，间接从老产业抽取资源，也是一种出清方式**。
+
+对企业来说，你让他去死，他也是不情愿的，他会说我就该死吗？我成立的时候你啥也不说。我一边给员工发工资，一边纳税，没有功劳也有苦劳，这么狠的内卷，我活下来我容易吗？现在觉得环境太差了，让我去死，凭什么？我不想死，我要坚持下去，我希望别人都死，自己活下来，吃个大的。
+
+所以，如果你不是最牛的，你的公司不是最牛的，一旦征兆出现了，立刻撤退。人是自己活下来的第一责任人。早早退出，还能赚点，能休息，能找新风口。熬下去，资产就一点点没了，人心气就没了。
+
+**道法自然**。
+
+出清如同寒冬。
+
+春天是解冻，资源开始从冻土里释放。夏天是疯长竞争，光照足，雨水多，谁长得快谁占得多。秋天是收获。冬天是清场，是把一个生长季里积累的枯枝、病株、虫卵和过密部分集中处理掉，让土地重新空出来，等下一轮。
+
+冬天越冷，清场越彻底。低温把藏在树皮缝里、落叶底下、土壤浅层的虫卵和幼虫冻死，把过密的弱枝冻枯，来年春天病虫害的基数就低，光照和养分留给存活下来的根和苗，收成反而更好。
+
+寒冬不区分益虫害虫，也不管谁可怜谁无辜，只要死得足够就行了。
+
+**大道无情**。
+
+暖冬反而危险。表面上看，冬天不冷，人舒服，地不冻，好像省了成本。可是，虫卵活下来了，病菌活下来了，弱枝也没被淘汰。春天温度一上来，虫害和病害一起爆发，整片地都被拖进去。
+
+非洲草原的旱季，也是整个生态系统进入出清期。降水停了，水源变少，动物只能向少数还存水的地方集中，食草动物密度一下子上来，草被啃得更狠，弱的、病的、老的个体先撑不住。捕食者也向水源靠拢，伏击和淘汰变得更集中。旱季让超载的部分先死。
+
+......
+
+全文六千七百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
