@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '达里奥是Anthropic的CEO，实控人。这个人极度危险，毫无底线。';
+        const CONTENT = `先说背景。美国建国的底色是极度血腥极度残忍的，要对这一点有非常警醒和清晰的认识，不要有任何幻想。
+
+可以参考小说《血色子午线》和《美国精神病人》。牢A的视频大家多少了解一点，《汉尼拔》，《嗜血法医》，《纸牌屋》，完全符合美国精神。刘慈欣的《三体》，他能想象出黑暗森林理论，但是想不出具体的血腥场面，想不出牢A的描述画面，没经历能想的出来吗？想不出来。
+
+达里奥就是这种人。当大模型发展到可以垄断的时候，邪恶的人必然会以最变态最无耻的方式，奴役用户，奴役员工，奴役一切。他会认为，我的不遵守承诺，我的不道德，我的肆无忌惮，是让我发展到如此厉害的必要条件。必然会更加无耻更加肆无忌惮。就像好，一个孩子，小时候经常被父母毒打。由于他天生聪明，尽管一直被虐待，成长后仍然很成功。这时候，这对俊福父母说，他现在这么成功，那是因为我们在他小时候毒打的结果，防止他变坏。
+
+Anthropic是2021年成立的。2021年和2022年，Anthropic在公众视野里几乎没有存在感，它做的事情是研究，不是商业化。
+
+2023年是Anthropic从研究机构转向商业公司的第一年。从2023年到2026年，仅仅三年时间，它做了非常多可怕的事情。
+
+**Anthropic诞生的名义是安全，最终把这个条款废除了**。
+
+2023年，Anthropic推出《负责任扩展政策》，硬承诺，如果模型能力触及预设的危险阈值，公司必须暂停训练，直到安全措施到位。达里奥多次公开说，这是Anthropic区别于其他AI公司最根本的东西，不是最快，而是最负责任。
+
+这条承诺在2026年2月24日被正式废除。
+
+危险的地方在于，Anthropic手里恰好拥有最强的网络安全模型Mythos。这个模型能够自主识别主流软件系统中大量此前未被发现的安全漏洞，并且在没有人工指导的情况下开发出相应的攻击手段。它发现的最早一个漏洞可以追溯到27年前，另外一个漏洞在自动化测试工具运行了500万次之后仍然没有被检测出来。
+
+Mythos挖掘和利用漏洞的效率大约是前代模型的10倍。这种能力既可以用来强化防御，也可以用来攻击。如果用来攻击，没人挡得住。
+
+**介入军事用途**。
+
+2025起，Claude进入美军，承担情报分析、战场模拟和网络防御等任务，在美以对伊朗的军事行动中，Claude融合多源情报、秒级生成战场态势、精准识别军事目标、辅助打击决策。
+
+这就意味着，全球所有用户使用Claude时，数入的数据和信息，都可以被Clause用在军事用途，关键时候，可以被精确干掉。不开玩笑。用户把自己卖了，不但没收到钱，还向对方付钱。
+
+......
+
+全文七千五百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
