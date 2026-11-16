@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '老黄能回归英伟达吗？';
+        const CONTENT = `先说结论，老黄回归英伟达，必须两个条件同时达成：**法律层面老黄没有违反国家安全；英伟达业绩出了大问题**。
+
+有人做出一个很长的判断，大致是这样的：英伟达第一时间把GPU这种国家安全事件降级成出轨女员工的小事件，再借小事件辞职，是聪明的危机公关，等于危机降级、自罚三杯。他相信英伟达绝对离不开黄仁勋，风波过去后回归阻力不大，股东和华尔街也仍相信黄仁勋领导能带来更高营收。Megaspeed钻了法案空子，法案禁售特定规格GPU，却没禁止出租或云服务，记录又难查，GPU可能在马来西亚数据中心转租中国，若长租给中国可能打到最高法院由9名法官投票，若大部分流向中国则只能从法律层面进一步收紧。两党会逐渐形成新共识，GPU出口跟两党主要立场不重合，可以划出新站队，极左要消灭AI，右翼建制派要全球开放售卖，极右要彻底禁止出口，禁与放都错。长期看，依赖灰色渠道折旧更新成本高；EUV不国产化，中芯华虹难支持华为寒武纪，差距会拉大；中国没机会在SRAM加GPGPU和LLM ASIC激进路线追赶，下一轮打败英伟达的是这两类而非低价国产GPGPU；黄仁勋以威望和爱戴回归的概率一直很高。
+
+对这种判断，我的分析是：两个地方不对，其他地方对。
+
+第一个不对的地方，他对黄仁勋个人处境的描绘，带有一种明显的主动棋手视角，把一场被迫的危机，叙述成黄仁勋有计划的战略撤退。这不可能。黄仁勋顶多算是反应很快。高明的反应，可以高明到像是有计划的撤退，但肯定不是，因为损失太大了。我们不能把一个高明的应对看成一个有计划的撤退。把国家安全大事件转化成出轨小事件，然后借小事件辞职，是非常聪明的危机公关，危机降级，再自罚三杯。这是被动，不是主动。
+
+黄仁勋辞职的时间线是这样的：
+
+11月8日他向员工承认婚外情，同一天董事会启动独立调查，调查的核心问题包括他是否被外国情报机构锁定。
+
+11月12日他辞去CEO和董事职务。
+
+11月18日国会三个委员会联合对他发起闭门问询，要求说明Megaspeed是否成了GPU流入中国的通道。
+
+也就是说，国家安全这条线从来没有被降级掉，它只是从公开舆论场转移到了董事会调查和国会听证的程序里。
+
+辞职发生在国会问询之前，而不是在小事件被接受之后。把辞职解读为自罚三杯，前提是对方接受了这只是私德问题这个框架；但从国会两党议员在辞职后继续推动收紧出口管制、推动《远程访问安全法》和《芯片安全法案》的动作来看，没有任何一方把这件事当成喝三杯酒就能过去的事，而且面临的风险很大。
+
+第二个不对的地方，他说黄仁勋以极其崇高的威望和全球人民的爱戴回来继续领导英伟达的概率非常高。
+
+这是最不可能的。
+
+回归的真正前置条件是法律和国安问题的干净切割，以及英伟达的业绩出现危机。否则绝不可能回归。
+
+......
+
+全文五千三百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
