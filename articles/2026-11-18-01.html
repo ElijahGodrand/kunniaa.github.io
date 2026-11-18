@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '美国精英的精神内核';
+        const CONTENT = `理解一个族群，要看关键时刻的言行，不能看日常。
+
+用自然界做个比喻。
+
+肉食动物，捕猎的频率并不高。我们看纪录片看视频，看到的捕猎场景，都是摄影师长期蹲守，剪辑出来的。
+
+老虎，狮子，一个星期捕猎一次，每次十几分钟，猎豹，花豹，大概四五天捕猎一次，每次几十秒。其他时间，休息，巡视，睡觉，玩。
+
+如果我们没看到它们捕猎的时刻，会觉得它们好像也没什么，似乎没什么威胁。即使它们捕猎，前半程也是静悄悄的，东看看西看看，潜伏，隐蔽，在下风口往上走，靠近之后，突然发起攻击，在极短的时间内抓住猎物，咬死吃肉。
+
+大部分时间没危险，不代表没危险。前半程静悄悄，不代表安全。
+
+再比如网上的杀猪盘，经常会搞一些高人设的帅哥美女，网络聊天，聊上几个星期，几个月，聊的天花乱坠，一切都好的不得了，然后再跟你线下去见面，见面了就完了，骗财偏色噶腰子。
+
+所以一个人跟你花言巧语的时候，不一定是好人。大概率不是好人。一个很有个性，很难接近的人，说话难听，脸色难看，可能是一个对世界很失望的人。比如电影《黑社会》的号码帮的加钱哥，对谁脾气都很大，只认钱，拿钱办事，战死为止，很敬业。
+
+相比较，吉米才是反差最大，西装笔挺，温文尔雅，说话客气，但是能一声不吭面无表情，绞肉喂狗。比加钱哥可怕多了。
+
+有了这个认知，再来评价美国历史上的名人名言，就会看到真正有价值的东西。
+
+不是要批评什么，而是分析他们的真正观念，评估真正的风险，以便应对。
+
+科顿·马瑟（Cotton Mather，清教领袖）：1703年，马萨诸塞殖民地在他的影响下通过决议，对每个印第安人的头皮悬赏40英镑，到1720年赏金升至100英镑。他本人曾写道，庆幸上帝“乐意”让这场“屠杀”发生。
+
+乔治·华盛顿（首任总统）：印第安人与狼等同，称“两者都是掠食的野兽，仅仅在形状上不同。”
+
+托马斯·杰斐逊（第三任总统）：如果印第安人反抗，就“我们会杀死他们全部”，并主张“追踪并灭绝印第安人，要不将其赶往人迹罕至之地。”
+
+詹姆斯·麦迪逊（第四任总统， 宪法之父）：他将前几任的逻辑制度化。1814年，他颁布法令，正式确立了头皮悬赏制度：“上缴一名12岁以上男性印第安人的头皮，奖励100美元；上缴一名妇女或儿童的头皮，奖励50美元”，“用印第安人的皮可以做出优质的长筒靴”，“美国必须灭绝印第安人，每10分钟就该处决一名印第安人”。这个时期，1美元相当于1.6克黄金，这算1400块人民币。100美元相当于14万人民币。
+
+为什么这么贵？因为正规军更贵，边疆地区地广人稀，调动和供养正规军的后勤成本极其高昂，且正规军不擅长丛林游击战。通过重金悬赏，把民间猎人、民兵和边疆定居者转化为赏金猎人，用重赏刺激私人武装主动深入原住民腹省去长期养兵的军费。
+
+安德鲁·杰克逊（第七任总统）：“有必要灭绝全体印第安人部落。”他主导的《印第安人移除法案》（1830年）直接导致了血泪之路，成千上万的原住民死于强制迁徙。
+
+威廉·谢尔曼（南北战争英雄）：“我见过唯一的印第安好人，就是死人。”
+
+......
+
+全文五千两百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
