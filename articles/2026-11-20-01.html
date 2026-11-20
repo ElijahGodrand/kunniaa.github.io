@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = 'GoodFire：50人50亿刀';
+        const CONTENT = `今年，OpenAI想50亿美元收购一个公司，GoodFire，被GoodFire拒了，他们认为自己将来更值钱。
+
+GoodFire，成立于2024年6月，总部位于旧金山，员工50名，产品是做大模型的机制可解释性研究。可解释性影响训练、安全、推理、提示词所有下游方向。
+
+OpenAI寻求收购内部想弄清自家AI的安全漏洞是怎么回事，包括Hugging Face入侵，入侵OpenAI自身系统。传统监控手段搞不定。未来，大模型功能越强，搞清楚它内部机制越重要，解释性越重要。
+
+GoodFire还可以用可解释性指导训练大模型，把幻觉减少一半。
+
+GoodFire通过逆向工程识别出了新的阿尔茨海默病生物标志物，这是首个由逆向工程得出的重要发现。当模型超越人类理解，逆向工程模型成了获取新知识的工具。
+
+GoodFire融资三轮。成立两个月后，融700万美元种子轮，成立接近一年融了5000万美元A轮，成立接近两年，融1.5亿美元B轮，估值12.5亿美元。
+
+五十人，估值至少五十亿刀，一人一亿刀。这估值确实高，但也只能是在美国这么值钱，在其他国家卖不到这个价。
+
+大多数国家搞不起大模型。中国搞得起大模型，出不了这么多钱，最有可能挖人，开一千万年薪，把最关键的几个人招了，最聪明的一个，对技术路线理解最全面的一个，工程能力最强的一个，三千万，搞定。两年后，把他们的东西榨干，开除。然后再从top5大学以三百万五百万年薪招几个最聪明的接着搞。
+
+可解释性方向，按照2026年的行情，硕士或本科，工程能力较强但可解释性论文一般，国内常见税前年包约40到90万。这类岗位对口机会较少，常会被归到通用算法或大模型应用方向。
+
+博士应届，如果有2到4篇 NeurIPS、ICML、ICLR 或 ACL 一作，工程能力强，税前年包约80到180万，头部公司120到250万。
+
+工作3到5年，核心作者，有一定引用，带小团队，税前150到350万，头部公司能到200到500万。
+
+比这还厉害的，800万一千万也有可能。
+
+那做这个工作难不难？
+
+难不难，看数学。数学上不难，就不算难。
+
+可解释性研究，数学门槛没那么高：线性代数、概率论、微积分。
+
+线性代数是最核心的：基与基变换、向量空间是一个不必有标准基的几何对象、矩阵是向量空间之间的线性映射。这些，把大模型神经元的原始激活空间投影到一组特征基上，看模型内部到底在用哪些方向编码信息。
+
+奇异值分解、正交基、基变换，分析叠加现象和稀疏自编码器。稀疏自编码器是线性表示假设，高层语义概念在激活空间中被编码为线性方向，叠加假设认为模型维度有限、特征数量远多于维度，所以特征必须以非正交的方式压缩在一起。
+
+概率论：概率分布、期望、标准差、对数似然、最大似然估计、随机变量、中心极限定理。这些是理解训练目标、评估干预效果、判断特征激活是否显著的基础。
+
+微积分：只需要梯度、链式法则，以及反向传播。
+
+后面还有两个，信息论，优化理论。
+
+信息论在衡量特征稀疏性、叠加程度、干预前后的信息变化时会用到，作为性能指标。
+
+优化理论，在理解稀疏自编码器的训练动力学和字典学习目标时用，用到再补。
+
+......
+
+全文五千二百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
