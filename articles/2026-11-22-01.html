@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '《日知录》的一条被误解名言';
+        const CONTENT = `顾炎武，思想家，在《日知录》说，易姓改号，换一个王朝、换一个皇帝，这叫亡国；仁义不行、伦理崩坏，到了“率兽食人，人将相食”的地步，这叫亡天下。亡国是政权更替，亡天下是文明秩序和人伦瓦解。
+
+他接着说，保国是“其君其臣肉食者谋之”，也就是政权存亡主要由君臣和食禄者负责；保天下则是“匹夫之贱与有责焉”，普通人也有一份责任。后来梁启超把这句话概括成“天下兴亡，匹夫有责”。
+
+好，大多数引用就到此为止，大多数讨论到此为止。
+
+这是一种深深的误解。
+
+顾炎武的本意，跟大量的引用刚好相反。他批评的是一小撮人把风气搞坏了。普通人是被影响的，也是受害者。
+
+名士，专家，媒体，他们的言行有影响力，如果他们烂掉了，社会会崩溃。
+
+但是不看全文，完全意识不到这一点。懂文字的，懂历史的，有点学问的，不会主动讲全文。
+
+顾炎武地位这么高，讲全文，相当于被顾炎武骂了，顾炎武把那点猥琐贪婪无能都抖出来了。
+
+更坏的人，曲解“天下兴亡，匹夫有责”，把责任推给普通人。顾炎武根本不是这个意思！
+
+真是一塌糊涂！
+
+全文不长：
+
+**正始魏明帝殂，少帝即位，改元正始，凡九年。其十年，则太傅司马懿杀大将军曹爽，而魏之大权移矣。三国鼎立，至此垂三十年，一时名士风流盛于洛下。乃其弃经典而尚老、庄，蔑礼法而崇放达，视其主之颠危若路人然，即此诸贤为之倡也。自此以後，竞相祖述。如《晋书》言王敦见卫玠，谓长史谢鲲曰：“不意永嘉之末，复闻正始之音，”沙门支遁以清谈著名于时，莫不崇敬，以为造微之功足参诸正始。《宋书》言羊玄保二子，太祖赐名日咸、日粲，谓玄保曰：“欲令卿二子有林下正始馀风。”王微《与何偃书》曰：“卿少陶玄风，淹雅修畅，自是正始中人。”《南齐书》占袁粲言于帝曰：“臣观张绪有正始遗风。”《南史》言何尚之谓王球：“正始之风尚在。”其为後人企慕如此。**
+
+**然而《晋书·儒林传序》云：“摈阙里之典经、习正始之馀论，指礼法为流俗，目纵诞以清高。此则虚名虽被于时流，笃论未忘乎学者。是以讲明六艺，郑王为集汉之终；演说老、庄，王何为开晋之始。以至国亡于上，教沦于下。羌、戎互僭，君臣屡易。非林下诸贤之咎而谁咎哉！”**
+
+**有亡国，有亡天下，亡国与亡天下奚辨？曰：易姓改号谓之亡国。仁义充塞，而至于率兽食人，人将相食，谓之亡天下。魏晋人之清谈，何以亡天下？是孟子所谓杨、墨之言，至于使天下无父无君，而入于禽兽者也。**
+
+**昔者嵇绍之父康被杀于晋文王，至武帝革命之时，而山涛荐之入仕，绍时屏居私门，欲辞不就。涛谓之曰：“为君思之久矣，天地四时犹有消息，而况于人乎。”一时传诵，以为名言，而不知其败义伤教，至于率天下而无父者也。夫绍之于晋，非其君也，忘其父而事其非君，当其未死，三十馀年之间，为无父之人亦已久矣，而荡阴之死，何足以赎其罪乎！且其入仕之初，岂知必有乘舆败绩之事，而可树其忠名以盖于晚节，自正始以来，而大义之不明遍于天下。如山涛者，既为邪说之魁，遂使嵇绍之贤且犯天下之不韪而不顾，夫邪正之说不容两立，使谓绍为忠，则必谓王裒为不忠而後可也，何怪其相率臣于刘聪、石勒，观其故主青衣行酒，而不以动其心者乎？是故知保人下，然後知保其国。保国者，其君其臣，肉食者谋之；保天下者，匹夫之贱与有责焉耳矣。**
+
+网上能搜到的文章，对它的引用是有问题的，应该是都没看过原文。
+
+网上搜出来的引用都是《日知录.正始》这种格式，这是不对的，正始不是一篇完整的文章，不能这么引用。它是第十三卷的一个文条，如果不知道是第十三卷，你这么找是找不到全文。引用者没核对过原文，只要核对一定发现问题。规范的引用是“《日知录》卷十三《正始》条”。在“正始”后加上一个“条”字，既指出了它在目录里的位置，又界定了它札记条目的属性，避免误认为独立篇章。
+
+正始是年号，公元239年魏明帝曹叡驾崩，八岁齐王曹芳即位，次年改元为“正始”。这一时期是竹林七贤活跃、清谈玄学兴起的时代。
+
+......
+
+只有先懂得保住文明和人伦底线（保天下），才谈得上保住政权（保其国）。
+
+保卫政权（保国）是皇帝和大臣这些享受高官厚禄的“肉食者”该去谋划的事情，利益与责任对等，谁掌权谁负责。
+
+保卫文明（保天下）：哪怕是地位再卑微的普通百姓（匹夫之贱），也都负有不可推卸的责任。
+
+顾炎武这里的意思，还是骂名士下贱，不配称之为人。
+
+顾炎武写这段话时，大明已经亡了。明末清初，大量名士，如钱谦益吴伟业，在降清时，说的正是山涛那套“天命有归、四时消息”的漂亮话；而明末心学末流空谈性理、不务实学，也跟魏晋清谈如出一辙。顾炎武明着骂山涛嵇绍，其实是骂钱谦益吴伟业。
+
+顾炎武把“国”（皇权/朝廷）和“天下”（文明/社会伦理）切分开，不要求普通老百姓去替朱家卖命，那是肉食者的事，又赋予了所有人坚守文化与道德底线的责任。而且明说了，先保天下，才能保国。保天下做不到，必然也做不到保国。
+
+先有亡天下，后有亡国。
+
+看到亡天下了，必然知道后面有亡国。
+
+......
+
+全文八千八百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
