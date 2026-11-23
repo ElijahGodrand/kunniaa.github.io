@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '中学英语作文怎么提分';
+        const CONTENT = `中学英语作文不理想，分数低，多是各种小错：时态混乱、单复数不分、句子之间没有连接。这些都是习惯问题，习惯问题只能靠短时间高频次的重复来纠正。
+
+买几本句型转换专项训练，每天用五分钟到十分钟做几道题，做题时不能用词典笔，不准查词典，用铅笔做题，用铅笔在生词下划线标记。做完题，再用词典笔扫不认识的词，看看这个词什么意思。每道做错的题，用最大的声音，重复朗读填上正确答案的句子三遍，再脱稿说三遍。形成肌肉记忆。做错的题，把答案擦掉，把生词记到纸上。每天高频低量提问和回忆几个生词，循环记忆，每天重做前几天做错的题。做这个练习，直到句型转换持续一个星期不出错，可以暂停。
+
+再往下，就是一个敢写和能写的问题。也要训练。**课本上的英语课文都是干巴巴的无趣的牛屎，伟光正，乏味的很，而且是中式英语，不正宗，毫无美感，恶心吧唧，不值得学，教的方法也不对，从写作训练的角度而言，一无是处**。
+
+我们从历史上看看，英语作文写得好的人，是怎么练出来的。
+
+**经济学家张五常**写过一篇文章《造短句的日子》聊过自己写英语作文的经验。
+
+他认为，英文造句要从短句造起。英文的长句是由短句串连起来的。如果开始学就写长句，其结果不是左弯右曲，就是花拳绣腿，不可取也。先学几个字、几个字的短句，简单直写，但求清楚明白，熟练之后才把短句串连起来，其清晰与文气就有了根底。
+
+一九五九年九月他进入了洛杉矶加州大学作本科生。他是外籍学生，校方规定要考外生英语试，决定哪些要补修不计学分的外生英语课程，哪些可以不补。三千多个外籍学生中他的成绩最差，要上不计学分的补课了。
+
+需要补修的分很多班别，以上述的英语试的成绩高下来分派，他被安排在成绩最差的那一班。在此之前他读书的成绩奇差，已经二十三岁，比同学长几年，于是决定要真的读一下。那不计学分但算成绩的。
+
+第一课之后，他去问老师，这个班要拿A容易吗？戴深近视眼镜的老头子老师回应：这英语成绩最差的一班我教了十多年，从来没有给过A，因为可以拿得A的学生不会分派到这班来。
+
+近视老头子的教法前所未见，后无所闻。他教得非常用功，算成绩的计分方法奇特。十五个星期，每星期五节课，每课一个小时。每天课后老头子出一个文章题目，学生回家要写三百字，过一天要交出，再过一天他修改后就发还给学生。一篇三百字的习作以十为满分，错一处减一分，错十处或以上是零分，不论其他，而这些习作的分数加起来就是该科的最后成绩了。一班四十个学生，老头子每天改四十篇短文、记分，而还有其他班要教的，工作量很大。
+
+......
+
+全文五千两百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
