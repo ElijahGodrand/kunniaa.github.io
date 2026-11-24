@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '精神战力：无敌的阿Q';
+        const CONTENT = `每个朝代，每一年，每一秒，都有无数的人在不快乐的状态。这种不快乐，不管人类怎么发展，不管科技怎么进步，都是不快乐的。
+
+现代社会的大多数人，比古代皇帝的享受还要好，但仍然不快乐。
+
+弗洛伊德写过一本书《文明及其不满》，是他晚年对文明本身的分析。他说，**文明不是让人幸福的，文明是让人变得可以共处的。文明的历史，就是压抑本能的历史**。
+
+文明必须本能压下去。规矩、道德、法律、良心，都是用来压制的。文明的进步，建立在欲望被压制的基础上。按得越紧，文明越高，但人内心的不适也越深。
+
+这个压制不仅仅靠外面的人拿鞭子完成的，文明通过教育和习惯，在每个人心里装了一个叫超我的监视器。人想干坏事，甚至只是想了一下，超我就用罪疚感来惩罚他。文明越发展，罪疚感越重，人越不快乐。
+
+他还列了人类痛苦的三个根源，这三个根源里都是没钱或者没房：第一，自己这副会衰老、会生病的身体；第二，外面那个残酷的、不讲情面的大自然；第三，人与人相处本身带来的痛苦，也就是痛苦来自社会各角度。
+
+第三条最要命，痛苦不是来自敌人，是来自必须跟别人生活在一起这件事本身。文明想解决第三条，结果它自己成了第三条的一部分。
+
+一个人随着年龄的增大，他的不快乐会越来越多，儿童的时候很快乐，青少年也不错，中年之后就彻底变了，越往后越糟糕。
+
+那怎么快乐起来呢？那这个问题怎么解决呢？
+
+我们看看鲁迅的小说是怎么写的。鲁迅很多文学作品都有相互对照的范例，对照出两个人，一个是闰土，一个是阿Q。
+
+闰土跟阿Q的区别就是，闰土大概是没什么希望了，不可能快乐了，但是阿Q是可以的，他有精神胜利法，自己很爽，有时候还能喊喊革命了，吓唬赵老太爷。
+
+如果是穿越文，让我们穿越，系统让我们润土和阿Q之间选择一个，大部分人应该会选择阿Q，几乎没人选闰土。
+
+鲁迅不认可阿Q的精神胜利法。我的想法是，因为阿Q的精神胜利法对外产生的影响太小，顶多让他自己快乐一点，能去城里打工，赚点钱，不能根本改变，鲁迅哀其不幸怒其不争。
+
+《阿Q正传》写于1921年，一百年出头，精神胜利法也被嘲笑了一百年。但今天，很多人使用的东西就是精神胜利法。
+
+精神胜利法就是，我永远是对的，我永远没有错。我能找到各种解释，解释为什么如此。这种解释有两种：一种是内在的，阿Q的，一种是外在的，指责别人错了，没做好，比如川普，乔布斯，马斯克，都喜欢开人。川普的名言，u r fired。乔布斯，马斯克，在公司跟员工一起坐电梯，会问问题，对方回答让他不满意，立刻开除，以至于员工们一看到他们来坐电梯，自动远离，不跟他们一起坐。
+
+这种精神胜利法，乔布斯叫作现实扭曲力场，马斯克叫作第一性原理加上绝不投降，彼得蒂尔叫作逆向思维，稻盛和夫叫改变心相，名字一个比一个高级，里面的东西跟未庄土谷祠里那个瘦骨伶仃、黄辫子、破毡帽的阿Q发明的东西是一样的。
+
+......
+
+全文五千三百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
