@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '黄仁勋回归：原因和未来';
+        const CONTENT = `我以前写过，黄仁勋回来，需要两个条件：第一，法律层面没问题；第二，英伟达业绩大跌。
+
+我的预测是三年时间回归。哪知形势比人强：黄仁勋离职，英伟达股票大跌，导致美股大跌，短短十几天，美股市值损失六万亿美元。再不止跌，可能会导致美股大崩盘，经济大萧条。
+
+所以不得不把黄仁勋再请回来了。法律问题，自然也顾不上了。
+
+黄仁勋回来，可以暂时缓解美股下跌，留下缓冲时间。
+
+对黄仁勋和英伟达而言，可能要走下坡路了，因为他们要面对这些事实：
+
+**未来市场分额，英伟达失去统治力**。
+
+摩根大通统计主要前沿实验室已经宣布的、2026年之后部署的全部算力协议，总规模约44吉瓦：英伟达份额28%。博通定制芯片份额23%，AMD份额18%，亚马逊Trainium份额16%，谷歌TPUTrainium14%。
+
+另外一个统计数据以OpenAI和Anthropic为主体的口径显示：英伟达份额为39%，博通24%，谷歌TPU16%，AMD15%。
+
+无论用哪个口径，结论都一样：在下一代算力基础设施的增量蛋糕里，英伟达的份额从83%这个量级骤降到了28%到39%这个区间。
+
+英伟达的统治力在已经卖出去的芯片和已有的CUDA装机量上是真实的，但在未来还会不会继续买英伟达这个问题上，很显然统治力不足，走下坡路。
+
+统治力是暂时的。
+
+黄仁勋说了三十多年的话是“英伟达离倒闭永远只有30天”，2025年12月他在播客里补了一句：这不是口号，是真实感受，脆弱感和不确定感从未离开过，今天早上醒来的感觉和创业第一天没有区别。
+
+一个市场份额95%、毛利率超过70%、芯片供不应求的公司的CEO，如果他的统治真的稳固到不需要经营，他不会把脆弱感当作自己三十多年的底色。
+
+**对外5000亿美元担保**。
+
+黄仁勋应该早早看到这个趋势，他的策略就是搞担保。提前锁定订单，扩大市场份额。
+
+高盛报告显示，截至7月底英伟达的承诺与担保总额达到5300亿美元，美国银行估算截至8月已经提供的金融担保约2300亿美元，The Information统计英伟达向neocloud和大客户提供的投资与信贷支持约1700亿美元。
+
+这几个数字口径不同，但拼在一起可以看出盘子的大致轮廓：英伟达用资产负债表为客户购买自己的芯片提供了数千亿美元级别的信用背书，其中已经明确披露的、最刚性的一块是1180亿美元的担保敞口，而OpenAI那1050亿是最确定的。
+
+担保不是英伟达在统治力巅峰时的从容布局，而是一个已经看见增量份额在流失、看见CUDA在变薄、看见客户在自研芯片，选择AMD和博通等等。英伟达用自己最值钱的资产，信用，去换取时间、锁定市场、换取下一代算力仍然有一席之地的防御性动作。
+
+英伟达在存量里的统治是真实的，但在增量里的统治是不完整的。
+
+担保这个动作之所以出现，正是因为后者不完整。如果它完整，英伟达只需要卖芯片；正因为不完整，它才需要同时扮演供应商、担保人和生态链建造者。
+
+这确实是一种危机感的流露，是英伟达知道客户不会永远留下来。
+
+**不准卖给中国，业绩下跌，没有补上去**。
+
+美国国内市场被分流。中国市场进不去了。美国对华芯片禁令越来越严厉，英伟达的业绩补不上来。
+
+直接卖给中国客户的收入占比确实已经压得很低，英伟达季度营收1158亿美元中，中国仅占2.1%。
+
+但真正的杀伤力不在于直接销售，而在于管制规则从芯片是否直接运往中国扩展到了全球哪些数据中心在使用英伟达芯片为与中国有关联的客户提供算力。
+
+新规可能削减英伟达收入440亿至620亿美元，因为先进AI芯片运往任何与中国有关联的全球数据中心都需要许可证。
+
+英伟达董事会为此专门设立了国家安全与出口管制委员会，这是结构性的经营约束。市场份额肯定是补不上来的。
+
+......
+
+全文五千九百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
