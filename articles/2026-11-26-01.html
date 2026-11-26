@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '老黄回归：博弈和暗战';
+        const CONTENT = `2026年中期选举，民主党席卷全美，不仅重夺众议院多数席位，更在参议院攻城略地，连传统深红腹地也接连失守，拿下了国会两院的控制权。
+
+大胜之后的民主党人志得意满，试图锁定2028年的总统宝座。那要先剪除川普的羽翼与钱袋。在川普阵营的科技巨头盟友中，马斯克锋芒太露、根基深厚且极具攻击性，不是首轮试探的最佳靶子。观黄仁勋，这位长期专注于芯片、极少涉足政治的华裔，在美国政治生态里显得温和、克制，甚至带着某种传统亚裔精英顺从规则、不惹事端的底色。
+
+**捏软柿子是政客的本能，先拿黄仁勋开刀，敲山震虎，一旦他倒下，下一个自然就是马斯克**。
+
+在民主党磨刀霍霍之际，共和党内部的裂痕也在败选的阴影下悄然蔓延。政治动物的嗅觉非常灵敏，国务卿卢比奥看着中期选举的惨淡战果，认为川普的政治生命已步入黄昏，这艘船眼看就要沉没。为了在未来的政治洗牌中保全自己，卢比奥选择了最古老也最现实的生存法则，暗中跳船，向民主党递上了投名状。
+
+2026年春季（约5月中旬），他起草了一份备忘录。中期选举之后，他把这份备忘录重新包装，用极具煽动性和强硬的措辞改写成一份矛头直指黄仁勋的文件，把涉及新加坡企业Megaspeed的芯片流向与所谓桃色风波编织成危害国家安全的罗网。
+
+与此同时，财政部长斯科特贝森特也在一旁巧妙配合，在舆论与监管的边缘推波助澜，猛烈抨击英伟达，要求董事会进行彻底整顿并从公司外部寻找新任首席执行官。
+
+内外交困之下，素来不耐受政治高压的黄仁勋选择退场，于2026年11月12日宣布辞去英伟达首席执行官一职。
+
+然而，政客们算计到了人性的软弱，却低估了资本市场的狂暴。黄仁勋一走，英伟达股价在短短数日内暴跌四分之一，标普500指数连跌七日步入技术性回调，整个华尔街仿佛一夜之间听到了2008年金融海啸的丧钟。
+
+一旦意识到这把火可能烧毁整座房子，华盛顿风向出现戏剧性逆转。之前在暗处递情报、放冷箭的卢比奥与贝森特迅速调转枪口，开始全力挽回局面。
+
+贝森特在2026年11月22日的电视访谈中一改往日口风，公开赞扬英伟达董事会的调查效率，称黄仁勋现在已经算是外部人士了，为他的回归敞开了大门。
+
+卢比奥阵营也忙着撇清干系，指责外界滥用与过度解读情报，双方都在安全与市场的边界上小心翼翼地打着擦边球。
+
+在风暴中心一直按兵不动的川普，此刻展现出了老练政治赌徒的定力。在局势未明、内部底牌尚未摸清之前，他没有盲目冲锋，只是反复在公开场合释放支持黄仁勋回归的信号，试探水深。
+
+当看到卢比奥与贝森特相继松口，川普立刻派出副总统万斯亲自出马，代表白宫向英伟达董事会传递了最高级别的国家安全背书，明确表示黄仁勋的回归不存在任何安全隐患。
+
+2026年11月23日，就在董事局主席哈维琼斯公开宣称无意请回黄仁勋仅仅几天之后，英伟达董事会全票推翻了此前的决定，迎回了他们的拿破仑。消息一出，英伟达股价开盘暴涨33%，单日市值狂飙数千亿美元，把美股从衰退的悬崖边拉了回来。
+
+......
+
+全文七千一百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
