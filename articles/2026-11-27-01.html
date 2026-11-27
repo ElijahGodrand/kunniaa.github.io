@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '精神战力：一切的视角，视角的一切';
+        const CONTENT = `很多难题无法解决，其实就是视角问题。选择合适的视角，没有解决不了的问题。
+
+《与神对话》说，希特勒与其他灵魂没有本质差别，他的一生是灵魂选择的体验和课程，干掉几百万人特定类型的人是体验的一部分，所以最后仍然上了天堂。
+
+对希特勒的评价，是视角选择问题。
+
+《薄伽梵歌》，一场战争要开打，一方的头领阿周那，另一方是他的堂兄弟、祖父毗湿摩、老师德罗纳。他放下弓说我不愿杀亲人，宁可自己去死。黑天那跟他说，自我不灭，身体可杀，阿特曼不死，被杀者和杀者都只是身体层面的变化，为身体的消亡而哀恸是不必要的。他向阿周那显现一切众生都在他之中，敌人也在他之中，于是敌人不再是对立面而是整体的一部分。他说，时间就是毁灭者，这些人早已被他杀死，阿周那只是工具。
+
+事实没变，敌军还是那些人，箭还是要射出去，选择另一个视角，战争变成履行，死亡变成转换，胜负从目标变成无关变量，到最后连我是不是凶手这个问题都被移出了评估体系。
+
+经常说的上帝视角，其实两种含义。
+
+第一种含义是观察含义，通常使用的含义，站在全局最高、无所不知的位置上看问题，把所有局部立场、因果链条和利害关系都收进眼底，这是一种超然的认识位置，本身是中立的。 
+
+第二种含义是解决问题的决策方向含义，极少明说的含义，就是不受任何制约，想怎么定义就怎么定义，想怎么处置就怎么处置，什么事都干得出来，效率极高。
+
+创世记里的大洪水，除了挪亚方舟乘客，其他所有活物全部清除；巴别塔的结局是变乱语言、把人分散；出埃及记十灾一轮轮落下，埃及的长子都被击杀；亚伯拉罕被要求献以撒，考验人的至痛验证忠诚；约伯的十个儿女、财产、健康被当作试验品；乌撒伸手扶住约柜当场被击杀；大卫数点人口，上帝降瘟疫死了7万人。非常残酷。
+
+所以如果有人说上帝视角，那要搞清楚说的是哪一种，第一种还是第二种。有人说，要用上帝视角解决问题，是怎么个解决法子。是看全局，还是全干掉。
+
+还有更多例子。
+
+人类每天都吃各种肉，鸡肉，鸭肉，猪肉，牛肉，羊肉，没有人觉得这个有什么问题，也没啥情绪波动，大概率很开心，即使小朋友，吃肉的时候都很开心。也许有极少的一部分，纯素食。
+
+人类把动物当作肉的单位。
+
+如果换成鸡的视角，一只鸡，看地球，看人类，很可怕的，地球每年屠宰数百亿只鸡，尸体的数量、运输的拥挤、断喙和笼养，全都是暴行。事实不动一个，视角换一下，残忍就出现了。
+
+日本有亲子饭：鸡肉和鸡蛋放进一碗饭里，名字把亲子关系拿来当卖点，取名的那个视角觉得亲切、便宜、好吃，吃的人觉得这是日本家常菜。从鸡的角度，这是把母亲和孩子一起端上桌。
+
+南京人一年吃掉数千万只鸭子，盐水鸭、板鸭、鸭血粉丝汤。成都人一年消费大量兔头，四川每年出栏肉兔以亿计，啃兔头是传统。
+
+奴隶制以前是理所当然的，没人觉得有问题。
+
+把人当牲口一样买卖。古罗马的奴隶、奥斯曼的禁卫军和古拉姆体系、马穆鲁克、巴巴里海盗在16世纪到19世纪从欧洲沿海掠走大批白人，摩尔人和土耳其人把地中海沿岸的意大利人、西班牙人、英格兰人、冰岛人抓到北非市场出售，这些白人被当作动产，逃跑者被追捕，价格随行就市。
+
+......
+
+全文五千六百字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
