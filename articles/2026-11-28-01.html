@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆尼Kunniaa的文章</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        'cream': '#FDFBF7',
+                        'ink': '#2C2C2C',
+                        'gray-warm': '#6B6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        .content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 w-full text-left pl-[30%] py-4 pr-8 text-sm sm:text-base text-ink italic bg-cream/80 backdrop-blur">
+        <div class="pl-4 sm:pl-6 lg:px-8 space-y-2">
+            <p>荣耀不在终点，荣耀在路上。</p>
+            <div class="h-px bg-gradient-to-r from-ink from-40% to-transparent w-80"></div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl ml-[30%] mr-8 px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <h1 id="article-title" class="text-[22px] font-semibold text-ink mb-8 leading-relaxed"></h1>
+        <div id="article-content" class="content text-base text-ink"></div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full text-left pl-[30%] py-3 pr-8 text-sm text-gray-warm bg-cream/80 backdrop-blur">
+        <div class="flex gap-5 pl-4 sm:pl-6 lg:px-8">
+            <!--a href="https://x.com/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" class="w-5 h-5">
+            </a-->
+            <a href="https://medium.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/medium.svg" alt="Medium" class="w-5 h-5">
+            </a>
+            <a href="https://www.zhihu.com/people/KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zhihu.svg" alt="知乎" class="w-5 h-5">
+            </a>            
+            <a href="https://weibo.com/u/2796631153" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sinaweibo.svg" alt="微博" class="w-5 h-5">
+            </a>
+            <a href="https://www.youtube.com/@KunniaaDotCom" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" class="w-5 h-5">
+            </a>
+            <a href="https://space.bilibili.com/14921174" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bilibili.svg" alt="B站" class="w-5 h-5">
+            </a>
+            <a href="https://v.douyin.com/khena__k0tA/" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-[18px] h-[18px]" fill="#000">
+                    <path d="M937.386667 423.850667a387.84 387.84 0 0 1-232.874667-77.824v352.341333C704.512 878.250667 565.930667 1024 394.922667 1024S85.333333 878.250667 85.333333 698.368c0-179.882667 138.581333-325.632 309.589334-325.632 17.066667 0 33.706667 1.450667 49.92 4.266667v186.624a131.754667 131.754667 0 0 0-48.64-9.216c-76.288 0-138.154667 65.024-138.154667 145.322666 0 80.213333 61.866667 145.322667 138.24 145.322667 76.202667 0 138.069333-65.109333 138.069333-145.322667V0h172.714667c0 134.485333 103.68 243.541333 231.594667 243.541333v180.309334h-1.28"/>
+                </svg>
+            </a>
+        </div>
+        <div class="pl-4 sm:pl-6 lg:px-8 mt-1">© 2026 Kunniaa. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════=
+        //  使用说明：改这两个变量即可
+        // ═══════════════════════════════════════=
+        const TITLE = '奇怪角色：日本天皇';
+        const CONTENT = `研究日本的历史，会发现一个很有意思的矛盾：各种文章各种书籍都用某某天皇某某天皇划分日本的历史，看起来天皇很重要，但是看日本的古装剧和小说，天皇那过得不是一般惨，穷得一塌糊涂，破烂不堪，手下的大臣也都穷的当衣服要饭，乞丐一样。
+
+为什么这么诡异？
+
+后来发现，日本的天皇跟普世观念的皇帝概念差别很大，在绝大部分历史时间里，是个祭司，每年举行一些祭祀仪式，但是，不掌管军队，不征税，没有人事任命权，啥都没有。有些时期太穷了，要靠卖字维生。
+
+为什么没有？因为不能碰这些东西，碰了就不是天皇了，或者倒血霉。
+
+看起来非常奇怪，但确实是以非常拧巴的方式形成。
+
+得从源头说起。
+
+先说日本真正掌握权力、武力、税收、人事的是哪些人。
+
+3世纪到6世纪的**古坟时代**，日本列岛只有大大小小的部族联盟。
+
+这个时期掌握武力和征税权的是各地的豪族，比如葛城氏、苏我氏、物部氏，他们各自拥有私兵和被称为屯仓、田庄的直属领地，自己向领民收租，自己带兵打仗。人事任命权在各部族内部世袭，谁拳头硬谁说了算。
+
+后来被称为天皇的那个角色，在这个时代根本不叫天皇，而是被称为大王，比如倭王武。
+
+大王的本质是大和地区部族联盟的**盟主兼首席巫师**，主要工作是主持祭祀太阳神和各部族祖先神的仪式，在豪族发生利益冲突时充当宗教仲裁人，**本身并不具备调动全国军队的绝对权威**。
+
+7世纪到8世纪的**飞鸟与奈良时代**，大王家族联合部分豪族发动乙巳之变，消灭了专权的苏我氏，开始照搬唐朝的律令制，试图建立中央集权。
+
+**武力名义上收归朝廷组建的军团，实际上很快由地方郡司和新兴武士雏形掌控**。
+
+征税权通过班田收授法收归律令制政府，由太政官体系下的民部省负责征收租庸调。
+
+人事任命权也掌握在太政官和皇族核心手里。
+
+在7世纪末，为了在外交上和唐朝皇帝平起平坐，**大王这个充满部族首领气息的称号被正式废除，改称为天皇**。但即便改了名字，这个新诞生的天皇在现实运作中依然被迅速架空，宫廷里爆发了无数次皇族与外戚藤原氏的流血政变，天皇的主要精力很快被重新引导向抄写佛经、修建东大寺大佛以及主持神道教大尝祭等宗教事务上。
+
+9世纪到12世纪的**平安时代**，律令制彻底崩塌，庄园经济取代了国有土地。
+
+**武力掌握在地方豪强和开始崛起的武士集团**手里，比如伊势平氏和河内源氏，朝廷自己连京城的治安都维持不了，只能雇佣武士当看门狗。
+
+征税权被庞大的贵族庄园主和各大寺院瓜分，朝廷几乎收不到多少直接税。
+
+人事任命权和最高行政决策权全部被外戚藤原氏垄断，藤原氏家族成员轮流担任摄政和关白，史称摄关政治。
+
+......
+
+全文一万字，见知识星球“昆尼Kunniaa” 。
+
+我是昆尼Kunniaa，观察 · 思考 · 重构。`;
+        // ═══════════════════════════════════════
+
+        document.getElementById('article-title').textContent = TITLE;
+
+        const contentDiv = document.getElementById('article-content');
+        const paragraphs = CONTENT.split('\n\n');
+
+        paragraphs.forEach(para => {
+            const trimmed = para.trim();
+            if (!trimmed) return;
+            const p = document.createElement('p');
+            p.innerHTML = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            contentDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
